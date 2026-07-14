@@ -1,0 +1,582 @@
+[
+  {
+    "State": "Andhra Pradesh",
+    "Funds Released (Rs)": 5200000,
+    "Date of Sanction Order": "2023-02-22",
+    "Date of Release": "2023-02-22",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.47,07,775/- Settled & UC Rs.4,92,225/- Pending",
+    "Financial Year": "2022-23",
+    "Facility_ID": "KISCE-0002"
+  },
+  {
+    "State": "Andhra Pradesh",
+    "Funds Released (Rs)": 10500000,
+    "Date of Sanction Order": "2023-02-22",
+    "Date of Release": "2023-02-22",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.87,74,457/- Settled & UC Rs.17,74,543/- Pending",
+    "Financial Year": "2022-23",
+    "Facility_ID": "KISCE-0002"
+  },
+  {
+    "State": "Andhra Pradesh",
+    "Funds Released (Rs)": 1045551,
+    "Date of Sanction Order": "2024-07-29",
+    "Date of Release": "2024-11-26",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.9,17,246/- Settled & UC Rs.1,28,305/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0002"
+  },
+  {
+    "State": "Andhra Pradesh",
+    "Funds Released (Rs)": 3063559,
+    "Date of Sanction Order": "2025-02-28",
+    "Date of Release": "2025-03-04",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.25,70,262/- Settled & UC Rs.4,93,297/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0002"
+  },
+  {
+    "State": "Andhra Pradesh",
+    "Funds Released (Rs)": 111695,
+    "Date of Sanction Order": "2025-02-28",
+    "Date of Release": "2025-03-04",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0002"
+  },
+  {
+    "State": "Bihar",
+    "Funds Released (Rs)": 1760000,
+    "Date of Sanction Order": "2024-12-10",
+    "Date of Release": "2024-12-13",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.14,32,418/- Settled & UC Rs.3,27,582/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0005"
+  },
+  {
+    "State": "Chandigarh",
+    "Funds Released (Rs)": 6735600,
+    "Date of Sanction Order": "2023-06-13",
+    "Date of Release": "2023-11-07",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.24,42,365/- Settled & UC Rs.42,93,235/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0006"
+  },
+  {
+    "State": "Chhattisgarh",
+    "Funds Released (Rs)": 11652664,
+    "Date of Sanction Order": "2023-03-31",
+    "Date of Release": "2023-03-31",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.1,15,05,341/- Settled & UC Rs.1,47,323/- Pending",
+    "Financial Year": "2022-23",
+    "Facility_ID": "KISCE-0007"
+  },
+  {
+    "State": "Chhattisgarh",
+    "Funds Released (Rs)": 11695124,
+    "Date of Sanction Order": "2023-05-09",
+    "Date of Release": "2023-05-19",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.1,04,13,874/- Settled & UC Rs.12,81,250/-Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0007"
+  },
+  {
+    "State": "Chhattisgarh",
+    "Funds Released (Rs)": 3852494,
+    "Date of Sanction Order": "2024-11-13",
+    "Date of Release": "2024-11-27",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.15,59,160/- Settled & UC Rs.22,93,334/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0007"
+  },
+  {
+    "State": "Chhattisgarh",
+    "Funds Released (Rs)": 3442598,
+    "Date of Sanction Order": "2025-02-28",
+    "Date of Release": "2025-03-04",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0007"
+  },
+  {
+    "State": "Dadra & Nagar Haveli and Daman & Diu",
+    "Funds Released (Rs)": 8592531,
+    "Date of Sanction Order": "2023-07-18",
+    "Date of Release": "2023-11-13",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.58,32,097/- Settled & UC Rs.27,60,434/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0008"
+  },
+  {
+    "State": "Dadra & Nagar Haveli and Daman & Diu",
+    "Funds Released (Rs)": 5291450,
+    "Date of Sanction Order": "2023-07-18",
+    "Date of Release": "2023-11-07",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0008"
+  },
+  {
+    "State": "Dadra & Nagar Haveli and Daman & Diu",
+    "Funds Released (Rs)": 531022,
+    "Date of Sanction Order": "2025-02-07",
+    "Date of Release": "2025-02-11",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0008"
+  },
+  {
+    "State": "Dadra & Nagar Haveli and Daman & Diu",
+    "Funds Released (Rs)": 250000,
+    "Date of Sanction Order": "2025-02-07",
+    "Date of Release": "2025-02-11",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0008"
+  },
+  {
+    "State": "Goa",
+    "Funds Released (Rs)": 3837367,
+    "Date of Sanction Order": "2024-09-20",
+    "Date of Release": "2024-11-29",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.10,31,357/- Settled & UC Rs.28,06,010/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0010"
+  },
+  {
+    "State": "Goa",
+    "Funds Released (Rs)": 4953255,
+    "Date of Sanction Order": "2025-03-31",
+    "Date of Release": "2025-03-31",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.46,96,455/- Settled & UC Rs.2,56,800/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0010"
+  },
+  {
+    "State": "Goa",
+    "Funds Released (Rs)": 527061,
+    "Date of Sanction Order": "2025-03-31",
+    "Date of Release": "2025-03-31",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0010"
+  },
+  {
+    "State": "Gujarat",
+    "Funds Released (Rs)": 3037376,
+    "Date of Sanction Order": "2024-03-20",
+    "Date of Release": "2024-03-22",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0011"
+  },
+  {
+    "State": "Gujarat",
+    "Funds Released (Rs)": 8654215,
+    "Date of Sanction Order": "2024-03-20",
+    "Date of Release": "2024-03-22",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0011"
+  },
+  {
+    "State": "Gujarat",
+    "Funds Released (Rs)": 1330633,
+    "Date of Sanction Order": "2025-03-26",
+    "Date of Release": "2025-03-27",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0011"
+  },
+  {
+    "State": "Gujarat",
+    "Funds Released (Rs)": 2771000,
+    "Date of Sanction Order": "2025-04-23",
+    "Date of Release": "2025-05-14",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2025-26",
+    "Facility_ID": "KISCE-0011"
+  },
+  {
+    "State": "Gujarat",
+    "Funds Released (Rs)": 1409323,
+    "Date of Sanction Order": "2025-08-14",
+    "Date of Release": "2025-08-14",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2025-26",
+    "Facility_ID": "KISCE-0011"
+  },
+  {
+    "State": "Haryana",
+    "Funds Released (Rs)": 6120000,
+    "Date of Sanction Order": "2023-05-09",
+    "Date of Release": "2023-05-19",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.51,45,000/- Settled & UC Rs.9,75,000/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0012"
+  },
+  {
+    "State": "Haryana",
+    "Funds Released (Rs)": 2449000,
+    "Date of Sanction Order": "2023-05-09",
+    "Date of Release": "2023-05-19",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.12,39,184/- Settled & UC Rs.12,09,816/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0012"
+  },
+  {
+    "State": "Haryana",
+    "Funds Released (Rs)": 6348000,
+    "Date of Sanction Order": "2025-03-27",
+    "Date of Release": "2025-03-27",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0012"
+  },
+  {
+    "State": "Haryana",
+    "Funds Released (Rs)": 7347000,
+    "Date of Sanction Order": "2025-03-27",
+    "Date of Release": "2025-03-27",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0012"
+  },
+  {
+    "State": "Himachal Pradesh",
+    "Funds Released (Rs)": 3385500,
+    "Date of Sanction Order": "2024-01-10",
+    "Date of Release": "2024-01-10",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0013"
+  },
+  {
+    "State": "Himachal Pradesh",
+    "Funds Released (Rs)": 10368351,
+    "Date of Sanction Order": "2024-01-10",
+    "Date of Release": "2024-01-10",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0013"
+  },
+  {
+    "State": "Jammu & Kashmir",
+    "Funds Released (Rs)": 9421371,
+    "Date of Sanction Order": "2024-01-25",
+    "Date of Release": "2024-01-31",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.38,70,000/- Settled & UC Rs.55,51,371/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0014; KISCE-0015"
+  },
+  {
+    "State": "Jammu & Kashmir",
+    "Funds Released (Rs)": 11822578,
+    "Date of Sanction Order": "2024-01-25",
+    "Date of Release": "2024-01-31",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0014; KISCE-0015"
+  },
+  {
+    "State": "Jharkhand",
+    "Funds Released (Rs)": 1919121,
+    "Date of Sanction Order": "2024-06-11",
+    "Date of Release": "2024-06-13",
+    "Head": "Recurring",
+    "UC Status": "Amount Rs.10,73,081/- Return to SAI HO & Rs.8,46,040/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0016"
+  },
+  {
+    "State": "Karnataka",
+    "Funds Released (Rs)": 7258650,
+    "Date of Sanction Order": "2022-02-11",
+    "Date of Release": "2022-02-11",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.70,72,940/-Settled & UC Rs.1,85,750/- Pending",
+    "Financial Year": "2021-22",
+    "Facility_ID": "KISCE-0017"
+  },
+  {
+    "State": "Karnataka",
+    "Funds Released (Rs)": 2400000,
+    "Date of Sanction Order": "2023-02-22",
+    "Date of Release": "2023-02-22",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2022-23",
+    "Facility_ID": "KISCE-0017"
+  },
+  {
+    "State": "Karnataka",
+    "Funds Released (Rs)": 1044812,
+    "Date of Sanction Order": "2024-02-28",
+    "Date of Release": "2024-03-20",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.2,57,808/- Settled & UC Rs.7,87,004/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0017"
+  },
+  {
+    "State": "Karnataka",
+    "Funds Released (Rs)": 1624996,
+    "Date of Sanction Order": "2024-09-05",
+    "Date of Release": "2024-11-26",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0017"
+  },
+  {
+    "State": "Kerala",
+    "Funds Released (Rs)": 1717389,
+    "Date of Sanction Order": "2023-04-05",
+    "Date of Release": "2023-05-19",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.1,71,304/- Settled & UC Rs.15,46,085/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0018"
+  },
+  {
+    "State": "Kerala",
+    "Funds Released (Rs)": 7432430,
+    "Date of Sanction Order": "2023-10-16",
+    "Date of Release": "2023-11-07",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.64,20,730/- Settled & UC Rs.10,11,700/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0018"
+  },
+  {
+    "State": "Ladakh",
+    "Funds Released (Rs)": 5052035,
+    "Date of Sanction Order": "2024-09-04",
+    "Date of Release": "2024-12-13",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0019"
+  },
+  {
+    "State": "Ladakh",
+    "Funds Released (Rs)": 850886,
+    "Date of Sanction Order": "2024-09-04",
+    "Date of Release": "2024-12-13",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0019"
+  },
+  {
+    "State": "Madhya Pradesh",
+    "Funds Released (Rs)": 12936548,
+    "Date of Sanction Order": "2025-02-28",
+    "Date of Release": "2025-03-04",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.71,76,500/- Settled & UC Rs.57,60,048/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0021"
+  },
+  {
+    "State": "Maharashtra",
+    "Funds Released (Rs)": 15600000,
+    "Date of Sanction Order": "2023-08-10",
+    "Date of Release": "11-Sep-23 13-Nov-23",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.22,46,220/- Settled and UC Rs.26,40,783/- Received to RC & UC Rs.1,07,12,997/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0022"
+  },
+  {
+    "State": "Manipur",
+    "Funds Released (Rs)": 12308453,
+    "Date of Sanction Order": "2024-08-07",
+    "Date of Release": "2024-12-02",
+    "Head": "Non-recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0023"
+  },
+  {
+    "State": "Manipur",
+    "Funds Released (Rs)": 456750,
+    "Date of Sanction Order": "2024-12-10",
+    "Date of Release": "2024-12-13",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0023"
+  },
+  {
+    "State": "Manipur",
+    "Funds Released (Rs)": 5703000,
+    "Date of Sanction Order": "2024-12-23",
+    "Date of Release": "2024-12-26",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0023"
+  },
+  {
+    "State": "Manipur",
+    "Funds Released (Rs)": 456750,
+    "Date of Sanction Order": "2025-03-12",
+    "Date of Release": "2025-03-13",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0023"
+  },
+  {
+    "State": "Meghalaya",
+    "Funds Released (Rs)": 11776000,
+    "Date of Sanction Order": "2023-07-18",
+    "Date of Release": "2023-11-07",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.1,00,26,000/- Settled & UC Rs.17,50,000/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0024"
+  },
+  {
+    "State": "Meghalaya",
+    "Funds Released (Rs)": 5159000,
+    "Date of Sanction Order": "2025-03-24",
+    "Date of Release": "2025-03-25",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0024"
+  },
+  {
+    "State": "Mizoram",
+    "Funds Released (Rs)": 1926300,
+    "Date of Sanction Order": "2024-10-25",
+    "Date of Release": "2024-12-02",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.18,79,499/- Settled & UC Rs.46,801/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0025"
+  },
+  {
+    "State": "Mizoram",
+    "Funds Released (Rs)": 1637699,
+    "Date of Sanction Order": "2025-01-23",
+    "Date of Release": "2025-02-10",
+    "Head": "Recurring",
+    "UC Status": "Pending at State",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0025"
+  },
+  {
+    "State": "Nagaland",
+    "Funds Released (Rs)": 5840240,
+    "Date of Sanction Order": "2024-07-11",
+    "Date of Release": "2024-12-02",
+    "Head": "Recurring",
+    "UC Status": "Origional UC Not submitted to RC",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0026"
+  },
+  {
+    "State": "Nagaland",
+    "Funds Released (Rs)": 4800000,
+    "Date of Sanction Order": "2024-12-24",
+    "Date of Release": "2024-12-26",
+    "Head": "Recurring",
+    "UC Status": "Origional UC Not submitted to RC",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0026"
+  },
+  {
+    "State": "Rajasthan",
+    "Funds Released (Rs)": 1637141,
+    "Date of Sanction Order": "2025-06-16",
+    "Date of Release": "2025-06-16",
+    "Head": "Recurring",
+    "UC Status": "Recently Released",
+    "Financial Year": "2025-26",
+    "Facility_ID": "KISCE-0030"
+  },
+  {
+    "State": "Rajasthan",
+    "Funds Released (Rs)": 5236026,
+    "Date of Sanction Order": "2025-06-16",
+    "Date of Release": "2025-06-16",
+    "Head": "Non-recurring",
+    "UC Status": "Recently Released",
+    "Financial Year": "2025-26",
+    "Facility_ID": "KISCE-0030"
+  },
+  {
+    "State": "Tamil Nadu",
+    "Funds Released (Rs)": 896216,
+    "Date of Sanction Order": "2023-11-14",
+    "Date of Release": "2023-11-16",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.8,95,897/- Settled & UC Rs.319/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0032"
+  },
+  {
+    "State": "Telangana",
+    "Funds Released (Rs)": 3704238,
+    "Date of Sanction Order": "2024-03-28",
+    "Date of Release": "2024-03-29",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.9,12,953/- Settled & UC Rs.27,91,285/- Pending",
+    "Financial Year": "2023-24",
+    "Facility_ID": "KISCE-0033"
+  },
+  {
+    "State": "Tripura",
+    "Funds Released (Rs)": 4416295.36,
+    "Date of Sanction Order": "2021-12-22",
+    "Date of Release": "2021-12-22",
+    "Head": "Non-recurring",
+    "UC Status": "UC Rs.18,29,887/- Settled & UC Rs.25,86,408/- Pending",
+    "Financial Year": "2021-22",
+    "Facility_ID": "KISCE-0034"
+  },
+  {
+    "State": "Tripura",
+    "Funds Released (Rs)": 3780000,
+    "Date of Sanction Order": "2025-01-07",
+    "Date of Release": "2025-02-10",
+    "Head": "Recurring",
+    "UC Status": "UC Rs.27,80,000/- Settled & UC Rs.10,00,000/- Pending",
+    "Financial Year": "2024-25",
+    "Facility_ID": "KISCE-0034"
+  }
+]
