@@ -21,6 +21,8 @@ export interface Location {
   Latitude: number;
   Longitude: number;
   Remarks: string | null;
+  /** Google Maps location link from the coordinate-update source (present only for updated facilities). */
+  Google_Maps_URL?: string | null;
 }
 
 export interface DisciplineDetail {

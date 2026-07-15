@@ -952,6 +952,32 @@ button:focus-visible {
   border: none;
 }
 
+.directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background: #1a73e8;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.directions-btn:hover {
+  background: #1765cc;
+}
+
+.directions-btn:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
 .popup-scroll {
   max-height: 220px;
   overflow-y: auto;

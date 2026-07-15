@@ -19,13 +19,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bengaluru Urban, Karnataka, India",
     "Geocode_Query_Address": "N. Subhash Southern Centre, University Campus, Kangeri, Bangalore-560 056, Karnataka, India",
-    "Latitude": 12.97,
-    "Longitude": 77.55,
+    "Latitude": 12.945401,
+    "Longitude": 77.513541,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.945401,77.513541"
   },
   {
     "Facility_ID": "RC-0002",
@@ -47,13 +48,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bhopal, Madhya Pradesh, India",
     "Geocode_Query_Address": "Udhav Das Mehta Bhaiji Central Centre, Rajiv Gandhi Bhavan, Shyamla Hills, Bhopal-462013, Madhya Pradesh, India",
-    "Latitude": 23.27,
-    "Longitude": 77.4,
+    "Latitude": 23.2189444,
+    "Longitude": 77.3444564,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.2189444,77.3444564"
   },
   {
     "Facility_ID": "RC-0003",
@@ -75,13 +77,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Gandhinagar, Gujarat, India",
     "Geocode_Query_Address": "N.S. Western Centre Sector-15, Sports Complex Gandhinagar-382 016, Gujarat, India",
-    "Latitude": 23.22,
-    "Longitude": 72.68,
+    "Latitude": 23.233036,
+    "Longitude": 72.635271,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.233036,72.635271"
   },
   {
     "Facility_ID": "RC-0004",
@@ -103,13 +106,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kamrup Metropolitan, Assam, India",
     "Geocode_Query_Address": "New Field Sports Complex, Mohd.Shah Road, Paltan Bazar Guwahati-781 008, Assam, India",
-    "Latitude": 26.18,
-    "Longitude": 91.73,
+    "Latitude": 26.179742,
+    "Longitude": 91.748353,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.179742,91.748353"
   },
   {
     "Facility_ID": "RC-0005",
@@ -131,13 +135,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Imphal West, Manipur, India",
     "Geocode_Query_Address": "North Eastern Regional Centre, Takyel, Imphal-795001, Manipur, India",
-    "Latitude": 24.82,
-    "Longitude": 93.9,
+    "Latitude": 24.8010346,
+    "Longitude": 93.9107947,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.8010346,93.9107947"
   },
   {
     "Facility_ID": "RC-0006",
@@ -159,13 +164,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kolkata, West Bengal, India",
     "Geocode_Query_Address": "Netaji Subash Eastern Centre, Sector-III, Salt Lake City, Kolkota-700 091, West Bengal, India",
-    "Latitude": 22.591,
-    "Longitude": 88.412,
+    "Latitude": 22.5647741,
+    "Longitude": 88.4102792,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.5647741,88.4102792"
   },
   {
     "Facility_ID": "RC-0007",
@@ -187,13 +193,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Lucknow, Uttar Pradesh, India",
     "Geocode_Query_Address": "Lucknow Kanpur Road, Sarojini Nagar, Lucknow -226008, Uttar Pradesh, India",
-    "Latitude": 26.85,
-    "Longitude": 80.92,
+    "Latitude": 26.7550018,
+    "Longitude": 80.8681394,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.7550018,80.8681394"
   },
   {
     "Facility_ID": "RC-0008",
@@ -215,13 +222,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Mumbai Suburban, Maharashtra, India",
     "Geocode_Query_Address": "Shri Atal Bihari Vajpayee, Akurli Road, Kandivali East, Mumbai–400101, Maharashtra, India",
-    "Latitude": 19.08,
-    "Longitude": 72.88,
+    "Latitude": 19.1981031,
+    "Longitude": 72.8612567,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.1981031,72.8612567"
   },
   {
     "Facility_ID": "RC-0009",
@@ -243,13 +251,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sonipat, Haryana, India",
     "Geocode_Query_Address": "Ch.Devi Lal Northern Regional Centre, Joshi Chauhan, G.T.Road, Bahalgarh Sonipat -131 021, Haryana, India",
-    "Latitude": 28.993,
-    "Longitude": 77.015,
+    "Latitude": 28.96869,
+    "Longitude": 77.09393,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.96869,77.09393"
   },
   {
     "Facility_ID": "RC-0010",
@@ -271,13 +280,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Thiruvananthapuram, Kerala, India",
     "Geocode_Query_Address": "Laxmibai National College of Physical Education, Kariavottam P.O.,Post Box No.3 Trivandrum-695581, Kerala, India",
-    "Latitude": 8.568,
-    "Longitude": 76.886,
+    "Latitude": 8.5728,
+    "Longitude": 76.8895,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.5728,76.8895"
   },
   {
     "Facility_ID": "RC-0011",
@@ -299,13 +309,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sahibzada Ajit Singh Nagar, Punjab, India",
     "Geocode_Query_Address": "Patiala Road, Nabha Sahib Zirakpur-140603, Chandigarh, Punjab, India",
-    "Latitude": 30.68,
-    "Longitude": 76.72,
+    "Latitude": 30.6362366,
+    "Longitude": 76.7987638,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.6362366,76.7987638"
   },
   {
     "Facility_ID": "RC-0012",
@@ -327,13 +338,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Patiala, Punjab, India",
     "Geocode_Query_Address": "Netaji Subhash National Institute for Sports, Old Moti Bagh, Patiala –147 001, Punjab, India",
-    "Latitude": 30.3398,
-    "Longitude": 76.3869,
+    "Latitude": 30.30811,
+    "Longitude": 76.39361,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.30811,76.39361"
   },
   {
     "Facility_ID": "RC-0013",
@@ -355,13 +367,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "New Delhi, Delhi, India",
     "Geocode_Query_Address": "Jawaharlal Nehru Stadium Complex (East Gate), Lodhi Road, New Delhi - 110003, India",
-    "Latitude": 28.5829,
-    "Longitude": 77.2334,
+    "Latitude": 28.582873,
+    "Longitude": 77.23438,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.582873,77.23438"
   },
   {
     "Facility_ID": "NCOE-0001",
@@ -383,13 +396,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Alappuzha, Kerala, India",
     "Geocode_Query_Address": null,
-    "Latitude": 9.48,
-    "Longitude": 76.48,
+    "Latitude": 9.5247004,
+    "Longitude": 76.3583359,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=9.5247004,76.3583359"
   },
   {
     "Facility_ID": "NCOE-0002",
@@ -411,13 +425,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Thiruvananthapuram, Kerala, India",
     "Geocode_Query_Address": "Laxmibai National College, of Physical Education, Kariavottam P.O., Post Box No.3, Thiruvananthapuram, Kerala, India",
-    "Latitude": 8.568,
-    "Longitude": 76.886,
+    "Latitude": 8.57278,
+    "Longitude": 76.88944,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.57278,76.88944"
   },
   {
     "Facility_ID": "NCOE-0003",
@@ -439,13 +454,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Chhatrapati Sambhajinagar, Maharashtra, India",
     "Geocode_Query_Address": "Dr.B.R.Ambedkar University Campus, Aurangabad-431004 , Maharashtra, India",
-    "Latitude": 19.88,
-    "Longitude": 75.32,
+    "Latitude": 19.9049667,
+    "Longitude": 75.3121167,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.9049667,75.3121167"
   },
   {
     "Facility_ID": "NCOE-0004",
@@ -467,13 +483,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Mumbai Suburban, Maharashtra, India",
     "Geocode_Query_Address": "Akurli Road, Kandivali East Mumbai-400101, Maharashtra, India",
-    "Latitude": 19.08,
-    "Longitude": 72.88,
+    "Latitude": 19.1977096,
+    "Longitude": 72.8617727,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.1977096,72.8617727"
   },
   {
     "Facility_ID": "NCOE-0005",
@@ -495,13 +512,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bengaluru Urban, Karnataka, India",
     "Geocode_Query_Address": "N. Subhash Southern Centre, University Campus, Kangeri, Bangalore, Karnataka, India",
-    "Latitude": 12.97,
-    "Longitude": 77.55,
+    "Latitude": 12.94135,
+    "Longitude": 77.51555,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.94135,77.51555"
   },
   {
     "Facility_ID": "NCOE-0006",
@@ -523,13 +541,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bhopal, Madhya Pradesh, India",
     "Geocode_Query_Address": "Bishenkhedi PO Suraj Nagar, Bhopal-462 003 Madhya Pradesh, India",
-    "Latitude": 23.27,
-    "Longitude": 77.4,
+    "Latitude": 23.2188232,
+    "Longitude": 77.3446261,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.2188232,77.3446261"
   },
   {
     "Facility_ID": "NCOE-0007",
@@ -579,13 +598,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kangra, Himachal Pradesh, India",
     "Geocode_Query_Address": "Sports Complex, District Kangra Dharamshala-176 215 Himachal Pradesh, India",
-    "Latitude": 32.1,
-    "Longitude": 76.27,
+    "Latitude": 32.1950184,
+    "Longitude": 76.3263227,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=32.1950184,76.3263227"
   },
   {
     "Facility_ID": "NCOE-0009",
@@ -607,13 +627,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Hamirpur, Himachal Pradesh, India",
     "Geocode_Query_Address": "Athletics Pavilion, NSCBPG College, Campus, NIT Road, ANU, Hamirpur-177005, Himachal Pradesh, India",
-    "Latitude": 31.68,
-    "Longitude": 76.52,
+    "Latitude": 31.7014091,
+    "Longitude": 76.520436,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.7014091,76.520436"
   },
   {
     "Facility_ID": "NCOE-0010",
@@ -635,13 +656,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kamrup Metropolitan, Assam, India",
     "Geocode_Query_Address": "New Field Sports Complex Mohd. Shah Road, Paltan Bazar, Guwahati -781008, Assam, India",
-    "Latitude": 26.18,
-    "Longitude": 91.73,
+    "Latitude": 26.179742,
+    "Longitude": 91.748353,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.179742,91.748353"
   },
   {
     "Facility_ID": "NCOE-0011",
@@ -663,13 +685,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Papum Pare, Arunachal Pradesh, India",
     "Geocode_Query_Address": "Sanghay Laden Sports Complex, Chimpu, Itangar-791111, Arunachal Pradesh, India",
-    "Latitude": 27.15,
-    "Longitude": 93.72,
+    "Latitude": 27.0616534,
+    "Longitude": 93.59907,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.0616534,93.59907"
   },
   {
     "Facility_ID": "NCOE-0012",
@@ -691,13 +714,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Gandhinagar, Gujarat, India",
     "Geocode_Query_Address": "Sports Complex, Sector-15, Gandhinagar-382009, Gujarat, India",
-    "Latitude": 23.22,
-    "Longitude": 72.68,
+    "Latitude": 23.2340468,
+    "Longitude": 72.6362606,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.2340468,72.6362606"
   },
   {
     "Facility_ID": "NCOE-0013",
@@ -719,13 +743,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ahmedabad, Gujarat, India",
     "Geocode_Query_Address": "Block B, Veer Savarkar Sports Complex, Naranpura, Ahmedabad, Gujarat, India",
-    "Latitude": 23.03,
-    "Longitude": 72.58,
+    "Latitude": 23.0687145,
+    "Longitude": 72.555234,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.0687145,72.555234"
   },
   {
     "Facility_ID": "NCOE-0014",
@@ -747,13 +772,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Imphal East, Manipur, India",
     "Geocode_Query_Address": "Khuman Lampak Imphal-795 001, Manipur, India",
-    "Latitude": 24.8149,
-    "Longitude": 93.954,
+    "Latitude": 24.8227,
+    "Longitude": 93.9525,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.8227,93.9525"
   },
   {
     "Facility_ID": "NCOE-0015",
@@ -775,13 +801,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kolkata, West Bengal, India",
     "Geocode_Query_Address": "LA Block, Salt Lake City, Kolkata-700 106 West Bengal, India",
-    "Latitude": 22.591,
-    "Longitude": 88.412,
+    "Latitude": 22.5647741,
+    "Longitude": 88.4102792,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.5647741,88.4102792"
   },
   {
     "Facility_ID": "NCOE-0016",
@@ -803,13 +830,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Cuttack, Odisha, India",
     "Geocode_Query_Address": "Water Sports Centre Jagatpur-754021 Odisha, India",
-    "Latitude": 20.45,
-    "Longitude": 85.82,
+    "Latitude": 20.5055954,
+    "Longitude": 85.9096916,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.5055954,85.9096916"
   },
   {
     "Facility_ID": "NCOE-0017",
@@ -831,13 +859,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Lucknow, Uttar Pradesh, India",
     "Geocode_Query_Address": "Kanpur Road, Sarojini Nagar, Lucknow – 226008, Uttar Pradesh, India",
-    "Latitude": 26.85,
-    "Longitude": 80.92,
+    "Latitude": 26.7550018,
+    "Longitude": 80.8681394,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.7550018,80.8681394"
   },
   {
     "Facility_ID": "NCOE-0018",
@@ -859,13 +888,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Varanasi, Uttar Pradesh, India",
     "Geocode_Query_Address": "National Centre of Excellence, Dr. Sampoornand Sports Complex, Sigra, Varanasi - 221002, Uttar Pradesh, India",
-    "Latitude": 25.32,
-    "Longitude": 82.98,
+    "Latitude": 25.314897,
+    "Longitude": 82.986597,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.314897,82.986597"
   },
   {
     "Facility_ID": "NCOE-0019",
@@ -887,13 +917,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Patiala, Punjab, India",
     "Geocode_Query_Address": "Netaji Subhash National Institute for Sports, Old Moti Bagh, Patiala –147001, Punjab, India",
-    "Latitude": 30.3398,
-    "Longitude": 76.3869,
+    "Latitude": 30.3081,
+    "Longitude": 76.3936,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.3081,76.3936"
   },
   {
     "Facility_ID": "NCOE-0020",
@@ -915,13 +946,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rohtak, Haryana, India",
     "Geocode_Query_Address": "Sports Authority of India Sector-6, Rohtak 124001, Haryana",
-    "Latitude": 28.9,
-    "Longitude": 76.58,
+    "Latitude": 28.9165132,
+    "Longitude": 76.6044118,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.9165132,76.6044118"
   },
   {
     "Facility_ID": "NCOE-0021",
@@ -943,13 +975,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sonipat, Haryana, India",
     "Geocode_Query_Address": "Joshi Chauhan, G.T.Road, Bahalgarh, Sonipat-131 021, Haryana, India",
-    "Latitude": 28.98,
-    "Longitude": 77.02,
+    "Latitude": 28.9686931,
+    "Longitude": 77.0939262,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.9686931,77.0939262"
   },
   {
     "Facility_ID": "NCOE-0022",
@@ -971,13 +1004,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Central Delhi, Delhi, India",
     "Geocode_Query_Address": "Indira Gandhi Stadium Complex, Indraprastha Estate, ITO, New Delhi, India",
-    "Latitude": 28.628,
-    "Longitude": 77.2452,
+    "Latitude": 28.63111,
+    "Longitude": 77.24944,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.63111,77.24944"
   },
   {
     "Facility_ID": "NCOE-0023",
@@ -999,13 +1033,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "New Delhi, Delhi, India",
     "Geocode_Query_Address": "National Stadium, India Gate, New Delhi-110001",
-    "Latitude": 28.611,
-    "Longitude": 77.2373,
+    "Latitude": 28.612537,
+    "Longitude": 77.237335,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.612537,77.237335"
   },
   {
     "Facility_ID": "NCOE-0024",
@@ -1027,13 +1062,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "New Delhi, Delhi, India",
     "Geocode_Query_Address": "Mother Teresa Road, Talkatora Garden, New Delhi, India",
-    "Latitude": 28.627,
-    "Longitude": 77.196,
+    "Latitude": 28.622456,
+    "Longitude": 77.192925,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.622456,77.192925"
   },
   {
     "Facility_ID": "NCOE-0025",
@@ -1055,13 +1091,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "South Delhi, Delhi, India",
     "Geocode_Query_Address": "Suraj Kund Rd, Tughlakabad, New Delhi-110044, India",
-    "Latitude": 28.501,
-    "Longitude": 77.268,
+    "Latitude": 28.499759,
+    "Longitude": 77.266835,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "NCOE Strength 2025-26 as on date -2.xlsx",
-    "Source_Sheet": "Master File NCOEs-25-26"
+    "Source_Sheet": "Master File NCOEs-25-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.499759,77.266835"
   },
   {
     "Facility_ID": "NCOE-0026",
@@ -1083,13 +1120,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "New Delhi, Delhi, India",
     "Geocode_Query_Address": "Jawaharlal Nehru Stadium Complex (East Gate), Lodhi Road, New Delhi - 110003, India",
-    "Latitude": 28.5829,
-    "Longitude": 77.2334,
+    "Latitude": 28.582889,
+    "Longitude": 77.234389,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "No strength data in NCOE 2025-26 master",
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "RCs_NCOEs_STCs"
+    "Source_Sheet": "RCs_NCOEs_STCs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.582889,77.234389"
   },
   {
     "Facility_ID": "STC-0001",
@@ -1111,13 +1149,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kurnool, Andhra Pradesh, India",
     "Geocode_Query_Address": "District Sports Authority, Out Door Stadium, Kurnool-518004, Andhra Pradesh, India",
-    "Latitude": 15.8,
-    "Longitude": 77.97,
+    "Latitude": 15.83568,
+    "Longitude": 78.03981,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.83568,78.03981"
   },
   {
     "Facility_ID": "STC-0002",
@@ -1139,13 +1178,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Eluru, Andhra Pradesh, India",
     "Geocode_Query_Address": "A.S.R.Stadium, Eluru-534 005 Andhra Pradesh, India",
-    "Latitude": 16.72,
-    "Longitude": 81.1,
+    "Latitude": 16.718411,
+    "Longitude": 81.116295,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.718411,81.116295"
   },
   {
     "Facility_ID": "STC-0003",
@@ -1167,13 +1207,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Visakhapatnam, Andhra Pradesh, India",
     "Geocode_Query_Address": "Port Diamond Jubilee Stadium, Nehru Place, Visakhapattnam-530024, Andhra Pradesh, India",
-    "Latitude": 17.7,
-    "Longitude": 83.28,
+    "Latitude": 17.74244,
+    "Longitude": 83.30261,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.74244,83.30261"
   },
   {
     "Facility_ID": "STC-0004",
@@ -1195,13 +1236,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bengaluru Urban, Karnataka, India",
     "Geocode_Query_Address": "Karnataka State Hockey Stadium, Akkithimanahalli, Longford Road, Bangalore-560 025, India",
-    "Latitude": 12.97,
-    "Longitude": 77.55,
+    "Latitude": 12.961684,
+    "Longitude": 77.600642,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.961684,77.600642"
   },
   {
     "Facility_ID": "STC-0005",
@@ -1223,13 +1265,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dharwad, Karnataka, India",
     "Geocode_Query_Address": "Saptapur Road, Dharwad-580001, Karnataka, India",
-    "Latitude": 15.38,
-    "Longitude": 75.12,
+    "Latitude": 15.452426,
+    "Longitude": 74.994435,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.452426,74.994435"
   },
   {
     "Facility_ID": "STC-0006",
@@ -1251,13 +1294,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kodagu, Karnataka, India",
     "Geocode_Query_Address": "Man's Compound, Medikeri-571 201, Karnataka, India",
-    "Latitude": 12.42,
-    "Longitude": 75.73,
+    "Latitude": 12.42694,
+    "Longitude": 75.73033,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.42694,75.73033"
   },
   {
     "Facility_ID": "STC-0007",
@@ -1279,13 +1323,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Hyderabad, Telangana, India",
     "Geocode_Query_Address": "Hockey Complex, Gachibowli Stadium, Hyderabad-500032, Telangana, India",
-    "Latitude": 17.37,
-    "Longitude": 78.48,
+    "Latitude": 17.4452,
+    "Longitude": 78.3403,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.4452,78.3403"
   },
   {
     "Facility_ID": "STC-0008",
@@ -1307,13 +1352,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jabalpur, Madhya Pradesh, India",
     "Geocode_Query_Address": "Ranital Sports Stadium, Rani Taal, Jabalpur-482002, Madhya Pradesh, India",
-    "Latitude": 23.15,
-    "Longitude": 79.93,
+    "Latitude": 23.1723,
+    "Longitude": 79.9231,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.1723,79.9231"
   },
   {
     "Facility_ID": "STC-0009",
@@ -1335,13 +1381,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Tikamgarh, Madhya Pradesh, India",
     "Geocode_Query_Address": "Shahid Narayandas Khare Stadium, Tikkamgarh, Madhya Pradesh, India",
-    "Latitude": 24.73,
-    "Longitude": 78.82,
+    "Latitude": 24.7508364,
+    "Longitude": 78.8409961,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.7508364,78.8409961"
   },
   {
     "Facility_ID": "STC-0010",
@@ -1363,13 +1410,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dhar, Madhya Pradesh, India",
     "Geocode_Query_Address": "Jaitpura, Indore Ahmedabad Road, Dhar – 454001, Madhya Pradesh, India",
-    "Latitude": 22.6,
-    "Longitude": 75.3,
+    "Latitude": 22.6096,
+    "Longitude": 75.3361,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.6096,75.3361"
   },
   {
     "Facility_ID": "STC-0011",
@@ -1391,13 +1439,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Raipur, Chhattisgarh, India",
     "Geocode_Query_Address": "Budha Talab Sports Complex, Shyam Talkies Road, Raipur-492001, Chhatisgarh, Chhattisgarh, India",
-    "Latitude": 21.25,
-    "Longitude": 81.63,
+    "Latitude": 21.2345,
+    "Longitude": 81.6308,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.2345,81.6308"
   },
   {
     "Facility_ID": "STC-0012",
@@ -1419,13 +1468,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rajnandgaon, Chhattisgarh, India",
     "Geocode_Query_Address": "Digvijay Stadium, Rajnandgaon -491441, Chhatisgarh, Chhattisgarh, India",
-    "Latitude": 21.1,
-    "Longitude": 81.03,
+    "Latitude": 21.09463,
+    "Longitude": 81.02067,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.09463,81.02067"
   },
   {
     "Facility_ID": "STC-0013",
@@ -1447,13 +1497,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bilaspur, Himachal Pradesh, India",
     "Geocode_Query_Address": "SAI Training Centre, Bilaspur-174001, Himachal Pradesh, India",
-    "Latitude": 31.33,
-    "Longitude": 76.75,
+    "Latitude": 31.344223,
+    "Longitude": 76.757224,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.344223,76.757224"
   },
   {
     "Facility_ID": "STC-0014",
@@ -1475,13 +1526,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kargil, Ladakh, India",
     "Geocode_Query_Address": "Govt. Degree College Complex, Bagh-I Khominee, Kargil-194103, Jammu & Kashmir, Ladakh, India",
-    "Latitude": 34.55,
-    "Longitude": 76.13,
+    "Latitude": 34.5567618,
+    "Longitude": 76.1305503,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.5567618,76.1305503"
   },
   {
     "Facility_ID": "STC-0015",
@@ -1503,13 +1555,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sri Muktsar Sahib, Punjab, India",
     "Geocode_Query_Address": "Dashmesh Girls Sr.Sec. School, District Muktasar, Badal -152113, Punjab, India",
-    "Latitude": 30.47,
-    "Longitude": 74.5,
+    "Latitude": 30.0727796,
+    "Longitude": 74.6720871,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.0727796,74.6720871"
   },
   {
     "Facility_ID": "STC-0016",
@@ -1531,13 +1584,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ludhiana, Punjab, India",
     "Geocode_Query_Address": "Opposite Guru Nanak Stadium, Gandhi Nagar, Civil Lines, Ludhiana- 141001, Punjab, India",
-    "Latitude": 30.9,
-    "Longitude": 75.85,
+    "Latitude": 30.91078,
+    "Longitude": 75.84522,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.91078,75.84522"
   },
   {
     "Facility_ID": "STC-0017",
@@ -1559,13 +1613,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Sangrur, Punjab, India",
     "Geocode_Query_Address": "Gursagar Trust, Mastana Sahib, Punjab-148 001, India",
-    "Latitude": 30.23,
-    "Longitude": 75.83,
+    "Latitude": 30.26611,
+    "Longitude": 75.77361,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.26611,75.77361"
   },
   {
     "Facility_ID": "STC-0018",
@@ -1587,13 +1642,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jammu, Jammu & Kashmir, India",
     "Geocode_Query_Address": "M.A.Stadium, Jammu-180001, Jammu & Kashmir, India",
-    "Latitude": 32.73,
-    "Longitude": 74.87,
+    "Latitude": 32.723,
+    "Longitude": 74.854,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=32.723,74.854"
   },
   {
     "Facility_ID": "STC-0019",
@@ -1615,13 +1671,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Alwar, Rajasthan, India",
     "Geocode_Query_Address": "Indira Gandhi Stadium, Alwar-301 001 Rajasthan, India",
-    "Latitude": 27.57,
-    "Longitude": 76.6,
+    "Latitude": 27.5453499,
+    "Longitude": 76.6091329,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.5453499,76.6091329"
   },
   {
     "Facility_ID": "STC-0020",
@@ -1643,13 +1700,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jaipur, Rajasthan, India",
     "Geocode_Query_Address": "Vidhyadhar Nagar Stadium Road, Sector 9, Jaipur- 302039, Rajasthan, India",
-    "Latitude": 26.92,
-    "Longitude": 75.82,
+    "Latitude": 26.9711,
+    "Longitude": 75.7829,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.9711,75.7829"
   },
   {
     "Facility_ID": "STC-0021",
@@ -1671,13 +1729,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jodhpur, Rajasthan, India",
     "Geocode_Query_Address": "Barakatulla Stadium, Jodhpur-342 003, Rajasthan, India",
-    "Latitude": 26.28,
-    "Longitude": 73.02,
+    "Latitude": 26.27333,
+    "Longitude": 73.00111,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.27333,73.00111"
   },
   {
     "Facility_ID": "STC-0022",
@@ -1699,13 +1758,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Papum Pare, Arunachal Pradesh, India",
     "Geocode_Query_Address": "SAI Training Centre, Sports Authority of India, Naharlagun-791110, Arunachal Pradesh",
-    "Latitude": 27.15,
-    "Longitude": 93.72,
+    "Latitude": 27.10503,
+    "Longitude": 93.69275,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.10503,93.69275"
   },
   {
     "Facility_ID": "STC-0023",
@@ -1727,13 +1787,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "East Khasi Hills, Meghalaya, India",
     "Geocode_Query_Address": "NEHU Campus, Umshing Mawkynroh, Shillong, Meghalaya-793022, India",
-    "Latitude": 25.57,
-    "Longitude": 91.88,
+    "Latitude": 25.61,
+    "Longitude": 91.9014,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.61,91.9014"
   },
   {
     "Facility_ID": "STC-0024",
@@ -1755,13 +1816,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Golaghat, Assam, India",
     "Geocode_Query_Address": "Jyotinagar, Golaghat, Assam-785 621, India",
-    "Latitude": 26,
-    "Longitude": 93,
+    "Latitude": 26.52601,
+    "Longitude": 93.97881,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.52601,93.97881"
   },
   {
     "Facility_ID": "STC-0025",
@@ -1783,13 +1845,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kokrajhar, Assam, India",
     "Geocode_Query_Address": "Kathalguri, Kokhrajhar (BTAD), Assam-783370, India",
-    "Latitude": 26.4,
-    "Longitude": 90.27,
+    "Latitude": 26.43345,
+    "Longitude": 90.2931,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.43345,90.2931"
   },
   {
     "Facility_ID": "STC-0026",
@@ -1811,13 +1874,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Kokrajhar, Assam, India",
     "Geocode_Query_Address": "SAI Training Centre, Sports Authority of India, Solalgaon, North Lakhimpur, Assam-787001",
-    "Latitude": 26.4,
-    "Longitude": 90.27,
+    "Latitude": 27.2362,
+    "Longitude": 94.1039,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.2362,94.1039"
   },
   {
     "Facility_ID": "STC-0027",
@@ -1839,13 +1903,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Tinsukia, Assam, India",
     "Geocode_Query_Address": "Sarbananda Stadium, Borguri, Tinsukia-786125, Assam, India",
-    "Latitude": 27.48,
-    "Longitude": 95.35,
+    "Latitude": 27.4969517,
+    "Longitude": 95.3372043,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.4969517,95.3372043"
   },
   {
     "Facility_ID": "STC-0028",
@@ -1867,13 +1932,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Namchi, Sikkim, India",
     "Geocode_Query_Address": "District South Sikkim, Namchi-737126, India",
-    "Latitude": 27.17,
-    "Longitude": 88.37,
+    "Latitude": 27.163381,
+    "Longitude": 88.355356,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset (alias)",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.163381,88.355356"
   },
   {
     "Facility_ID": "STC-0029",
@@ -1895,13 +1961,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Imphal West, Manipur, India",
     "Geocode_Query_Address": "North Eastern Regional Centre, Takyel, Imphal-795001, Manipur, India",
-    "Latitude": 24.82,
-    "Longitude": 93.9,
+    "Latitude": 24.8041,
+    "Longitude": 93.9108,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.8041,93.9108"
   },
   {
     "Facility_ID": "STC-0030",
@@ -1923,13 +1990,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bishnupur, Manipur, India",
     "Geocode_Query_Address": "SAI Training Centre, Sports Authority of India, District Bishenpur, Utlou-795134, Manipur",
-    "Latitude": 24.63,
-    "Longitude": 93.77,
+    "Latitude": 24.7175,
+    "Longitude": 93.8551,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.7175,93.8551"
   },
   {
     "Facility_ID": "STC-0031",
@@ -1951,13 +2019,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dimapur, Nagaland, India",
     "Geocode_Query_Address": "SAI Training Centre, Sports Authority of India, Half Nagarjan, Dimapur-797112, Nagaland",
-    "Latitude": 25.9,
-    "Longitude": 93.73,
+    "Latitude": 25.900746,
+    "Longitude": 93.7357624,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.900746,93.7357624"
   },
   {
     "Facility_ID": "STC-0032",
@@ -1979,13 +2048,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Aizawl, Mizoram, India",
     "Geocode_Query_Address": "SAI Training Centre, Sports Authority of India, Mission Vangthlang, Aizawl-796 001, Mizoram",
-    "Latitude": 23.73,
-    "Longitude": 92.72,
+    "Latitude": 23.7118,
+    "Longitude": 92.7137,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.7118,92.7137"
   },
   {
     "Facility_ID": "STC-0033",
@@ -2063,13 +2133,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Nicobar, Andaman & Nicobar Islands, India",
     "Geocode_Query_Address": null,
-    "Latitude": 9.15,
-    "Longitude": 92.75,
+    "Latitude": 9.229877,
+    "Longitude": 92.789208,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=9.229877,92.789208"
   },
   {
     "Facility_ID": "STC-0036",
@@ -2091,13 +2162,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "South Andaman, Andaman & Nicobar Islands, India",
     "Geocode_Query_Address": "Water Sports Centre, Netaji Subash Stadium, Port Blair –744101, Andman & Nicobar, Andaman & Nicobar Islands, India",
-    "Latitude": 11.67,
-    "Longitude": 92.73,
+    "Latitude": 11.6721,
+    "Longitude": 92.7477,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.6721,92.7477"
   },
   {
     "Facility_ID": "STC-0037",
@@ -2119,13 +2191,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Patna, Bihar, India",
     "Geocode_Query_Address": "Swaran Jayanti Khel Chhatrawas, Moinul Haque Stadium, Rajendra Nagar, Patna-800016, Bihar, India",
-    "Latitude": 25.42,
-    "Longitude": 85.17,
+    "Latitude": 25.60778,
+    "Longitude": 85.16778,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.60778,85.16778"
   },
   {
     "Facility_ID": "STC-0038",
@@ -2147,13 +2220,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Hazaribagh, Jharkhand, India",
     "Geocode_Query_Address": "Padma, Hazaribag – 825411, Jharkhand, India",
-    "Latitude": 24,
-    "Longitude": 85.25,
+    "Latitude": 24.20053,
+    "Longitude": 85.3561,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.20053,85.3561"
   },
   {
     "Facility_ID": "STC-0039",
@@ -2175,13 +2249,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ranchi, Jharkhand, India",
     "Geocode_Query_Address": "Sahid Birsha Munda Stadium, Morawadi Ground, Ranchi-834008, Jharkhand, India",
-    "Latitude": 23.35,
-    "Longitude": 85.33,
+    "Latitude": 23.394138,
+    "Longitude": 85.328808,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.394138,85.328808"
   },
   {
     "Facility_ID": "STC-0040",
@@ -2203,13 +2278,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Cuttack, Odisha, India",
     "Geocode_Query_Address": "Barabati Stadium, Cuttack-753005, Odisha, India",
-    "Latitude": 20.45,
-    "Longitude": 85.82,
+    "Latitude": 20.48111,
+    "Longitude": 85.86861,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.48111,85.86861"
   },
   {
     "Facility_ID": "STC-0041",
@@ -2231,13 +2307,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sundargarh, Odisha, India",
     "Geocode_Query_Address": "Shankara Sports Complex, Bhawanipur, Post Sankara, Sundergarh – 770020, Odisha, India",
-    "Latitude": 22.1,
-    "Longitude": 84,
+    "Latitude": 22.1199,
+    "Longitude": 84.0405,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.1199,84.0405"
   },
   {
     "Facility_ID": "STC-0042",
@@ -2259,13 +2336,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "West Tripura, Tripura, India",
     "Geocode_Query_Address": "Badharghat Dasharath Dev Sports Complex, Agartala-799003 Tripura, India",
-    "Latitude": 23.85,
-    "Longitude": 91.28,
+    "Latitude": 23.806796,
+    "Longitude": 91.276129,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.806796,91.276129"
   },
   {
     "Facility_ID": "STC-0043",
@@ -2287,13 +2365,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Birbhum, West Bengal, India",
     "Geocode_Query_Address": "Kabiguru Krirangan, District Birbhum, Bolpur -731204, West Bengal, India",
-    "Latitude": 23.92,
-    "Longitude": 87.53,
+    "Latitude": 23.668276,
+    "Longitude": 87.692472,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.668276,87.692472"
   },
   {
     "Facility_ID": "STC-0044",
@@ -2315,13 +2394,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jalpaiguri, West Bengal, India",
     "Geocode_Query_Address": "Bishwabangla Krirangan, Eastern Block, Jalpaiguri – 735101, West Bengal, India",
-    "Latitude": 26.52,
-    "Longitude": 88.73,
+    "Latitude": 26.538829,
+    "Longitude": 88.717623,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.538829,88.717623"
   },
   {
     "Facility_ID": "STC-0045",
@@ -2343,13 +2423,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Darjeeling, West Bengal, India",
     "Geocode_Query_Address": "Gorkha Stadium, Darjeeling Lebong -734105, West Bengal, India",
-    "Latitude": 27.03,
-    "Longitude": 88.27,
+    "Latitude": 27.05153,
+    "Longitude": 88.27788,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.05153,88.27788"
   },
   {
     "Facility_ID": "STC-0046",
@@ -2371,13 +2452,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bareilly, Uttar Pradesh, India",
     "Geocode_Query_Address": "Bareilly College, Bareilly-243005, Uttar Pradesh, India",
-    "Latitude": 28.35,
-    "Longitude": 79.42,
+    "Latitude": 28.3573639,
+    "Longitude": 79.4202528,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.3573639,79.4202528"
   },
   {
     "Facility_ID": "STC-0047",
@@ -2399,13 +2481,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rae Bareli, Uttar Pradesh, India",
     "Geocode_Query_Address": "Motil Lal Nehru Stadium, Jail Road, Raibareilly-229 001, Uttar Pradesh, India",
-    "Latitude": 26.22,
-    "Longitude": 81.23,
+    "Latitude": 26.216797,
+    "Longitude": 81.237488,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.216797,81.237488"
   },
   {
     "Facility_ID": "STC-0048",
@@ -2427,13 +2510,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Etawah, Uttar Pradesh, India",
     "Geocode_Query_Address": "Master Chandagi Ram Stadium, Safai Etawah, District Etawah -206301, Uttar Pradesh, India",
-    "Latitude": 26.78,
-    "Longitude": 79.02,
+    "Latitude": 26.956387,
+    "Longitude": 78.957244,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.956387,78.957244"
   },
   {
     "Facility_ID": "STC-0049",
@@ -2455,13 +2539,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Varanasi, Uttar Pradesh, India",
     "Geocode_Query_Address": "Nanhey Singh Udai Pratap Inter College, Varanasi-221002, Uttar Pradesh, India",
-    "Latitude": 25.32,
-    "Longitude": 82.98,
+    "Latitude": 25.35384,
+    "Longitude": 82.97267,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.35384,82.97267"
   },
   {
     "Facility_ID": "STC-0050",
@@ -2483,13 +2568,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Udham Singh Nagar, Uttarakhand, India",
     "Geocode_Query_Address": "Sports Stadium, District Udhamsingh Nagar, Kashipur-244713, Uttrakhand, Uttarakhand, India",
-    "Latitude": 28.98,
-    "Longitude": 79.4,
+    "Latitude": 29.2246439,
+    "Longitude": 78.9672911,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.2246439,78.9672911"
   },
   {
     "Facility_ID": "STC-0051",
@@ -2511,13 +2597,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Goa, Goa, India",
     "Geocode_Query_Address": "Sports Complex, Peddem, Mapusa, Goa, India",
-    "Latitude": 15.48,
-    "Longitude": 73.82,
+    "Latitude": 15.602619,
+    "Longitude": 73.827309,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.602619,73.827309"
   },
   {
     "Facility_ID": "STC-0052",
@@ -2539,13 +2626,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Goa, Goa, India",
     "Geocode_Query_Address": "Sports Complex, Ponda-403401, Goa, India",
-    "Latitude": 15.48,
-    "Longitude": 73.82,
+    "Latitude": 15.4065991,
+    "Longitude": 74.0050935,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.4065991,74.0050935"
   },
   {
     "Facility_ID": "STC-0053",
@@ -2567,13 +2655,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North West Delhi, Delhi, India",
     "Geocode_Query_Address": "Rajiv Gandhi Bhawan, Bawana, Delhi-110039, India",
-    "Latitude": 28.72,
-    "Longitude": 77.1,
+    "Latitude": 28.8017,
+    "Longitude": 77.0292,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.8017,77.0292"
   },
   {
     "Facility_ID": "STC-0054",
@@ -2595,13 +2684,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bhiwani, Haryana, India",
     "Geocode_Query_Address": "Seth Kirori Mal Building Bhiwani-127035, Haryana, India",
-    "Latitude": 28.78,
-    "Longitude": 76.13,
+    "Latitude": 28.800675,
+    "Longitude": 76.131554,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.800675,76.131554"
   },
   {
     "Facility_ID": "STC-0055",
@@ -2623,13 +2713,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Hisar, Haryana, India",
     "Geocode_Query_Address": "Haryana Agriculture University, Hisar-125004, Haryana, India",
-    "Latitude": 29.17,
-    "Longitude": 75.72,
+    "Latitude": 29.149,
+    "Longitude": 75.7005,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.149,75.7005"
   },
   {
     "Facility_ID": "STC-0056",
@@ -2651,13 +2742,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kurukshetra, Haryana, India",
     "Geocode_Query_Address": "1672, Kailash Nagar Daronacharya Stadium, Kurukshetra-1361 118, Haryana, India",
-    "Latitude": 29.97,
-    "Longitude": 76.85,
+    "Latitude": 29.9676,
+    "Longitude": 76.86482,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.9676,76.86482"
   },
   {
     "Facility_ID": "STC-0057",
@@ -2679,13 +2771,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kozhikode, Kerala, India",
     "Geocode_Query_Address": "Indoor Stadium Complex Calicut-673 004, Kerala, India",
-    "Latitude": 11.25,
-    "Longitude": 75.77,
+    "Latitude": 11.2577,
+    "Longitude": 75.7857,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.2577,75.7857"
   },
   {
     "Facility_ID": "STC-0058",
@@ -2707,13 +2800,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kollam, Kerala, India",
     "Geocode_Query_Address": "Lal Bahadur Stadium, Kollam-691001, Kerala, India",
-    "Latitude": 8.88,
-    "Longitude": 76.6,
+    "Latitude": 8.88315,
+    "Longitude": 76.59902,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.88315,76.59902"
   },
   {
     "Facility_ID": "STC-0059",
@@ -2735,13 +2829,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kannur, Kerala, India",
     "Geocode_Query_Address": "Kannur District, Tellicherry- 670101, Kerala, India",
-    "Latitude": 11.87,
-    "Longitude": 75.35,
+    "Latitude": 11.7505207,
+    "Longitude": 75.4847686,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.7505207,75.4847686"
   },
   {
     "Facility_ID": "STC-0060",
@@ -2763,13 +2858,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Thrissur, Kerala, India",
     "Geocode_Query_Address": "Indoor Stadium, Trichur-680 020, Kerala, India",
-    "Latitude": 10.52,
-    "Longitude": 76.22,
+    "Latitude": 10.5324294,
+    "Longitude": 76.2158632,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.5324294,76.2158632"
   },
   {
     "Facility_ID": "STC-0061",
@@ -2791,13 +2887,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Lakshadweep, Lakshadweep, India",
     "Geocode_Query_Address": "Near Govt. College of Arts & Science, Menchery, Androth–682551, Lakshdweep, Lakshadweep, India",
-    "Latitude": 10.57,
-    "Longitude": 72.63,
+    "Latitude": 10.81691,
+    "Longitude": 73.68703,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.81691,73.68703"
   },
   {
     "Facility_ID": "STC-0062",
@@ -2819,13 +2916,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Puducherry, Puducherry, India",
     "Geocode_Query_Address": "Indira Gandhi Sports Complex Upplam, Puducherry-605001, India",
-    "Latitude": 11.93,
-    "Longitude": 79.8,
+    "Latitude": 11.9215665,
+    "Longitude": 79.8290614,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.9215665,79.8290614"
   },
   {
     "Facility_ID": "STC-0063",
@@ -2847,13 +2945,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Yanam, Puducherry, India",
     "Geocode_Query_Address": "Dr.Y.S.R International Indoor Stadium, G.M.C Balayogi Sports Complex, Yanam -533464, Puducherry, India",
-    "Latitude": 16.73,
-    "Longitude": 82.22,
+    "Latitude": 16.734,
+    "Longitude": 82.2101,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.734,82.2101"
   },
   {
     "Facility_ID": "STC-0064",
@@ -2875,13 +2974,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Chennai, Tamil Nadu, India",
     "Geocode_Query_Address": "No.55, J.N.Stadium, Sydenham’s Road, Perimet, Chennai-600 003, Tamilnadu, Tamil Nadu, India",
-    "Latitude": 13.08,
-    "Longitude": 80.27,
+    "Latitude": 13.085319,
+    "Longitude": 80.270871,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.085319,80.270871"
   },
   {
     "Facility_ID": "STC-0065",
@@ -2903,13 +3003,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Mayiladuthurai, Tamil Nadu, India",
     "Geocode_Query_Address": "Rajan Thottam Stadium, Mayiladuthurai-609001 Tamilnadu, Tamil Nadu, India",
-    "Latitude": 11.1,
-    "Longitude": 79.65,
+    "Latitude": 11.10299,
+    "Longitude": 79.65696,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.10299,79.65696"
   },
   {
     "Facility_ID": "STC-0066",
@@ -2931,13 +3032,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Salem, Tamil Nadu, India",
     "Geocode_Query_Address": "Mahatama Gandhi Stadium Salem-636001, Tamilnadu, Tamil Nadu, India",
-    "Latitude": 11.65,
-    "Longitude": 78.15,
+    "Latitude": 11.6602,
+    "Longitude": 78.1533,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "STC Existing Strength 2025-26 as on date-2.xlsx",
-    "Source_Sheet": "STCs Master-2025-26"
+    "Source_Sheet": "STCs Master-2025-26",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.6602,78.1533"
   },
   {
     "Facility_ID": "KIC-0001",
@@ -32807,13 +32909,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "South Andaman, Andaman & Nicobar Islands, India",
     "Geocode_Query_Address": null,
-    "Latitude": 11.67,
-    "Longitude": 92.73,
+    "Latitude": 11.6695437,
+    "Longitude": 92.7462984,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "25% Fund has been released. Manpower Hiring under Process",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Andaman & Nicobar"
+    "Source_Sheet": "Andaman & Nicobar",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.6695437,92.7462984"
   },
   {
     "Facility_ID": "KISCE-0002",
@@ -32835,13 +32938,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Kadapa, Andhra Pradesh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 14.47,
-    "Longitude": 78.82,
+    "Latitude": 14.4292,
+    "Longitude": 78.8572,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Notification (SAAP/1/2025/, dt:02.06.2025) issued for filling up. Waiting for calling for personal interview to the eligible candidates.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Andhra Pradesh"
+    "Source_Sheet": "Andhra Pradesh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=14.4292,78.8572"
   },
   {
     "Facility_ID": "KISCE-0003",
@@ -32863,13 +32967,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Papum Pare, Arunachal Pradesh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 27.15,
-    "Longitude": 93.72,
+    "Latitude": 27.0616534,
+    "Longitude": 93.59907,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Arunachal Pradesh"
+    "Source_Sheet": "Arunachal Pradesh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.0616534,93.59907"
   },
   {
     "Facility_ID": "KISCE-0004",
@@ -32891,13 +32996,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Kamrup, Assam, India",
     "Geocode_Query_Address": null,
-    "Latitude": 26.11,
-    "Longitude": 91.784,
+    "Latitude": 26.11569,
+    "Longitude": 91.76031,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "Applications under scrutiny for vacant posts.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Assam"
+    "Source_Sheet": "Assam",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.11569,91.76031"
   },
   {
     "Facility_ID": "KISCE-0005",
@@ -32919,13 +33025,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Rajgir, Bihar, India",
     "Geocode_Query_Address": null,
-    "Latitude": 25.03,
-    "Longitude": 85.42,
+    "Latitude": 25.02094,
+    "Longitude": 85.36457,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": "Selection Trial for trainees is under process. Recruitment of Manpower is also under process.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Bihar"
+    "Source_Sheet": "Bihar",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.02094,85.36457"
   },
   {
     "Facility_ID": "KISCE-0006",
@@ -32947,13 +33054,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Chandigarh, Chandigarh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 30.75,
-    "Longitude": 76.78,
+    "Latitude": 30.72903,
+    "Longitude": 76.7457,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Applications invited for the post of Young Professional, Physiotherapist and Masseur (Female)",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Chandigarh"
+    "Source_Sheet": "Chandigarh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.72903,76.7457"
   },
   {
     "Facility_ID": "KISCE-0007",
@@ -32975,13 +33083,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Bilaspur, Chhattisgarh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 22.08,
-    "Longitude": 82.15,
+    "Latitude": 22.09852,
+    "Longitude": 82.18294,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Chhattisgarh"
+    "Source_Sheet": "Chhattisgarh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.09852,82.18294"
   },
   {
     "Facility_ID": "KISCE-0008",
@@ -33003,13 +33112,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Dadra and Nagar Haveli, Dadra & Nagar Haveli and Daman & Diu, India",
     "Geocode_Query_Address": null,
-    "Latitude": 20.27,
-    "Longitude": 73.02,
+    "Latitude": 20.251442,
+    "Longitude": 73.034842,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Interview for vacant posts yet to be conducted by the state",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "DNH & DD"
+    "Source_Sheet": "DNH & DD",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.251442,73.034842"
   },
   {
     "Facility_ID": "KISCE-0009",
@@ -33031,13 +33141,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "North West Delhi, Delhi, India",
     "Geocode_Query_Address": null,
-    "Latitude": 28.7237,
-    "Longitude": 77.1717,
+    "Latitude": 28.70381,
+    "Longitude": 77.18729,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "Applications under scrutiny for vacant posts.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Delhi"
+    "Source_Sheet": "Delhi",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.70381,77.18729"
   },
   {
     "Facility_ID": "KISCE-0010",
@@ -33059,13 +33170,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "North Goa, Goa, India",
     "Geocode_Query_Address": null,
-    "Latitude": 15.48,
-    "Longitude": 73.82,
+    "Latitude": 15.48926,
+    "Longitude": 73.81151,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "The advertisement for the vacant post of S&C Expert (Grade II) has been floated. The selection process is expected to be completed by the last week of November.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Goa"
+    "Source_Sheet": "Goa",
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.48926,73.81151"
   },
   {
     "Facility_ID": "KISCE-0011",
@@ -33087,13 +33199,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Nadiad, Gujarat, India",
     "Geocode_Query_Address": null,
-    "Latitude": 22.7,
-    "Longitude": 72.87,
+    "Latitude": 22.701627,
+    "Longitude": 72.873484,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Gujarat"
+    "Source_Sheet": "Gujarat",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.701627,72.873484"
   },
   {
     "Facility_ID": "KISCE-0012",
@@ -33115,13 +33228,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Panchkula, Haryana, India",
     "Geocode_Query_Address": null,
-    "Latitude": 30.7055,
-    "Longitude": 76.857,
+    "Latitude": 30.6856,
+    "Longitude": 76.8669,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Haryana"
+    "Source_Sheet": "Haryana",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.6856,76.8669"
   },
   {
     "Facility_ID": "KISCE-0013",
@@ -33143,13 +33257,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Bilaspur, Himachal Pradesh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 31.33,
-    "Longitude": 76.75,
+    "Latitude": 31.344223,
+    "Longitude": 76.757224,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": "Vacant Post (Physiotherapist) yet to be advertised by the State",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Himachal"
+    "Source_Sheet": "Himachal",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.344223,76.757224"
   },
   {
     "Facility_ID": "KISCE-0014",
@@ -33171,13 +33286,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Jammu, Jammu & Kashmir, India",
     "Geocode_Query_Address": null,
-    "Latitude": 32.73,
-    "Longitude": 74.87,
+    "Latitude": 32.723,
+    "Longitude": 74.854,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Unable to fill in despite Advertisements. New set of Advertisements still pending.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "J & K"
+    "Source_Sheet": "J & K",
+    "Google_Maps_URL": "https://www.google.com/maps?q=32.723,74.854"
   },
   {
     "Facility_ID": "KISCE-0015",
@@ -33199,13 +33315,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Srinagar, Jammu & Kashmir, India",
     "Geocode_Query_Address": null,
-    "Latitude": 34.08,
-    "Longitude": 74.8,
+    "Latitude": 34.08928,
+    "Longitude": 74.84453,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Unable to fill in despite Advertisements. New set of Advertisements still pending.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "J & K"
+    "Source_Sheet": "J & K",
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.08928,74.84453"
   },
   {
     "Facility_ID": "KISCE-0016",
@@ -33227,13 +33344,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Ranchi, Jharkhand, India",
     "Geocode_Query_Address": null,
-    "Latitude": 23.35,
-    "Longitude": 85.33,
+    "Latitude": 23.381547,
+    "Longitude": 85.387243,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "1. Vacancies are yet to be advertised 2. Two Employee Resigned (S&C lead & Physiotherapist Grade II)",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Jharkhand"
+    "Source_Sheet": "Jharkhand",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.381547,85.387243"
   },
   {
     "Facility_ID": "KISCE-0017",
@@ -33255,13 +33373,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Bengaluru Urban, Karnataka, India",
     "Geocode_Query_Address": null,
-    "Latitude": 12.97,
-    "Longitude": 77.55,
+    "Latitude": 13.1582193,
+    "Longitude": 77.6432657,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Under Process",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Karnataka"
+    "Source_Sheet": "Karnataka",
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.1582193,77.6432657"
   },
   {
     "Facility_ID": "KISCE-0018",
@@ -33283,13 +33402,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Thiruvananthapuram, Kerala, India",
     "Geocode_Query_Address": null,
-    "Latitude": 8.48,
-    "Longitude": 76.95,
+    "Latitude": 8.557114,
+    "Longitude": 77.009969,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Additional manpower sanctioned",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Kerala"
+    "Source_Sheet": "Kerala",
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.557114,77.009969"
   },
   {
     "Facility_ID": "KISCE-0019",
@@ -33311,13 +33431,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Leh, Ladakh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 34.17,
-    "Longitude": 77.58,
+    "Latitude": 34.135572,
+    "Longitude": 77.530775,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Ladakh"
+    "Source_Sheet": "Ladakh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.135572,77.530775"
   },
   {
     "Facility_ID": "KISCE-0021",
@@ -33339,13 +33460,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Bhopal, Madhya Pradesh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 23.27,
-    "Longitude": 77.4,
+    "Latitude": 23.23111,
+    "Longitude": 77.39972,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Madhya Pradesh"
+    "Source_Sheet": "Madhya Pradesh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.23111,77.39972"
   },
   {
     "Facility_ID": "KISCE-0022",
@@ -33367,13 +33489,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Pune, Maharashtra, India",
     "Geocode_Query_Address": null,
-    "Latitude": 18.5786,
-    "Longitude": 73.77,
+    "Latitude": 18.57565,
+    "Longitude": 73.76051,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "The manpower hiring process is currently underway. The advertisement has already been floated, and suitable candidates have been identified. The interview and remaining processes will be completed in the last week of November.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Maharashtra"
+    "Source_Sheet": "Maharashtra",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.57565,73.76051"
   },
   {
     "Facility_ID": "KISCE-0023",
@@ -33395,13 +33518,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Imphal East, Manipur, India",
     "Geocode_Query_Address": null,
-    "Latitude": 24.8149,
-    "Longitude": 93.954,
+    "Latitude": 24.82017,
+    "Longitude": 93.95322,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Manipur"
+    "Source_Sheet": "Manipur",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.82017,93.95322"
   },
   {
     "Facility_ID": "KISCE-0024",
@@ -33423,13 +33547,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "East Khasi Hills, Meghalaya, India",
     "Geocode_Query_Address": null,
-    "Latitude": 25.57,
-    "Longitude": 91.88,
+    "Latitude": 25.579995,
+    "Longitude": 91.894326,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Recruitment for the post(s) of Head Coach Athletics & S&C Grade II is ongoing. Please Note: Strength of Trainees has been updated on \"Meghalaya Sheet\"",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Meghalaya"
+    "Source_Sheet": "Meghalaya",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.579995,91.894326"
   },
   {
     "Facility_ID": "KISCE-0025",
@@ -33451,13 +33576,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Aizawl, Mizoram, India",
     "Geocode_Query_Address": null,
-    "Latitude": 23.73,
-    "Longitude": 92.72,
+    "Latitude": 23.714281,
+    "Longitude": 92.735391,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "1. HPM Eligible candidates not available in the state, State will write for relaxation. 2. Masseuse resigned, new hiring process initiated",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Mizoram"
+    "Source_Sheet": "Mizoram",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.714281,92.735391"
   },
   {
     "Facility_ID": "KISCE-0026",
@@ -33479,13 +33605,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Kohima, Nagaland, India",
     "Geocode_Query_Address": null,
-    "Latitude": 25.67,
-    "Longitude": 94.1,
+    "Latitude": 25.70714,
+    "Longitude": 94.0924,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Strength and Conditioning Expert vacant.",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Nagaland"
+    "Source_Sheet": "Nagaland",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.70714,94.0924"
   },
   {
     "Facility_ID": "KISCE-0027",
@@ -33507,13 +33634,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Khordha, Odisha, India",
     "Geocode_Query_Address": null,
-    "Latitude": 20.286,
-    "Longitude": 85.825,
+    "Latitude": 20.288063,
+    "Longitude": 85.823819,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Odisha"
+    "Source_Sheet": "Odisha",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.288063,85.823819"
   },
   {
     "Facility_ID": "KISCE-0028",
@@ -33535,13 +33663,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Puducherry, Puducherry, India",
     "Geocode_Query_Address": null,
-    "Latitude": 11.93,
-    "Longitude": 79.8,
+    "Latitude": 11.9215,
+    "Longitude": 79.829,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Interview for vacant posts yet to be conducted by the state",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Puducherry"
+    "Source_Sheet": "Puducherry",
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.9215,79.829"
   },
   {
     "Facility_ID": "KISCE-0029",
@@ -33563,13 +33692,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Jalandhar, Punjab, India",
     "Geocode_Query_Address": null,
-    "Latitude": 31.32,
-    "Longitude": 75.57,
+    "Latitude": 31.335211,
+    "Longitude": 75.554598,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Interview for vacant posts yet to be conducted by the state",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Punjab"
+    "Source_Sheet": "Punjab",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.335211,75.554598"
   },
   {
     "Facility_ID": "KISCE-0030",
@@ -33591,13 +33721,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Jaipur, Rajasthan, India",
     "Geocode_Query_Address": null,
-    "Latitude": 26.893,
-    "Longitude": 75.807,
+    "Latitude": 26.89399,
+    "Longitude": 75.80323,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "Funds has been released",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Rajasthan"
+    "Source_Sheet": "Rajasthan",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.89399,75.80323"
   },
   {
     "Facility_ID": "KISCE-0031",
@@ -33619,13 +33750,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "East Sikkim, Sikkim, India",
     "Geocode_Query_Address": null,
-    "Latitude": 27.335,
-    "Longitude": 88.612,
+    "Latitude": 27.334131,
+    "Longitude": 88.611981,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Sikkim"
+    "Source_Sheet": "Sikkim",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.334131,88.611981"
   },
   {
     "Facility_ID": "KISCE-0032",
@@ -33647,13 +33779,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Chennai, Tamil Nadu, India",
     "Geocode_Query_Address": null,
-    "Latitude": 13.085,
-    "Longitude": 80.268,
+    "Latitude": 13.08556,
+    "Longitude": 80.27167,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "Hiring of manpower under process",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Tamil Nadu"
+    "Source_Sheet": "Tamil Nadu",
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.08556,80.27167"
   },
   {
     "Facility_ID": "KISCE-0033",
@@ -33675,13 +33808,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Hyderabad, Telangana, India",
     "Geocode_Query_Address": null,
-    "Latitude": 17.632,
-    "Longitude": 78.545,
+    "Latitude": 17.556021,
+    "Longitude": 78.544861,
     "Coordinate_Precision": "Venue (approx)",
     "Coordinate_Source": "Curated venue location",
     "Remarks": "Under Process",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Telangana"
+    "Source_Sheet": "Telangana",
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.556021,78.544861"
   },
   {
     "Facility_ID": "KISCE-0034",
@@ -33703,13 +33837,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "West Tripura, Tripura, India",
     "Geocode_Query_Address": null,
-    "Latitude": 23.85,
-    "Longitude": 91.28,
+    "Latitude": 23.80679,
+    "Longitude": 91.27611,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Tripura"
+    "Source_Sheet": "Tripura",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.80679,91.27611"
   },
   {
     "Facility_ID": "KISCE-0035",
@@ -33731,13 +33866,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Lucknow, Uttar Pradesh, India",
     "Geocode_Query_Address": null,
-    "Latitude": 26.85,
-    "Longitude": 80.92,
+    "Latitude": 26.929195,
+    "Longitude": 80.98335,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Centre approved in 48th DPAC",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Uttar Pradesh"
+    "Source_Sheet": "Uttar Pradesh",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.929195,80.98335"
   },
   {
     "Facility_ID": "KISCE-0036",
@@ -33759,13 +33895,14 @@
     "District_Source": "Given",
     "Geocode_Query_District": "Dehradun, Uttarakhand, India",
     "Geocode_Query_Address": null,
-    "Latitude": 30.32,
-    "Longitude": 78.03,
+    "Latitude": 30.30302,
+    "Longitude": 78.10441,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "MoU Signed recently 08.08.24",
     "Source_File": "KISCEs Details (State wise).xlsx",
-    "Source_Sheet": "Uttarakhand"
+    "Source_Sheet": "Uttarakhand",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.30302,78.10441"
   },
   {
     "Facility_ID": "EXT-0001",
@@ -33787,13 +33924,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jaipur, Rajasthan, India",
     "Geocode_Query_Address": "Jawahar Lal Nehru Marg, Rajasthan University Campus, Talvandi, Jaipur, Rajasthan 302004, India",
-    "Latitude": 26.92,
-    "Longitude": 75.82,
+    "Latitude": 26.8878,
+    "Longitude": 75.8138,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.8878,75.8138"
   },
   {
     "Facility_ID": "EXT-0002",
@@ -33815,13 +33953,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ajmer, Rajasthan, India",
     "Geocode_Query_Address": "Srinagar Road, Alwar Gate, Rajasthan 305001, India",
-    "Latitude": 26.45,
-    "Longitude": 74.63,
+    "Latitude": 26.445,
+    "Longitude": 74.6567,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.445,74.6567"
   },
   {
     "Facility_ID": "EXT-0003",
@@ -33843,13 +33982,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Srinagar, Jammu & Kashmir, India",
     "Geocode_Query_Address": "Nehru Park Srinagar Dal lake pincode. 190001, Jammu & Kashmir, India",
-    "Latitude": 34.08,
-    "Longitude": 74.8,
+    "Latitude": 34.0881093,
+    "Longitude": 74.8474905,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.0881093,74.8474905"
   },
   {
     "Facility_ID": "EXT-0004",
@@ -33871,13 +34011,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Khandwa, Madhya Pradesh, India",
     "Geocode_Query_Address": "P.W.D Civil line, Harsud Road, Khandwa-4500 (M.P.), Madhya Pradesh, India",
-    "Latitude": 21.83,
-    "Longitude": 76.35,
+    "Latitude": 21.8282957,
+    "Longitude": 76.3654669,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.8282957,76.3654669"
   },
   {
     "Facility_ID": "EXT-0005",
@@ -33899,13 +34040,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Indore, Madhya Pradesh, India",
     "Geocode_Query_Address": "Govt. Hr. Sec. School Malahar Ashram 94 Tilak Rambag, Indore 452004, Madhya Pradesh, India",
-    "Latitude": 22.72,
-    "Longitude": 75.85,
+    "Latitude": 22.7262897,
+    "Longitude": 75.8563801,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.7262897,75.8563801"
   },
   {
     "Facility_ID": "EXT-0006",
@@ -33927,13 +34069,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Meerut, Uttar Pradesh, India",
     "Geocode_Query_Address": "C-6 Shastri Nagar Meerut 250004, Uttar Pradesh, India",
-    "Latitude": 28.98,
-    "Longitude": 77.7,
+    "Latitude": 28.9913333,
+    "Longitude": 77.559339,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.9913333,77.559339"
   },
   {
     "Facility_ID": "EXT-0007",
@@ -33955,13 +34098,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Koraput, Odisha, India",
     "Geocode_Query_Address": "SAI, HAL , T&DI Campus, PO-Sunabeda, Distt. Koraput -763003, Odisha, India",
-    "Latitude": 18.8,
-    "Longitude": 82.7,
+    "Latitude": 18.7242126,
+    "Longitude": 82.8263767,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.7242126,82.8263767"
   },
   {
     "Facility_ID": "EXT-0008",
@@ -33983,13 +34127,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dibrugarh, Assam, India",
     "Geocode_Query_Address": "District Gymnasium, Chowkidinghee, Dirbugarh - 786003, Assam, India",
-    "Latitude": 27.47,
-    "Longitude": 94.92,
+    "Latitude": 27.470544,
+    "Longitude": 94.914972,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.470544,94.914972"
   },
   {
     "Facility_ID": "EXT-0009",
@@ -34011,13 +34156,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jorhat, Assam, India",
     "Geocode_Query_Address": "SAI Table Tennis Academy, Kaushal Kunwar Indoor Stadium, District Library Road, Jorhat, Assam - 785001, India",
-    "Latitude": 26.75,
-    "Longitude": 94.22,
+    "Latitude": 26.7547577,
+    "Longitude": 94.2087565,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.7547577,94.2087565"
   },
   {
     "Facility_ID": "EXT-0010",
@@ -34039,13 +34185,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dibrugarh, Assam, India",
     "Geocode_Query_Address": "DDR College, Chabua, 786184, Dibrugarh, Assam, India",
-    "Latitude": 27.47,
-    "Longitude": 94.92,
+    "Latitude": 27.487903,
+    "Longitude": 95.166488,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.487903,95.166488"
   },
   {
     "Facility_ID": "EXT-0011",
@@ -34067,13 +34214,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Majuli, Assam, India",
     "Geocode_Query_Address": "Auniati Hemchandra Higher Secondary School, Kamalabari Chariali, Majuli, Assam 785106, India",
-    "Latitude": 26.95,
-    "Longitude": 94.17,
+    "Latitude": 26.9450931,
+    "Longitude": 94.1637164,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.9450931,94.1637164"
   },
   {
     "Facility_ID": "EXT-0012",
@@ -34095,13 +34243,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Lunglei, Mizoram, India",
     "Geocode_Query_Address": "Mission Vengthlang, Aizawl-Mizoram-796005, India",
-    "Latitude": 22.9,
-    "Longitude": 92.75,
+    "Latitude": 22.890003,
+    "Longitude": 92.748877,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.890003,92.748877"
   },
   {
     "Facility_ID": "EXT-0013",
@@ -34123,13 +34272,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bilaspur, Himachal Pradesh, India",
     "Geocode_Query_Address": "SAI STC BILASPUR Near Roura sector Bilaspur Pin code- 174001, Himachal Pradesh, India",
-    "Latitude": 31.33,
-    "Longitude": 76.75,
+    "Latitude": 31.4181948,
+    "Longitude": 76.8359933,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.4181948,76.8359933"
   },
   {
     "Facility_ID": "EXT-0014",
@@ -34151,13 +34301,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Srinagar, Jammu & Kashmir, India",
     "Geocode_Query_Address": "SAI STC Jammu, M.A.Stadium, Jammu-180001, Jammu & Kashmir, India",
-    "Latitude": 34.08,
-    "Longitude": 74.8,
+    "Latitude": 34.07474,
+    "Longitude": 74.82044,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.07474,74.82044"
   },
   {
     "Facility_ID": "EXT-0015",
@@ -34179,13 +34330,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Darjeeling, West Bengal, India",
     "Geocode_Query_Address": "St. Teresa's Girls' H. S. School Darjeeling-734101, West Bengal, India",
-    "Latitude": 27.03,
-    "Longitude": 88.27,
+    "Latitude": 27.0476455,
+    "Longitude": 88.2629604,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.0476455,88.2629604"
   },
   {
     "Facility_ID": "EXT-0016",
@@ -34207,13 +34359,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kalimpong, West Bengal, India",
     "Geocode_Query_Address": "Kalimpong, West Bengal - 734301, India",
-    "Latitude": 27.07,
-    "Longitude": 88.47,
+    "Latitude": 27.0734,
+    "Longitude": 88.4723583,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.0734,88.4723583"
   },
   {
     "Facility_ID": "EXT-0017",
@@ -34235,13 +34388,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rayagada, Odisha, India",
     "Geocode_Query_Address": "Gatamuniguda- 765020, Dist- Rayagada, Odisha, India",
-    "Latitude": 19.15,
-    "Longitude": 83.4,
+    "Latitude": 19.59,
+    "Longitude": 83.5,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Extension centre"
+    "Source_Sheet": "Extension centre",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.59,83.5"
   },
   {
     "Facility_ID": "NSTC-0001",
@@ -34263,13 +34417,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Varanasi, Uttar Pradesh, India",
     "Geocode_Query_Address": "Principal, Udai Pratap Inter College, Bhojubeer, Varanasi- 221002, Uttar Pradesh, India",
-    "Latitude": 25.32,
-    "Longitude": 82.98,
+    "Latitude": 25.3551936,
+    "Longitude": 82.9725189,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "NSTC-Regular schools"
+    "Source_Sheet": "NSTC-Regular schools",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.3551936,82.9725189"
   },
   {
     "Facility_ID": "NSTC-0002",
@@ -34291,13 +34446,14 @@
     "District_Source": "Verify",
     "Geocode_Query_District": "Imphal East, Manipur, India",
     "Geocode_Query_Address": "Sainik School Imphal,PO Pangei Yangdong Imphal west manipur-795114, India",
-    "Latitude": 24.8,
-    "Longitude": 93.95,
+    "Latitude": 24.9101445,
+    "Longitude": 93.9846836,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "NSTC-Regular schools"
+    "Source_Sheet": "NSTC-Regular schools",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.9101445,93.9846836"
   },
   {
     "Facility_ID": "NSTC-0003",
@@ -34319,13 +34475,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kamrup Metropolitan, Assam, India",
     "Geocode_Query_Address": "DON BOSCO SCHOOL, Panbazar, Guwahati-781001, Assam, India",
-    "Latitude": 26.18,
-    "Longitude": 91.73,
+    "Latitude": 26.18489,
+    "Longitude": 91.7457,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "NSTC-Regular schools"
+    "Source_Sheet": "NSTC-Regular schools",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.18489,91.7457"
   },
   {
     "Facility_ID": "NSTC-0004",
@@ -34347,13 +34504,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Chandigarh, Chandigarh, India",
     "Geocode_Query_Address": "Non Operational, Chandigarh, India",
-    "Latitude": 30.75,
-    "Longitude": 76.78,
+    "Latitude": 30.7378371,
+    "Longitude": 76.7966948,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "NSTC-Regular schools"
+    "Source_Sheet": "NSTC-Regular schools",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.7378371,76.7966948"
   },
   {
     "Facility_ID": "IGMA-0001",
@@ -34375,13 +34533,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Palakkad, Kerala, India",
     "Geocode_Query_Address": "Kallekkad (PO), Palakkad-678006,, Kerala, India",
-    "Latitude": 10.77,
-    "Longitude": 76.65,
+    "Latitude": 10.78715,
+    "Longitude": 76.59981,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.78715,76.59981"
   },
   {
     "Facility_ID": "IGMA-0002",
@@ -34403,13 +34562,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Tiruppattur, Tamil Nadu, India",
     "Geocode_Query_Address": "Hindu bharathiya educational trust Ambur, Tamil Nadu-635802, India",
-    "Latitude": 12.5,
-    "Longitude": 78.57,
+    "Latitude": 12.7818125,
+    "Longitude": 78.7022344,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.7818125,78.7022344"
   },
   {
     "Facility_ID": "IGMA-0003",
@@ -34431,13 +34591,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Thanjavur, Tamil Nadu, India",
     "Geocode_Query_Address": "Rajakrisnapuram, Inathukanpatti, Thanjavur, Tamil Nadu 613001, India",
-    "Latitude": 10.78,
-    "Longitude": 79.13,
+    "Latitude": 10.7907,
+    "Longitude": 79.1368,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.7907,79.1368"
   },
   {
     "Facility_ID": "IGMA-0004",
@@ -34459,13 +34620,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Khunti, Jharkhand, India",
     "Geocode_Query_Address": "DAV Road, Post. Khunti-835210 (Jharkhand), India",
-    "Latitude": 23.07,
-    "Longitude": 85.27,
+    "Latitude": 23.0771693,
+    "Longitude": 85.2858267,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.0771693,85.2858267"
   },
   {
     "Facility_ID": "IGMA-0005",
@@ -34487,13 +34649,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Thoubal, Manipur, India",
     "Geocode_Query_Address": "Thoubal Nongangkhong, PO/PS Thoubal-795138, Manipur, India",
-    "Latitude": 24.65,
-    "Longitude": 93.98,
+    "Latitude": 24.6387,
+    "Longitude": 93.9969,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.6387,93.9969"
   },
   {
     "Facility_ID": "IGMA-0006",
@@ -34515,13 +34678,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bishnupur, Manipur, India",
     "Geocode_Query_Address": "Moirang Khunou, PO/PS Moirang, Bishnupur District-795133, Manipur, India",
-    "Latitude": 24.63,
-    "Longitude": 93.77,
+    "Latitude": 24.4693176,
+    "Longitude": 93.7846972,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.4693176,93.7846972"
   },
   {
     "Facility_ID": "IGMA-0007",
@@ -34543,13 +34707,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Chirang, Assam, India",
     "Geocode_Query_Address": "Vill. Shout Simlaguri, P.O.:-Garubhasa, Distt. Chirang BTR Assam Pin no:- 783373, India",
-    "Latitude": 26.52,
-    "Longitude": 90.55,
+    "Latitude": 26.5536403,
+    "Longitude": 90.3737493,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Estimated (district HQ)",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.5536403,90.3737493"
   },
   {
     "Facility_ID": "IGMA-0008",
@@ -34571,13 +34736,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Amritsar, Punjab, India",
     "Geocode_Query_Address": "Jandiala Verowal Road, Amritsar I, Punjab 143149, India",
-    "Latitude": 31.63,
-    "Longitude": 74.87,
+    "Latitude": 31.578283,
+    "Longitude": 75.0283786,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "IGMAs"
+    "Source_Sheet": "IGMAs",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.578283,75.0283786"
   },
   {
     "Facility_ID": "AKH-0001",
@@ -34599,13 +34765,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kolhapur, Maharashtra, India",
     "Geocode_Query_Address": "1357 B Ward Khari Corner Kolhapur 416012, Maharashtra, India",
-    "Latitude": 16.68,
-    "Longitude": 74.22,
+    "Latitude": 16.690718,
+    "Longitude": 74.222439,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.690718,74.222439"
   },
   {
     "Facility_ID": "AKH-0002",
@@ -34627,13 +34794,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Pune, Maharashtra, India",
     "Geocode_Query_Address": "Gulshachi Talim Akhara 800 Budhwar Peth Pune 411002, Maharashtra, India",
-    "Latitude": 18.52,
-    "Longitude": 73.85,
+    "Latitude": 18.5168433,
+    "Longitude": 73.8590914,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.5168433,73.8590914"
   },
   {
     "Facility_ID": "AKH-0003",
@@ -34655,13 +34823,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Dhule, Maharashtra, India",
     "Geocode_Query_Address": "77 Maruti Nagar chalisgon road near har har Mahadeo vijay vyayam shala Dhule 424001, Maharashtra, India",
-    "Latitude": 20.9,
-    "Longitude": 74.77,
+    "Latitude": 20.8764,
+    "Longitude": 74.7807,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.8764,74.7807"
   },
   {
     "Facility_ID": "AKH-0004",
@@ -34683,13 +34852,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kolhapur, Maharashtra, India",
     "Geocode_Query_Address": "Jawahar Road, Murgud Near Jai Hind Talkies, Tal- Kagal, Distt. Kolhapur- 416219, Maharashtra, India",
-    "Latitude": 16.68,
-    "Longitude": 74.22,
+    "Latitude": 16.3941,
+    "Longitude": 74.1907,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.3941,74.1907"
   },
   {
     "Facility_ID": "AKH-0005",
@@ -34711,13 +34881,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Pune, Maharashtra, India",
     "Geocode_Query_Address": "Alandi Rd, behind Khandoba Mandir Talk, Kelgaon, Pune, Maharashtra 412105, India",
-    "Latitude": 18.52,
-    "Longitude": 73.85,
+    "Latitude": 18.679112,
+    "Longitude": 73.898194,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.679112,73.898194"
   },
   {
     "Facility_ID": "AKH-0006",
@@ -34739,13 +34910,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Satara, Maharashtra, India",
     "Geocode_Query_Address": "Kisanveer Satara Sahakari Sakhar Karkhana Bhuj Tal Wai Dist Satara, Maharashtra, India",
-    "Latitude": 17.68,
-    "Longitude": 74.02,
+    "Latitude": 17.8822,
+    "Longitude": 73.9706,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.8822,73.9706"
   },
   {
     "Facility_ID": "AKH-0007",
@@ -34767,13 +34939,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sangli, Maharashtra, India",
     "Geocode_Query_Address": "Datta Niwas\", Opp. Vasantdada Shugar Factory, Near Vita Bank, Madhavnagar Road, Sangli. Pin.- 416416, Maharashtra, India",
-    "Latitude": 16.85,
-    "Longitude": 74.57,
+    "Latitude": 16.879017,
+    "Longitude": 74.583478,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.879017,74.583478"
   },
   {
     "Facility_ID": "AKH-0008",
@@ -34795,13 +34968,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Pune, Maharashtra, India",
     "Geocode_Query_Address": "Hind Keshri Pai Yogesh Dodke Kushti Sankul, Kothrud, Pune, Maharashtra 411038, India",
-    "Latitude": 18.52,
-    "Longitude": 73.85,
+    "Latitude": 18.454977,
+    "Longitude": 73.853794,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Discontinued",
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.454977,73.853794"
   },
   {
     "Facility_ID": "AKH-0009",
@@ -34823,13 +34997,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ahmednagar, Maharashtra, India",
     "Geocode_Query_Address": "Adv M.N Deshmukh Arts, Science & Commerce College, Maharashtra, India",
-    "Latitude": 19.08,
-    "Longitude": 74.72,
+    "Latitude": 19.5277,
+    "Longitude": 73.8681,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.5277,73.8681"
   },
   {
     "Facility_ID": "AKH-0010",
@@ -34851,13 +35026,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Kolhapur, Maharashtra, India",
     "Geocode_Query_Address": "1357 B Ward Khari Corner Kolhapur 416012, Maharashtra, India",
-    "Latitude": 16.68,
-    "Longitude": 74.22,
+    "Latitude": 16.6948,
+    "Longitude": 74.2243,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.6948,74.2243"
   },
   {
     "Facility_ID": "AKH-0011",
@@ -34879,13 +35055,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Nashik, Maharashtra, India",
     "Geocode_Query_Address": "478 Ram Mandir Road, Bhagur. Nashik 422502, Maharashtra, India",
-    "Latitude": 19.98,
-    "Longitude": 73.78,
+    "Latitude": 19.8789,
+    "Longitude": 73.8333,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.8789,73.8333"
   },
   {
     "Facility_ID": "AKH-0012",
@@ -34907,13 +35084,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Pune, Maharashtra, India",
     "Geocode_Query_Address": "Saraswatinagar, Indapur , Taluka - Indapur, Dist - Pune PIN - 413106, Maharashtra, India",
-    "Latitude": 18.52,
-    "Longitude": 73.85,
+    "Latitude": 18.105781,
+    "Longitude": 75.011569,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.105781,75.011569"
   },
   {
     "Facility_ID": "AKH-0013",
@@ -34935,13 +35113,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Sangli, Maharashtra, India",
     "Geocode_Query_Address": "Veer hanumaan kusti Kendra atpadi. Tal-Atpadi,dist-Sangli. Pin code- 415301, Maharashtra, India",
-    "Latitude": 16.85,
-    "Longitude": 74.57,
+    "Latitude": 17.4226767,
+    "Longitude": 74.9391219,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.4226767,74.9391219"
   },
   {
     "Facility_ID": "AKH-0014",
@@ -34963,13 +35142,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ahmednagar, Maharashtra, India",
     "Geocode_Query_Address": "Atma Malik Dhyanpeeth kokamthan. Shirdi-Kopergaon Road A/P- Jeur kumbhari Tal-kopergaon, Dist-A.Nagar Pin-423601 (MH), Maharashtra, India",
-    "Latitude": 19.08,
-    "Longitude": 74.72,
+    "Latitude": 19.832389,
+    "Longitude": 74.4761413,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.832389,74.4761413"
   },
   {
     "Facility_ID": "AKH-0015",
@@ -34991,13 +35171,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Bhilwara, Rajasthan, India",
     "Geocode_Query_Address": "Luv Kush Akhada, Pansal Rd, Jawahar Nagar, Bhilwara, Rajasthan 311001, India",
-    "Latitude": 25.35,
-    "Longitude": 74.63,
+    "Latitude": 25.36129,
+    "Longitude": 74.63946,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.36129,74.63946"
   },
   {
     "Facility_ID": "AKH-0016",
@@ -35019,13 +35200,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Hisar, Haryana, India",
     "Geocode_Query_Address": "Shaheed Bhagat Singh International kushti Akhara Mirchpur Hisar Haryana, India",
-    "Latitude": 29.17,
-    "Longitude": 75.72,
+    "Latitude": 29.316027,
+    "Longitude": 76.175476,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.316027,76.175476"
   },
   {
     "Facility_ID": "AKH-0017",
@@ -35047,13 +35229,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rohtak, Haryana, India",
     "Geocode_Query_Address": "Vikas Pahalwan VyayamshalaJind bya pass Rohtak, Haryana, India",
-    "Latitude": 28.9,
-    "Longitude": 76.58,
+    "Latitude": 28.912567,
+    "Longitude": 76.567175,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.912567,76.567175"
   },
   {
     "Facility_ID": "AKH-0018",
@@ -35075,13 +35258,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jind, Haryana, India",
     "Geocode_Query_Address": "Ch. Bharat Singh Akhara Vill: Nidani Distt Jind Haryana, India",
-    "Latitude": 29.3,
-    "Longitude": 76.32,
+    "Latitude": 29.280098,
+    "Longitude": 76.417555,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.280098,76.417555"
   },
   {
     "Facility_ID": "AKH-0019",
@@ -35103,13 +35287,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Jhajjar, Haryana, India",
     "Geocode_Query_Address": "LDC Akhara vill Chhara Distt Jhajjar Haryana, India",
-    "Latitude": 28.6,
-    "Longitude": 76.65,
+    "Latitude": 28.696798,
+    "Longitude": 76.716211,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.696798,76.716211"
   },
   {
     "Facility_ID": "AKH-0020",
@@ -35131,13 +35316,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Rohtak, Haryana, India",
     "Geocode_Query_Address": "Capt Ramkaran Akhara Sector 37 Kacha Chamaria road Rohtak Haryana, India",
-    "Latitude": 28.9,
-    "Longitude": 76.58,
+    "Latitude": 28.886,
+    "Longitude": 76.611,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.886,76.611"
   },
   {
     "Facility_ID": "AKH-0021",
@@ -35159,13 +35345,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Delhi, Delhi, India",
     "Geocode_Query_Address": "Master chandgiram akhada civil lines Delhi 110054, India",
-    "Latitude": 28.7,
-    "Longitude": 77.2,
+    "Latitude": 28.680174,
+    "Longitude": 77.229874,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.680174,77.229874"
   },
   {
     "Facility_ID": "AKH-0022",
@@ -35187,13 +35374,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Delhi, Delhi, India",
     "Geocode_Query_Address": "Village bakoli near Shani mandir NH 1 Alipur delhi 110036, India",
-    "Latitude": 28.7,
-    "Longitude": 77.2,
+    "Latitude": 28.80432,
+    "Longitude": 77.142079,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.80432,77.142079"
   },
   {
     "Facility_ID": "AKH-0023",
@@ -35215,13 +35403,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Delhi, Delhi, India",
     "Geocode_Query_Address": "A-33 double story Gur mandi Delhi-7, India",
-    "Latitude": 28.7,
-    "Longitude": 77.2,
+    "Latitude": 28.68114,
+    "Longitude": 77.199217,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.68114,77.199217"
   },
   {
     "Facility_ID": "AKH-0024",
@@ -35243,13 +35432,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North West Delhi, Delhi, India",
     "Geocode_Query_Address": "Swami bhumanand wrestling academy safiabad Bawana (Delhi), India",
-    "Latitude": 28.72,
-    "Longitude": 77.1,
+    "Latitude": 28.868009,
+    "Longitude": 77.082886,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.868009,77.082886"
   },
   {
     "Facility_ID": "AKH-0025",
@@ -35271,13 +35461,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "South West Delhi, Delhi, India",
     "Geocode_Query_Address": "Maharishi dayanand akhara 552B tora mandi road najafgarh Delhi-43, India",
-    "Latitude": 28.58,
-    "Longitude": 77.03,
+    "Latitude": 28.61255,
+    "Longitude": 76.99095,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.61255,76.99095"
   },
   {
     "Facility_ID": "AKH-0026",
@@ -35299,13 +35490,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North West Delhi, Delhi, India",
     "Geocode_Query_Address": "Azadpur Near Petrol Pump new sabzi mandi New Delhi -110033 &, India",
-    "Latitude": 28.72,
-    "Longitude": 77.1,
+    "Latitude": 28.721893,
+    "Longitude": 77.164922,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.721893,77.164922"
   },
   {
     "Facility_ID": "AKH-0027",
@@ -35327,13 +35519,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Delhi, Delhi, India",
     "Geocode_Query_Address": "Main road near dada mai wala mandir gate bankner delhi, India",
-    "Latitude": 28.7,
-    "Longitude": 77.2,
+    "Latitude": 28.8475743,
+    "Longitude": 77.0732014,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": "Discontinued",
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.8475743,77.0732014"
   },
   {
     "Facility_ID": "AKH-0028",
@@ -35355,13 +35548,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "North Delhi, Delhi, India",
     "Geocode_Query_Address": "Guru Hanuman akhra road shakti nagar Delhi-7, India",
-    "Latitude": 28.7,
-    "Longitude": 77.2,
+    "Latitude": 28.6758586,
+    "Longitude": 77.1975049,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.6758586,77.1975049"
   },
   {
     "Facility_ID": "AKH-0029",
@@ -35384,12 +35578,13 @@
     "Geocode_Query_District": "Faridkot, Punjab, India",
     "Geocode_Query_Address": "Baba Sheikh Kusti Akhara, Balbir Basti Gali No.9 (r) Side Stadium, Faridkot (Punajb)-151203, Punjab, India",
     "Latitude": 30.67,
-    "Longitude": 74.75,
+    "Longitude": 74.766,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.67,74.766"
   },
   {
     "Facility_ID": "AKH-0030",
@@ -35411,13 +35606,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Amritsar, Punjab, India",
     "Geocode_Query_Address": "Akhara Padam Shree Kartar Singh , Gol Bagh, Amritsar 143001, Punjab, India",
-    "Latitude": 31.63,
-    "Longitude": 74.87,
+    "Latitude": 31.63175,
+    "Longitude": 74.86752,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.63175,74.86752"
   },
   {
     "Facility_ID": "AKH-0031",
@@ -35439,13 +35635,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ujjain, Madhya Pradesh, India",
     "Geocode_Query_Address": "Vyayamshala, Nyas, 64 Yogipuri, Raamghat Mandir Ujjain, Madhya Pradesh, India",
-    "Latitude": 23.18,
-    "Longitude": 75.78,
+    "Latitude": 23.188735,
+    "Longitude": 75.764932,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.188735,75.764932"
   },
   {
     "Facility_ID": "AKH-0032",
@@ -35467,13 +35664,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Indore, Madhya Pradesh, India",
     "Geocode_Query_Address": "Badi Gwaltoli Shri Ram Mandir Indore, Madhya Pradesh, India",
-    "Latitude": 22.72,
-    "Longitude": 75.85,
+    "Latitude": 22.7181,
+    "Longitude": 75.8927,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.7181,75.8927"
   },
   {
     "Facility_ID": "AKH-0033",
@@ -35495,13 +35693,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ujjain, Madhya Pradesh, India",
     "Geocode_Query_Address": "124, Kajipura, Ankpat Marg, Ujjain-45006, Madhya Pradesh, India",
-    "Latitude": 23.18,
-    "Longitude": 75.78,
+    "Latitude": 23.19948,
+    "Longitude": 75.7773,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.19948,75.7773"
   },
   {
     "Facility_ID": "AKH-0034",
@@ -35523,13 +35722,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Varanasi, Uttar Pradesh, India",
     "Geocode_Query_Address": "Guru Gaya seth Akhada, Kazzakpura, Varanasi -221001, Uttar Pradesh, India",
-    "Latitude": 25.32,
-    "Longitude": 82.98,
+    "Latitude": 25.32065,
+    "Longitude": 83.021287,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.32065,83.021287"
   },
   {
     "Facility_ID": "AKH-0035",
@@ -35551,13 +35751,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Ghaziabad, Uttar Pradesh, India",
     "Geocode_Query_Address": "Ch. Mahavir Singh Akhara, Ashok Vihar, Loni Gaziabad, Uttar Pradesh, India",
-    "Latitude": 28.67,
-    "Longitude": 77.42,
+    "Latitude": 28.7317295,
+    "Longitude": 77.2900919,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.7317295,77.2900919"
   },
   {
     "Facility_ID": "AKH-0036",
@@ -35579,13 +35780,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Varanasi, Uttar Pradesh, India",
     "Geocode_Query_Address": "Meghu Pahlwan Akhada, Sarwanpur, Koraut, Varanasi - 221010, Uttar Pradesh, India",
-    "Latitude": 25.32,
-    "Longitude": 82.98,
+    "Latitude": 25.425162,
+    "Longitude": 82.818486,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.425162,82.818486"
   },
   {
     "Facility_ID": "AKH-0037",
@@ -35607,13 +35809,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Mirzapur, Uttar Pradesh, India",
     "Geocode_Query_Address": "Satya Narayan Singh khel vikash sansthan, Kachhwa, Mirzapur - 231501, Uttar Pradesh, India",
-    "Latitude": 25.15,
-    "Longitude": 82.58,
+    "Latitude": 25.207542,
+    "Longitude": 82.715984,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.207542,82.715984"
   },
   {
     "Facility_ID": "AKH-0038",
@@ -35635,13 +35838,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Muzaffarnagar, Uttar Pradesh, India",
     "Geocode_Query_Address": "Lt. Bachan Singh Akhara, Village Pachandakalan, Muzaffarnagar UP, Uttar Pradesh, India",
-    "Latitude": 29.47,
-    "Longitude": 77.7,
+    "Latitude": 29.488,
+    "Longitude": 77.769,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.488,77.769"
   },
   {
     "Facility_ID": "AKH-0039",
@@ -35663,13 +35867,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Baghpat, Uttar Pradesh, India",
     "Geocode_Query_Address": "Arya Vyayamshala, Chaprauli Baghpat, Uttar Pradesh, India",
-    "Latitude": 28.93,
-    "Longitude": 77.22,
+    "Latitude": 29.20911,
+    "Longitude": 77.17344,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.20911,77.17344"
   },
   {
     "Facility_ID": "AKH-0040",
@@ -35691,13 +35896,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Muzaffarnagar, Uttar Pradesh, India",
     "Geocode_Query_Address": "Rastrya Inter College, Shahpur, Muzaffarnagar, Uttar Pradesh, India",
-    "Latitude": 29.47,
-    "Longitude": 77.7,
+    "Latitude": 29.349562,
+    "Longitude": 77.551117,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.349562,77.551117"
   },
   {
     "Facility_ID": "AKH-0041",
@@ -35719,13 +35925,14 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Karbi Anglong, Assam, India",
     "Geocode_Query_Address": "PO- Langhin Tiniali, Vil- Goraimari, PS- Dokmoka - 782441, Dist - Karbi Anglong, Assam, India",
-    "Latitude": 26.18,
-    "Longitude": 93.57,
+    "Latitude": 26.202728,
+    "Longitude": 93.129303,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.202728,93.129303"
   },
   {
     "Facility_ID": "AKH-0042",
@@ -35747,12 +35954,13 @@
     "District_Source": "Inferred-Confident",
     "Geocode_Query_District": "Nuapada, Odisha, India",
     "Geocode_Query_Address": "Amsena, Nuapada,KHARIAR Road: 766 109, (Odisha), India",
-    "Latitude": 20.65,
-    "Longitude": 82.82,
+    "Latitude": 20.87639,
+    "Longitude": 82.531678,
     "Coordinate_Precision": "District centroid",
     "Coordinate_Source": "Census dataset",
     "Remarks": null,
     "Source_File": "DETAILS OF RCs_ STCs_ NCOEs_ EXTENSION CENTERS.xlsx",
-    "Source_Sheet": "Adopted Akharas"
+    "Source_Sheet": "Adopted Akharas",
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.87639,82.531678"
   }
 ]

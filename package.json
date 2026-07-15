@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "convert-data": "node scripts/convert_data.js"
+    "convert-data": "node scripts/convert_data.js",
+    "apply-coordinate-updates": "node scripts/apply_coordinate_updates.cjs"
   },
   "dependencies": {
     "dexie": "^4.4.4",

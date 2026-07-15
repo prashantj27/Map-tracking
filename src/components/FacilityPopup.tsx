@@ -6,6 +6,19 @@ import { getDisciplineIcon } from '../lib/disciplineIcons';
 
 type TabId = 'Overview' | 'Disciplines' | 'Admin';
 
+/**
+ * Google Maps navigation URL — directions from the user's current location to this facility.
+ * Built from the facility coordinates, which for updated facilities are the exact values from
+ * the coordinate-update source (the same point encoded in `loc.Google_Maps_URL`); for all other
+ * facilities their existing coordinates are used. Omitting `origin` lets Google Maps use the
+ * device's current location. The universal `maps/dir/` link opens the Google Maps app on mobile
+ * and a new browser tab on desktop.
+ */
+function buildDirectionsUrl(loc: Location): string {
+  const destination = encodeURIComponent(`${loc.Latitude},${loc.Longitude}`);
+  return `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+}
+
 export function FacilityPopupContent({ loc }: { loc: Location }) {
   const [activeTab, setActiveTab] = useState<TabId>('Overview');
 
@@ -55,6 +68,17 @@ export function FacilityPopupContent({ loc }: { loc: Location }) {
             {loc.Address}{loc.Address ? <br /> : null}
             {[loc.City, loc.District, loc.State].filter(Boolean).join(', ')}
           </div>
+          {Number.isFinite(loc.Latitude) && Number.isFinite(loc.Longitude) && (
+            <a
+              className="directions-btn"
+              href={buildDirectionsUrl(loc)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Get directions to ${loc.Facility_Name} in Google Maps`}
+            >
+              <span aria-hidden="true">🧭</span> Directions
+            </a>
+          )}
           {(loc.Total_Trainees ?? 0) > 0 && (
             <div className="popup-card">
               <strong className="muted"><span aria-hidden="true">👥 </span>Trainees:</strong>{' '}
