@@ -6,10 +6,11 @@ import Map, {
 import type { BBox } from 'geojson';
 import useSupercluster from 'use-supercluster';
 import type Supercluster from 'supercluster';
-import type { Location } from '../db';
+import type { Location, Project } from '../db';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from '../lib/facilityTypes';
 import { geoToDataState, dataToGeoStates } from '../lib/stateNames';
 import { getDisciplineIcon, isRealDiscipline } from '../lib/disciplineIcons';
+import { PROJECT_COLOR } from '../lib/projects';
 
 /** A facility's own sport icon — only when it offers exactly one discipline (98% of KICs). */
 function getFacilityDisciplineIcon(loc: Location): string | null {
@@ -19,6 +20,7 @@ function getFacilityDisciplineIcon(loc: Location): string | null {
   return disciplines.length === 1 ? getDisciplineIcon(disciplines[0]) : null;
 }
 import { FacilityPopupContent } from './FacilityPopup';
+import { ProjectLayer } from './projects/ProjectLayer';
 
 interface PointProps {
   cluster: boolean;
@@ -37,10 +39,12 @@ export interface MapViewProps {
   activeDiscipline?: string;
   /** When a facility-type quick filter is active, clusters take that category's color. */
   activeQuickFilter?: FacilityCategory | null;
-  /** Facility_ID -> number of Phase-1 projects parented there (drives the popup's Project Details link). */
-  projectCountByFacility?: Map<string, number>;
-  /** Opens the state Projects modal for a facility. */
-  onOpenProjects?: (loc: Location) => void;
+  /** Projects (PRJ) GIS layer — independent of the facility markers. */
+  projects: Project[];
+  showProjects: boolean;
+  selectedProject: Project | null;
+  onSelectProject: (p: Project | null) => void;
+  onViewProjectDetails: (p: Project) => void;
 }
 
 // Distinct marker silhouettes (24×24 viewBox, tip at the bottom centre so the point sits on the
@@ -63,7 +67,8 @@ const MAP_STYLES = {
 
 function MapViewComponent({
   locations, stateColorMatch, selected, onSelect, onStateClick, mapRef,
-  activeDiscipline, activeQuickFilter, projectCountByFacility, onOpenProjects
+  activeDiscipline, activeQuickFilter,
+  projects, showProjects, selectedProject, onSelectProject, onViewProjectDetails
 }: MapViewProps) {
   // Viewport state lives here so panning/zooming never re-renders the side panel.
   const [bounds, setBounds] = useState<BBox | null>(null);
@@ -345,13 +350,21 @@ function MapViewComponent({
             closeOnClick={false}
             maxWidth="340px"
           >
-            <FacilityPopupContent
-              loc={selected}
-              projectCount={projectCountByFacility?.get(selected.Facility_ID) ?? 0}
-              onOpenProjects={onOpenProjects ? () => onOpenProjects(selected) : undefined}
-            />
+            <FacilityPopupContent loc={selected} />
           </Popup>
         )}
+
+        {/* Dedicated Projects (PRJ) layer — independent clustered markers + popup */}
+        <ProjectLayer
+          projects={projects}
+          show={showProjects}
+          bounds={bounds}
+          zoom={zoom}
+          mapRef={mapRef}
+          selected={selectedProject}
+          onSelect={onSelectProject}
+          onViewDetails={onViewProjectDetails}
+        />
 
         {/* State hover tooltip (hidden while a popup is open) */}
         {hoveredState && !selected && (
@@ -383,7 +396,14 @@ function MapViewComponent({
       </div>
 
       {/* Legend */}
-      <div className="map-legend" aria-label="Facility type legend">
+      <div className="map-legend" aria-label="Map legend">
+        {showProjects && (
+          <div className="legend-row">
+            <span className="legend-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
+            <span className="legend-acronym">PRJ</span>
+            <span className="legend-label">Projects</span>
+          </div>
+        )}
         {activeDiscipline && (
           <div className="legend-row legend-discipline">
             <span aria-hidden="true">{disciplineIcon}</span>

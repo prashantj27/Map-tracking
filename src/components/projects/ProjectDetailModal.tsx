@@ -5,8 +5,8 @@ import { StatusBadge } from './StatusBadge';
 import { ProjectGallery } from './ProjectGallery';
 import { getInfraMeta } from '../../lib/projects';
 
-type TabId = 'Overview' | 'Gallery' | 'Documents' | 'Timeline' | 'Remarks';
-const TABS: TabId[] = ['Overview', 'Gallery', 'Documents', 'Timeline', 'Remarks'];
+type TabId = 'Overview' | 'Financials' | 'Timeline' | 'Gallery' | 'Documents' | 'Remarks';
+const TABS: TabId[] = ['Overview', 'Financials', 'Timeline', 'Gallery', 'Documents', 'Remarks'];
 
 function EmptyState({ label }: { label: string }) {
   return (
@@ -22,7 +22,6 @@ function EmptyState({ label }: { label: string }) {
 export function ProjectDetailModal({ project, onClose }: { project: Project; onClose: () => void }) {
   const [tab, setTab] = useState<TabId>('Overview');
   const infra = getInfraMeta(project.Infra_Type);
-  const parentLabel = project.Parent_Is_NCOE ? 'Parent NCOE' : 'Parent Facility';
 
   return (
     <Modal onClose={onClose} size="lg" labelledBy="project-detail-title" className="project-detail-modal">
@@ -72,12 +71,14 @@ export function ProjectDetailModal({ project, onClose }: { project: Project; onC
           <dl className="overview-grid">
             <div><dt>Project Name</dt><dd>{project.Project_Name}</dd></div>
             <div><dt>State</dt><dd>{project.State}</dd></div>
-            <div><dt>{parentLabel}</dt><dd>{project.Parent_Facility_Name}</dd></div>
+            {project.District && <div><dt>District</dt><dd>{project.District}</dd></div>}
             <div><dt>Infrastructure Type</dt><dd>{project.Infra_Type}</dd></div>
             <div><dt>Project Code</dt><dd><code className="readonly-code">{project.Project_Code}</code></dd></div>
-            <div><dt>Status</dt><dd><StatusBadge status={project.Status} /></dd></div>
+            <div><dt>Status</dt><dd><StatusBadge status={project.Status || 'Data Awaiting'} /></dd></div>
           </dl>
         )}
+
+        {tab === 'Financials' && <EmptyState label="Financials" />}
 
         {tab === 'Gallery' && <ProjectGallery projectCode={project.Project_Code} />}
 

@@ -5,12 +5,11 @@ import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
 import { dataToGeoStates } from './lib/stateNames';
-import { isRealDiscipline } from './lib/disciplineIcons';
-import { USE_PROJECT_COORDINATES, hasProjectCoordinates } from './lib/projects';
-import { FilterPanel } from './components/FilterPanel';
+import { hasProjectCoordinates } from './lib/projects';
+import { MapFilterBar } from './components/MapFilterBar';
 import { MapView } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
-import { ProjectsModal } from './components/projects/ProjectsModal';
+import { ProjectDetailModal } from './components/projects/ProjectDetailModal';
 import './App.css';
 
 // Stable colors per SAI region (alphabetical-index assignment would reshuffle
@@ -43,17 +42,16 @@ function App() {
 
   const [seedState, setSeedState] = useState<SeedState>('loading');
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
-  const [panelOpen, setPanelOpen] = useState(true);
 
-  // Filters
-  const [filterRegion, setFilterRegion] = useState('');
+  // Facility filters (independent of the PRJ layer)
   const [filterState, setFilterState] = useState('');
-  const [filterDiscipline, setFilterDiscipline] = useState('');
-  const [activeQuickFilter, setActiveQuickFilter] = useState<FacilityCategory | null>(null);
+  const [activeFacilityType, setActiveFacilityType] = useState<FacilityCategory | null>(null);
   const [reportState, setReportState] = useState<string | null>(null);
 
-  // Facility whose state Projects modal is open (its parented projects are shown).
-  const [projectsFacility, setProjectsFacility] = useState<Location | null>(null);
+  // Projects (PRJ) GIS layer — toggled independently of the facility layers
+  const [showProjects, setShowProjects] = useState(true);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [projectDetail, setProjectDetail] = useState<Project | null>(null);
 
   useEffect(() => {
     seedDatabase()
@@ -74,43 +72,19 @@ function App() {
   const uniqueStates = useMemo(
     () => Array.from(new Set(allLocations.map(l => l.State).filter(isNonEmptyString))).sort(),
     [allLocations]);
-  const uniqueDisciplines = useMemo(() => {
-    const dSet = new Set<string>();
-    allLocations.forEach(l => {
-      l.Disciplines?.split(',').forEach(d => { const t = d.trim(); if (t && isRealDiscipline(t)) dSet.add(t); });
-    });
-    return Array.from(dSet).sort();
-  }, [allLocations]);
 
-  // Facility_ID -> number of Phase-1 projects parented there (drives the popup's Project Details link).
-  const projectCountByFacility = useMemo(() => {
-    const m = new Map<string, number>();
-    allProjects.forEach(p => m.set(p.Parent_Facility_ID, (m.get(p.Parent_Facility_ID) || 0) + 1));
-    return m;
-  }, [allProjects]);
+  // Facility markers: State + Facility Type filters (independent from projects).
+  const filteredLocations = useMemo(() => allLocations.filter(loc => {
+    if (filterState && loc.State !== filterState) return false;
+    if (activeFacilityType && classifyFacility(loc.Facility_Type) !== activeFacilityType) return false;
+    return true;
+  }), [allLocations, filterState, activeFacilityType]);
 
-  const projectsForFacility = useMemo(
-    () => (projectsFacility ? allProjects.filter(p => p.Parent_Facility_ID === projectsFacility.Facility_ID) : []),
-    [allProjects, projectsFacility]);
-
-  // Region/State/Discipline filters — drive the statistics.
-  const filteredLocationsForStats = useMemo(() => {
-    return allLocations.filter(loc => {
-      if (filterRegion && loc.Parent_Region !== filterRegion) return false;
-      if (filterState && loc.State !== filterState) return false;
-      if (filterDiscipline) {
-        if (!loc.Disciplines) return false;
-        if (!loc.Disciplines.split(',').some(d => d.trim() === filterDiscipline)) return false;
-      }
-      return true;
-    });
-  }, [allLocations, filterRegion, filterState, filterDiscipline]);
-
-  // Facility-type quick filter additionally applies to the map markers.
-  const filteredLocations = useMemo(() => {
-    if (!activeQuickFilter) return filteredLocationsForStats;
-    return filteredLocationsForStats.filter(loc => classifyFacility(loc.Facility_Type) === activeQuickFilter);
-  }, [filteredLocationsForStats, activeQuickFilter]);
+  // PRJ markers: only projects with coordinates; State filter also scopes them (geographic).
+  const filteredProjects = useMemo(() => {
+    const withCoords = allProjects.filter(hasProjectCoordinates);
+    return filterState ? withCoords.filter(p => p.State === filterState) : withCoords;
+  }, [allProjects, filterState]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {
@@ -136,103 +110,87 @@ function App() {
     return matchExpr;
   }, [allLocations, uniqueRegions]);
 
-  const hasActiveFilters = !!(filterRegion || filterState || filterDiscipline || activeQuickFilter);
+  const hasActiveFilters = !!(filterState || activeFacilityType);
+  const resetFilters = useCallback(() => { setFilterState(''); setActiveFacilityType(null); }, []);
 
-  const resetFilters = useCallback(() => {
-    setFilterRegion('');
-    setFilterState('');
-    setFilterDiscipline('');
-    setActiveQuickFilter(null);
-  }, []);
-
-  const handleRegionChange = useCallback((v: string) => {
-    setFilterRegion(v);
-    setFilterState(''); // region change resets state
-  }, []);
-
-  const handlePickFacility = useCallback((loc: Location) => {
-    resetFilters(); // a searched facility may be outside the active filters — make sure its pin is visible
+  // Facility selection (from map / report card) — one popup at a time.
+  const handleSelectFacility = useCallback((loc: Location | null) => {
+    if (loc) setSelectedProject(null);
     setSelectedLocation(loc);
-    mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: 10, duration: 1200 });
-  }, [resetFilters]);
+  }, []);
 
-  // Map state click: filter + open the report card.
   const handleStateClick = useCallback((stateName: string) => {
     setFilterState(stateName);
     setReportState(stateName);
   }, []);
 
-  // From the report card's facility list: fly + open popup, keep filters.
   const handlePickFromReport = useCallback((loc: Location) => {
+    setSelectedProject(null);
     setSelectedLocation(loc);
     mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: 10, duration: 1200 });
   }, []);
 
-  const handleOpenProjects = useCallback((loc: Location) => setProjectsFacility(loc), []);
+  // Search → facility: clear filters so the pin is visible, fly + open popup.
+  const handlePickFacility = useCallback((loc: Location) => {
+    resetFilters();
+    setSelectedProject(null);
+    setSelectedLocation(loc);
+    mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: 10, duration: 1200 });
+  }, [resetFilters]);
 
-  // "Show on Map": until per-project coordinates are switched on, fly to the parent facility and
-  // open its existing popup. Flipping USE_PROJECT_COORDINATES switches this to the project's own
-  // coordinates with no other change (the values are already stored on the project).
-  const handleShowProjectOnMap = useCallback((project: Project) => {
-    setProjectsFacility(null);
-    if (USE_PROJECT_COORDINATES && hasProjectCoordinates(project)) {
-      mapRef.current?.flyTo({ center: [project.Longitude as number, project.Latitude as number], zoom: 12, duration: 1200 });
-      return;
+  // PRJ selection (marker click).
+  const handleSelectProject = useCallback((p: Project | null) => {
+    if (p) setSelectedLocation(null);
+    setSelectedProject(p);
+  }, []);
+
+  const handleViewProjectDetails = useCallback((p: Project) => setProjectDetail(p), []);
+
+  // "Show on Map" (search result / future project list) — ensure PRJ visible, fly to the marker
+  // and open its popup.
+  const handlePickProject = useCallback((p: Project) => {
+    setShowProjects(true);
+    setFilterState('');
+    setSelectedLocation(null);
+    setSelectedProject(p);
+    if (hasProjectCoordinates(p)) {
+      mapRef.current?.flyTo({ center: [p.Longitude as number, p.Latitude as number], zoom: 12, duration: 1200 });
     }
-    const parent = allLocations.find(l => l.Facility_ID === project.Parent_Facility_ID);
-    if (parent) {
-      setSelectedLocation(parent);
-      mapRef.current?.flyTo({ center: [parent.Longitude, parent.Latitude], zoom: 10, duration: 1200 });
-    }
-  }, [allLocations]);
+  }, []);
+
+  const noResults = seedState === 'ready' && allLocations.length > 0
+    && filteredLocations.length === 0 && (!showProjects || filteredProjects.length === 0)
+    && hasActiveFilters;
 
   return (
     <div className="app-shell">
-      <button
-        className="panel-toggle"
-        onClick={() => setPanelOpen(o => !o)}
-        aria-expanded={panelOpen}
-        aria-controls="control-panel"
-      >
-        {panelOpen ? '‹ Hide filters' : '› Filters'}
-      </button>
-
-      <aside id="control-panel" className={`control-panel${panelOpen ? '' : ' closed'}`}>
-        <h3>SAI Facilities Finder</h3>
-
-        <FilterPanel
-          allLocations={allLocations}
-          uniqueRegions={uniqueRegions}
-          uniqueStates={uniqueStates}
-          uniqueDisciplines={uniqueDisciplines}
-          filterRegion={filterRegion}
-          filterState={filterState}
-          filterDiscipline={filterDiscipline}
-          activeQuickFilter={activeQuickFilter}
-          onRegionChange={handleRegionChange}
-          onStateChange={setFilterState}
-          onDisciplineChange={setFilterDiscipline}
-          onQuickFilterChange={setActiveQuickFilter}
-          onReset={resetFilters}
-          onPickFacility={handlePickFacility}
-          hasActiveFilters={hasActiveFilters}
-          onOpenReport={filterState ? () => setReportState(filterState) : undefined}
-        />
-        {/* Statistics Overview removed from the sidebar — facility statistics now live in the
-            state report card (opened from the State filter or by clicking a state on the map). */}
-      </aside>
-
       <MapView
         locations={filteredLocations}
         stateColorMatch={stateColorMatch}
         selected={selectedLocation}
-        onSelect={setSelectedLocation}
+        onSelect={handleSelectFacility}
         onStateClick={handleStateClick}
         mapRef={mapRef}
-        activeDiscipline={filterDiscipline}
-        activeQuickFilter={activeQuickFilter}
-        projectCountByFacility={projectCountByFacility}
-        onOpenProjects={handleOpenProjects}
+        activeQuickFilter={activeFacilityType}
+        projects={filteredProjects}
+        showProjects={showProjects}
+        selectedProject={selectedProject}
+        onSelectProject={handleSelectProject}
+        onViewProjectDetails={handleViewProjectDetails}
+      />
+
+      <MapFilterBar
+        uniqueStates={uniqueStates}
+        filterState={filterState}
+        onStateChange={setFilterState}
+        activeFacilityType={activeFacilityType}
+        onFacilityTypeChange={setActiveFacilityType}
+        showProjects={showProjects}
+        onToggleProjects={setShowProjects}
+        allLocations={allLocations}
+        projects={allProjects}
+        onPickFacility={handlePickFacility}
+        onPickProject={handlePickProject}
       />
 
       {reportState && (
@@ -246,32 +204,27 @@ function App() {
         />
       )}
 
-      {projectsFacility && (
-        <ProjectsModal
-          stateName={projectsFacility.State ?? 'Projects'}
-          projects={projectsForFacility}
-          onClose={() => setProjectsFacility(null)}
-          onShowOnMap={handleShowProjectOnMap}
-        />
+      {projectDetail && (
+        <ProjectDetailModal project={projectDetail} onClose={() => setProjectDetail(null)} />
       )}
 
       {seedState === 'loading' && allLocations.length === 0 && (
         <div className="overlay-message" role="status">
           <div className="spinner" aria-hidden="true" />
-          Loading facility data…
+          Loading data…
         </div>
       )}
 
       {seedState === 'error' && allLocations.length === 0 && (
         <div className="overlay-message error" role="alert">
-          Could not load facility data. Check your connection and{' '}
+          Could not load data. Check your connection and{' '}
           <button onClick={() => window.location.reload()}>reload</button>.
         </div>
       )}
 
-      {seedState === 'ready' && allLocations.length > 0 && filteredLocations.length === 0 && (
+      {noResults && (
         <div className="overlay-message" role="status">
-          No facilities match these filters.{' '}
+          No facilities or projects match these filters.{' '}
           <button onClick={resetFilters}>Reset filters</button>
         </div>
       )}

@@ -527,7 +527,7 @@ button:focus-visible {
 
 .map-legend {
   position: absolute;
-  bottom: 28px;
+  top: 12px;
   left: 12px;
   z-index: 5;
   background: rgba(255, 255, 255, 0.94);
@@ -1289,4 +1289,120 @@ button:focus-visible {
 @media (max-width: 460px) {
   .projects-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+
+/* ============================================================
+   PRJ GIS layer — floating filter bar, project markers & popup
+   ============================================================ */
+
+/* ---- Floating map filter bar (bottom-left; replaces the old left sidebar) ---- */
+.map-filter-bar {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 15;
+  width: 300px;
+  max-width: calc(100vw - 32px);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.mfb-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border-bottom: 1px solid #eef0f2;
+}
+.map-filter-bar.collapsed .mfb-header { border-bottom: none; }
+.mfb-title { font-size: 13px; font-weight: 700; color: #1a73e8; }
+.mfb-collapse {
+  border: none; background: #f1f3f4; color: #5f6368; width: 26px; height: 26px;
+  border-radius: 7px; cursor: pointer; font-size: 10px; flex-shrink: 0;
+}
+.mfb-collapse:hover { background: #e8eaed; }
+.mfb-body { padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
+
+.mfb-search { position: relative; }
+.mfb-search input {
+  width: 100%; padding: 9px 10px; border-radius: 8px; background: #f1f3f4;
+  border: 1px solid #dadce0; outline: none; font-family: inherit; font-size: 13px; box-sizing: border-box;
+}
+.mfb-search input:focus-visible { outline: 2px solid #1a73e8; outline-offset: 1px; }
+/* results drop UP (the bar is anchored to the bottom of the screen) */
+.mfb-search .search-results {
+  position: absolute; left: 0; right: 0; bottom: calc(100% + 6px); top: auto; margin: 0; z-index: 5;
+}
+.mfb-search .search-results button { display: flex; align-items: center; gap: 4px; }
+.mfb-search .search-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.mfb-row { display: flex; flex-direction: column; gap: 4px; }
+.mfb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #5f6368; }
+.mfb-row select {
+  width: 100%; padding: 8px 10px; border-radius: 8px; background: #fff; border: 1px solid #dadce0;
+  font-family: inherit; font-size: 13px; cursor: pointer; color: #202124;
+}
+.mfb-prj-toggle {
+  display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;
+  padding: 9px 10px; background: #f6f4ff; border: 1px solid #e6e0ff; border-radius: 8px;
+}
+.mfb-prj-toggle input { width: 16px; height: 16px; accent-color: #6a3ff5; cursor: pointer; }
+.prj-swatch { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 2px rgba(106, 63, 245, 0.25); flex-shrink: 0; }
+.search-kind {
+  margin-left: auto; font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 999px;
+  color: #fff; background: #6a3ff5; letter-spacing: 0.03em; flex-shrink: 0;
+}
+
+/* ---- PRJ markers (premium, distinct from all facility pins) ---- */
+.prj-pin {
+  position: relative; width: 30px; height: 30px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.15s ease; transform-origin: center;
+}
+.prj-pin:hover { transform: scale(1.2); }
+.prj-pin-body {
+  position: relative; z-index: 1; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--prj-color, #6a3ff5); border: 2.5px solid #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  display: flex; align-items: center; justify-content: center;
+  animation: pop-in 0.3s ease-out;
+}
+.prj-pin-pulse {
+  position: absolute; inset: 1px; border-radius: 50%; background: var(--prj-color, #6a3ff5);
+  opacity: 0; pointer-events: none;
+}
+.prj-pin:hover .prj-pin-pulse { animation: prj-pulse 1.3s ease-out infinite; }
+@keyframes prj-pulse {
+  0% { transform: scale(0.75); opacity: 0.5; }
+  70% { transform: scale(1.9); opacity: 0; }
+  100% { opacity: 0; }
+}
+.maplibregl-marker:hover { z-index: 10; }
+
+.prj-cluster {
+  border: 3px solid #fff; border-radius: 50%;
+  background: #6a3ff5; color: #fff; font-weight: 700; font-size: 13px;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 3px 10px rgba(106, 63, 245, 0.45);
+  transition: transform 0.15s ease; font-family: inherit;
+}
+.prj-cluster:hover { transform: scale(1.08); }
+
+/* ---- PRJ popup ---- */
+.prj-popup { width: 250px; max-width: 100%; font-family: 'Inter', system-ui, sans-serif; color: #202124; }
+.prj-popup-title { margin: 8px 0 10px; font-size: 15px; font-weight: 600; line-height: 1.3; }
+.prj-popup-meta { margin: 0 0 12px; display: flex; flex-direction: column; gap: 8px; }
+.prj-popup-meta > div { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; }
+.prj-popup-meta dt { color: #5f6368; font-weight: 600; }
+.prj-popup-meta dd { margin: 0; text-align: right; }
+.prj-popup-actions { display: flex; flex-direction: column; gap: 8px; }
+.prj-popup-actions .directions-btn,
+.prj-popup-actions .project-details-link { margin: 0; justify-content: center; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .map-filter-bar { left: 8px; right: 8px; bottom: 8px; width: auto; max-width: none; }
+}
+@media (max-width: 560px) {
+  .map-legend { display: none; }
 }
