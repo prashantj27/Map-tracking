@@ -330,14 +330,71 @@ button:focus-visible {
 .pin {
   position: relative;
   cursor: pointer;
-  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.3));
   animation: pop-in 0.3s ease-out;
+}
+
+/* Visual part of the pin — scaled on hover / for NCOE without moving the anchor
+   tip or the hover tooltip (which is a separate, un-scaled child of .pin). */
+.pin-graphic {
+  position: relative;
+  line-height: 0;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.15s;
   transform-origin: bottom center;
 }
 
-.pin:hover {
+.pin:hover .pin-graphic {
   transform: scale(1.25);
+}
+
+/* NCOE are the primary state centres — render them a little larger. */
+.pin-graphic.ncoe {
+  transform: scale(1.3);
+}
+
+.pin:hover .pin-graphic.ncoe {
+  transform: scale(1.55);
+}
+
+/* Hover box: facility name + type */
+.pin-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+  display: none;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  padding: 5px 9px;
+  border-radius: 6px;
+  pointer-events: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  text-align: center;
+}
+
+/* Push the tooltip a touch higher for the larger NCOE pins. */
+.pin-graphic.ncoe + .pin-tooltip {
+  margin-bottom: 18px;
+}
+
+.pin:hover .pin-tooltip {
+  display: block;
+}
+
+.pin-tooltip strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pin-tooltip-type {
+  display: block;
+  font-size: 10px;
+  opacity: 0.85;
+  margin-top: 1px;
 }
 
 .pin-acronym {

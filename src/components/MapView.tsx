@@ -290,7 +290,6 @@ export function MapView({
           const cfg = FACILITY_CONFIG[category];
           // Active discipline filter wins; otherwise single-sport facilities show their own icon.
           const pinIcon = disciplineIcon ?? getFacilityDisciplineIcon(loc);
-          const soleSport = loc.Disciplines && !loc.Disciplines.includes(',') ? loc.Disciplines.trim() : null;
 
           return (
             <Marker
@@ -304,13 +303,21 @@ export function MapView({
                 setHoveredState(null);
               }}
             >
-              <div className="pin" title={soleSport ? `${loc.Facility_Name} — ${soleSport}` : loc.Facility_Name}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                {pinIcon
-                  ? <span className="pin-emoji" aria-hidden="true">{pinIcon}</span>
-                  : <span className="pin-acronym">{cfg.acronym}</span>}
+              <div className="pin">
+                {/* NCOE are the primary state centres — rendered a little larger via .ncoe */}
+                <div className={`pin-graphic${category === 'NCOE' ? ' ncoe' : ''}`}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  {pinIcon
+                    ? <span className="pin-emoji" aria-hidden="true">{pinIcon}</span>
+                    : <span className="pin-acronym">{cfg.acronym}</span>}
+                </div>
+                {/* Hover box: facility name + type */}
+                <span className="pin-tooltip" aria-hidden="true">
+                  <strong>{loc.Facility_Name}</strong>
+                  <span className="pin-tooltip-type">{loc.Facility_Type}</span>
+                </span>
               </div>
             </Marker>
           );
