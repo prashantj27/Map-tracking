@@ -8,11 +8,17 @@ Status legend: 🔴 blocking · 🟠 high value · 🟡 nice to have · ✅ done
 
 ## Known issues / tech debt
 
-- 🔴 **`recharts` → `react-is` build resolution.** `recharts@3` imports `react-is` but doesn't declare it, and it's absent from the resolved `package-lock.json`, so a clean `npm ci` + `vite build` fails to resolve `react-is`. Fix: add `react-is` (matching React 19) as an explicit dependency. *(Tracked for a dedicated bug fix PR.)*
+- ✅ **`recharts` → `react-is` build resolution** — fixed (`react-is` added as an explicit dependency). Recharts is no longer bundled at all since `StatsDeck` was removed.
 - 🟡 **Lint warnings** (`npm run lint`, all non-blocking):
-  - `react-hooks/exhaustive-deps` on several `useMemo`s that depend on `useLiveQuery` arrays (`allLocations`, `allDisciplineRows`, `allFunds`, `allManpower`) which get a new reference each render. Consider memoizing the source arrays or documenting the intentional dependency.
-  - `StatsDeck.tsx` Recharts tooltip `formatter` returns a JSX fragment array without a `key` (`react/jsx-key`).
+  - `react-hooks/exhaustive-deps` on `useMemo`s that depend on `useLiveQuery` arrays (which get a new reference each render) — intentional given Dexie live-query memoization; the codebase convention.
   - `scripts/compare.cjs` has an unused `fs` import.
+
+## Projects module — Phase 2+
+
+- 🟠 **Switch to real project coordinates.** Coordinates are already stored per project; flip `USE_PROJECT_COORDINATES` (`src/lib/projects.ts`) and add dedicated project markers / clustering so "Show on Map" targets the project instead of its parent facility.
+- 🟠 **Richer project data from future Excel updates** — financials, agencies, timeline, progress, status, cost, installments, documents, multiple images, remarks. The `Project` schema already reserves these fields; wire the Documents/Timeline/Remarks tabs (currently empty-state) to them as they arrive.
+- 🟡 **Real permissions/RBAC** behind `src/lib/permissions.ts` (upload/delete currently open to all).
+- 🟡 **Server-backed image storage** (uploads are currently per-browser IndexedDB) if central sharing is needed.
 - 🟡 **Two Excel masters at repo root** (`SAI_Facilities_Master.xlsx`, `…Master 2.xlsx`); `convert_data.js` hardcodes the `" 2"` filename default. Keep one canonical master (or a `data/` folder + required CLI arg).
 - 🟡 **Ad-hoc `scripts/*.cjs` inspectors** (`analyze`, `compare`, `check_sheets`, `inspect_sheets`) are throwaway utilities — consolidate or clearly mark as such.
 

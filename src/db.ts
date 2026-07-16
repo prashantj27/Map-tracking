@@ -56,19 +56,57 @@ export interface ManpowerDetail {
   "Status": string | null;
 }
 
+/**
+ * A Phase-1 Sports Infrastructure Project. `Project_Code` is the internal unique id
+ * (never shown as a filter). Each project is associated with a parent SAI facility of
+ * its state (largest NCOE where present, else the state's largest facility) which stands
+ * in for its location until per-project coordinates are switched on. Latitude/Longitude
+ * are already captured; the optional fields below are reserved so future Excel updates
+ * (financials, agencies, timeline, progress, documents, images, cost, installments) seed
+ * in without any schema change.
+ */
+export interface Project {
+  id?: number;
+  Project_Code: string;
+  Project_Name: string | null;
+  State: string | null;
+  Parent_Facility_ID: string;
+  Parent_Facility_Name: string | null;
+  Parent_Is_NCOE?: boolean;
+  Infra_Type: string;
+  Status: string;
+  Order: number;
+  Latitude: number | null;
+  Longitude: number | null;
+  Remarks: string | null;
+  // Reserved for future Excel updates (no schema change required):
+  Agencies?: string | null;
+  Financials?: unknown;
+  Timeline?: unknown;
+  Progress?: number | null;
+  Project_Cost?: number | null;
+  Installments?: unknown;
+  Documents?: unknown;
+  Images?: unknown;
+}
+
 export class MapDatabase extends Dexie {
   locations!: Table<Location>;
   disciplines!: Table<DisciplineDetail>;
   funds!: Table<FundDetail>;
   manpower!: Table<ManpowerDetail>;
+  projects!: Table<Project>;
 
   constructor() {
     super('MapDatabase');
-    this.version(5).stores({
+    // v6 adds the projects table. Uploaded project images live in a SEPARATE
+    // database (src/lib/imageStore.ts) so reseeding here never wipes user uploads.
+    this.version(6).stores({
       locations: '++id, Facility_ID, Facility_Type, State, District, Disciplines',
       disciplines: '++id, Facility_ID, Discipline',
       funds: '++id, Facility_ID',
-      manpower: '++id, Facility_ID'
+      manpower: '++id, Facility_ID',
+      projects: '++id, Project_Code, State, Parent_Facility_ID, Infra_Type'
     });
   }
 }
@@ -143,10 +181,25 @@ async function doSeed(): Promise<SeedResult> {
   if (dataFun.length) await db.funds.bulkAdd(dataFun);
   if (dataMan.length) await db.manpower.bulkAdd(dataMan);
 
+  // Projects are additive — a deploy without the projects file must not break the core seed.
+  let projectCount = 0;
+  try {
+    const resProj = await fetch('/data/sai_projects.json');
+    if (resProj.ok) {
+      const dataProj = await resProj.json();
+      if (Array.isArray(dataProj) && dataProj.length) {
+        await db.projects.bulkAdd(dataProj);
+        projectCount = dataProj.length;
+      }
+    }
+  } catch (e) {
+    console.warn('Projects data not seeded (optional):', e);
+  }
+
   if (dataVersion !== null) localStorage.setItem(SEED_META_KEY, dataVersion);
   localStorage.removeItem(LEGACY_SEED_KEY);
 
-  console.log(`Seeded ${cleanedFacilities.length} facilities, ${dataDis.length} disciplines, ${dataFun.length} funds, ${dataMan.length} manpower.`);
+  console.log(`Seeded ${cleanedFacilities.length} facilities, ${dataDis.length} disciplines, ${dataFun.length} funds, ${dataMan.length} manpower, ${projectCount} projects.`);
   return 'seeded';
 }
 

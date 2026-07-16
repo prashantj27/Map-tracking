@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { Location } from '../db';
-import { FACILITY_CONFIG, QUICK_FILTER_CATEGORIES, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
+import { FACILITY_CONFIG, FILTER_CHIP_CATEGORIES, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
 import { getDisciplineIcon } from '../lib/disciplineIcons';
 
 export interface FilterPanelProps {
@@ -114,12 +114,13 @@ export function FilterPanel({
           >
             ALL
           </button>
-          {QUICK_FILTER_CATEGORIES.map(cat => (
+          {FILTER_CHIP_CATEGORIES.map(cat => (
             <button
               key={cat}
               className={`chip${activeQuickFilter === cat ? ' active' : ''}`}
               aria-pressed={activeQuickFilter === cat}
               onClick={() => onQuickFilterChange(activeQuickFilter === cat ? null : cat)}
+              style={activeQuickFilter === cat ? { background: FACILITY_CONFIG[cat].color, borderColor: FACILITY_CONFIG[cat].color, color: '#fff' } : undefined}
             >
               {FACILITY_CONFIG[cat].acronym}
             </button>

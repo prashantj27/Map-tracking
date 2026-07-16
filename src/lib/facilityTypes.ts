@@ -38,6 +38,9 @@ export const ALL_CATEGORIES = Object.keys(FACILITY_CONFIG) as FacilityCategory[]
 /** Categories exposed as quick-filter chips / stat cards. */
 export const QUICK_FILTER_CATEGORIES: FacilityCategory[] = ['NCOE', 'STC', 'KISCE', 'KIC'];
 
+/** All facility-type chips shown in the sidebar filter (ordered). */
+export const FILTER_CHIP_CATEGORIES: FacilityCategory[] = ['RC', 'NCOE', 'STC', 'EXT', 'KIC', 'KISCE', 'AKHARA'];
+
 // Exact Facility_Type values found in the SAI master data.
 const EXACT_MATCH: Record<string, FacilityCategory> = {
   'Regional Centre (RC)': 'RC',

@@ -37,14 +37,17 @@ export function StateReportCard({ stateName, locations, disciplineRows, onClose,
 
     // Facility mix + trainees
     const counts = Object.fromEntries(ALL_CATEGORIES.map(c => [c, 0])) as Record<FacilityCategory, number>;
+    const traineesByCategory = Object.fromEntries(ALL_CATEGORIES.map(c => [c, 0])) as Record<FacilityCategory, number>;
     let m = 0, f = 0, total = 0;
     // Utilization is only meaningful for facilities that record BOTH numbers.
     let sanctioned = 0, sanctionedActual = 0;
     stateLocs.forEach(l => {
-      counts[classifyFacility(l.Facility_Type)]++;
+      const cat = classifyFacility(l.Facility_Type);
+      counts[cat]++;
       m += l.Trainees_Male || 0;
       f += l.Trainees_Female || 0;
       total += l.Total_Trainees || 0;
+      traineesByCategory[cat] += l.Total_Trainees || 0;
       if ((l.Sanctioned_Strength || 0) > 0) {
         sanctioned += l.Sanctioned_Strength || 0;
         sanctionedActual += l.Total_Trainees || 0;
@@ -88,7 +91,7 @@ export function StateReportCard({ stateName, locations, disciplineRows, onClose,
       .slice(0, 5);
 
     return {
-      stateLocs, rank, totalStates: ranked.length, regions, counts,
+      stateLocs, rank, totalStates: ranked.length, regions, counts, traineesByCategory,
       m, f, total, sanctioned, sanctionedActual,
       disciplineList, traineesPerDiscipline,
       fundRows: stateFunds.length, totalFunds,
@@ -151,6 +154,9 @@ export function StateReportCard({ stateName, locations, disciplineRows, onClose,
         <section>
           <h4>Trainees</h4>
           <div className="report-big">{report.total.toLocaleString()}</div>
+          <div className="dim small trainee-breakup">
+            Breakup: NCOE ({report.traineesByCategory.NCOE.toLocaleString()}) • STC ({report.traineesByCategory.STC.toLocaleString()}) • KIC ({report.traineesByCategory.KIC.toLocaleString()}) • KISCE ({report.traineesByCategory.KISCE.toLocaleString()})
+          </div>
           <div className="gender-bar" role="img" aria-label={`Male ${report.m}, Female ${report.f}`}>
             <div style={{ width: `${malePct}%`, background: '#1a73e8' }}></div>
             <div style={{ width: `${100 - malePct}%`, background: '#e91e63' }}></div>

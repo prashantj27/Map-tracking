@@ -19,7 +19,15 @@ function buildDirectionsUrl(loc: Location): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
 }
 
-export function FacilityPopupContent({ loc }: { loc: Location }) {
+export interface FacilityPopupProps {
+  loc: Location;
+  /** Number of Phase-1 projects parented to this facility (0 = not a parent). */
+  projectCount?: number;
+  /** Opens this facility's state Projects modal. */
+  onOpenProjects?: () => void;
+}
+
+export function FacilityPopupContent({ loc, projectCount = 0, onOpenProjects }: FacilityPopupProps) {
   const [activeTab, setActiveTab] = useState<TabId>('Overview');
 
   const disciplines = useLiveQuery(
@@ -78,6 +86,13 @@ export function FacilityPopupContent({ loc }: { loc: Location }) {
             >
               <span aria-hidden="true">🧭</span> Directions
             </a>
+          )}
+          {projectCount > 0 && onOpenProjects && (
+            <button className="project-details-link" onClick={onOpenProjects}>
+              <span aria-hidden="true">📋</span> Project Details
+              <span className="pd-count">{projectCount}</span>
+              <span aria-hidden="true">→</span>
+            </button>
           )}
           {(loc.Total_Trainees ?? 0) > 0 && (
             <div className="popup-card">
