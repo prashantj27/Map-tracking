@@ -303,7 +303,7 @@ export function MapView({
                 setHoveredState(null);
               }}
             >
-              <div className="pin">
+              <div className="pin" onMouseEnter={clearHover}>
                 {/* NCOE are the primary state centres — rendered a little larger via .ncoe */}
                 <div className={`pin-graphic${category === 'NCOE' ? ' ncoe' : ''}`}>
                   <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
