@@ -58,8 +58,16 @@ Record counts above are the actual lengths of the generated JSON files.
 - **DisciplineDetail** — per-facility, per-sport trainee breakdown, keyed by `Facility_ID`.
 - **FundDetail** — KISCE fund releases: amount, sanction/release dates, head, UC status, financial year.
 - **ManpowerDetail** — KISCE staffing: staff category, designation, sanctioned vs current strength, status.
+- **Project** — a Phase-1 Sports Infrastructure Project: `Project_Code` (internal id, never a UI filter), `Project_Name`, `State`, `Parent_Facility_ID`/`Parent_Facility_Name`/`Parent_Is_NCOE`, `Infra_Type`, `Status`, `Order`, `Latitude`/`Longitude` (persisted for the future coordinate switch), `Remarks`, plus reserved optional fields (financials, agencies, timeline, progress, cost, installments, documents, images) for later Excel updates. See the Projects module below.
 
-Dexie schema (v5) indexes: `locations` on `Facility_ID, Facility_Type, State, District, Disciplines`; child tables on `Facility_ID` (+ `disciplines` also on `Discipline`).
+Dexie schema (v6) indexes: `locations` on `Facility_ID, Facility_Type, State, District, Disciplines`; child tables on `Facility_ID` (+ `disciplines` also on `Discipline`); `projects` on `Project_Code, State, Parent_Facility_ID, Infra_Type`. **Uploaded project images live in a separate IndexedDB** (`ProjectImages`, `src/lib/imageStore.ts`) so a data reseed (`db.delete()`) never wipes user uploads.
+
+### Projects module (Phase-1)
+An enterprise project-monitoring layer that reuses the existing map/popups/sidebar/styling without altering them.
+- **Pipeline** (`scripts/convert_projects.cjs` → `public/data/sai_projects.json`): parses the "Project mapping" Excel; recovers blank states from the `Unique Code` prefix; drops rows without a valid code; cleans mojibake; derives `Infra_Type` from the name; derives `Status` (`Cancelled` where the remark says so, else `Data Awaiting`); and associates each project with a **parent facility** — the state's largest NCOE by trainee strength, or (where the state has no NCOE) its largest facility of any type — so no project is orphaned. Bumps `meta.json` to trigger a reseed.
+- **Entry point**: a `📋 Project Details →` link appears on a parent facility's popup (below Directions) when it has projects. It opens `ProjectsModal` (state list: header total + infra breakdown, A–Z / Recently-Added sort, lazy-loaded `ProjectCard` grid). Each card → `ProjectDetailModal` (Overview / Gallery / Documents / Timeline / Remarks) or **Show on Map** (flies to the parent facility + opens its popup).
+- **Coordinate switch**: project lat/lng are already stored; the single `USE_PROJECT_COORDINATES` flag in `src/lib/projects.ts` switches "Show on Map" from the parent facility to the project's own coordinates with no other change.
+- **Images**: `ProjectGallery` shows a self-contained SVG placeholder until photos are uploaded (`ImageUploader`: drag-drop / multiple / camera), stored by `Project_Code` in the separate image DB and shown via the in-platform fullscreen `ImageViewer` (prev/next/zoom/pan/download/delete). Delete is gated through `src/lib/permissions.ts`.
 
 ## 3. Component & module map
 
@@ -72,15 +80,21 @@ src/
 ├── index.css                Global resets / base styles
 ├── App.css                  All component styling (class-based; imported by App.tsx)
 ├── components/
-│   ├── FilterPanel.tsx      Search typeahead, Region/State/Discipline selects, type chips,
+│   ├── FilterPanel.tsx      Search typeahead, Region/State/Discipline selects, all-7 type chips,
 │   │                        active-filter tags + reset, "view report card" link
-│   ├── StatsDeck.tsx        Clickable count cards (AnimatedNumber), gender bar, two Recharts charts
-│   ├── MapView.tsx          MapLibre map: state choropleth (2D fill + 3D extrusion), lazy district
-│   │                        lines, clustered markers, hover tooltip, popup, 3D + dark-mode toggles, legend
-│   ├── FacilityPopup.tsx    FacilityPopupContent — Overview / Disciplines / Funds & Staff tabs
-│   └── StateReportCard.tsx  Full-height per-state panel: facility mix, trainees + utilization,
-│                            clickable disciplines, KISCE funds by FY, staffing, top facilities
-└── lib/
+│   ├── MapView.tsx          MapLibre map (memoized): state choropleth (2D fill + 3D extrusion), lazy
+│   │                        district lines, clustered markers (custom STC/EXT/AKH shapes), hover
+│   │                        tooltip, popup, 3D + dark-mode toggles, legend
+│   ├── FacilityPopup.tsx    FacilityPopupContent — Overview / Disciplines / Funds & Staff tabs,
+│   │                        Directions + Project Details link
+│   ├── StateReportCard.tsx  Full-height per-state panel: facility mix, trainees + type breakup +
+│   │                        utilization, disciplines, KISCE funds by FY, staffing, top facilities
+│   ├── Modal.tsx            Reusable portal modal shell (Esc/backdrop close, scroll lock, focus
+│   │                        trap + restore, modal stack)
+│   └── projects/            ProjectsModal, ProjectCard, ProjectDetailModal, ProjectGallery,
+│                            ImageUploader, ImageViewer, StatusBadge
+│   (StatsDeck.tsx removed — statistics now live in StateReportCard)
+└── lib/  (+ projects.ts, imageStore.ts, permissions.ts)
     ├── facilityTypes.ts     Single source of truth for facility taxonomy (classify + config)
     ├── stateNames.ts        GeoJSON ↔ facility-data state-name aliasing (both directions)
     └── disciplineIcons.ts   Discipline → emoji, "-Para" folding, junk-row filtering

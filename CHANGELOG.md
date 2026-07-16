@@ -9,7 +9,15 @@ This project does not yet publish versioned releases; entries are grouped under
 ## [Unreleased]
 
 ### Added
+- **Phase-1 Sports Infrastructure Projects module.** 373 projects from the "Project mapping" Excel, each associated with a parent facility of its state (largest NCOE, else largest facility). New `📋 Project Details →` popup link → state Projects modal (total + infra breakdown + sort + cards) → per-project detail modal (Overview / Gallery / Documents / Timeline / Remarks). Gallery with placeholder + image upload (drag-drop / multiple / camera, stored by Project Code in a separate IndexedDB) and an in-platform fullscreen viewer (prev/next/zoom/pan/download/delete/close). Architecture is ready to switch to real project coordinates via a single `USE_PROJECT_COORDINATES` flag. New: `scripts/convert_projects.cjs`, `src/lib/{projects,imageStore,permissions}.ts`, `src/components/Modal.tsx`, `src/components/projects/*`.
+- Facility coordinate updates from the source Excel (208 non-KIC + 795 KIC facilities set to exact coordinates + Google Maps URLs); `📋`/`🧭` Directions button in the popup. (`scripts/{build_coordinate_overrides,apply_coordinate_updates}.cjs`.)
+- Map polish: pin hover box (name + type), larger NCOE pins, hovered marker raised above neighbours.
 - Project documentation set for long-term maintenance: `CLAUDE.md` (project context + coding/workflow rules), `docs/architecture.md` (canonical up-to-date architecture reference), `docs/roadmap.md` (forward plan + known issues), and this `CHANGELOG.md`.
+
+### Changed
+- Sidebar now shows all 7 facility-type filter chips (RC/NCOE/STC/EXT/KIC/KISCE/AKH); STC/EXT/AKH use distinct custom marker shapes.
+- Statistics Overview removed from the sidebar (`StatsDeck` deleted; Recharts no longer bundled); trainee-strength breakup moved beneath the total in the right-side state report card.
+- `react-is` added as an explicit dependency so a clean `vite build` resolves it (recharts' undeclared import).
 
 ### Changed
 - `README.md` updated to point at the new `CLAUDE.md` and `docs/` set.

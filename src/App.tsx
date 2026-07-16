@@ -1,15 +1,16 @@
 import { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import type { MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { db, seedDatabase, type Location } from './db';
+import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { classifyFacility, ALL_CATEGORIES, QUICK_FILTER_CATEGORIES, FACILITY_CONFIG, type FacilityCategory } from './lib/facilityTypes';
+import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
 import { dataToGeoStates } from './lib/stateNames';
 import { isRealDiscipline } from './lib/disciplineIcons';
+import { USE_PROJECT_COORDINATES, hasProjectCoordinates } from './lib/projects';
 import { FilterPanel } from './components/FilterPanel';
-import { StatsDeck, type Stats } from './components/StatsDeck';
 import { MapView } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
+import { ProjectsModal } from './components/projects/ProjectsModal';
 import './App.css';
 
 // Stable colors per SAI region (alphabetical-index assignment would reshuffle
@@ -51,6 +52,9 @@ function App() {
   const [activeQuickFilter, setActiveQuickFilter] = useState<FacilityCategory | null>(null);
   const [reportState, setReportState] = useState<string | null>(null);
 
+  // Facility whose state Projects modal is open (its parented projects are shown).
+  const [projectsFacility, setProjectsFacility] = useState<Location | null>(null);
+
   useEffect(() => {
     seedDatabase()
       .then(() => setSeedState('ready'))
@@ -62,6 +66,7 @@ function App() {
 
   const allLocations = useLiveQuery(() => db.locations.toArray()) || [];
   const allDisciplineRows = useLiveQuery(() => db.disciplines.toArray()) || [];
+  const allProjects = useLiveQuery(() => db.projects.toArray()) || [];
 
   const uniqueRegions = useMemo(
     () => Array.from(new Set(allLocations.map(l => l.Parent_Region).filter(isNonEmptyString))).sort(),
@@ -76,6 +81,17 @@ function App() {
     });
     return Array.from(dSet).sort();
   }, [allLocations]);
+
+  // Facility_ID -> number of Phase-1 projects parented there (drives the popup's Project Details link).
+  const projectCountByFacility = useMemo(() => {
+    const m = new Map<string, number>();
+    allProjects.forEach(p => m.set(p.Parent_Facility_ID, (m.get(p.Parent_Facility_ID) || 0) + 1));
+    return m;
+  }, [allProjects]);
+
+  const projectsForFacility = useMemo(
+    () => (projectsFacility ? allProjects.filter(p => p.Parent_Facility_ID === projectsFacility.Facility_ID) : []),
+    [allProjects, projectsFacility]);
 
   // Region/State/Discipline filters — drive the statistics.
   const filteredLocationsForStats = useMemo(() => {
@@ -95,78 +111,6 @@ function App() {
     if (!activeQuickFilter) return filteredLocationsForStats;
     return filteredLocationsForStats.filter(loc => classifyFacility(loc.Facility_Type) === activeQuickFilter);
   }, [filteredLocationsForStats, activeQuickFilter]);
-
-  const stats = useMemo<Stats & {
-    genderByCategory: Record<FacilityCategory, { m: number; f: number }>;
-    traineesByCategory: Record<FacilityCategory, number>;
-  }>(() => {
-    const counts = Object.fromEntries(ALL_CATEGORIES.map(c => [c, 0])) as Record<FacilityCategory, number>;
-    const genderByCategory = Object.fromEntries(
-      ALL_CATEGORIES.map(c => [c, { m: 0, f: 0 }])
-    ) as Record<FacilityCategory, { m: number; f: number }>;
-    const traineesByCategory = Object.fromEntries(
-      ALL_CATEGORIES.map(c => [c, 0])
-    ) as Record<FacilityCategory, number>;
-    let m = 0, f = 0, total = 0;
-
-    filteredLocationsForStats.forEach(loc => {
-      const cat = classifyFacility(loc.Facility_Type);
-      counts[cat]++;
-      const locM = loc.Trainees_Male || 0;
-      const locF = loc.Trainees_Female || 0;
-      const locTotal = loc.Total_Trainees || 0;
-      m += locM;
-      f += locF;
-      total += locTotal;
-      genderByCategory[cat].m += locM;
-      genderByCategory[cat].f += locF;
-      traineesByCategory[cat] += locTotal;
-    });
-
-    return { counts, m, f, total, genderByCategory, traineesByCategory };
-  }, [filteredLocationsForStats]);
-
-  const topBarChartTitle = filterDiscipline ? 'Top 5 States (Trainees)' : 'Top 5 Disciplines (Trainees)';
-
-  const topBarChartData = useMemo(() => {
-    const facMap = new Map<string, Location>();
-    filteredLocationsForStats.forEach(l => facMap.set(l.Facility_ID, l));
-
-    const totals: Record<string, { total: number; breakdown: Record<string, number> }> = {};
-
-    allDisciplineRows.forEach(row => {
-      const loc = facMap.get(row.Facility_ID);
-      if (!loc || !row.Discipline) return;
-
-      const key = filterDiscipline ? loc.State : row.Discipline;
-      if (!key) return;
-
-      if (!totals[key]) {
-        totals[key] = { total: 0, breakdown: { KIC: 0, KISCE: 0, STC: 0, NCOE: 0 } };
-      }
-
-      const t = row.Total_Trainees ?? ((row.Trainees_Male || 0) + (row.Trainees_Female || 0));
-      totals[key].total += t;
-
-      const cat = classifyFacility(loc.Facility_Type);
-      if (['KIC', 'KISCE', 'STC', 'NCOE'].includes(cat)) {
-        totals[key].breakdown[cat] += 1;
-      }
-    });
-
-    return Object.entries(totals)
-      .map(([name, data]) => ({ name, total: data.total, breakdown: data.breakdown }))
-      .sort((a, b) => b.total - a.total)
-      .slice(0, 5)
-      .reverse();
-  }, [filteredLocationsForStats, allDisciplineRows, filterDiscipline]);
-
-  const facilityGenderData = useMemo(() =>
-    QUICK_FILTER_CATEGORIES.map(cat => ({
-      name: FACILITY_CONFIG[cat].acronym,
-      Male: stats.genderByCategory[cat].m,
-      Female: stats.genderByCategory[cat].f,
-    })), [stats.genderByCategory]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {
@@ -192,13 +136,6 @@ function App() {
     return matchExpr;
   }, [allLocations, uniqueRegions]);
 
-  const scopeLabel = useMemo(() => {
-    const parts = [filterState || filterRegion || 'All India'];
-    if (activeQuickFilter) parts.push(`${FACILITY_CONFIG[activeQuickFilter].acronym}s`);
-    if (filterDiscipline) parts.push(filterDiscipline);
-    return parts.join(' • ');
-  }, [filterState, filterRegion, activeQuickFilter, filterDiscipline]);
-
   const hasActiveFilters = !!(filterRegion || filterState || filterDiscipline || activeQuickFilter);
 
   const resetFilters = useCallback(() => {
@@ -219,10 +156,6 @@ function App() {
     mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: 10, duration: 1200 });
   }, [resetFilters]);
 
-  const handleToggleQuickFilter = useCallback((cat: FacilityCategory) => {
-    setActiveQuickFilter(prev => (prev === cat ? null : cat));
-  }, []);
-
   // Map state click: filter + open the report card.
   const handleStateClick = useCallback((stateName: string) => {
     setFilterState(stateName);
@@ -234,6 +167,24 @@ function App() {
     setSelectedLocation(loc);
     mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: 10, duration: 1200 });
   }, []);
+
+  const handleOpenProjects = useCallback((loc: Location) => setProjectsFacility(loc), []);
+
+  // "Show on Map": until per-project coordinates are switched on, fly to the parent facility and
+  // open its existing popup. Flipping USE_PROJECT_COORDINATES switches this to the project's own
+  // coordinates with no other change (the values are already stored on the project).
+  const handleShowProjectOnMap = useCallback((project: Project) => {
+    setProjectsFacility(null);
+    if (USE_PROJECT_COORDINATES && hasProjectCoordinates(project)) {
+      mapRef.current?.flyTo({ center: [project.Longitude as number, project.Latitude as number], zoom: 12, duration: 1200 });
+      return;
+    }
+    const parent = allLocations.find(l => l.Facility_ID === project.Parent_Facility_ID);
+    if (parent) {
+      setSelectedLocation(parent);
+      mapRef.current?.flyTo({ center: [parent.Longitude, parent.Latitude], zoom: 10, duration: 1200 });
+    }
+  }, [allLocations]);
 
   return (
     <div className="app-shell">
@@ -267,16 +218,8 @@ function App() {
           hasActiveFilters={hasActiveFilters}
           onOpenReport={filterState ? () => setReportState(filterState) : undefined}
         />
-
-        <StatsDeck
-          stats={stats}
-          topBarChartData={topBarChartData}
-          topBarChartTitle={topBarChartTitle}
-          facilityGenderData={facilityGenderData}
-          activeQuickFilter={activeQuickFilter}
-          onToggleQuickFilter={handleToggleQuickFilter}
-          scopeLabel={scopeLabel}
-        />
+        {/* Statistics Overview removed from the sidebar — facility statistics now live in the
+            state report card (opened from the State filter or by clicking a state on the map). */}
       </aside>
 
       <MapView
@@ -288,6 +231,8 @@ function App() {
         mapRef={mapRef}
         activeDiscipline={filterDiscipline}
         activeQuickFilter={activeQuickFilter}
+        projectCountByFacility={projectCountByFacility}
+        onOpenProjects={handleOpenProjects}
       />
 
       {reportState && (
@@ -298,6 +243,15 @@ function App() {
           disciplineRows={allDisciplineRows}
           onClose={() => setReportState(null)}
           onPickFacility={handlePickFromReport}
+        />
+      )}
+
+      {projectsFacility && (
+        <ProjectsModal
+          stateName={projectsFacility.State ?? 'Projects'}
+          projects={projectsForFacility}
+          onClose={() => setProjectsFacility(null)}
+          onShowOnMap={handleShowProjectOnMap}
         />
       )}
 
