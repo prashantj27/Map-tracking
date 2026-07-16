@@ -1,16 +1,27 @@
 import type { Project } from '../db';
 
-/**
- * Phase-1 behaviour flag. Projects have no dedicated markers yet: "Show on Map" flies to
- * the parent facility and opens its existing popup. The project coordinates are already
- * stored (db.Project.Latitude/Longitude); flipping this to `true` later switches the
- * behaviour to the project's own location with no other change required.
- */
-export const USE_PROJECT_COORDINATES = false;
-
-/** Whether a project has its own usable coordinates (used by the future switch above). */
+/** Whether a project has usable coordinates (drives whether it gets a PRJ marker). */
 export function hasProjectCoordinates(p: Project): boolean {
   return Number.isFinite(p.Latitude as number) && Number.isFinite(p.Longitude as number);
+}
+
+/**
+ * The Projects (PRJ) GIS layer has its own identity colour, deliberately distinct from every
+ * facility-type colour (deep violet). Marker colour is status-based and future-ready: add a new
+ * status here and every PRJ marker/cluster/legend picks it up with no other change.
+ */
+export const PROJECT_COLOR = '#6a3ff5';
+
+const PROJECT_STATUS_COLORS: Record<string, string> = {
+  'Data Awaiting': PROJECT_COLOR,
+  'Cancelled': '#d93025',
+  'In Progress': '#f9ab00',
+  'Completed': '#188038',
+  'On Hold': '#80868b',
+};
+
+export function getProjectStatusColor(status: string | null | undefined): string {
+  return PROJECT_STATUS_COLORS[status ?? ''] ?? PROJECT_COLOR;
 }
 
 export interface InfraMeta { icon: string; color: string; }

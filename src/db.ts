@@ -70,6 +70,7 @@ export interface Project {
   Project_Code: string;
   Project_Name: string | null;
   State: string | null;
+  District?: string | null;
   Parent_Facility_ID: string;
   Parent_Facility_Name: string | null;
   Parent_Is_NCOE?: boolean;

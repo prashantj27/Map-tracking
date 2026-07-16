@@ -15,7 +15,7 @@ Status legend: 🔴 blocking · 🟠 high value · 🟡 nice to have · ✅ done
 
 ## Projects module — Phase 2+
 
-- 🟠 **Switch to real project coordinates.** Coordinates are already stored per project; flip `USE_PROJECT_COORDINATES` (`src/lib/projects.ts`) and add dedicated project markers / clustering so "Show on Map" targets the project instead of its parent facility.
+- ✅ **Dedicated PRJ GIS layer** — projects now render their own clustered markers at their own coordinates, independent of facilities (replaced the NCOE-parent stand-in). Real coordinates arrive via a future Excel update; the layer picks them up on reseed with no code change.
 - 🟠 **Richer project data from future Excel updates** — financials, agencies, timeline, progress, status, cost, installments, documents, multiple images, remarks. The `Project` schema already reserves these fields; wire the Documents/Timeline/Remarks tabs (currently empty-state) to them as they arrive.
 - 🟡 **Real permissions/RBAC** behind `src/lib/permissions.ts` (upload/delete currently open to all).
 - 🟡 **Server-backed image storage** (uploads are currently per-browser IndexedDB) if central sharing is needed.

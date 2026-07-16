@@ -65,8 +65,9 @@ Dexie schema (v6) indexes: `locations` on `Facility_ID, Facility_Type, State, Di
 ### Projects module (Phase-1)
 An enterprise project-monitoring layer that reuses the existing map/popups/sidebar/styling without altering them.
 - **Pipeline** (`scripts/convert_projects.cjs` → `public/data/sai_projects.json`): parses the "Project mapping" Excel; recovers blank states from the `Unique Code` prefix; drops rows without a valid code; cleans mojibake; derives `Infra_Type` from the name; derives `Status` (`Cancelled` where the remark says so, else `Data Awaiting`); and associates each project with a **parent facility** — the state's largest NCOE by trainee strength, or (where the state has no NCOE) its largest facility of any type — so no project is orphaned. Bumps `meta.json` to trigger a reseed.
-- **Entry point**: a `📋 Project Details →` link appears on a parent facility's popup (below Directions) when it has projects. It opens `ProjectsModal` (state list: header total + infra breakdown, A–Z / Recently-Added sort, lazy-loaded `ProjectCard` grid). Each card → `ProjectDetailModal` (Overview / Gallery / Documents / Timeline / Remarks) or **Show on Map** (flies to the parent facility + opens its popup).
-- **Coordinate switch**: project lat/lng are already stored; the single `USE_PROJECT_COORDINATES` flag in `src/lib/projects.ts` switches "Show on Map" from the parent facility to the project's own coordinates with no other change.
+- **Dedicated PRJ GIS layer** (`ProjectLayer` inside `MapView`): every project renders its own premium clustered marker (violet, status-based colour via `getProjectStatusColor`) at its own coordinates — a second `useSupercluster` set, fully independent of the facility markers and toggled by the filter bar's PRJ checkbox. `Parent_Facility_*` fields remain in the data but are no longer used for display.
+- **Project-centric flow**: clicking a PRJ marker opens `ProjectPopup` (name, state, district if present, status, Directions, `View Project Details →` — no facility/NCOE reference) → `ProjectDetailModal` (Overview / Financials / Timeline / Gallery / Documents / Remarks). "Show on Map" (search result / future list) flies to the PRJ marker and opens its popup.
+- **Filter bar** (`MapFilterBar`, bottom-left, replaces the old left sidebar): Facility Type dropdown, State selector, PRJ layer toggle, and an intelligent search over facilities **and** projects.
 - **Images**: `ProjectGallery` shows a self-contained SVG placeholder until photos are uploaded (`ImageUploader`: drag-drop / multiple / camera), stored by `Project_Code` in the separate image DB and shown via the in-platform fullscreen `ImageViewer` (prev/next/zoom/pan/download/delete). Delete is gated through `src/lib/permissions.ts`.
 
 ## 3. Component & module map
@@ -80,8 +81,8 @@ src/
 ├── index.css                Global resets / base styles
 ├── App.css                  All component styling (class-based; imported by App.tsx)
 ├── components/
-│   ├── FilterPanel.tsx      Search typeahead, Region/State/Discipline selects, all-7 type chips,
-│   │                        active-filter tags + reset, "view report card" link
+│   ├── MapFilterBar.tsx     Floating bottom-left filters: Facility Type, State, PRJ toggle,
+│   │                        intelligent search over facilities + projects (replaces the sidebar)
 │   ├── MapView.tsx          MapLibre map (memoized): state choropleth (2D fill + 3D extrusion), lazy
 │   │                        district lines, clustered markers (custom STC/EXT/AKH shapes), hover
 │   │                        tooltip, popup, 3D + dark-mode toggles, legend
@@ -91,8 +92,8 @@ src/
 │   │                        utilization, disciplines, KISCE funds by FY, staffing, top facilities
 │   ├── Modal.tsx            Reusable portal modal shell (Esc/backdrop close, scroll lock, focus
 │   │                        trap + restore, modal stack)
-│   └── projects/            ProjectsModal, ProjectCard, ProjectDetailModal, ProjectGallery,
-│                            ImageUploader, ImageViewer, StatusBadge
+│   └── projects/            ProjectLayer (PRJ markers), ProjectPopup, ProjectDetailModal,
+│                            ProjectCard, ProjectGallery, ImageUploader, ImageViewer, StatusBadge
 │   (StatsDeck.tsx removed — statistics now live in StateReportCard)
 └── lib/  (+ projects.ts, imageStore.ts, permissions.ts)
     ├── facilityTypes.ts     Single source of truth for facility taxonomy (classify + config)
