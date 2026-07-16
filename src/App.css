@@ -333,6 +333,12 @@ button:focus-visible {
   animation: pop-in 0.3s ease-out;
 }
 
+/* Bring the hovered marker — and its hover box — above neighbouring pins so
+   the tooltip is never clipped by other markers. */
+.maplibregl-marker:hover {
+  z-index: 10;
+}
+
 /* Visual part of the pin — scaled on hover / for NCOE without moving the anchor
    tip or the hover tooltip (which is a separate, un-scaled child of .pin). */
 .pin-graphic {
