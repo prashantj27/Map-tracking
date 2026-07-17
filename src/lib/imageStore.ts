@@ -50,3 +50,12 @@ export function projectImagesQuery(projectCode: string) {
 export async function deleteProjectImage(id: number): Promise<void> {
   await imageDb.images.delete(id);
 }
+
+/**
+ * Distinct Project_Codes that have at least one uploaded image — reads only the index (never
+ * loads blobs), so it stays cheap regardless of how many/large the stored images are. Powers the
+ * "Without GPS Images" project filter.
+ */
+export function projectCodesWithImages(): Promise<string[]> {
+  return imageDb.images.orderBy('Project_Code').uniqueKeys() as Promise<string[]>;
+}

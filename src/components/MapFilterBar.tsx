@@ -1,35 +1,59 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Location, Project } from '../db';
 import { FACILITY_CONFIG, FILTER_CHIP_CATEGORIES, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
-import { PROJECT_COLOR } from '../lib/projects';
+import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, type ProjectStatusFilterKey } from '../lib/projects';
+import { TypeIcon } from './TypeIcon';
+
+export type TypeSelection = FacilityCategory | 'PRJ' | null;
 
 export interface MapFilterBarProps {
   uniqueStates: string[];
   filterState: string;
   onStateChange: (v: string) => void;
-  activeFacilityType: FacilityCategory | null;
-  onFacilityTypeChange: (v: FacilityCategory | null) => void;
-  showProjects: boolean;
-  onToggleProjects: (v: boolean) => void;
+  typeSelection: TypeSelection;
+  onTypeSelectionChange: (v: TypeSelection) => void;
+  projectStatusFilter: ProjectStatusFilterKey | null;
+  onProjectStatusFilterChange: (v: ProjectStatusFilterKey | null) => void;
   allLocations: Location[];
   projects: Project[];
   onPickFacility: (loc: Location) => void;
   onPickProject: (p: Project) => void;
 }
 
+function typeLabel(sel: TypeSelection): string {
+  if (sel === null) return 'All Facilities';
+  if (sel === 'PRJ') return 'Projects (PRJ)';
+  return `${FACILITY_CONFIG[sel].label} (${FACILITY_CONFIG[sel].acronym})`;
+}
+
 /**
- * Floating map filter bar (bottom-left) — replaces the old left sidebar. Holds the Facility Type
- * and State selectors, the independent PRJ layer toggle, and an intelligent search over both
- * facilities and projects. Facilities and Projects filter independently.
+ * Floating glassmorphism filter panel (bottom-left) — global search, the Facility Type selector
+ * (a custom icon dropdown that doubles as the map legend), a Projects-only status filter row, and
+ * the State selector. Replaces the old left sidebar.
  */
 export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
-  activeFacilityType, onFacilityTypeChange,
-  showProjects, onToggleProjects,
+  typeSelection, onTypeSelectionChange,
+  projectStatusFilter, onProjectStatusFilterChange,
   allLocations, projects, onPickFacility, onPickProject,
 }: MapFilterBarProps) {
   const [query, setQuery] = useState('');
-  const [collapsed, setCollapsed] = useState(false);
+  const [typeOpen, setTypeOpen] = useState(false);
+  const typeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!typeOpen) return;
+    const onDocDown = (e: MouseEvent) => {
+      if (typeRef.current && !typeRef.current.contains(e.target as Node)) setTypeOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setTypeOpen(false); };
+    document.addEventListener('mousedown', onDocDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDocDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [typeOpen]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -40,94 +64,127 @@ export function MapFilterBar({
       l.District?.toLowerCase().includes(q)).slice(0, 6);
     const projs = projects.filter((p) =>
       p.Project_Name?.toLowerCase().includes(q) ||
-      p.State?.toLowerCase().includes(q)).slice(0, 6);
+      p.State?.toLowerCase().includes(q) ||
+      p.District?.toLowerCase().includes(q)).slice(0, 6);
     return { facilities, projects: projs };
   }, [query, allLocations, projects]);
 
   const hasResults = results.facilities.length > 0 || results.projects.length > 0;
 
+  const selectType = (v: TypeSelection) => {
+    onTypeSelectionChange(v);
+    setTypeOpen(false);
+  };
+
   return (
-    <section className={`map-filter-bar${collapsed ? ' collapsed' : ''}`} aria-label="Map filters">
-      <header className="mfb-header">
-        <span className="mfb-title">SAI Facilities &amp; Projects</span>
+    <section className="map-filter-panel" aria-label="Map filters">
+      <div className="mfp-search">
+        <svg className="mfp-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
+          <line x1="15.3" y1="15.3" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+        <input
+          type="search"
+          placeholder="Search facilities, projects, districts…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          autoComplete="off"
+          aria-label="Search facilities, projects, districts"
+        />
+        {hasResults && (
+          <ul className="search-results mfp-search-results" role="listbox">
+            {results.projects.map((p) => (
+              <li key={`p-${p.Project_Code}`}>
+                <button onClick={() => { onPickProject(p); setQuery(''); }}>
+                  <span className="search-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
+                  <span className="search-name">{p.Project_Name}</span>
+                  <span className="dim small"> {p.State}</span>
+                  <span className="search-kind prj">PRJ</span>
+                </button>
+              </li>
+            ))}
+            {results.facilities.map((loc) => (
+              <li key={`f-${loc.id}`}>
+                <button onClick={() => { onPickFacility(loc); setQuery(''); }}>
+                  <span className="search-dot" style={{ background: FACILITY_CONFIG[classifyFacility(loc.Facility_Type)].color }} aria-hidden="true" />
+                  <span className="search-name">{loc.Facility_Name}</span>
+                  <span className="dim small"> {[loc.City, loc.State].filter(Boolean).join(', ')}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+        {query.trim().length >= 2 && !hasResults && (
+          <div className="search-empty">No matches for “{query.trim()}”</div>
+        )}
+      </div>
+
+      <div className="type-select" ref={typeRef}>
         <button
-          className="mfb-collapse"
-          onClick={() => setCollapsed((c) => !c)}
-          aria-expanded={!collapsed}
-          aria-label={collapsed ? 'Expand filters' : 'Collapse filters'}
+          type="button"
+          className="type-select-trigger"
+          onClick={() => setTypeOpen((o) => !o)}
+          aria-haspopup="listbox"
+          aria-expanded={typeOpen}
         >
-          {collapsed ? '▲' : '▼'}
+          <TypeIcon type={typeSelection ?? 'ALL'} size={26} />
+          <span className="type-select-label">{typeLabel(typeSelection)}</span>
+          <svg className={`type-select-chevron${typeOpen ? ' open' : ''}`} viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </button>
-      </header>
 
-      {!collapsed && (
-        <div className="mfb-body">
-          <div className="mfb-search">
-            <input
-              type="search"
-              placeholder="Search facilities or projects…"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              autoComplete="off"
-              aria-label="Search facilities or projects"
-            />
-            {hasResults && (
-              <ul className="search-results" role="listbox">
-                {results.projects.map((p) => (
-                  <li key={`p-${p.Project_Code}`}>
-                    <button onClick={() => { onPickProject(p); setQuery(''); }}>
-                      <span className="search-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
-                      <span className="search-name">{p.Project_Name}</span>
-                      <span className="dim small"> {p.State}</span>
-                      <span className="search-kind prj">PRJ</span>
-                    </button>
-                  </li>
-                ))}
-                {results.facilities.map((loc) => (
-                  <li key={`f-${loc.id}`}>
-                    <button onClick={() => { onPickFacility(loc); setQuery(''); }}>
-                      <span className="search-dot" style={{ background: FACILITY_CONFIG[classifyFacility(loc.Facility_Type)].color }} aria-hidden="true" />
-                      <span className="search-name">{loc.Facility_Name}</span>
-                      <span className="dim small"> {[loc.City, loc.State].filter(Boolean).join(', ')}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {query.trim().length >= 2 && !hasResults && (
-              <div className="search-empty">No matches for “{query.trim()}”</div>
-            )}
-          </div>
+        {typeOpen && (
+          <ul className="type-select-menu" role="listbox" aria-label="Facility type">
+            <li role="none">
+              <button role="option" aria-selected={typeSelection === null} className={`type-option${typeSelection === null ? ' selected' : ''}`} onClick={() => selectType(null)}>
+                <TypeIcon type="ALL" />
+                <span>All Facilities</span>
+              </button>
+            </li>
+            {FILTER_CHIP_CATEGORIES.map((cat) => (
+              <li key={cat} role="none">
+                <button role="option" aria-selected={typeSelection === cat} className={`type-option${typeSelection === cat ? ' selected' : ''}`} onClick={() => selectType(cat)}>
+                  <TypeIcon type={cat} />
+                  <span>{FACILITY_CONFIG[cat].label} <em>({FACILITY_CONFIG[cat].acronym})</em></span>
+                </button>
+              </li>
+            ))}
+            <li className="type-option-divider" role="none" aria-hidden="true" />
+            <li role="none">
+              <button role="option" aria-selected={typeSelection === 'PRJ'} className={`type-option${typeSelection === 'PRJ' ? ' selected' : ''}`} onClick={() => selectType('PRJ')}>
+                <TypeIcon type="PRJ" />
+                <span>Projects <em>(PRJ)</em></span>
+              </button>
+            </li>
+          </ul>
+        )}
+      </div>
 
-          <div className="mfb-row">
-            <label htmlFor="mfb-type" className="mfb-label">Facility Type</label>
-            <select
-              id="mfb-type"
-              value={activeFacilityType ?? ''}
-              onChange={(e) => onFacilityTypeChange((e.target.value || null) as FacilityCategory | null)}
+      {typeSelection === 'PRJ' && (
+        <div className="project-status-bar" role="group" aria-label="Project status filters">
+          {PROJECT_STATUS_FILTERS.map((f) => (
+            <button
+              key={f.key}
+              type="button"
+              className={`status-chip${projectStatusFilter === f.key ? ' active' : ''}`}
+              aria-pressed={projectStatusFilter === f.key}
+              onClick={() => onProjectStatusFilterChange(projectStatusFilter === f.key ? null : f.key)}
+              style={projectStatusFilter === f.key ? { background: f.color, borderColor: f.color } : undefined}
             >
-              <option value="">All Facility Types</option>
-              {FILTER_CHIP_CATEGORIES.map((cat) => (
-                <option key={cat} value={cat}>{FACILITY_CONFIG[cat].label} ({FACILITY_CONFIG[cat].acronym})</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="mfb-row">
-            <label htmlFor="mfb-state" className="mfb-label">State</label>
-            <select id="mfb-state" value={filterState} onChange={(e) => onStateChange(e.target.value)}>
-              <option value="">All States</option>
-              {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </div>
-
-          <label className="mfb-prj-toggle">
-            <input type="checkbox" checked={showProjects} onChange={(e) => onToggleProjects(e.target.checked)} />
-            <span className="prj-swatch" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
-            <span>Projects <strong>(PRJ)</strong></span>
-          </label>
+              <span aria-hidden="true">{f.icon}</span> {f.label}
+            </button>
+          ))}
         </div>
       )}
+
+      <div className="mfp-state-row">
+        <label htmlFor="mfp-state" className="mfp-state-label">State</label>
+        <select id="mfp-state" value={filterState} onChange={(e) => onStateChange(e.target.value)}>
+          <option value="">All States</option>
+          {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
+        </select>
+      </div>
     </section>
   );
 }

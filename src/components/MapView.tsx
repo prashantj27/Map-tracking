@@ -10,7 +10,6 @@ import type { Location, Project } from '../db';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from '../lib/facilityTypes';
 import { geoToDataState, dataToGeoStates } from '../lib/stateNames';
 import { getDisciplineIcon, isRealDiscipline } from '../lib/disciplineIcons';
-import { PROJECT_COLOR } from '../lib/projects';
 import { FacilityPopupContent } from './FacilityPopup';
 import { ProjectLayer } from './projects/ProjectLayer';
 import { MapPinGraphic, pinGlyph } from './MapPinGraphic';
@@ -102,11 +101,6 @@ function MapViewComponent({
       : { radius: 1, maxZoom: 1, minPoints: 1000 } // effectively disables clustering
   });
 
-  const presentCategories = useMemo(() => {
-    const set = new Set<FacilityCategory>();
-    locations.forEach(loc => set.add(classifyFacility(loc.Facility_Type)));
-    return (Object.keys(FACILITY_CONFIG) as FacilityCategory[]).filter(c => set.has(c));
-  }, [locations]);
 
   // 3D mode: extrude each state by its (filtered) facility count.
   const stateHeightMatch = useMemo(() => {
@@ -374,8 +368,10 @@ function MapViewComponent({
         )}
       </Map>
 
-      {/* Map mode controls */}
+      {/* Map mode controls. No separate type legend — marker colours/icons match the Facility
+          Type selector and quick-filter chips, which serve as the visual legend. */}
       <div className="map-controls">
+        {is3D && <div className="map-3d-note">Height = facilities per state</div>}
         <button
           className={`map-control-btn${is3D ? ' active' : ''}`}
           onClick={toggle3D}
@@ -392,29 +388,6 @@ function MapViewComponent({
         >
           {theme === 'light' ? '🌙' : '☀️'}
         </button>
-      </div>
-
-      {/* Legend */}
-      <div className="map-legend" aria-label="Map legend">
-        {showProjects && (
-          <div className="legend-row">
-            <span className="legend-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
-            <span className="legend-acronym">PRJ</span>
-            <span className="legend-label">Projects</span>
-          </div>
-        )}
-        {presentCategories.map(cat => (
-          <div key={cat} className="legend-row">
-            <span className="legend-dot" style={{ background: FACILITY_CONFIG[cat].color }} aria-hidden="true" />
-            <span className="legend-acronym">{FACILITY_CONFIG[cat].acronym}</span>
-            <span className="legend-label">{FACILITY_CONFIG[cat].label}</span>
-          </div>
-        ))}
-        {is3D && (
-          <div className="legend-row legend-note">
-            <span className="legend-label">Height = facilities per state</span>
-          </div>
-        )}
       </div>
     </div>
   );
