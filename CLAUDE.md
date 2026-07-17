@@ -25,7 +25,7 @@ npm run convert-data  # regenerate public/data/*.json from the Excel master
 
 ## Architecture invariants — do not break these
 
-1. **Single source of truth for facility taxonomy.** All facility-type classification goes through `classifyFacility()` and `FACILITY_CONFIG` in [`src/lib/facilityTypes.ts`](src/lib/facilityTypes.ts). It drives pin colors/acronyms, quick filters, stat cards, the legend, chart categories, and report-card chips. Never re-implement type matching inline — extend the config/classifier instead.
+1. **Single source of truth for facility taxonomy.** All facility-type classification goes through `classifyFacility()` and `FACILITY_CONFIG` in [`src/lib/facilityTypes.ts`](src/lib/facilityTypes.ts). It drives pin colors/icons, the Facility Type selector, quick-filter chips, and report-card chips — this doubles as the map legend (there is no separate static legend). Never re-implement type matching inline — extend the config/classifier instead.
 2. **State-name aliasing lives in `src/lib/stateNames.ts`.** GeoJSON `STNAME_SH` and facility-data `State` differ for a few states/UTs. Always translate through `geoToDataState` / `dataToGeoStates` when crossing that boundary (choropleth, click-to-filter, 3D heights).
 3. **Two-stage filtering is intentional.** `filteredLocationsForStats` (region/state/discipline) drives statistics; `filteredLocations` additionally applies the type quick filter and drives map markers. Keep them separate so count cards stay stable while a type chip is active.
 4. **Data is cleaned at build time, not in the client.** Discipline typo fixes, dedupe, and column renames happen in [`scripts/convert_data.js`](scripts/convert_data.js). Keep the client thin; add data cleaning to the script, not to `db.ts`.

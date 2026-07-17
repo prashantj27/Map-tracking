@@ -49,10 +49,36 @@ export interface StatusMeta { label: string; color: string; bg: string; }
 export const STATUS_CONFIG: Record<string, StatusMeta> = {
   'Data Awaiting': { label: 'Data Awaiting', color: '#b06000', bg: '#fef7e0' },
   'Cancelled':     { label: 'Cancelled',     color: '#c5221f', bg: '#fce8e6' },
+  'In Progress':   { label: 'In Progress',   color: '#b06000', bg: '#fef7e0' },
+  'Completed':     { label: 'Completed',     color: '#188038', bg: '#e6f4ea' },
+  'On Hold':       { label: 'On Hold',       color: '#5f6368', bg: '#f1f3f4' },
 };
 
 export function getStatusMeta(status: string | null | undefined): StatusMeta {
   return STATUS_CONFIG[status ?? 'Data Awaiting'] ?? STATUS_CONFIG['Data Awaiting'];
+}
+
+/**
+ * Project Status quick-filter (bottom-left project filter bar, shown only when the Facility Type
+ * selector is set to Projects). "No images" is future-ready ground-truth verification: it matches
+ * projects with zero uploaded gallery photos (see lib/imageStore.ts) rather than a data column,
+ * since geotagged site-photo evidence is the practical proxy available today.
+ */
+export type ProjectStatusFilterKey = 'In Progress' | 'Completed' | 'Cancelled' | 'NO_IMAGES';
+
+export interface ProjectStatusFilterMeta { key: ProjectStatusFilterKey; label: string; icon: string; color: string; }
+
+export const PROJECT_STATUS_FILTERS: ProjectStatusFilterMeta[] = [
+  { key: 'In Progress', label: 'In Progress', icon: '🟡', color: '#f9ab00' },
+  { key: 'Completed',   label: 'Completed',   icon: '🟢', color: '#188038' },
+  { key: 'Cancelled',   label: 'Cancelled',   icon: '🔴', color: '#d93025' },
+  { key: 'NO_IMAGES',   label: 'Without GPS Images', icon: '📷', color: '#5f6368' },
+];
+
+/** Whether a project matches a Project Status filter key. `hasImages` comes from the image store. */
+export function projectMatchesStatusFilter(p: Project, filter: ProjectStatusFilterKey, hasImages: boolean): boolean {
+  if (filter === 'NO_IMAGES') return !hasImages;
+  return p.Status === filter;
 }
 
 /** Count projects by infra type, ordered by INFRA_CONFIG then by count. */

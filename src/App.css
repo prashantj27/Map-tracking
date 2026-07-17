@@ -10,71 +10,10 @@
   color: #202124;
 }
 
-.control-panel {
-  width: 320px;
-  flex-shrink: 0;
-  height: 100vh;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.97);
-  padding: 20px;
-  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-
-.control-panel.closed {
-  display: none;
-}
-
-.control-panel h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  border-bottom: 2px solid #f1f3f4;
-  padding-bottom: 12px;
-  color: #1a73e8;
-}
-
-.panel-toggle {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 20;
-  display: none;
-  padding: 8px 12px;
-  border: 1px solid #dadce0;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  color: #1a73e8;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
 .map-area {
   flex: 1;
   position: relative;
   min-width: 0;
-}
-
-/* Mobile: panel becomes a slide-over */
-@media (max-width: 768px) {
-  .panel-toggle {
-    display: block;
-  }
-  .control-panel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: min(320px, 85vw);
-    padding-top: 56px;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
-  }
 }
 
 /* ===== Text helpers ===== */
@@ -86,40 +25,12 @@
 .strong-500 { font-weight: 500; }
 .block { display: block; margin-bottom: 4px; }
 
-/* ===== Filter panel ===== */
+/* ===== Filter panel (shared search-result list; the panel itself lives in the
+   "Floating filter panel & quick chips" section near the end of this file) ===== */
 
-.field label,
-.search-box label {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #5f6368;
-}
-
-.field select,
-.search-box input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  background: #f1f3f4;
-  color: #202124;
-  border: 1px solid #dadce0;
-  outline: none;
-  font-family: inherit;
-  font-size: 13px;
-  box-sizing: border-box;
-}
-
-.field select:focus-visible,
-.search-box input:focus-visible,
 button:focus-visible {
   outline: 2px solid #1a73e8;
   outline-offset: 1px;
-}
-
-.search-box {
-  position: relative;
 }
 
 .search-results {
@@ -168,126 +79,7 @@ button:focus-visible {
   padding: 6px 2px;
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.chip {
-  padding: 6px 12px;
-  border-radius: 16px;
-  border: none;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: #e8eaed;
-  color: #5f6368;
-  transition: background 0.2s;
-}
-
-.chip.active {
-  background: #1a73e8;
-  color: #fff;
-}
-
-.active-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-}
-
-.filter-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: #e8f0fe;
-  color: #1a73e8;
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 3px 6px 3px 10px;
-}
-
-.filter-tag button {
-  border: none;
-  background: none;
-  color: #1a73e8;
-  font-size: 13px;
-  cursor: pointer;
-  padding: 0 2px;
-  line-height: 1;
-}
-
-.reset-btn {
-  border: none;
-  background: none;
-  color: #d93025;
-  font-size: 11px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 4px;
-}
-
-/* ===== Stats deck ===== */
-
-.stats-deck {
-  margin-top: 10px;
-  padding-top: 15px;
-  border-top: 2px solid #f1f3f4;
-}
-
-.stats-deck h4 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: #202124;
-}
-
-.scope-label {
-  font-size: 12px;
-  color: #1a73e8;
-}
-
-.stat-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.stat-card {
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: inherit;
-}
-
-.stat-value {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.stat-label {
-  font-size: 11px;
-}
-
-.trainee-box {
-  background: #f8f9fa;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #e8eaed;
-}
-
-.trainee-total {
-  font-size: 24px;
-  font-weight: 700;
-  color: #202124;
-  margin: 2px 0 10px;
-}
+/* ===== Trainee gender bar (used by the state report card) ===== */
 
 .gender-bar {
   display: flex;
@@ -302,21 +94,6 @@ button:focus-visible {
   justify-content: space-between;
   font-size: 11px;
   color: #5f6368;
-}
-
-.charts { margin-top: 15px; }
-.chart-block { margin-bottom: 20px; }
-
-.chart-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: #5f6368;
-  margin-bottom: 8px;
-}
-
-.chart-holder {
-  width: 100%;
-  margin-left: -15px;
 }
 
 /* ===== Map: pins, clusters, tooltip, legend ===== */
@@ -471,7 +248,9 @@ button:focus-visible {
   pointer-events: none;
 }
 
-/* Map mode controls (3D / theme) */
+/* Map mode controls (3D / theme). No static type legend here — marker colours/icons match the
+   Facility Type selector and quick-filter chips (see the floating panel section below), which
+   serve as the visual legend. */
 .map-controls {
   position: absolute;
   top: 110px;
@@ -479,7 +258,18 @@ button:focus-visible {
   z-index: 6;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 6px;
+}
+
+.map-3d-note {
+  background: rgba(32, 33, 36, 0.82);
+  color: #fff;
+  font-size: 10px;
+  font-style: italic;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
 .map-control-btn {
@@ -525,64 +315,6 @@ button:focus-visible {
   margin-top: 2px;
 }
 
-.map-legend {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 5;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 11px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 210px;
-}
-
-.legend-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 3px 0;
-}
-
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.legend-acronym {
-  font-weight: 700;
-  width: 40px;
-  flex-shrink: 0;
-}
-
-.legend-label {
-  color: #5f6368;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.legend-discipline {
-  padding-bottom: 4px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e8eaed;
-  font-size: 12px;
-}
-
-.legend-note {
-  padding-top: 4px;
-  margin-top: 4px;
-  border-top: 1px solid #e8eaed;
-  font-style: italic;
-}
-
-@media (max-width: 768px) {
-  .map-legend { display: none; }
-}
 
 /* ===== State report card ===== */
 
@@ -1295,62 +1027,168 @@ button:focus-visible {
    PRJ GIS layer — floating filter bar, project markers & popup
    ============================================================ */
 
-/* ---- Floating map filter bar (bottom-left; replaces the old left sidebar) ---- */
-.map-filter-bar {
+/* ---- Floating filter panel & quick chips (bottom-left; replaces the old left sidebar) ----
+   Glassmorphism: translucent white, backdrop blur, soft shadow, rounded corners, 200-300ms
+   motion. The panel + the quick-chip bar are both anchored to one bottom-left flex stack so they
+   never overlap regardless of panel content/viewport size. */
+
+@keyframes mfp-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.map-bottom-stack {
   position: absolute;
   left: 16px;
   bottom: 16px;
   z-index: 15;
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   max-width: calc(100vw - 32px);
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
   font-family: 'Inter', system-ui, sans-serif;
 }
-.mfb-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 14px; border-bottom: 1px solid #eef0f2;
-}
-.map-filter-bar.collapsed .mfb-header { border-bottom: none; }
-.mfb-title { font-size: 13px; font-weight: 700; color: #1a73e8; }
-.mfb-collapse {
-  border: none; background: #f1f3f4; color: #5f6368; width: 26px; height: 26px;
-  border-radius: 7px; cursor: pointer; font-size: 10px; flex-shrink: 0;
-}
-.mfb-collapse:hover { background: #e8eaed; }
-.mfb-body { padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
 
-.mfb-search { position: relative; }
-.mfb-search input {
-  width: 100%; padding: 9px 10px; border-radius: 8px; background: #f1f3f4;
-  border: 1px solid #dadce0; outline: none; font-family: inherit; font-size: 13px; box-sizing: border-box;
+/* ---- Bottom quick-filter chips (Google-Maps style) ---- */
+.map-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14), 0 1px 4px rgba(15, 23, 42, 0.06);
+  scrollbar-width: none;
 }
-.mfb-search input:focus-visible { outline: 2px solid #1a73e8; outline-offset: 1px; }
-/* results drop UP (the bar is anchored to the bottom of the screen) */
-.mfb-search .search-results {
-  position: absolute; left: 0; right: 0; bottom: calc(100% + 6px); top: auto; margin: 0; z-index: 5;
-}
-.mfb-search .search-results button { display: flex; align-items: center; gap: 4px; }
-.mfb-search .search-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-quick-chips::-webkit-scrollbar { display: none; }
 
-.mfb-row { display: flex; flex-direction: column; gap: 4px; }
-.mfb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #5f6368; }
-.mfb-row select {
-  width: 100%; padding: 8px 10px; border-radius: 8px; background: #fff; border: 1px solid #dadce0;
-  font-family: inherit; font-size: 13px; cursor: pointer; color: #202124;
+.quick-chip {
+  display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+  padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid transparent;
+  background: transparent; color: #3c4043; font-size: 12.5px; font-weight: 600;
+  font-family: inherit; cursor: pointer; white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
 }
-.mfb-prj-toggle {
-  display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;
-  padding: 9px 10px; background: #eef1f8; border: 1px solid #d6ddf0; border-radius: 8px;
+.quick-chip:hover { background: rgba(26, 115, 232, 0.08); }
+.quick-chip.active {
+  background: #202124; color: #fff; border-color: #202124;
+  transform: translateY(-1px);
 }
-.mfb-prj-toggle input { width: 16px; height: 16px; accent-color: #223f86; cursor: pointer; }
-.prj-swatch { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 2px rgba(34, 63, 134, 0.25); flex-shrink: 0; }
-.search-kind {
-  margin-left: auto; font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 999px;
-  color: #fff; background: #223f86; letter-spacing: 0.03em; flex-shrink: 0;
+.quick-chip.active .type-icon { box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.55); }
+.quick-chip.more-chip {
+  padding: 6px 12px; background: rgba(95, 99, 104, 0.08); color: #5f6368;
+}
+.quick-chip.more-chip:hover { background: rgba(95, 99, 104, 0.16); }
+.quick-chip.more-chip.open { color: #1a73e8; background: #e8f0fe; }
+.more-chevron { transition: transform 0.2s ease; }
+.quick-chip.more-chip.open .more-chevron { transform: rotate(180deg); }
+
+/* ---- Main floating panel ---- */
+.map-filter-panel {
+  width: 312px;
+  max-width: calc(100vw - 32px);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.2), 0 2px 10px rgba(15, 23, 42, 0.08);
+  box-sizing: border-box;
+  animation: mfp-rise 0.25s ease-out;
+}
+
+/* Search */
+.mfp-search { position: relative; }
+.mfp-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #5f6368; pointer-events: none; }
+.mfp-search input {
+  width: 100%; padding: 11px 12px 11px 34px; border-radius: 14px; background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08); outline: none; font-family: inherit; font-size: 13.5px;
+  box-sizing: border-box; color: #202124; transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.mfp-search input::placeholder { color: #80868b; }
+.mfp-search input:focus-visible { outline: none; border-color: #1a73e8; box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.18); }
+/* results drop UP — the panel sits at the bottom of the screen */
+.mfp-search-results {
+  position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); top: auto; margin: 0; z-index: 5;
+  animation: mfp-rise 0.2s ease-out;
+}
+.mfp-search-results button { display: flex; align-items: center; gap: 4px; }
+.mfp-search-results .search-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Facility Type selector — custom icon dropdown, doubles as the map legend */
+.type-select { position: relative; }
+.type-select-trigger {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 14px; border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92); cursor: pointer; font-family: inherit;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.type-select-trigger:hover { background: #fff; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
+.type-select-label { flex: 1; text-align: left; font-size: 13.5px; font-weight: 600; color: #202124; }
+.type-select-chevron { color: #5f6368; transition: transform 0.2s ease; flex-shrink: 0; }
+.type-select-chevron.open { transform: rotate(180deg); }
+
+.type-select-menu {
+  position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); z-index: 6;
+  list-style: none; margin: 0; padding: 6px; max-height: 320px; overflow-y: auto;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
+  animation: mfp-rise 0.2s ease-out;
+}
+.type-option {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 10px; border: none; background: none;
+  font-family: inherit; font-size: 13px; color: #202124; text-align: left; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.type-option:hover { background: #f1f3f4; }
+.type-option.selected { background: #e8f0fe; color: #1a73e8; font-weight: 600; }
+.type-option em { font-style: normal; color: #5f6368; }
+.type-option.selected em { color: #1a73e8; }
+.type-option-divider { height: 1px; margin: 6px 4px; background: rgba(0, 0, 0, 0.08); list-style: none; }
+
+/* Shared small circular badge icon (Facility Type selector + quick chips) */
+.type-icon {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  border-radius: 50%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Project Status filter — appears only when Facility Type = Projects */
+.project-status-bar {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  animation: mfp-rise 0.22s ease-out;
+}
+.status-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85); color: #3c4043; font-size: 12px; font-weight: 600;
+  font-family: inherit; cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.status-chip:hover { background: #fff; }
+.status-chip.active { color: #fff; }
+
+/* State selector — compact, secondary control */
+.mfp-state-row {
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 8px; border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+.mfp-state-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #5f6368; flex-shrink: 0; }
+.mfp-state-row select {
+  flex: 1; min-width: 0; padding: 7px 8px; border-radius: 10px; background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08); font-family: inherit; font-size: 12.5px; cursor: pointer; color: #202124;
 }
 
 /* ---- Shared map-pin graphic (facilities + projects use the same teardrop frame) ---- */
@@ -1397,10 +1235,15 @@ button:focus-visible {
 .prj-popup-actions .directions-btn,
 .prj-popup-actions .project-details-link { margin: 0; justify-content: center; }
 
-/* ---- Responsive ---- */
+/* ---- Responsive: floating panel + quick chips ---- */
 @media (max-width: 768px) {
-  .map-filter-bar { left: 8px; right: 8px; bottom: 8px; width: auto; max-width: none; }
+  .map-bottom-stack { left: 8px; right: 8px; bottom: 8px; max-width: none; }
+  .map-filter-panel { width: auto; max-width: none; }
+  .map-quick-chips { width: 100%; box-sizing: border-box; }
+  .type-select-menu { max-height: 45vh; }
 }
-@media (max-width: 560px) {
-  .map-legend { display: none; }
+@media (max-width: 420px) {
+  /* Icon-only chips to save space; "More Filters" keeps its label (no icon of its own). */
+  .quick-chip-label { display: none; }
+  .quick-chip:not(.more-chip) { padding: 8px; }
 }

@@ -5,8 +5,10 @@ import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
 import { dataToGeoStates } from './lib/stateNames';
-import { hasProjectCoordinates } from './lib/projects';
-import { MapFilterBar } from './components/MapFilterBar';
+import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
+import { projectCodesWithImages } from './lib/imageStore';
+import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
+import { MapQuickChips } from './components/MapQuickChips';
 import { MapView } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
 import { ProjectDetailModal } from './components/projects/ProjectDetailModal';
@@ -43,13 +45,16 @@ function App() {
   const [seedState, setSeedState] = useState<SeedState>('loading');
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
 
-  // Facility filters (independent of the PRJ layer)
+  // Unified type selector (Facility Type dropdown + bottom quick chips): a facility category,
+  // 'PRJ' (Projects layer only), or null ("All Facilities" — everything shown). Replaces the
+  // separate facility-type filter + independent PRJ-layer checkbox from the previous design.
+  const [typeSelection, setTypeSelection] = useState<TypeSelection>(null);
   const [filterState, setFilterState] = useState('');
-  const [activeFacilityType, setActiveFacilityType] = useState<FacilityCategory | null>(null);
   const [reportState, setReportState] = useState<string | null>(null);
 
-  // Projects (PRJ) GIS layer — toggled independently of the facility layers
-  const [showProjects, setShowProjects] = useState(true);
+  // Project Status filter — only meaningful (and only shown) while typeSelection === 'PRJ'.
+  const [projectStatusFilter, setProjectStatusFilter] = useState<ProjectStatusFilterKey | null>(null);
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [projectDetail, setProjectDetail] = useState<Project | null>(null);
 
@@ -66,6 +71,10 @@ function App() {
   const allDisciplineRows = useLiveQuery(() => db.disciplines.toArray()) || [];
   const allProjects = useLiveQuery(() => db.projects.toArray()) || [];
 
+  // Project_Codes with at least one uploaded gallery image — powers "Without GPS Images".
+  const uploadedCodesArr = useLiveQuery(() => projectCodesWithImages(), []) || [];
+  const uploadedImageCodes = useMemo(() => new Set(uploadedCodesArr), [uploadedCodesArr]);
+
   const uniqueRegions = useMemo(
     () => Array.from(new Set(allLocations.map(l => l.Parent_Region).filter(isNonEmptyString))).sort(),
     [allLocations]);
@@ -73,18 +82,31 @@ function App() {
     () => Array.from(new Set(allLocations.map(l => l.State).filter(isNonEmptyString))).sort(),
     [allLocations]);
 
-  // Facility markers: State + Facility Type filters (independent from projects).
-  const filteredLocations = useMemo(() => allLocations.filter(loc => {
-    if (filterState && loc.State !== filterState) return false;
-    if (activeFacilityType && classifyFacility(loc.Facility_Type) !== activeFacilityType) return false;
-    return true;
-  }), [allLocations, filterState, activeFacilityType]);
+  // Selecting a specific facility type or "Projects" focuses the map on that single layer
+  // (Google-Maps-style category switching); "All Facilities" shows both layers together.
+  const activeFacilityType: FacilityCategory | null = (typeSelection && typeSelection !== 'PRJ') ? typeSelection : null;
+  const showFacilities = typeSelection !== 'PRJ';
+  const showProjects = typeSelection === null || typeSelection === 'PRJ';
 
-  // PRJ markers: only projects with coordinates; State filter also scopes them (geographic).
+  // Facility markers: State + Facility Type filters.
+  const filteredLocations = useMemo(() => {
+    if (!showFacilities) return [];
+    return allLocations.filter(loc => {
+      if (filterState && loc.State !== filterState) return false;
+      if (activeFacilityType && classifyFacility(loc.Facility_Type) !== activeFacilityType) return false;
+      return true;
+    });
+  }, [allLocations, filterState, activeFacilityType, showFacilities]);
+
+  // PRJ markers: only projects with coordinates; State + Project Status filters also apply.
   const filteredProjects = useMemo(() => {
-    const withCoords = allProjects.filter(hasProjectCoordinates);
-    return filterState ? withCoords.filter(p => p.State === filterState) : withCoords;
-  }, [allProjects, filterState]);
+    let list = allProjects.filter(hasProjectCoordinates);
+    if (filterState) list = list.filter(p => p.State === filterState);
+    if (projectStatusFilter) {
+      list = list.filter(p => projectMatchesStatusFilter(p, projectStatusFilter, uploadedImageCodes.has(p.Project_Code)));
+    }
+    return list;
+  }, [allProjects, filterState, projectStatusFilter, uploadedImageCodes]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {
@@ -110,8 +132,20 @@ function App() {
     return matchExpr;
   }, [allLocations, uniqueRegions]);
 
-  const hasActiveFilters = !!(filterState || activeFacilityType);
-  const resetFilters = useCallback(() => { setFilterState(''); setActiveFacilityType(null); }, []);
+  const hasActiveFilters = !!(filterState || typeSelection || projectStatusFilter);
+
+  // Changing the type selection away from Projects clears its status filter (it's hidden then,
+  // so a stale filter shouldn't silently keep hiding PRJ markers next time it's reopened).
+  const handleTypeSelectionChange = useCallback((v: TypeSelection) => {
+    setTypeSelection(v);
+    if (v !== 'PRJ') setProjectStatusFilter(null);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilterState('');
+    setTypeSelection(null);
+    setProjectStatusFilter(null);
+  }, []);
 
   // Facility selection (from map / report card) — one popup at a time.
   const handleSelectFacility = useCallback((loc: Location | null) => {
@@ -146,10 +180,11 @@ function App() {
 
   const handleViewProjectDetails = useCallback((p: Project) => setProjectDetail(p), []);
 
-  // "Show on Map" (search result / future project list) — ensure PRJ visible, fly to the marker
-  // and open its popup.
+  // Search → project ("Show on Map"): switch to the Projects layer so the marker is visible, fly
+  // to it and open its popup.
   const handlePickProject = useCallback((p: Project) => {
-    setShowProjects(true);
+    setTypeSelection('PRJ');
+    setProjectStatusFilter(null);
     setFilterState('');
     setSelectedLocation(null);
     setSelectedProject(p);
@@ -179,19 +214,22 @@ function App() {
         onViewProjectDetails={handleViewProjectDetails}
       />
 
-      <MapFilterBar
-        uniqueStates={uniqueStates}
-        filterState={filterState}
-        onStateChange={setFilterState}
-        activeFacilityType={activeFacilityType}
-        onFacilityTypeChange={setActiveFacilityType}
-        showProjects={showProjects}
-        onToggleProjects={setShowProjects}
-        allLocations={allLocations}
-        projects={allProjects}
-        onPickFacility={handlePickFacility}
-        onPickProject={handlePickProject}
-      />
+      <div className="map-bottom-stack">
+        <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={handleTypeSelectionChange} />
+        <MapFilterBar
+          uniqueStates={uniqueStates}
+          filterState={filterState}
+          onStateChange={setFilterState}
+          typeSelection={typeSelection}
+          onTypeSelectionChange={handleTypeSelectionChange}
+          projectStatusFilter={projectStatusFilter}
+          onProjectStatusFilterChange={setProjectStatusFilter}
+          allLocations={allLocations}
+          projects={allProjects}
+          onPickFacility={handlePickFacility}
+          onPickProject={handlePickProject}
+        />
+      </div>
 
       {reportState && (
         <StateReportCard
