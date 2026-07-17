@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Location, Project } from '../db';
 import { FACILITY_CONFIG, FILTER_CHIP_CATEGORIES, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
 import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, type ProjectStatusFilterKey } from '../lib/projects';
+import { useDraggable } from '../lib/useDraggable';
 import { TypeIcon } from './TypeIcon';
+import { DragHandle } from './DragHandle';
 
 export type TypeSelection = FacilityCategory | 'PRJ' | null;
 
@@ -40,6 +42,8 @@ export function MapFilterBar({
   const [query, setQuery] = useState('');
   const [typeOpen, setTypeOpen] = useState(false);
   const typeRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+  const { style: dragStyle, dragging, handleProps: dragHandleProps } = useDraggable('mapFilterPanelPos', panelRef);
 
   useEffect(() => {
     if (!typeOpen) return;
@@ -77,7 +81,7 @@ export function MapFilterBar({
   };
 
   return (
-    <section className="map-filter-panel" aria-label="Map filters">
+    <section className="map-filter-panel" aria-label="Map filters" ref={panelRef} style={dragStyle}>
       <div className="mfp-search">
         <svg className="mfp-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
@@ -90,6 +94,11 @@ export function MapFilterBar({
           onChange={(e) => setQuery(e.target.value)}
           autoComplete="off"
           aria-label="Search facilities, projects, districts"
+        />
+        <DragHandle
+          className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
+          label="Drag to move the filter panel (double-click to reset position)"
+          {...dragHandleProps}
         />
         {hasResults && (
           <ul className="search-results mfp-search-results" role="listbox">
@@ -117,6 +126,14 @@ export function MapFilterBar({
         {query.trim().length >= 2 && !hasResults && (
           <div className="search-empty">No matches for “{query.trim()}”</div>
         )}
+      </div>
+
+      <div className="mfp-state-row">
+        <label htmlFor="mfp-state" className="mfp-state-label">State</label>
+        <select id="mfp-state" value={filterState} onChange={(e) => onStateChange(e.target.value)}>
+          <option value="">All States</option>
+          {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
+        </select>
       </div>
 
       <div className="type-select" ref={typeRef}>
@@ -177,14 +194,6 @@ export function MapFilterBar({
           ))}
         </div>
       )}
-
-      <div className="mfp-state-row">
-        <label htmlFor="mfp-state" className="mfp-state-label">State</label>
-        <select id="mfp-state" value={filterState} onChange={(e) => onStateChange(e.target.value)}>
-          <option value="">All States</option>
-          {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
-        </select>
-      </div>
     </section>
   );
 }

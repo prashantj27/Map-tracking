@@ -81,12 +81,15 @@ src/
 ├── index.css                Global resets / base styles
 ├── App.css                  All component styling (class-based; imported by App.tsx)
 ├── components/
-│   ├── MapFilterBar.tsx     Floating glassmorphism panel (bottom-left): search, the Facility Type
-│   │                        selector (custom icon dropdown — All Facilities / 9 types / Projects,
-│   │                        doubles as the map legend), the Project Status chip row (Projects only),
-│   │                        and the State selector. Replaces the old left sidebar.
-│   ├── MapQuickChips.tsx    Bottom quick-filter chip row (All/NCOE/STC/KIC/NSTC/IGMA/RC/Projects/
-│   │                        More Filters) — drives the same type-selection state as MapFilterBar
+│   ├── MapFilterBar.tsx     Floating glassmorphism panel (default: bottom-left, user-draggable):
+│   │                        search, the State selector, the Facility Type selector (custom icon
+│   │                        dropdown — All Facilities / 9 types / Projects, doubles as the map
+│   │                        legend), and the Project Status chip row (Projects only). Replaces the
+│   │                        old left sidebar.
+│   ├── MapQuickChips.tsx    Bottom quick-filter chip row (default: bottom-left, user-draggable):
+│   │                        All/NCOE/STC/KIC/RC/Projects primary, KISCE/EXT/AKH/IGMA/NSTC behind
+│   │                        "More Filters" — drives the same type-selection state as MapFilterBar
+│   ├── DragHandle.tsx       Shared grip button for the two draggable widgets above
 │   ├── TypeIcon.tsx         Small circular badge icon for a facility type / "All" / Projects —
 │   │                        reuses MapPinGraphic's glyphs so it doubles as the legend
 │   ├── MapPinGraphic.tsx    Shared teardrop pin frame + per-type glyph set (also used by TypeIcon)
@@ -106,7 +109,8 @@ src/
 └── lib/  (+ projects.ts, imageStore.ts, permissions.ts)
     ├── facilityTypes.ts     Single source of truth for facility taxonomy (classify + config)
     ├── stateNames.ts        GeoJSON ↔ facility-data state-name aliasing (both directions)
-    └── disciplineIcons.ts   Discipline → emoji, "-Para" folding, junk-row filtering
+    ├── disciplineIcons.ts   Discipline → emoji, "-Para" folding, junk-row filtering
+    └── useDraggable.ts      Pointer-events drag hook (clamped, localStorage-persisted position)
 ```
 
 ### State ownership
@@ -134,11 +138,13 @@ The State selector is orthogonal (geographic) and scopes both layers together re
 - **No static legend overlay** — marker colours/icons are driven by the same `FACILITY_CONFIG` that renders the Facility Type selector and quick-filter chips (`TypeIcon`), so those double as the legend.
 
 ### Floating filter panel (`MapFilterBar.tsx` + `MapQuickChips.tsx`)
+Panel order top-to-bottom: **Search** → **State** → **Facility Type** → **Project Status** (conditional).
 - **Search** typeahead over facility name/city/district and project name/state/district (min 2 chars, top 6 each, tagged `PRJ`) with fly-to + popup-open on select; results drop upward since the panel is bottom-anchored.
+- **State selector**: compact, scopes both GIS layers geographically.
 - **Facility Type selector**: a custom icon dropdown (not a native `<select>`, so each option can show its `TypeIcon`) — "All Facilities", the 9 facility categories, and "Projects (PRJ)" — single-select, closes on choice/outside-click/Escape.
 - **Project Status filter**: shown only when the type selector is "Projects" — see the Projects module section above.
-- **State selector**: compact, scopes both GIS layers geographically.
-- **Quick-filter chips** (`MapQuickChips.tsx`): the same type-selection state as one-tap pills (All/NCOE/STC/KIC/NSTC/IGMA/RC/Projects), with KISCE/EXT/AKH behind a "More Filters" expander — kept in sync with the dropdown since both write the same `typeSelection`.
+- **Quick-filter chips** (`MapQuickChips.tsx`): the same type-selection state as one-tap pills — primary `All/NCOE/STC/KIC/RC/Projects`, with `KISCE/EXT/AKH/IGMA/NSTC` behind a "More Filters" expander — kept in sync with the dropdown since both write the same `typeSelection`.
+- **Draggable**: both widgets have a grip handle (`DragHandle.tsx` + `lib/useDraggable.ts`) and can be repositioned anywhere on screen; position is clamped to stay fully visible and persisted per-browser in `localStorage`. Double-click a handle to reset to the default bottom-left spot.
 
 ### Facility popup (`FacilityPopup.tsx`)
 Up to three tabs, each shown only when it has data: *Overview* (address, trainee split, contact in-charge), *Disciplines* (per-sport M/F/Total table), *Funds & Staff* (KISCE fund releases in ₹ + manpower sanctioned/current/status). Detail rows are fetched per-facility via `useLiveQuery`.

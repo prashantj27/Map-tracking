@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FACILITY_CONFIG, QUICK_CHIP_PRIMARY, QUICK_CHIP_MORE, type FacilityCategory } from '../lib/facilityTypes';
+import { useDraggable } from '../lib/useDraggable';
 import { TypeIcon, type TypeIconKey } from './TypeIcon';
+import { DragHandle } from './DragHandle';
 import type { TypeSelection } from './MapFilterBar';
 
 export interface MapQuickChipsProps {
@@ -15,6 +17,8 @@ export interface MapQuickChipsProps {
  */
 export function MapQuickChips({ typeSelection, onTypeSelectionChange }: MapQuickChipsProps) {
   const [moreOpen, setMoreOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const { style: dragStyle, dragging, handleProps: dragHandleProps } = useDraggable('mapQuickChipsPos', rootRef);
 
   const renderChip = (key: TypeSelection, label: string, iconType: TypeIconKey) => {
     const active = typeSelection === key;
@@ -33,7 +37,12 @@ export function MapQuickChips({ typeSelection, onTypeSelectionChange }: MapQuick
   };
 
   return (
-    <div className="map-quick-chips" role="group" aria-label="Quick filters">
+    <div className="map-quick-chips" role="group" aria-label="Quick filters" ref={rootRef} style={dragStyle}>
+      <DragHandle
+        className={`chips-drag-handle${dragging ? ' dragging' : ''}`}
+        label="Drag to move the quick filters (double-click to reset position)"
+        {...dragHandleProps}
+      />
       {renderChip(null, 'All', 'ALL')}
       {QUICK_CHIP_PRIMARY.map((cat: FacilityCategory) => renderChip(cat, FACILITY_CONFIG[cat].acronym, cat))}
       {renderChip('PRJ', 'Projects', 'PRJ')}
