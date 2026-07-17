@@ -8,7 +8,6 @@ import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
 import { projectCodesWithImages } from './lib/imageStore';
 import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
-import { MapQuickChips } from './components/MapQuickChips';
 import { MapView } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
 import { ProjectDetailModal } from './components/projects/ProjectDetailModal';
@@ -214,8 +213,7 @@ function App() {
         onViewProjectDetails={handleViewProjectDetails}
       />
 
-      {/* Independently draggable — each remembers its own position (see useDraggable). */}
-      <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={handleTypeSelectionChange} />
+      {/* Single draggable widget — remembers its own position (see useDraggable). */}
       <MapFilterBar
         uniqueStates={uniqueStates}
         filterState={filterState}

@@ -1028,19 +1028,18 @@ button:focus-visible {
    PRJ GIS layer — floating filter bar, project markers & popup
    ============================================================ */
 
-/* ---- Floating filter panel & quick chips (bottom-left by default; replaces the old left
-   sidebar) ----
+/* ---- Floating filter panel (bottom-left by default; replaces the old left sidebar) ----
    Glassmorphism: translucent white, backdrop blur, soft shadow, rounded corners, 200-300ms
-   motion. Both widgets are independently positioned and independently draggable (see
-   lib/useDraggable.ts) — their default bottom-left resting spots just happen not to overlap;
-   once the user drags one, its own remembered position takes over. */
+   motion. A single draggable widget (see lib/useDraggable.ts) combining search, State, the
+   Facility Type quick chips, and the Projects status row — one grip handle moves everything
+   together. */
 
 @keyframes mfp-rise {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Drag handle (shared by the quick-chip bar and the filter panel) ---- */
+/* ---- Drag handle (the filter panel's grip, at the end of the search box) ---- */
 .drag-handle {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   border: none; cursor: grab; touch-action: none; color: #9aa0a6;
@@ -1049,47 +1048,33 @@ button:focus-visible {
 .drag-handle:hover { color: #5f6368; }
 .drag-handle.dragging { cursor: grabbing; }
 
-/* ---- Bottom quick-filter chips (Google-Maps style) ---- */
-.map-quick-chips {
-  position: absolute;
-  left: 16px;
-  bottom: 210px;
-  z-index: 15;
+/* ---- Facility Type quick chips (Google-Maps style) — nested inside the filter panel, the
+   sole Facility Type control. Wraps onto multiple lines rather than scrolling, since it now
+   lives inside a fixed-width card instead of a free-floating pill. ---- */
+.mfp-chip-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-  max-width: min(100%, calc(100vw - 32px));
-  overflow-x: auto;
-  padding: 5px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px) saturate(180%);
-  -webkit-backdrop-filter: blur(14px) saturate(180%);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14), 0 1px 4px rgba(15, 23, 42, 0.06);
-  scrollbar-width: none;
-  font-family: 'Inter', system-ui, sans-serif;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
-.chips-drag-handle {
-  width: 24px; height: 24px; border-radius: 50%; background: rgba(95, 99, 104, 0.08);
-}
-.chips-drag-handle:hover { background: rgba(95, 99, 104, 0.16); }
-.map-quick-chips::-webkit-scrollbar { display: none; }
 
 .quick-chip {
   display: flex; align-items: center; gap: 6px; flex-shrink: 0;
-  padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid transparent;
-  background: transparent; color: #3c4043; font-size: 12.5px; font-weight: 600;
+  padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.7); color: #3c4043; font-size: 12.5px; font-weight: 600;
   font-family: inherit; cursor: pointer; white-space: nowrap;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.quick-chip:hover { background: rgba(26, 115, 232, 0.08); }
+.quick-chip:hover { background: #fff; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08); }
 .quick-chip.active {
   background: #202124; color: #fff; border-color: #202124;
   transform: translateY(-1px);
 }
 .quick-chip.active .type-icon { box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.55); }
 .quick-chip.more-chip {
-  padding: 6px 12px; background: rgba(95, 99, 104, 0.08); color: #5f6368;
+  padding: 6px 12px; background: rgba(95, 99, 104, 0.08); color: #5f6368; border-color: transparent;
 }
 .quick-chip.more-chip:hover { background: rgba(95, 99, 104, 0.16); }
 .quick-chip.more-chip.open { color: #1a73e8; background: #e8f0fe; }
@@ -1102,7 +1087,7 @@ button:focus-visible {
   left: 16px;
   bottom: 16px;
   z-index: 15;
-  width: min(312px, calc(100vw - 32px));
+  width: min(336px, calc(100vw - 32px));
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -1138,43 +1123,7 @@ button:focus-visible {
 .mfp-search-results button { display: flex; align-items: center; gap: 4px; }
 .mfp-search-results .search-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-/* Facility Type selector — custom icon dropdown, doubles as the map legend */
-.type-select { position: relative; }
-.type-select-trigger {
-  width: 100%; display: flex; align-items: center; gap: 10px;
-  padding: 8px 10px; border-radius: 14px; border: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.92); cursor: pointer; font-family: inherit;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-.type-select-trigger:hover { background: #fff; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
-.type-select-label { flex: 1; text-align: left; font-size: 13.5px; font-weight: 600; color: #202124; }
-.type-select-chevron { color: #5f6368; transition: transform 0.2s ease; flex-shrink: 0; }
-.type-select-chevron.open { transform: rotate(180deg); }
-
-.type-select-menu {
-  position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); z-index: 6;
-  list-style: none; margin: 0; padding: 6px; max-height: 320px; overflow-y: auto;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
-  animation: mfp-rise 0.2s ease-out;
-}
-.type-option {
-  width: 100%; display: flex; align-items: center; gap: 10px;
-  padding: 8px 10px; border-radius: 10px; border: none; background: none;
-  font-family: inherit; font-size: 13px; color: #202124; text-align: left; cursor: pointer;
-  transition: background 0.15s ease;
-}
-.type-option:hover { background: #f1f3f4; }
-.type-option.selected { background: #e8f0fe; color: #1a73e8; font-weight: 600; }
-.type-option em { font-style: normal; color: #5f6368; }
-.type-option.selected em { color: #1a73e8; }
-.type-option-divider { height: 1px; margin: 6px 4px; background: rgba(0, 0, 0, 0.08); list-style: none; }
-
-/* Shared small circular badge icon (Facility Type selector + quick chips) */
+/* Shared small circular badge icon (Facility Type quick chips) */
 .type-icon {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   border-radius: 50%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -1249,12 +1198,10 @@ button:focus-visible {
 .prj-popup-actions .directions-btn,
 .prj-popup-actions .project-details-link { margin: 0; justify-content: center; }
 
-/* ---- Responsive: floating panel + quick chips (default positions only — once either widget
-   has been dragged, its remembered position applies at every width). ---- */
+/* ---- Responsive: floating panel (default position only — once dragged, its remembered
+   position applies at every width). ---- */
 @media (max-width: 768px) {
   .map-filter-panel { left: 8px; bottom: 8px; }
-  .map-quick-chips { left: 8px; bottom: 246px; max-width: calc(100vw - 16px); }
-  .type-select-menu { max-height: 45vh; }
 }
 @media (max-width: 420px) {
   /* Icon-only chips to save space; "More Filters" keeps its label (no icon of its own). */

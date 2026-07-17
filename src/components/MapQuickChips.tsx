@@ -1,8 +1,6 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { FACILITY_CONFIG, QUICK_CHIP_PRIMARY, QUICK_CHIP_MORE, type FacilityCategory } from '../lib/facilityTypes';
-import { useDraggable } from '../lib/useDraggable';
 import { TypeIcon, type TypeIconKey } from './TypeIcon';
-import { DragHandle } from './DragHandle';
 import type { TypeSelection } from './MapFilterBar';
 
 export interface MapQuickChipsProps {
@@ -11,16 +9,14 @@ export interface MapQuickChipsProps {
 }
 
 /**
- * Bottom floating quick-filter chips (Google-Maps style) — one tap to switch the active type.
- * Drives the exact same `typeSelection` state as the Facility Type selector in MapFilterBar, so
- * the two stay in sync regardless of which control the user touches.
+ * One-tap facility-type chips (Google-Maps style) — the sole Facility Type control, nested inside
+ * MapFilterBar's panel. Each chip's `title` carries the full type name (e.g. "National Centre of
+ * Excellence") as a hover tooltip, since the chips themselves only show the short acronym.
  */
 export function MapQuickChips({ typeSelection, onTypeSelectionChange }: MapQuickChipsProps) {
   const [moreOpen, setMoreOpen] = useState(false);
-  const rootRef = useRef<HTMLDivElement>(null);
-  const { style: dragStyle, dragging, handleProps: dragHandleProps } = useDraggable('mapQuickChipsPos', rootRef);
 
-  const renderChip = (key: TypeSelection, label: string, iconType: TypeIconKey) => {
+  const renderChip = (key: TypeSelection, label: string, iconType: TypeIconKey, title: string) => {
     const active = typeSelection === key;
     return (
       <button
@@ -28,6 +24,7 @@ export function MapQuickChips({ typeSelection, onTypeSelectionChange }: MapQuick
         type="button"
         className={`quick-chip${active ? ' active' : ''}`}
         aria-pressed={active}
+        title={title}
         onClick={() => onTypeSelectionChange(active ? null : key)}
       >
         <TypeIcon type={iconType} size={18} />
@@ -37,16 +34,11 @@ export function MapQuickChips({ typeSelection, onTypeSelectionChange }: MapQuick
   };
 
   return (
-    <div className="map-quick-chips" role="group" aria-label="Quick filters" ref={rootRef} style={dragStyle}>
-      <DragHandle
-        className={`chips-drag-handle${dragging ? ' dragging' : ''}`}
-        label="Drag to move the quick filters (double-click to reset position)"
-        {...dragHandleProps}
-      />
-      {renderChip(null, 'All', 'ALL')}
-      {QUICK_CHIP_PRIMARY.map((cat: FacilityCategory) => renderChip(cat, FACILITY_CONFIG[cat].acronym, cat))}
-      {renderChip('PRJ', 'Projects', 'PRJ')}
-      {moreOpen && QUICK_CHIP_MORE.map((cat: FacilityCategory) => renderChip(cat, FACILITY_CONFIG[cat].acronym, cat))}
+    <div className="mfp-chip-row" role="group" aria-label="Filter by facility type">
+      {renderChip(null, 'All', 'ALL', 'All Facilities')}
+      {QUICK_CHIP_PRIMARY.map((cat: FacilityCategory) => renderChip(cat, FACILITY_CONFIG[cat].acronym, cat, FACILITY_CONFIG[cat].label))}
+      {renderChip('PRJ', 'Projects', 'PRJ', 'Projects')}
+      {moreOpen && QUICK_CHIP_MORE.map((cat: FacilityCategory) => renderChip(cat, FACILITY_CONFIG[cat].acronym, cat, FACILITY_CONFIG[cat].label))}
       <button
         type="button"
         className={`quick-chip more-chip${moreOpen ? ' open' : ''}`}
