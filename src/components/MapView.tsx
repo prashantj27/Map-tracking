@@ -9,6 +9,7 @@ import type Supercluster from 'supercluster';
 import type { Location, Project } from '../db';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from '../lib/facilityTypes';
 import { geoToDataState, dataToGeoStates } from '../lib/stateNames';
+import { getDisciplineIcon, isRealDiscipline } from '../lib/disciplineIcons';
 import { PROJECT_COLOR } from '../lib/projects';
 import { FacilityPopupContent } from './FacilityPopup';
 import { ProjectLayer } from './projects/ProjectLayer';
@@ -45,9 +46,17 @@ const MAP_STYLES = {
   dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
 } as const;
 
-// KIC keeps its pre–premium-icon look (classic teardrop + acronym); every other type
-// uses the shared MapPinGraphic glyph pin.
+// KIC keeps its original look: the classic teardrop showing the facility's sport icon when it
+// offers exactly one discipline (~98% of KICs), else the "KIC" acronym. Every other type uses
+// the shared MapPinGraphic glyph pin.
 const KIC_TEARDROP = 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z';
+
+function getFacilityDisciplineIcon(loc: Location): string | null {
+  const disciplines = loc.Disciplines?.split(',')
+    .map(d => d.trim())
+    .filter(d => d && isRealDiscipline(d)) ?? [];
+  return disciplines.length === 1 ? getDisciplineIcon(disciplines[0]) : null;
+}
 
 function MapViewComponent({
   locations, stateColorMatch, selected, onSelect, onStateClick, mapRef,
@@ -311,7 +320,12 @@ function MapViewComponent({
                       <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
                         <path d={KIC_TEARDROP} />
                       </svg>
-                      <span className="pin-acronym">{cfg.acronym}</span>
+                      {(() => {
+                        const sport = getFacilityDisciplineIcon(loc);
+                        return sport
+                          ? <span className="pin-emoji" aria-hidden="true">{sport}</span>
+                          : <span className="pin-acronym">{cfg.acronym}</span>;
+                      })()}
                     </>
                   ) : (
                     <MapPinGraphic color={cfg.color} glyph={pinGlyph(category)} />
