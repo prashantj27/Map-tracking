@@ -62,10 +62,14 @@ export function pinGlyph(key: GlyphKey): ReactNode {
   return GLYPHS[key] ?? DEFAULT_GLYPH;
 }
 
-/** The shared teardrop pin frame (colour-filled head + white ring) with a centred white glyph. */
+/**
+ * The shared teardrop pin frame (colour-filled head + white ring) with a centred white glyph.
+ * Rendered ~30% smaller than the original 34×46 (now 24×32) — the viewBox is unchanged, so the
+ * glyph stays correctly proportioned and centred at any render size.
+ */
 export function MapPinGraphic({ color, glyph }: { color: string; glyph: ReactNode }) {
   return (
-    <svg className="mp-pin-svg" width="34" height="46" viewBox="0 0 40 54" aria-hidden="true">
+    <svg className="mp-pin-svg" width="24" height="32" viewBox="0 0 40 54" aria-hidden="true">
       <path
         d="M20 1.6C10.06 1.6 2 9.66 2 19.6c0 12.4 18 32.4 18 32.4s18-20 18-32.4C38 9.66 29.94 1.6 20 1.6Z"
         fill={color}
