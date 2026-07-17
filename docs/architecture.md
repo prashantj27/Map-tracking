@@ -82,22 +82,22 @@ src/
 ├── index.css                Global resets / base styles
 ├── App.css                  All component styling (class-based; imported by App.tsx)
 ├── components/
-│   ├── MapFilterBar.tsx     Floating glassmorphism panel (default: bottom-left, user-draggable):
-│   │                        search, the State selector, the Facility Type selector (custom icon
-│   │                        dropdown — All Facilities / 9 types / Projects, doubles as the map
-│   │                        legend), and the Project Status chip row (Projects only). Replaces the
-│   │                        old left sidebar.
-│   ├── MapQuickChips.tsx    Bottom quick-filter chip row (default: bottom-left, user-draggable):
-│   │                        All/NCOE/STC/KIC/RC/Projects primary, KISCE/EXT/AKH/IGMA/NSTC behind
-│   │                        "More Filters" — drives the same type-selection state as MapFilterBar
-│   ├── DragHandle.tsx       Shared grip button for the two draggable widgets above
+│   ├── MapFilterBar.tsx     Single floating glassmorphism panel (default: bottom-left,
+│   │                        user-draggable): search, the State selector, the Facility Type quick
+│   │                        chips (MapQuickChips, nested — the sole type control), and the Project
+│   │                        Status chip row (Projects only). Replaces the old left sidebar.
+│   ├── MapQuickChips.tsx    Facility Type quick-chip row, nested inside MapFilterBar's panel (not
+│   │                        independently positioned): All/NCOE/STC/KIC/RC/Projects primary,
+│   │                        KISCE/EXT/AKH/IGMA/NSTC behind "More Filters"; wraps onto multiple
+│   │                        lines. Each chip's hover tooltip carries the full type name.
+│   ├── DragHandle.tsx       Grip button (in the search box) for the filter panel
 │   ├── TypeIcon.tsx         Small circular badge icon for a facility type / "All" / Projects —
 │   │                        reuses MapPinGraphic's glyphs so it doubles as the legend
 │   ├── MapPinGraphic.tsx    Shared teardrop pin frame + per-type glyph set (also used by TypeIcon)
 │   ├── MapView.tsx          MapLibre map (memoized): state choropleth (2D fill + 3D extrusion), lazy
 │   │                        district lines, clustered markers, hover tooltip, popup, 3D + dark-mode
 │   │                        toggles. No static legend — marker colours/icons match the Facility Type
-│   │                        selector and quick chips.
+│   │                        quick chips.
 │   ├── FacilityPopup.tsx    FacilityPopupContent — Overview / Disciplines / Funds & Staff tabs,
 │   │                        Directions link
 │   ├── StateReportCard.tsx  Full-height per-state panel: facility mix, trainees + type breakup +
@@ -115,7 +115,7 @@ src/
 ```
 
 ### State ownership
-- **`App.tsx`** owns `typeSelection` (`FacilityCategory | 'PRJ' | null` — the single unified value driving both the Facility Type selector and the quick-chip bar; `null` = "All Facilities"), `filterState` (State), `projectStatusFilter`, plus `selectedLocation`/`selectedProject`, `reportState`, `projectDetail`, and `seedState`. `activeFacilityType`/`showFacilities`/`showProjects` are derived from `typeSelection` (see below). All derived data (`filteredLocations`, `filteredProjects`, choropleth `match` expression) is a `useMemo` chain off the live IndexedDB queries.
+- **`App.tsx`** owns `typeSelection` (`FacilityCategory | 'PRJ' | null` — the value driving the Facility Type quick chips; `null` = "All Facilities"), `filterState` (State), `projectStatusFilter`, plus `selectedLocation`/`selectedProject`, `reportState`, `projectDetail`, and `seedState`. `activeFacilityType`/`showFacilities`/`showProjects` are derived from `typeSelection` (see below). All derived data (`filteredLocations`, `filteredProjects`, choropleth `match` expression) is a `useMemo` chain off the live IndexedDB queries.
 - **`MapView.tsx`** owns *viewport* state (`bounds`, `zoom`, `hoveredState`, `is3D`, `theme`) locally, so panning/zooming and map-mode toggles never re-render the filter panel.
 - **Data reads** use `useLiveQuery` (Dexie) so the UI stays in sync with IndexedDB reactively; there is no Redux/Zustand/Context — plain React state + memoization only.
 
@@ -136,16 +136,15 @@ The State selector is orthogonal (geographic) and scopes both layers together re
 - **District boundaries** (`/india_district_simplified.geojson`, ~2.7 MB) are mounted lazily only once `zoom ≥ 5` to avoid the download at startup, and drawn from zoom 5.5.
 - **Markers**: facilities become a `supercluster` point set. Clustering activates only above ~40 points (`radius 50, maxZoom 11, minPoints 3`); below that, plain pins render. Each pin renders `MapPinGraphic` — a shared teardrop frame with a white per-type glyph (building/trophy/runner/columns/institution+star/handshake/crane) — **except KIC**, which keeps its original look: the facility's own sport emoji when it offers exactly one discipline, else the "KIC" acronym. Clusters show a count bubble sized by share and colored by the active type filter.
 - **3D mode**: swaps the fill layer for a `fill-extrusion` whose height is `sqrt(facilityCount) × 22000` per state.
-- **No static legend overlay** — marker colours/icons are driven by the same `FACILITY_CONFIG` that renders the Facility Type selector and quick-filter chips (`TypeIcon`), so those double as the legend.
+- **No static legend overlay** — marker colours/icons are driven by the same `FACILITY_CONFIG` that renders the Facility Type quick chips (`TypeIcon`), so those double as the legend.
 
 ### Floating filter panel (`MapFilterBar.tsx` + `MapQuickChips.tsx`)
-Panel order top-to-bottom: **Search** → **State** → **Facility Type** → **Project Status** (conditional).
+A single widget, panel order top-to-bottom: **Search** → **State** → **Facility Type chips** → **Project Status** (conditional).
 - **Search** typeahead over facility name/city/district and project name/state/district (min 2 chars, top 6 each, tagged `PRJ`) with fly-to + popup-open on select; results drop upward since the panel is bottom-anchored.
 - **State selector**: compact, scopes both GIS layers geographically.
-- **Facility Type selector**: a custom icon dropdown (not a native `<select>`, so each option can show its `TypeIcon`) — "All Facilities", the 9 facility categories, and "Projects (PRJ)" — single-select, closes on choice/outside-click/Escape.
-- **Project Status filter**: shown only when the type selector is "Projects" — see the Projects module section above.
-- **Quick-filter chips** (`MapQuickChips.tsx`): the same type-selection state as one-tap pills — primary `All/NCOE/STC/KIC/RC/Projects`, with `KISCE/EXT/AKH/IGMA/NSTC` behind a "More Filters" expander — kept in sync with the dropdown since both write the same `typeSelection`.
-- **Draggable**: both widgets have a grip handle (`DragHandle.tsx` + `lib/useDraggable.ts`) and can be repositioned anywhere on screen; position is clamped to stay fully visible and persisted per-browser in `localStorage`. Double-click a handle to reset to the default bottom-left spot.
+- **Facility Type quick chips** (`MapQuickChips.tsx`, nested — the sole type control): one-tap pills — primary `All/NCOE/STC/KIC/RC/Projects`, with `KISCE/EXT/AKH/IGMA/NSTC` behind a "More Filters" expander — write the shared `typeSelection` state directly. Each chip shows an icon + short acronym, with the full type name as a hover `title` tooltip. Wraps onto multiple lines inside the panel rather than scrolling.
+- **Project Status filter**: shown only when the active type is "Projects" — see the Projects module section above.
+- **Draggable**: one grip handle (`DragHandle.tsx`, in the search box) drags the whole panel — search, State, chips, and Project Status all move together (`lib/useDraggable.ts`); position is clamped to stay fully visible and persisted per-browser in `localStorage`. Double-click the handle to reset to the default bottom-left spot.
 
 ### Facility popup (`FacilityPopup.tsx`)
 Up to three tabs, each shown only when it has data: *Overview* (address, trainee split, contact in-charge), *Disciplines* (per-sport M/F/Total table), *Funds & Staff* (KISCE fund releases in ₹ + manpower sanctioned/current/status). Detail rows are fetched per-facility via `useLiveQuery`.
@@ -154,7 +153,7 @@ Up to three tabs, each shown only when it has data: *Overview* (address, trainee
 A full-height side panel opened by clicking a state (map or panel link): rank among states, facility mix, trainees + seat-utilization bar (only where sanctioned strength is recorded), clickable discipline chips that list the offering facilities, KISCE funds by financial year, KISCE staffing (in-post / sanctioned / vacant), and the top 5 facilities by trainees. Every facility row flies the map to that facility and opens its popup.
 
 ### Facility taxonomy (`lib/facilityTypes.ts`)
-`classifyFacility(type)` maps a raw `Facility_Type` string to one of ten `FacilityCategory` codes (`RC, NCOE, STC, EXT, KIC, KISCE, NSTC, IGMA, AKHARA, OTHER`) via an exact-match table with an ordered substring fallback (KISCE before KIC, NSTC before STC). `FACILITY_CONFIG` holds each category's label, acronym, color, and light background. This one module drives pin colors/icons, the Facility Type selector, quick-filter chips, and report-card chips — so classification and colour can never drift between views (this doubles as the map legend).
+`classifyFacility(type)` maps a raw `Facility_Type` string to one of ten `FacilityCategory` codes (`RC, NCOE, STC, EXT, KIC, KISCE, NSTC, IGMA, AKHARA, OTHER`) via an exact-match table with an ordered substring fallback (KISCE before KIC, NSTC before STC). `FACILITY_CONFIG` holds each category's label, acronym, color, and light background. This one module drives pin colors/icons, the Facility Type quick chips, and report-card chips — so classification and colour can never drift between views (this doubles as the map legend).
 
 ### PWA
 `vite-plugin-pwa` with `registerType: 'autoUpdate'` generates a service worker (precaches app shell + assets) and a web manifest ("Sports Facilities Tracker"). Icons currently reference only `favicon.svg`.

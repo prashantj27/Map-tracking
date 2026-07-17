@@ -40,14 +40,10 @@ export const ALL_CATEGORIES = Object.keys(FACILITY_CONFIG) as FacilityCategory[]
 /** Categories exposed as quick-filter chips / stat cards. */
 export const QUICK_FILTER_CATEGORIES: FacilityCategory[] = ['NCOE', 'STC', 'KISCE', 'KIC'];
 
-/** All 9 facility types offered by the Facility Type selector, in the specified display order. */
-export const FILTER_CHIP_CATEGORIES: FacilityCategory[] =
-  ['NCOE', 'STC', 'KIC', 'NSTC', 'IGMA', 'RC', 'KISCE', 'EXT', 'AKHARA'];
-
-/** Primary quick-filter chips in the bottom floating bar (most-used types, one tap away). */
+/** Primary quick-filter chips shown by default (most-used types, one tap away). */
 export const QUICK_CHIP_PRIMARY: FacilityCategory[] = ['NCOE', 'STC', 'KIC', 'RC'];
 
-/** Remaining types revealed behind the bottom bar's "More Filters" expander. */
+/** Remaining types revealed behind the "More Filters" expander. */
 export const QUICK_CHIP_MORE: FacilityCategory[] = ['KISCE', 'EXT', 'AKHARA', 'IGMA', 'NSTC'];
 
 // Exact Facility_Type values found in the SAI master data.

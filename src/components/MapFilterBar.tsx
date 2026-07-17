@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import type { Location, Project } from '../db';
-import { FACILITY_CONFIG, FILTER_CHIP_CATEGORIES, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
+import { FACILITY_CONFIG, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
 import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, type ProjectStatusFilterKey } from '../lib/projects';
 import { useDraggable } from '../lib/useDraggable';
-import { TypeIcon } from './TypeIcon';
+import { MapQuickChips } from './MapQuickChips';
 import { DragHandle } from './DragHandle';
 
 export type TypeSelection = FacilityCategory | 'PRJ' | null;
@@ -22,16 +22,9 @@ export interface MapFilterBarProps {
   onPickProject: (p: Project) => void;
 }
 
-function typeLabel(sel: TypeSelection): string {
-  if (sel === null) return 'All Facilities';
-  if (sel === 'PRJ') return 'Projects (PRJ)';
-  return `${FACILITY_CONFIG[sel].label} (${FACILITY_CONFIG[sel].acronym})`;
-}
-
 /**
- * Floating glassmorphism filter panel (bottom-left) — global search, the Facility Type selector
- * (a custom icon dropdown that doubles as the map legend), a Projects-only status filter row, and
- * the State selector. Replaces the old left sidebar.
+ * Floating glassmorphism filter panel (bottom-left) — a single draggable widget combining global
+ * search, the State selector, the Facility Type quick chips, and a Projects-only status filter row.
  */
 export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
@@ -40,24 +33,8 @@ export function MapFilterBar({
   allLocations, projects, onPickFacility, onPickProject,
 }: MapFilterBarProps) {
   const [query, setQuery] = useState('');
-  const [typeOpen, setTypeOpen] = useState(false);
-  const typeRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLElement>(null);
   const { style: dragStyle, dragging, handleProps: dragHandleProps } = useDraggable('mapFilterPanelPos', panelRef);
-
-  useEffect(() => {
-    if (!typeOpen) return;
-    const onDocDown = (e: MouseEvent) => {
-      if (typeRef.current && !typeRef.current.contains(e.target as Node)) setTypeOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setTypeOpen(false); };
-    document.addEventListener('mousedown', onDocDown);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDocDown);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [typeOpen]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -74,11 +51,6 @@ export function MapFilterBar({
   }, [query, allLocations, projects]);
 
   const hasResults = results.facilities.length > 0 || results.projects.length > 0;
-
-  const selectType = (v: TypeSelection) => {
-    onTypeSelectionChange(v);
-    setTypeOpen(false);
-  };
 
   return (
     <section className="map-filter-panel" aria-label="Map filters" ref={panelRef} style={dragStyle}>
@@ -136,47 +108,7 @@ export function MapFilterBar({
         </select>
       </div>
 
-      <div className="type-select" ref={typeRef}>
-        <button
-          type="button"
-          className="type-select-trigger"
-          onClick={() => setTypeOpen((o) => !o)}
-          aria-haspopup="listbox"
-          aria-expanded={typeOpen}
-        >
-          <TypeIcon type={typeSelection ?? 'ALL'} size={26} />
-          <span className="type-select-label">{typeLabel(typeSelection)}</span>
-          <svg className={`type-select-chevron${typeOpen ? ' open' : ''}`} viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true">
-            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-
-        {typeOpen && (
-          <ul className="type-select-menu" role="listbox" aria-label="Facility type">
-            <li role="none">
-              <button role="option" aria-selected={typeSelection === null} className={`type-option${typeSelection === null ? ' selected' : ''}`} onClick={() => selectType(null)}>
-                <TypeIcon type="ALL" />
-                <span>All Facilities</span>
-              </button>
-            </li>
-            {FILTER_CHIP_CATEGORIES.map((cat) => (
-              <li key={cat} role="none">
-                <button role="option" aria-selected={typeSelection === cat} className={`type-option${typeSelection === cat ? ' selected' : ''}`} onClick={() => selectType(cat)}>
-                  <TypeIcon type={cat} />
-                  <span>{FACILITY_CONFIG[cat].label} <em>({FACILITY_CONFIG[cat].acronym})</em></span>
-                </button>
-              </li>
-            ))}
-            <li className="type-option-divider" role="none" aria-hidden="true" />
-            <li role="none">
-              <button role="option" aria-selected={typeSelection === 'PRJ'} className={`type-option${typeSelection === 'PRJ' ? ' selected' : ''}`} onClick={() => selectType('PRJ')}>
-                <TypeIcon type="PRJ" />
-                <span>Projects <em>(PRJ)</em></span>
-              </button>
-            </li>
-          </ul>
-        )}
-      </div>
+      <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />
 
       {typeSelection === 'PRJ' && (
         <div className="project-status-bar" role="group" aria-label="Project status filters">
