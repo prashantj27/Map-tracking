@@ -311,7 +311,7 @@ function MapViewComponent({
                 <div className={`pin-graphic${category === 'NCOE' ? ' ncoe' : ''}`}>
                   {category === 'KIC' ? (
                     <>
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
                         <path d={KIC_TEARDROP} />
                       </svg>
                       {(() => {
