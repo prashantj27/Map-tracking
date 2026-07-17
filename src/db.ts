@@ -79,6 +79,8 @@ export interface Project {
   Order: number;
   Latitude: number | null;
   Longitude: number | null;
+  /** Google Maps location link for confirmed coordinates (present only where verified). */
+  Google_Maps_URL?: string | null;
   Remarks: string | null;
   // Reserved for future Excel updates (no schema change required):
   Agencies?: string | null;

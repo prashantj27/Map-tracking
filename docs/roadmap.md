@@ -16,6 +16,8 @@ Status legend: 🔴 blocking · 🟠 high value · 🟡 nice to have · ✅ done
 ## Projects module — Phase 2+
 
 - ✅ **Dedicated PRJ GIS layer** — projects now render their own clustered markers at their own coordinates, independent of facilities (replaced the NCOE-parent stand-in). Real coordinates arrive via a future Excel update; the layer picks them up on reseed with no code change.
+- ✅ **Real GPS coordinates applied** (262 projects, from Google Maps links, cross-checked); 28 with no confirmed location have their coordinates cleared rather than guessed. Pipeline: `scripts/build_project_gps_overrides.cjs` + `apply_project_gps_coordinates.cjs`.
+- 🟠 **A non-map way to reach coordinate-less projects.** `filteredProjects` requires `hasProjectCoordinates`, so a project without one — by design — can never get a PRJ marker; today it's only reachable by name via search, and flying/opening its popup silently no-ops. A compact list view (e.g. "Projects without a confirmed location — N") would let officials actually work through that backlog instead of it being invisible on the map. (The state-centric `ProjectsModal` this app had before the dedicated-PRJ-layer redesign is a reasonable starting point/precedent.)
 - 🟠 **Richer project data from future Excel updates** — financials, agencies, timeline, progress, status, cost, installments, documents, multiple images, remarks. The `Project` schema already reserves these fields; wire the Documents/Timeline/Remarks tabs (currently empty-state) to them as they arrive.
 - 🟡 **Real permissions/RBAC** behind `src/lib/permissions.ts` (upload/delete currently open to all).
 - 🟡 **Server-backed image storage** (uploads are currently per-browser IndexedDB) if central sharing is needed.
