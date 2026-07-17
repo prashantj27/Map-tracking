@@ -15,19 +15,20 @@
  *     that same no-link subset, provided as an explicit cross-reference.
  *
  * Behaviour:
- *   - Rows with a parseable Google Maps Link (`?q=<lat>,<lng>`) -> a real coordinate override
- *     (Latitude/Longitude/Google_Maps_URL), so the project gets a PRJ map marker at that exact
- *     location. Coordinates are taken from the link itself (per instruction), cross-checked
- *     against the Representative Latitude/Longitude columns (must match, else abort).
- *   - Rows with no link / "Not available" -> a CLEARING override (Latitude/Longitude/
- *     Google_Maps_URL all explicitly null), so any prior approximate coordinate is removed
- *     rather than left silently stale. No marker is shown for these until a real coordinate
- *     arrives. Combined with lib/projects.ts's `NO_IMAGES` status-filter check (which now also
- *     matches "no confirmed coordinates"), these surface under the "Without GPS Images" chip.
+ *   - Rows with a parseable Google Maps Link (`?q=<lat>,<lng>`) -> a coordinate override
+ *     (Latitude/Longitude/Google_Maps_URL + Without_GPS_Images:false), so the project gets a PRJ
+ *     map marker at that exact, newly-confirmed location. Coordinates are taken from the link
+ *     itself (per instruction), cross-checked against the Representative Latitude/Longitude
+ *     columns (must match, else abort).
+ *   - Rows with no link / "Not available" -> Latitude/Longitude/Google_Maps_URL are deliberately
+ *     OMITTED from the override (apply_project_gps_coordinates.cjs only touches fields present in
+ *     an override, so the project's EXISTING location — e.g. an earlier interim/approximate one —
+ *     is left exactly as it was). Only Without_GPS_Images:true is set, an explicit, permanent flag
+ *     that these need GPS-verified site photos, independent of whatever coordinate they carry.
  *   - The "Projects Without Coordinates" sheet is read purely as an integrity check: the script
- *     aborts if its codes don't exactly equal the no-link subset derived from sheet 1, so a
- *     future edit to either sheet that breaks this assumption is caught immediately rather than
- *     silently mis-clearing/mis-updating projects.
+ *     aborts if its codes don't exactly equal the no-link subset derived from sheet 1, so a future
+ *     edit to either sheet that breaks this assumption is caught immediately rather than silently
+ *     mis-flagging/mis-updating projects.
  *
  * Usage: node scripts/build_project_gps_overrides.cjs "path/to/Project_Image_Coordinates_Enhanced.xlsx"
  */
@@ -72,7 +73,7 @@ for (const sheet of [LOCATIONS_SHEET, NO_COORD_SHEET]) {
 const locRows = xlsx.utils.sheet_to_json(wb.Sheets[LOCATIONS_SHEET], { defval: null });
 const noCoordRows = xlsx.utils.sheet_to_json(wb.Sheets[NO_COORD_SHEET], { defval: null });
 
-const report = { total: locRows.length, applied: 0, cleared: 0, unmatched: [], linkMismatch: [] };
+const report = { total: locRows.length, applied: 0, flagged: 0, unmatched: [], linkMismatch: [] };
 const overrides = [];
 const derivedNoLinkCodes = new Set();
 
@@ -85,10 +86,12 @@ for (const row of locRows) {
   const linkCoords = parseLatLngFromLink(row['Google Maps Link']);
 
   if (!linkCoords) {
-    // No confirmed location for this project — clear any prior (approximate) coordinate.
+    // No newly-confirmed location for this project — flag it as needing GPS-verified photos, but
+    // do NOT touch its coordinates (whatever it currently has, e.g. an interim/approximate one
+    // from the original import, is left exactly as-is).
     derivedNoLinkCodes.add(code);
-    overrides.push({ Project_Code: code, Project_Name: proj.Project_Name, Latitude: null, Longitude: null, Google_Maps_URL: null });
-    report.cleared++;
+    overrides.push({ Project_Code: code, Project_Name: proj.Project_Name, Without_GPS_Images: true });
+    report.flagged++;
     continue;
   }
 
@@ -106,6 +109,7 @@ for (const row of locRows) {
     Latitude: linkCoords.lat,
     Longitude: linkCoords.lng,
     Google_Maps_URL: String(row['Google Maps Link']).trim(),
+    Without_GPS_Images: false,
   });
   report.applied++;
 }
@@ -134,8 +138,8 @@ console.log('Project GPS override generation');
 console.log('  Source rows (Project Locations) :', report.total);
 console.log('  Sheet2 cross-check (Without Coordinates):', noCoordRows.length, '— exact match with derived no-link subset ✓');
 console.log('  Overrides written               :', overrides.length, '->', path.relative(process.cwd(), outPath));
-console.log('  Applied (real coordinates)      :', report.applied);
-console.log('  Cleared (no confirmed location) :', report.cleared);
+console.log('  Applied (new confirmed coords)  :', report.applied);
+console.log('  Flagged Without_GPS_Images=true (coords left untouched):', report.flagged);
 console.log('  Unmatched (no such Project_Code):', report.unmatched.length, report.unmatched.join(', ') || '');
 if (report.unmatched.length) {
   console.log('  NOTE: these codes are not present in sai_projects.json and were NOT added — the pipeline that');

@@ -81,6 +81,13 @@ export interface Project {
   Longitude: number | null;
   /** Google Maps location link for confirmed coordinates (present only where verified). */
   Google_Maps_URL?: string | null;
+  /**
+   * Explicitly flagged by the source data as still needing GPS-verified site photos — independent
+   * of whether Latitude/Longitude happens to be set (a project can have an interim/approximate
+   * location and still be flagged here). Drives the "Without GPS Images" status filter alongside
+   * the uploaded-photo check; see lib/projects.ts.
+   */
+  Without_GPS_Images?: boolean;
   Remarks: string | null;
   // Reserved for future Excel updates (no schema change required):
   Agencies?: string | null;

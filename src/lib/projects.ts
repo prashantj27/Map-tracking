@@ -61,11 +61,12 @@ export function getStatusMeta(status: string | null | undefined): StatusMeta {
 /**
  * Project Status quick-filter (bottom-left project filter bar, shown only when the Facility Type
  * selector is set to Projects). "Without GPS Images" flags projects still needing ground-truth
- * verification — it matches a project that either (a) has no confirmed representative coordinate
- * yet (`hasProjectCoordinates`; set by the project-coordinates data pipeline — see
- * scripts/apply_project_gps_coordinates.cjs), since there is nothing to geotag a photo against, or
- * (b) has a confirmed location but zero uploaded gallery photos (see lib/imageStore.ts). Either
- * gap means the project isn't yet documented on the ground.
+ * verification — it matches a project that either (a) is explicitly flagged
+ * `Without_GPS_Images: true` by the source data (set by the project-coordinates data pipeline —
+ * see scripts/apply_project_gps_coordinates.cjs — independent of whatever coordinate it happens to
+ * carry; a project can have an interim/approximate location and still need real GPS-verified
+ * photos), or (b) has zero uploaded gallery photos regardless of its flag (see lib/imageStore.ts).
+ * Either gap means the project isn't yet documented on the ground.
  */
 export type ProjectStatusFilterKey = 'In Progress' | 'Completed' | 'Cancelled' | 'NO_IMAGES';
 
@@ -80,7 +81,7 @@ export const PROJECT_STATUS_FILTERS: ProjectStatusFilterMeta[] = [
 
 /** Whether a project matches a Project Status filter key. `hasImages` comes from the image store. */
 export function projectMatchesStatusFilter(p: Project, filter: ProjectStatusFilterKey, hasImages: boolean): boolean {
-  if (filter === 'NO_IMAGES') return !hasProjectCoordinates(p) || !hasImages;
+  if (filter === 'NO_IMAGES') return p.Without_GPS_Images === true || !hasImages;
   return p.Status === filter;
 }
 
