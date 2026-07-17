@@ -23,9 +23,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 1,
-    "Latitude": 18.110461,
-    "Longitude": 83.427834,
-    "Remarks": null
+    "Latitude": 18.109155,
+    "Longitude": 83.434425,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.109155,83.434425",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP002",
@@ -37,9 +39,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 2,
-    "Latitude": 14.410331,
-    "Longitude": 79.82861,
-    "Remarks": null
+    "Latitude": 14.410149,
+    "Longitude": 79.828843,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=14.410149,79.828843",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP003",
@@ -51,9 +55,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 3,
-    "Latitude": 16.983452,
-    "Longitude": 82.247871,
-    "Remarks": null
+    "Latitude": 16.983715,
+    "Longitude": 82.247917,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.983715,82.247917",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP004",
@@ -65,9 +71,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 4,
-    "Latitude": 13.616623,
-    "Longitude": 79.396304,
-    "Remarks": null
+    "Latitude": 13.616337,
+    "Longitude": 79.398066,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.616337,79.398066",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP005",
@@ -79,9 +87,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 5,
-    "Latitude": 17.02465,
-    "Longitude": 81.78231,
-    "Remarks": null
+    "Latitude": 17.067236,
+    "Longitude": 81.873936,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.067236,81.873936",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP006",
@@ -93,9 +103,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 6,
-    "Latitude": 17.02465,
-    "Longitude": 81.78231,
-    "Remarks": null
+    "Latitude": 17.067558,
+    "Longitude": 81.874513,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.067558,81.874513",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP007",
@@ -107,9 +119,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 7,
-    "Latitude": 16.29388,
-    "Longitude": 80.07763,
-    "Remarks": null
+    "Latitude": 16.249677,
+    "Longitude": 80.054638,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.249677,80.054638",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP008",
@@ -121,9 +135,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 8,
-    "Latitude": 16.9843,
-    "Longitude": 82.2442,
-    "Remarks": null
+    "Latitude": 16.983865,
+    "Longitude": 82.244585,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.983865,82.244585",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP009",
@@ -135,9 +151,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 9,
-    "Latitude": 17.82787874,
-    "Longitude": 83.07925001,
-    "Remarks": null
+    "Latitude": 17.827325,
+    "Longitude": 83.079914,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.827325,83.079914",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AP010",
@@ -289,9 +307,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 20,
-    "Latitude": 28.0231,
-    "Longitude": 94.5809,
-    "Remarks": null
+    "Latitude": 28.023065,
+    "Longitude": 94.579415,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.023065,94.579415",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR002",
@@ -303,9 +323,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 21,
-    "Latitude": 27.7827,
-    "Longitude": 96.347767,
-    "Remarks": null
+    "Latitude": 27.782104,
+    "Longitude": 96.346796,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.782104,96.346796",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR003",
@@ -317,9 +339,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 22,
-    "Latitude": 27.35516,
-    "Longitude": 93.03989,
-    "Remarks": null
+    "Latitude": 27.617351,
+    "Longitude": 93.01728,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.617351,93.017280",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR004",
@@ -331,9 +355,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 23,
-    "Latitude": 27.695106,
-    "Longitude": 93.911479,
-    "Remarks": null
+    "Latitude": 27.755987,
+    "Longitude": 93.828576,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.755987,93.828576",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR005",
@@ -345,9 +371,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 24,
-    "Latitude": 28.397249,
-    "Longitude": 93.839416,
-    "Remarks": null
+    "Latitude": 28.398403,
+    "Longitude": 93.842086,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.398403,93.842086",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR006",
@@ -359,9 +387,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 25,
-    "Latitude": 27.998809,
-    "Longitude": 94.211807,
-    "Remarks": null
+    "Latitude": 27.999483,
+    "Longitude": 94.213949,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.999483,94.213949",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR007",
@@ -373,9 +403,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 26,
-    "Latitude": 27.689152,
-    "Longitude": 93.621727,
-    "Remarks": null
+    "Latitude": 27.707908,
+    "Longitude": 93.622527,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.707908,93.622527",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR008",
@@ -387,9 +419,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 27,
-    "Latitude": 28.14463,
-    "Longitude": 95.8293,
-    "Remarks": null
+    "Latitude": 28.144652,
+    "Longitude": 95.829506,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.144652,95.829506",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR009",
@@ -401,9 +435,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 28,
-    "Latitude": 27.37552224,
-    "Longitude": 92.23981979,
-    "Remarks": null
+    "Latitude": 27.375522,
+    "Longitude": 92.23982,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.375522,92.239820",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR010",
@@ -415,9 +451,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 29,
-    "Latitude": 27.060798,
-    "Longitude": 93.599281,
-    "Remarks": null
+    "Latitude": 27.09024,
+    "Longitude": 93.620803,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.090240,93.620803",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR011",
@@ -429,9 +467,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 30,
-    "Latitude": 28.29401,
-    "Longitude": 93.92529,
-    "Remarks": null
+    "Latitude": 28.308978,
+    "Longitude": 94.049905,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.308978,94.049905",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR012",
@@ -445,7 +485,9 @@
     "Order": 31,
     "Latitude": 27.375206,
     "Longitude": 92.23939,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.375206,92.239390",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR013",
@@ -457,9 +499,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 32,
-    "Latitude": 26.97817,
-    "Longitude": 95.46952,
-    "Remarks": null
+    "Latitude": 27.040216,
+    "Longitude": 95.501543,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.040216,95.501543",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR014",
@@ -471,9 +515,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 33,
-    "Latitude": 27.805187,
-    "Longitude": 94.069772,
-    "Remarks": null
+    "Latitude": 27.791881,
+    "Longitude": 94.068145,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.791881,94.068145",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR015",
@@ -485,9 +531,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 34,
-    "Latitude": 28.058515,
-    "Longitude": 95.473779,
-    "Remarks": null
+    "Latitude": 28.058984,
+    "Longitude": 95.472868,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.058984,95.472868",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR016",
@@ -499,9 +547,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 35,
-    "Latitude": 27.998809,
-    "Longitude": 94.211807,
-    "Remarks": null
+    "Latitude": 27.943476,
+    "Longitude": 95.187326,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.943476,95.187326",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR017",
@@ -513,9 +563,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 36,
-    "Latitude": 27.63358,
-    "Longitude": 95.802947,
-    "Remarks": null
+    "Latitude": 27.633764,
+    "Longitude": 95.802313,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.633764,95.802313",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR018",
@@ -527,9 +579,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 37,
-    "Latitude": 27.525027,
-    "Longitude": 91.71568,
-    "Remarks": null
+    "Latitude": 27.52509,
+    "Longitude": 91.716555,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.525090,91.716555",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR019",
@@ -541,9 +595,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 38,
-    "Latitude": 28.601816,
-    "Longitude": 94.134779,
-    "Remarks": null
+    "Latitude": 28.601586,
+    "Longitude": 94.123888,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.601586,94.123888",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR020",
@@ -555,9 +611,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 39,
-    "Latitude": 27.739117,
-    "Longitude": 94.020081,
-    "Remarks": null
+    "Latitude": 27.732442,
+    "Longitude": 93.992222,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.732442,93.992222",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AR021",
@@ -571,7 +629,8 @@
     "Order": 40,
     "Latitude": 27.062172,
     "Longitude": 93.5986927,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AS001",
@@ -585,7 +644,8 @@
     "Order": 41,
     "Latitude": 26.433193091694,
     "Longitude": 90.292595755267,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AS002",
@@ -597,9 +657,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 42,
-    "Latitude": 26.116966,
-    "Longitude": 91.768547,
-    "Remarks": null
+    "Latitude": 26.118349,
+    "Longitude": 91.768389,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.118349,91.768389",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS003",
@@ -611,9 +673,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 43,
-    "Latitude": 27.49686,
-    "Longitude": 95.337479,
-    "Remarks": null
+    "Latitude": 27.496471,
+    "Longitude": 95.337312,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.496471,95.337312",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS004",
@@ -627,7 +691,8 @@
     "Order": 44,
     "Latitude": 26.433126370218,
     "Longitude": 90.291007360429,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AS005",
@@ -639,9 +704,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 45,
-    "Latitude": 27.023252,
-    "Longitude": 83.911707,
-    "Remarks": null
+    "Latitude": 27.023205,
+    "Longitude": 93.911614,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.023205,93.911614",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS006",
@@ -653,9 +720,11 @@
     "Infra_Type": "Other",
     "Status": "Data Awaiting",
     "Order": 46,
-    "Latitude": 26.124545561,
-    "Longitude": 91.913237152,
-    "Remarks": null
+    "Latitude": 26.124523,
+    "Longitude": 91.912673,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.124523,91.912673",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS007",
@@ -667,9 +736,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 47,
-    "Latitude": 86.12479,
-    "Longitude": 91.912712,
-    "Remarks": null
+    "Latitude": 26.146726,
+    "Longitude": 91.812036,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.146726,91.812036",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS008",
@@ -695,9 +766,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 49,
-    "Latitude": 27.48191,
-    "Longitude": 94.92654,
-    "Remarks": null
+    "Latitude": 27.448161,
+    "Longitude": 94.899176,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.448161,94.899176",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "AS011",
@@ -739,7 +812,9 @@
     "Order": 52,
     "Latitude": 25.784661,
     "Longitude": 87.47567,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.784661,87.475670",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH003",
@@ -751,9 +826,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 53,
-    "Latitude": 25.248312,
-    "Longitude": 86.957602,
-    "Remarks": null
+    "Latitude": 25.248264,
+    "Longitude": 86.957449,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.248264,86.957449",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH004",
@@ -793,9 +870,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 56,
-    "Latitude": 25.782383,
-    "Longitude": 84.782642,
-    "Remarks": null
+    "Latitude": 25.782033,
+    "Longitude": 84.781876,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.782033,84.781876",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH007",
@@ -821,9 +900,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 58,
-    "Latitude": 25.6067,
-    "Longitude": 85.1697,
-    "Remarks": null
+    "Latitude": 25.608449,
+    "Longitude": 85.169168,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.608449,85.169168",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH009",
@@ -837,7 +918,9 @@
     "Order": 59,
     "Latitude": 25.530094,
     "Longitude": 84.641244,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.530094,84.641244",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH010",
@@ -849,9 +932,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 60,
-    "Latitude": 25.239277,
-    "Longitude": 87.0524,
-    "Remarks": null
+    "Latitude": 25.241449,
+    "Longitude": 87.045922,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.241449,87.045922",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "BH011",
@@ -905,9 +990,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 64,
-    "Latitude": 22.8759331,
-    "Longitude": 84.1381159,
-    "Remarks": null
+    "Latitude": 22.893116,
+    "Longitude": 84.151815,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.893116,84.151815",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "CH002",
@@ -919,9 +1006,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 65,
-    "Latitude": 21.1124067,
-    "Longitude": 82.095962,
-    "Remarks": null
+    "Latitude": 21.101812,
+    "Longitude": 82.079992,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.101812,82.079992",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "CH003",
@@ -933,9 +1022,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 66,
-    "Latitude": 23.12939,
-    "Longitude": 83.1889722,
-    "Remarks": null
+    "Latitude": 23.1294,
+    "Longitude": 83.1888,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.129400,83.188800",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "CH004",
@@ -947,9 +1038,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 67,
-    "Latitude": 19.07896644,
-    "Longitude": 82.0181886,
-    "Remarks": null
+    "Latitude": 19.080171,
+    "Longitude": 82.018702,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.080171,82.018702",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "CH005",
@@ -1019,7 +1112,9 @@
     "Order": 72,
     "Latitude": 28.581944,
     "Longitude": 77.233678,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.581944,77.233678",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL002",
@@ -1031,9 +1126,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 73,
-    "Latitude": 28.49852,
-    "Longitude": 77.2685,
-    "Remarks": null
+    "Latitude": 28.498787,
+    "Longitude": 77.268443,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.498787,77.268443",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL003",
@@ -1045,9 +1142,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 74,
-    "Latitude": 28.580084,
-    "Longitude": 77.230536,
-    "Remarks": null
+    "Latitude": 28.580067,
+    "Longitude": 77.230556,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.580067,77.230556",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL004",
@@ -1059,9 +1158,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 75,
-    "Latitude": 28.3646,
-    "Longitude": 77.1415,
-    "Remarks": null
+    "Latitude": 28.613333,
+    "Longitude": 77.237222,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.613333,77.237222",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL005",
@@ -1075,7 +1176,8 @@
     "Order": 76,
     "Latitude": 28.580473,
     "Longitude": 77.187819,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL006",
@@ -1087,9 +1189,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 77,
-    "Latitude": 28.497937,
-    "Longitude": 77.268529,
-    "Remarks": null
+    "Latitude": 28.495895,
+    "Longitude": 77.269404,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.495895,77.269404",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL007",
@@ -1101,9 +1205,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 78,
-    "Latitude": 28.632017,
-    "Longitude": 77.251368,
-    "Remarks": null
+    "Latitude": 28.632011,
+    "Longitude": 77.251351,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.632011,77.251351",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL008",
@@ -1115,9 +1221,11 @@
     "Infra_Type": "Court",
     "Status": "Data Awaiting",
     "Order": 79,
-    "Latitude": 28.364,
-    "Longitude": 77.1414,
-    "Remarks": null
+    "Latitude": 28.611111,
+    "Longitude": 77.237222,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.611111,77.237222",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL009",
@@ -1129,9 +1237,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 80,
-    "Latitude": 28.57833,
-    "Longitude": 77.10056,
-    "Remarks": null
+    "Latitude": 28.576918,
+    "Longitude": 77.096907,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.576918,77.096907",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "DL010",
@@ -1269,9 +1379,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 90,
-    "Latitude": 15.4761014,
-    "Longitude": 73.8456995,
-    "Remarks": null
+    "Latitude": 15.481444,
+    "Longitude": 73.843769,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.481444,73.843769",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "GJ001",
@@ -1283,9 +1395,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 91,
-    "Latitude": 23.071092404244,
-    "Longitude": 72.650678631934,
-    "Remarks": null
+    "Latitude": 23.050584,
+    "Longitude": 72.66117,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.050584,72.661170",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "GJ002",
@@ -1297,9 +1411,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 92,
-    "Latitude": 22.71020346688,
-    "Longitude": 73.91573669517,
-    "Remarks": null
+    "Latitude": 22.708244,
+    "Longitude": 73.916128,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.708244,73.916128",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "GJ003",
@@ -1311,9 +1427,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 93,
-    "Latitude": 22.272635697417,
-    "Longitude": 73.185432355096,
-    "Remarks": null
+    "Latitude": 22.737009,
+    "Longitude": 73.319717,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.737009,73.319717",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "GJ004",
@@ -1325,9 +1443,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 94,
-    "Latitude": 22.272635697417,
-    "Longitude": 73.185432355096,
-    "Remarks": null
+    "Latitude": 22.736647,
+    "Longitude": 73.320941,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.736647,73.320941",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "GJ005",
@@ -1339,9 +1459,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 95,
-    "Latitude": 23.068899698173,
-    "Longitude": 72.556116733803,
-    "Remarks": null
+    "Latitude": 23.06907,
+    "Longitude": 72.556723,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.069070,72.556723",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP001",
@@ -1353,9 +1475,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 96,
-    "Latitude": 31.199972,
-    "Longitude": 77.421259,
-    "Remarks": null
+    "Latitude": 31.799982,
+    "Longitude": 77.421178,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.799982,77.421178",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP002",
@@ -1367,9 +1491,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 97,
-    "Latitude": 31.538747964172,
-    "Longitude": 76.898471137932,
-    "Remarks": null
+    "Latitude": 31.517568,
+    "Longitude": 76.882069,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.517568,76.882069",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP003",
@@ -1395,9 +1521,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 99,
-    "Latitude": 30.48795380125,
-    "Longitude": 77.541640248766,
-    "Remarks": null
+    "Latitude": 30.491821,
+    "Longitude": 77.532282,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.491821,77.532282",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP005",
@@ -1423,9 +1551,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 101,
-    "Latitude": 31.613760888295,
-    "Longitude": 76.34623267705,
-    "Remarks": null
+    "Latitude": 31.628356,
+    "Longitude": 76.339598,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.628356,76.339598",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP007",
@@ -1437,9 +1567,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 102,
-    "Latitude": 32.295269840711,
-    "Longitude": 75.88356880735,
-    "Remarks": null
+    "Latitude": 32.304667,
+    "Longitude": 75.893229,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=32.304667,75.893229",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP008",
@@ -1451,9 +1583,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 103,
-    "Latitude": 31.822931668687,
-    "Longitude": 76.209379857229,
-    "Remarks": null
+    "Latitude": 31.812942,
+    "Longitude": 76.207837,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.812942,76.207837",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HP009",
@@ -1507,9 +1641,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 108,
-    "Latitude": 28.971409,
-    "Longitude": 77.094791,
-    "Remarks": null
+    "Latitude": 28.97141,
+    "Longitude": 77.094792,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.971410,77.094792",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR002",
@@ -1521,9 +1657,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 109,
-    "Latitude": 29.1503508,
-    "Longitude": 75.7057018,
-    "Remarks": null
+    "Latitude": 29.148646,
+    "Longitude": 75.702221,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.148646,75.702221",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR003",
@@ -1537,7 +1675,9 @@
     "Order": 110,
     "Latitude": 29.147758,
     "Longitude": 75.703553,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.147758,75.703553",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR004",
@@ -1549,9 +1689,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 111,
-    "Latitude": 28.967308,
-    "Longitude": 77.093924,
-    "Remarks": null
+    "Latitude": 28.967492,
+    "Longitude": 77.094043,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.967492,77.094043",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR005",
@@ -1563,9 +1705,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 112,
-    "Latitude": 29.9551486,
-    "Longitude": 76.8164646,
-    "Remarks": null
+    "Latitude": 29.954475,
+    "Longitude": 76.817788,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.954475,76.817788",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR006",
@@ -1591,9 +1735,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 114,
-    "Latitude": 30.6867453,
-    "Longitude": 76.8686729,
-    "Remarks": null
+    "Latitude": 30.683953,
+    "Longitude": 76.868842,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.683953,76.868842",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR008",
@@ -1605,9 +1751,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 115,
-    "Latitude": 30.6867453,
-    "Longitude": 76.8686729,
-    "Remarks": null
+    "Latitude": 30.685547,
+    "Longitude": 76.867379,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.685547,76.867379",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR009",
@@ -1619,9 +1767,11 @@
     "Infra_Type": "Other",
     "Status": "Data Awaiting",
     "Order": 116,
-    "Latitude": 28.967368,
-    "Longitude": 77.092126,
-    "Remarks": null
+    "Latitude": 28.967646,
+    "Longitude": 77.092124,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.967646,77.092124",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR010",
@@ -1635,7 +1785,9 @@
     "Order": 117,
     "Latitude": 28.971223,
     "Longitude": 77.095678,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.971223,77.095678",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "HR011",
@@ -1675,9 +1827,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 120,
-    "Latitude": 23.9924669,
-    "Longitude": 85.3636758,
-    "Remarks": null
+    "Latitude": 24.199816,
+    "Longitude": 85.381813,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.199816,85.381813",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JH002",
@@ -1689,9 +1843,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 121,
-    "Latitude": 24.200499,
-    "Longitude": 85.382668,
-    "Remarks": null
+    "Latitude": 24.200648,
+    "Longitude": 85.382779,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.200648,85.382779",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JH003",
@@ -1745,9 +1901,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 126,
-    "Latitude": 33.922078269412,
-    "Longitude": 75.013961770652,
-    "Remarks": null
+    "Latitude": 33.932969,
+    "Longitude": 75.018153,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=33.932969,75.018153",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JK002",
@@ -1759,9 +1917,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 127,
-    "Latitude": 34.074073586353,
-    "Longitude": 74.821629966956,
-    "Remarks": null
+    "Latitude": 34.072783,
+    "Longitude": 74.820657,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.072783,74.820657",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JK003",
@@ -1773,9 +1933,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 128,
-    "Latitude": 32.7149498273,
-    "Longitude": 74.867343197611,
-    "Remarks": null
+    "Latitude": 32.714767,
+    "Longitude": 74.867145,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=32.714767,74.867145",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JK004",
@@ -1787,9 +1949,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 129,
-    "Latitude": 34.653756370519,
-    "Longitude": 74.474247609204,
-    "Remarks": null
+    "Latitude": 34.271748,
+    "Longitude": 74.451518,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.271748,74.451518",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "JK005",
@@ -1801,9 +1965,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 130,
-    "Latitude": 33.950908178812,
-    "Longitude": 74.682745797926,
-    "Remarks": null
+    "Latitude": 33.917835,
+    "Longitude": 74.683003,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=33.917835,74.683003",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA001",
@@ -1815,9 +1981,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 131,
-    "Latitude": 12.945945,
-    "Longitude": 77.51471,
-    "Remarks": null
+    "Latitude": 12.945636,
+    "Longitude": 77.514748,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.945636,77.514748",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA002",
@@ -1829,9 +1997,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 132,
-    "Latitude": 18.7977099,
-    "Longitude": 80.8128636,
-    "Remarks": null
+    "Latitude": 16.833194,
+    "Longitude": 75.695481,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.833194,75.695481",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA003",
@@ -1843,9 +2013,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 133,
-    "Latitude": 12.945659,
-    "Longitude": 77.515505,
-    "Remarks": null
+    "Latitude": 12.945801,
+    "Longitude": 77.515416,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.945801,77.515416",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA004",
@@ -1857,9 +2029,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 134,
-    "Latitude": 15.325861,
-    "Longitude": 74.771373,
-    "Remarks": null
+    "Latitude": 15.325413,
+    "Longitude": 74.772181,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.325413,74.772181",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA005",
@@ -1871,9 +2045,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 135,
-    "Latitude": 14.383549,
-    "Longitude": 75.242429,
-    "Remarks": null
+    "Latitude": 14.382597,
+    "Longitude": 75.246376,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=14.382597,75.246376",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA006",
@@ -1885,9 +2061,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 136,
-    "Latitude": 13.01882684,
-    "Longitude": 76.10380435,
-    "Remarks": null
+    "Latitude": 13.018919,
+    "Longitude": 76.103981,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.018919,76.103981",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA007",
@@ -1899,9 +2077,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 137,
-    "Latitude": 15.34676288,
-    "Longitude": 75.09011588,
-    "Remarks": null
+    "Latitude": 15.346859,
+    "Longitude": 75.090181,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.346859,75.090181",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA008",
@@ -1913,9 +2093,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 138,
-    "Latitude": 12.941532,
-    "Longitude": 77.515088,
-    "Remarks": null
+    "Latitude": 12.94171,
+    "Longitude": 77.515406,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.941710,77.515406",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA009",
@@ -1927,9 +2109,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 139,
-    "Latitude": 13.215759,
-    "Longitude": 75.020521,
-    "Remarks": null
+    "Latitude": 13.21585,
+    "Longitude": 75.020559,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.215850,75.020559",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA010",
@@ -1941,9 +2125,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 140,
-    "Latitude": 13.32476,
-    "Longitude": 75.799155,
-    "Remarks": null
+    "Latitude": 13.324826,
+    "Longitude": 75.798935,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.324826,75.798935",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA011",
@@ -1955,9 +2141,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 141,
-    "Latitude": 13.32476,
-    "Longitude": 75.79216,
-    "Remarks": null
+    "Latitude": 13.329076,
+    "Longitude": 75.792384,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.329076,75.792384",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA012",
@@ -1969,9 +2157,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 142,
-    "Latitude": 15.351417,
-    "Longitude": 76.134645,
-    "Remarks": null
+    "Latitude": 15.350535,
+    "Longitude": 76.131397,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=15.350535,76.131397",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA013",
@@ -1983,9 +2173,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 143,
-    "Latitude": 13.7315562,
-    "Longitude": 75.6307619,
-    "Remarks": null
+    "Latitude": 13.917511,
+    "Longitude": 75.592439,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.917511,75.592439",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA014",
@@ -1997,9 +2189,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Cancelled",
     "Order": 144,
-    "Latitude": 13.3320594,
-    "Longitude": 74.7430338,
-    "Remarks": "Cancelled"
+    "Latitude": 13.332884,
+    "Longitude": 74.74129,
+    "Remarks": "Cancelled",
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.332884,74.741290",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA015",
@@ -2011,9 +2205,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 145,
-    "Latitude": 12.968871,
-    "Longitude": 77.591646,
-    "Remarks": null
+    "Latitude": 12.968938,
+    "Longitude": 77.591595,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.968938,77.591595",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA016",
@@ -2025,9 +2221,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 146,
-    "Latitude": 12.968147,
-    "Longitude": 77.591794,
-    "Remarks": null
+    "Latitude": 12.969942,
+    "Longitude": 77.592962,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.969942,77.592962",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA017",
@@ -2039,9 +2237,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 147,
-    "Latitude": 12.961957,
-    "Longitude": 7760032,
-    "Remarks": null
+    "Latitude": 12.9618,
+    "Longitude": 77.60068,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.961800,77.600680",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA018",
@@ -2053,9 +2253,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 148,
-    "Latitude": 13.158034,
-    "Longitude": 77.642765,
-    "Remarks": null
+    "Latitude": 13.158164,
+    "Longitude": 77.642954,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=13.158164,77.642954",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA019",
@@ -2067,9 +2269,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 149,
-    "Latitude": 12.943924,
-    "Longitude": 77.513998,
-    "Remarks": null
+    "Latitude": 12.944738,
+    "Longitude": 77.513874,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.944738,77.513874",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KA023",
@@ -2123,9 +2327,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 153,
-    "Latitude": 11.781782,
-    "Longitude": 75.474008,
-    "Remarks": null
+    "Latitude": 11.781704,
+    "Longitude": 75.473955,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.781704,75.473955",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL002",
@@ -2137,9 +2343,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 154,
-    "Latitude": 8.575673,
-    "Longitude": 76.887383,
-    "Remarks": null
+    "Latitude": 8.575667,
+    "Longitude": 76.887386,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.575667,76.887386",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL003",
@@ -2151,9 +2359,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 155,
-    "Latitude": 8.572146,
+    "Latitude": 8.572147,
     "Longitude": 76.888784,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=8.572147,76.888784",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL004",
@@ -2165,9 +2375,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 156,
-    "Latitude": 10.648694,
-    "Longitude": 76.073928,
-    "Remarks": null
+    "Latitude": 10.648245,
+    "Longitude": 76.072717,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.648245,76.072717",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL005",
@@ -2179,9 +2391,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 157,
-    "Latitude": 12.075362,
-    "Longitude": 75.29141,
-    "Remarks": null
+    "Latitude": 12.075447,
+    "Longitude": 75.291475,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.075447,75.291475",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL006",
@@ -2193,9 +2407,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 158,
-    "Latitude": 9.83111,
-    "Longitude": 77.04861,
-    "Remarks": null
+    "Latitude": 9.830843,
+    "Longitude": 77.048377,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=9.830843,77.048377",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "KL007",
@@ -2235,9 +2451,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 161,
-    "Latitude": 34.137552116312,
-    "Longitude": 77.530442473781,
-    "Remarks": null
+    "Latitude": 34.135082,
+    "Longitude": 77.531519,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.135082,77.531519",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "LA002",
@@ -2249,9 +2467,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 162,
-    "Latitude": 34.149443238309,
-    "Longitude": 77.57697548045,
-    "Remarks": null
+    "Latitude": 34.150436,
+    "Longitude": 77.576919,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.150436,77.576919",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "LA003",
@@ -2263,9 +2483,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 163,
-    "Latitude": 34.16483632039,
-    "Longitude": 77.572059117823,
-    "Remarks": null
+    "Latitude": 34.117862,
+    "Longitude": 77.589563,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=34.117862,77.589563",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "LD001",
@@ -2305,9 +2527,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 166,
-    "Latitude": 25.517344,
-    "Longitude": 90.610936,
-    "Remarks": null
+    "Latitude": 25.51688,
+    "Longitude": 90.609958,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.516880,90.609958",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "ME002",
@@ -2319,9 +2543,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 167,
-    "Latitude": 25.555314,
-    "Longitude": 91.858806,
-    "Remarks": null
+    "Latitude": 25.555485,
+    "Longitude": 91.858875,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.555485,91.858875",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "ME003",
@@ -2333,9 +2559,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 168,
-    "Latitude": 25.434189,
-    "Longitude": 91.960833,
-    "Remarks": null
+    "Latitude": 25.433773,
+    "Longitude": 91.960793,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.433773,91.960793",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "ME004",
@@ -2347,9 +2575,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 169,
-    "Latitude": 25.65885,
-    "Longitude": 90.339633,
-    "Remarks": null
+    "Latitude": 25.655968,
+    "Longitude": 90.33763,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.655968,90.337630",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "Me005",
@@ -2361,9 +2591,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 170,
-    "Latitude": 25.545542,
-    "Longitude": 92.1645,
-    "Remarks": null
+    "Latitude": 25.54554,
+    "Longitude": 92.1643,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.545540,92.164300",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "ME006",
@@ -2375,9 +2607,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 171,
-    "Latitude": 25.500978,
-    "Longitude": 91.884314,
-    "Remarks": null
+    "Latitude": 25.500886,
+    "Longitude": 91.883973,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.500886,91.883973",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH001",
@@ -2389,9 +2623,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 172,
-    "Latitude": 19.53509388,
-    "Longitude": 75.18128549,
-    "Remarks": null
+    "Latitude": 19.897263,
+    "Longitude": 75.303522,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.897263,75.303522",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH002",
@@ -2405,7 +2641,9 @@
     "Order": 173,
     "Latitude": 19.192901,
     "Longitude": 72.861196,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.192901,72.861196",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH003",
@@ -2417,9 +2655,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 174,
-    "Latitude": 21.2726933,
-    "Longitude": 78.5841409,
-    "Remarks": null
+    "Latitude": 21.271844,
+    "Longitude": 78.587283,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.271844,78.587283",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH004",
@@ -2431,9 +2671,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 175,
-    "Latitude": 18.5747407,
-    "Longitude": 73.7610241,
-    "Remarks": null
+    "Latitude": 18.575854,
+    "Longitude": 73.760497,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.575854,73.760497",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH005",
@@ -2447,7 +2689,8 @@
     "Order": 176,
     "Latitude": 18.5747407,
     "Longitude": 73.7610241,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MH006",
@@ -2459,9 +2702,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 177,
-    "Latitude": 19.9974533,
-    "Longitude": 73.7898023,
-    "Remarks": null
+    "Latitude": 19.960831,
+    "Longitude": 73.756578,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.960831,73.756578",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH007",
@@ -2475,7 +2720,9 @@
     "Order": 178,
     "Latitude": 18.535774,
     "Longitude": 73.906659,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.535774,73.906659",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH008",
@@ -2487,9 +2734,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 179,
-    "Latitude": 19.900163,
-    "Longitude": 75.300453,
-    "Remarks": null
+    "Latitude": 19.90034,
+    "Longitude": 75.300518,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.900340,75.300518",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH009",
@@ -2501,9 +2750,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 180,
-    "Latitude": 16.6775,
-    "Longitude": 74.228722,
-    "Remarks": null
+    "Latitude": 16.677748,
+    "Longitude": 74.229146,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=16.677748,74.229146",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH010",
@@ -2515,9 +2766,11 @@
     "Infra_Type": "Other",
     "Status": "Data Awaiting",
     "Order": 181,
-    "Latitude": 20.938868,
-    "Longitude": 77.793473,
-    "Remarks": null
+    "Latitude": 20.938929,
+    "Longitude": 77.793659,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.938929,77.793659",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH011",
@@ -2529,9 +2782,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 182,
-    "Latitude": 17.721086,
-    "Longitude": 75.819869,
-    "Remarks": null
+    "Latitude": 17.721042,
+    "Longitude": 75.819704,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.721042,75.819704",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH012",
@@ -2543,9 +2798,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 183,
-    "Latitude": 19.901298,
-    "Longitude": 75.304174,
-    "Remarks": null
+    "Latitude": 19.901062,
+    "Longitude": 75.304282,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.901062,75.304282",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MH013",
@@ -2599,9 +2856,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 187,
-    "Latitude": 22.528611,
-    "Longitude": 92.899167,
-    "Remarks": null
+    "Latitude": 22.528042,
+    "Longitude": 92.898926,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.528042,92.898926",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI002",
@@ -2615,7 +2874,8 @@
     "Order": 188,
     "Latitude": 24.243499,
     "Longitude": 92.675082,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MI003",
@@ -2627,9 +2887,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 189,
-    "Latitude": 23.735185,
-    "Longitude": 92.728014,
-    "Remarks": null
+    "Latitude": 23.735257,
+    "Longitude": 92.728052,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.735257,92.728052",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI004",
@@ -2641,9 +2903,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 190,
-    "Latitude": 23.82861925,
-    "Longitude": 92.6311349,
-    "Remarks": null
+    "Latitude": 23.82807,
+    "Longitude": 92.631258,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.828070,92.631258",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI005",
@@ -2655,9 +2919,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 191,
-    "Latitude": 23.603333,
-    "Longitude": 92.717778,
-    "Remarks": null
+    "Latitude": 23.603361,
+    "Longitude": 92.717613,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.603361,92.717613",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI006",
@@ -2669,9 +2935,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 192,
-    "Latitude": 23.603611,
-    "Longitude": 92.716944,
-    "Remarks": null
+    "Latitude": 23.603905,
+    "Longitude": 92.717659,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.603905,92.717659",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI007",
@@ -2683,9 +2951,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 193,
-    "Latitude": 23,
-    "Longitude": 92,
-    "Remarks": null
+    "Latitude": 23.789135,
+    "Longitude": 92.725646,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.789135,92.725646",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MI008",
@@ -2699,7 +2969,8 @@
     "Order": 195,
     "Latitude": 23.73166667,
     "Longitude": 92.21388889,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MI009",
@@ -2726,8 +2997,10 @@
     "Status": "Data Awaiting",
     "Order": 197,
     "Latitude": 24.803728,
-    "Longitude": 93.910223,
-    "Remarks": null
+    "Longitude": 93.910222,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.803728,93.910222",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN002",
@@ -2741,7 +3014,9 @@
     "Order": 198,
     "Latitude": 24.803762,
     "Longitude": 93.910277,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.803762,93.910277",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN003",
@@ -2755,7 +3030,8 @@
     "Order": 199,
     "Latitude": 24.618232,
     "Longitude": 93.871294,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MN004",
@@ -2767,9 +3043,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 200,
-    "Latitude": 24.793237,
-    "Longitude": 93.94158,
-    "Remarks": null
+    "Latitude": 24.728892,
+    "Longitude": 93.899031,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.728892,93.899031",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN005",
@@ -2781,9 +3059,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 201,
-    "Latitude": 24.79664,
-    "Longitude": 93.93084,
-    "Remarks": null
+    "Latitude": 24.785212,
+    "Longitude": 93.936637,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.785212,93.936637",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN006",
@@ -2795,9 +3075,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 202,
-    "Latitude": 24.805043,
-    "Longitude": 93.910254,
-    "Remarks": null
+    "Latitude": 24.805031,
+    "Longitude": 93.910275,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.805031,93.910275",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN007",
@@ -2809,9 +3091,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 203,
-    "Latitude": 24.497549,
-    "Longitude": 93.772725,
-    "Remarks": null
+    "Latitude": 24.616921,
+    "Longitude": 93.759151,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.616921,93.759151",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MN008",
@@ -2823,9 +3107,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 204,
-    "Latitude": 24.496735,
-    "Longitude": 93.779077,
-    "Remarks": null
+    "Latitude": 24.640843,
+    "Longitude": 93.949365,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.640843,93.949365",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP001",
@@ -2837,9 +3123,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 205,
-    "Latitude": 23.23163,
-    "Longitude": 77.39974,
-    "Remarks": null
+    "Latitude": 23.230525,
+    "Longitude": 77.399466,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.230525,77.399466",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP002",
@@ -2853,7 +3141,8 @@
     "Order": 206,
     "Latitude": 23.21204,
     "Longitude": 77.33924,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP003",
@@ -2867,7 +3156,8 @@
     "Order": 207,
     "Latitude": 23.23163,
     "Longitude": 77.39974,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP004",
@@ -2881,7 +3171,8 @@
     "Order": 208,
     "Latitude": 23.21919,
     "Longitude": 77.344019,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP005",
@@ -2893,9 +3184,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 209,
-    "Latitude": 22.8064043,
-    "Longitude": 81.7494883,
-    "Remarks": null
+    "Latitude": 22.805326,
+    "Longitude": 81.748305,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.805326,81.748305",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP006",
@@ -2907,9 +3200,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 210,
-    "Latitude": 26.2178422,
-    "Longitude": 78.1783529,
-    "Remarks": null
+    "Latitude": 26.218342,
+    "Longitude": 78.178047,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.218342,78.178047",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP007",
@@ -2923,7 +3218,9 @@
     "Order": 211,
     "Latitude": 23.216736,
     "Longitude": 77.343367,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.216736,77.343367",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP008",
@@ -2949,9 +3246,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 214,
-    "Latitude": 23.19533,
-    "Longitude": 79.98729,
-    "Remarks": null
+    "Latitude": 23.194383,
+    "Longitude": 79.987527,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.194383,79.987527",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP010",
@@ -2963,9 +3262,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 215,
-    "Latitude": 23.156919,
-    "Longitude": 75.784465,
-    "Remarks": null
+    "Latitude": 23.157631,
+    "Longitude": 75.78362,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.157631,75.783620",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP011",
@@ -2977,9 +3278,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 216,
-    "Latitude": 25.413439,
-    "Longitude": 77.671954,
-    "Remarks": null
+    "Latitude": 25.413668,
+    "Longitude": 77.6748,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.413668,77.674800",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP012",
@@ -2991,9 +3294,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 217,
-    "Latitude": 23.82354,
-    "Longitude": 79.44207,
-    "Remarks": null
+    "Latitude": 23.822442,
+    "Longitude": 79.442828,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.822442,79.442828",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP013",
@@ -3005,9 +3310,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 218,
-    "Latitude": 23.231665,
-    "Longitude": 77.399711,
-    "Remarks": null
+    "Latitude": 23.231048,
+    "Longitude": 77.40081,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.231048,77.400810",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP014",
@@ -3019,9 +3326,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 219,
-    "Latitude": 26.185611,
-    "Longitude": 78.157343,
-    "Remarks": null
+    "Latitude": 26.186091,
+    "Longitude": 78.157083,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.186091,78.157083",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP015",
@@ -3035,7 +3344,8 @@
     "Order": 220,
     "Latitude": 26.533,
     "Longitude": 89.755,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP016",
@@ -3047,9 +3357,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 221,
-    "Latitude": 22.725842,
-    "Longitude": 75.879366,
-    "Remarks": null
+    "Latitude": 22.725524,
+    "Longitude": 75.879338,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.725524,75.879338",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP017",
@@ -3061,9 +3373,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 222,
-    "Latitude": 22.725322,
-    "Longitude": 75879762,
-    "Remarks": null
+    "Latitude": 22.725014,
+    "Longitude": 75.878466,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.725014,75.878466",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "MP018",
@@ -3117,9 +3431,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 226,
-    "Latitude": 25.906829,
-    "Longitude": 93.705234,
-    "Remarks": null
+    "Latitude": 25.906388,
+    "Longitude": 93.705551,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.906388,93.705551",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL002",
@@ -3131,9 +3447,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 227,
-    "Latitude": 25.569865,
-    "Longitude": 94.135176,
-    "Remarks": null
+    "Latitude": 25.582104,
+    "Longitude": 94.12659,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.582104,94.126590",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL003",
@@ -3145,9 +3463,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 228,
-    "Latitude": 25.751738,
-    "Longitude": 93.87366,
-    "Remarks": null
+    "Latitude": 25.751933,
+    "Longitude": 93.87364,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.751933,93.873640",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL004",
@@ -3159,9 +3479,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 229,
-    "Latitude": 26.184677,
-    "Longitude": 94.262057,
-    "Remarks": null
+    "Latitude": 26.184881,
+    "Longitude": 94.261998,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.184881,94.261998",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL005",
@@ -3173,9 +3495,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 230,
-    "Latitude": 26.184677,
-    "Longitude": 94.262057,
-    "Remarks": null
+    "Latitude": 26.532704,
+    "Longitude": 94.726966,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.532704,94.726966",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL006",
@@ -3187,9 +3511,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 231,
-    "Latitude": 26.7434383,
-    "Longitude": 95.062021,
-    "Remarks": null
+    "Latitude": 26.742907,
+    "Longitude": 95.06231,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.742907,95.062310",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL007",
@@ -3201,9 +3527,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 232,
-    "Latitude": 26.29565204,
-    "Longitude": 94.24744568,
-    "Remarks": null
+    "Latitude": 26.295405,
+    "Longitude": 94.247058,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.295405,94.247058",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL008",
@@ -3215,9 +3543,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 233,
-    "Latitude": 26.3231,
-    "Longitude": 94.52715,
-    "Remarks": null
+    "Latitude": 26.548649,
+    "Longitude": 94.669733,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.548649,94.669733",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL009",
@@ -3229,9 +3559,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 234,
-    "Latitude": 25.92583,
-    "Longitude": 93.965,
-    "Remarks": null
+    "Latitude": 25.978623,
+    "Longitude": 93.803596,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.978623,93.803596",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL010",
@@ -3243,9 +3575,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 235,
-    "Latitude": 26.36224,
-    "Longitude": 94.56307,
-    "Remarks": null
+    "Latitude": 26.49594,
+    "Longitude": 94.370531,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.495940,94.370531",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL011",
@@ -3257,9 +3591,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 236,
-    "Latitude": 30.13583,
-    "Longitude": 74.78972,
-    "Remarks": null
+    "Latitude": 26.092958,
+    "Longitude": 94.265454,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.092958,94.265454",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "NL012",
@@ -3285,9 +3621,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 238,
-    "Latitude": 20.290434,
-    "Longitude": 85.823351,
-    "Remarks": null
+    "Latitude": 20.290824,
+    "Longitude": 85.824241,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.290824,85.824241",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "OR002",
@@ -3299,9 +3637,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 239,
-    "Latitude": 20.290434,
-    "Longitude": 85.823351,
-    "Remarks": null
+    "Latitude": 19.80628,
+    "Longitude": 85.8492,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=19.806280,85.849200",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "OR003",
@@ -3313,9 +3653,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 240,
-    "Latitude": 20.833481,
-    "Longitude": 84.325639,
-    "Remarks": null
+    "Latitude": 20.830919,
+    "Longitude": 84.321498,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=20.830919,84.321498",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "OR004",
@@ -3327,9 +3669,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 241,
-    "Latitude": 21.488719,
-    "Longitude": 83.907752,
-    "Remarks": null
+    "Latitude": 21.483187,
+    "Longitude": 83.904275,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=21.483187,83.904275",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "OR005",
@@ -3341,9 +3685,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 242,
-    "Latitude": 21.75,
-    "Longitude": 86.5,
-    "Remarks": null
+    "Latitude": 22.283867,
+    "Longitude": 86.172464,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.283867,86.172464",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB001",
@@ -3355,9 +3701,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 243,
-    "Latitude": 31.3134205,
-    "Longitude": 75.5628239,
-    "Remarks": null
+    "Latitude": 31.542816,
+    "Longitude": 75.899567,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.542816,75.899567",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB002",
@@ -3369,9 +3717,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 244,
-    "Latitude": 30.2457963,
-    "Longitude": 75.8420716,
-    "Remarks": null
+    "Latitude": 30.244854,
+    "Longitude": 75.849539,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.244854,75.849539",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB003",
@@ -3383,9 +3733,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 245,
-    "Latitude": 30.30521,
-    "Longitude": 76.387976,
-    "Remarks": null
+    "Latitude": 30.309018,
+    "Longitude": 76.39396,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.309018,76.393960",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB004",
@@ -3397,9 +3749,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 246,
-    "Latitude": 31.63059,
-    "Longitude": 74.821091,
-    "Remarks": null
+    "Latitude": 31.637266,
+    "Longitude": 74.828984,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.637266,74.828984",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB005",
@@ -3411,9 +3765,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 247,
-    "Latitude": 31.7970069,
-    "Longitude": 75.105675,
-    "Remarks": null
+    "Latitude": 31.799584,
+    "Longitude": 75.103847,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.799584,75.103847",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB006",
@@ -3425,9 +3781,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 248,
-    "Latitude": 30.9464589,
-    "Longitude": 74.6140571,
-    "Remarks": null
+    "Latitude": 30.946561,
+    "Longitude": 74.61374,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.946561,74.613740",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB007",
@@ -3439,9 +3797,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 249,
-    "Latitude": 31.1255583,
-    "Longitude": 76.118642,
-    "Remarks": null
+    "Latitude": 31.127926,
+    "Longitude": 76.083198,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.127926,76.083198",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB008",
@@ -3467,9 +3827,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 251,
-    "Latitude": 30.1748526,
-    "Longitude": 74.9242774,
-    "Remarks": null
+    "Latitude": 30.171464,
+    "Longitude": 74.920684,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.171464,74.920684",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB010",
@@ -3483,7 +3845,9 @@
     "Order": 252,
     "Latitude": 30.30649,
     "Longitude": 76.393026,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.306490,76.393026",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB011",
@@ -3495,9 +3859,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 253,
-    "Latitude": 31.30621,
-    "Longitude": 75.60977,
-    "Remarks": null
+    "Latitude": 31.306133,
+    "Longitude": 75.609475,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=31.306133,75.609475",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PB012",
@@ -3551,9 +3917,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 257,
-    "Latitude": 11.937097428181,
-    "Longitude": 79.804230599171,
-    "Remarks": null
+    "Latitude": 11.936006,
+    "Longitude": 79.806287,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.936006,79.806287",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PY002",
@@ -3565,9 +3933,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 258,
-    "Latitude": 11.922227165609,
-    "Longitude": 79.828487970335,
-    "Remarks": null
+    "Latitude": 11.922085,
+    "Longitude": 79.829107,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.922085,79.829107",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "PY003",
@@ -3593,9 +3963,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 260,
-    "Latitude": 27.70349,
-    "Longitude": 76.194007,
-    "Remarks": null
+    "Latitude": 27.703311,
+    "Longitude": 76.19505,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.703311,76.195050",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ002",
@@ -3609,7 +3981,8 @@
     "Order": 261,
     "Latitude": 28.668812,
     "Longitude": 75.233949,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ003",
@@ -3621,9 +3994,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 262,
-    "Latitude": 26.971015,
-    "Longitude": 75.783872,
-    "Remarks": null
+    "Latitude": 26.971021,
+    "Longitude": 75.783644,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.971021,75.783644",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ004",
@@ -3637,7 +4012,8 @@
     "Order": 263,
     "Latitude": 24.615889,
     "Longitude": 73.734084,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ005",
@@ -3651,7 +4027,8 @@
     "Order": 264,
     "Latitude": 26.988683,
     "Longitude": 72.990575,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ006",
@@ -3665,7 +4042,8 @@
     "Order": 265,
     "Latitude": 27.60562151,
     "Longitude": 76.09466404,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ007",
@@ -3679,7 +4057,8 @@
     "Order": 266,
     "Latitude": 29.936572,
     "Longitude": 73.860409,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ008",
@@ -3691,9 +4070,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 267,
-    "Latitude": 27.0202205,
-    "Longitude": 76.0128896,
-    "Remarks": null
+    "Latitude": 27.019045,
+    "Longitude": 76.014476,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.019045,76.014476",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ009",
@@ -3707,7 +4088,8 @@
     "Order": 268,
     "Latitude": 26.973579,
     "Longitude": 73.396675,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ010",
@@ -3721,7 +4103,8 @@
     "Order": 269,
     "Latitude": 27.420562,
     "Longitude": 74.583433,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ011",
@@ -3735,7 +4118,8 @@
     "Order": 270,
     "Latitude": 28.113521,
     "Longitude": 75.376865,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ012",
@@ -3747,9 +4131,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 271,
-    "Latitude": 28.113521,
-    "Longitude": 75.376865,
-    "Remarks": null
+    "Latitude": 28.112116,
+    "Longitude": 75.375686,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.112116,75.375686",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ013",
@@ -3761,9 +4147,11 @@
     "Infra_Type": "Court",
     "Status": "Data Awaiting",
     "Order": 272,
-    "Latitude": 26.895014,
-    "Longitude": 75.806912,
-    "Remarks": null
+    "Latitude": 26.8958,
+    "Longitude": 75.8039,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.895800,75.803900",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ014",
@@ -3775,9 +4163,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 273,
-    "Latitude": 29.84925,
-    "Longitude": 73.456738,
-    "Remarks": null
+    "Latitude": 26.895433,
+    "Longitude": 75.802997,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.895433,75.802997",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ015",
@@ -3791,7 +4181,8 @@
     "Order": 274,
     "Latitude": 25.310522,
     "Longitude": 74.630796,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ016",
@@ -3805,7 +4196,8 @@
     "Order": 275,
     "Latitude": 26.988683,
     "Longitude": 72.990575,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ017",
@@ -3819,7 +4211,8 @@
     "Order": 276,
     "Latitude": 26.783322,
     "Longitude": 72.321766,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ018",
@@ -3833,7 +4226,8 @@
     "Order": 277,
     "Latitude": 26.978794,
     "Longitude": 72.588997,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ019",
@@ -3845,9 +4239,11 @@
     "Infra_Type": "Court",
     "Status": "Data Awaiting",
     "Order": 278,
-    "Latitude": 26.895014,
-    "Longitude": 75.806912,
-    "Remarks": null
+    "Latitude": 26.8947,
+    "Longitude": 75.80119,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.894700,75.801190",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ020",
@@ -3859,9 +4255,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 279,
-    "Latitude": 27.225737,
-    "Longitude": 75.94831,
-    "Remarks": null
+    "Latitude": 27.225739,
+    "Longitude": 75.948302,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.225739,75.948302",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ021",
@@ -3873,9 +4271,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 280,
-    "Latitude": 27.133878,
-    "Longitude": 75.64661,
-    "Remarks": null
+    "Latitude": 27.133867,
+    "Longitude": 75.646692,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.133867,75.646692",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ022",
@@ -3901,9 +4301,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 282,
-    "Latitude": 27.054429,
-    "Longitude": 76.156808,
-    "Remarks": null
+    "Latitude": 27.054424,
+    "Longitude": 76.156859,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.054424,76.156859",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ024",
@@ -3929,9 +4331,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 284,
-    "Latitude": 27.248845,
-    "Longitude": 76.01495,
-    "Remarks": null
+    "Latitude": 27.248844,
+    "Longitude": 76.014951,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.248844,76.014951",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ026",
@@ -3943,9 +4347,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 285,
-    "Latitude": 27.34129,
-    "Longitude": 75.702087,
-    "Remarks": null
+    "Latitude": 27.341266,
+    "Longitude": 75.702089,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.341266,75.702089",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ027",
@@ -3957,9 +4363,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 286,
-    "Latitude": 27.303835,
-    "Longitude": 75.94858,
-    "Remarks": null
+    "Latitude": 27.304437,
+    "Longitude": 75.948444,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.304437,75.948444",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ028",
@@ -3972,8 +4380,10 @@
     "Status": "Data Awaiting",
     "Order": 287,
     "Latitude": 27.507588,
-    "Longitude": 76.299431,
-    "Remarks": null
+    "Longitude": 76.299432,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.507588,76.299432",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ029",
@@ -3985,9 +4395,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 288,
-    "Latitude": 27.725334,
-    "Longitude": 76.100307,
-    "Remarks": null
+    "Latitude": 27.725359,
+    "Longitude": 76.100395,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.725359,76.100395",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ030",
@@ -3999,9 +4411,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 289,
-    "Latitude": 27.5930773,
+    "Latitude": 27.593073,
     "Longitude": 76.077003,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.593073,76.077003",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ031",
@@ -4028,8 +4442,10 @@
     "Status": "Data Awaiting",
     "Order": 291,
     "Latitude": 27.166633,
-    "Longitude": 75.350001,
-    "Remarks": null
+    "Longitude": 75.350002,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.166633,75.350002",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ033",
@@ -4055,9 +4471,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 293,
-    "Latitude": 27.431384,
-    "Longitude": 76.172888,
-    "Remarks": null
+    "Latitude": 27.431381,
+    "Longitude": 76.172891,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.431381,76.172891",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ035",
@@ -4071,7 +4489,9 @@
     "Order": 294,
     "Latitude": 26.964232,
     "Longitude": 75.616939,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.964232,75.616939",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ036",
@@ -4097,9 +4517,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 296,
-    "Latitude": 29.629871,
-    "Longitude": 74.294538,
-    "Remarks": null
+    "Latitude": 29.629897,
+    "Longitude": 74.293757,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.629897,74.293757",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ038",
@@ -4111,9 +4533,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 297,
-    "Latitude": 27.583608,
-    "Longitude": 75.143622,
-    "Remarks": null
+    "Latitude": 27.583737,
+    "Longitude": 75.143046,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.583737,75.143046",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ039",
@@ -4125,9 +4549,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 298,
-    "Latitude": 26.945155,
-    "Longitude": 75.793414,
-    "Remarks": null
+    "Latitude": 26.94524,
+    "Longitude": 75.793322,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.945240,75.793322",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ040",
@@ -4139,9 +4565,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 299,
-    "Latitude": 25.144998,
-    "Longitude": 75.820089,
-    "Remarks": null
+    "Latitude": 25.144717,
+    "Longitude": 75.820301,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.144717,75.820301",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ041",
@@ -4153,9 +4581,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 300,
-    "Latitude": 25.096162,
-    "Longitude": 73.907126,
-    "Remarks": null
+    "Latitude": 25.098767,
+    "Longitude": 73.908683,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.098767,73.908683",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ042",
@@ -4167,9 +4597,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 301,
-    "Latitude": 24.896014,
-    "Longitude": 74.622021,
-    "Remarks": null
+    "Latitude": 24.895596,
+    "Longitude": 74.621287,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.895596,74.621287",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ043",
@@ -4195,9 +4627,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 303,
-    "Latitude": 24.662596,
-    "Longitude": 75.954698,
-    "Remarks": null
+    "Latitude": 24.662233,
+    "Longitude": 75.953874,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.662233,75.953874",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "RJ045",
@@ -4211,7 +4645,8 @@
     "Order": 304,
     "Latitude": 25.657332,
     "Longitude": 76.166427,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ049",
@@ -4251,9 +4686,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 307,
-    "Latitude": 27.1,
-    "Longitude": 88.12,
-    "Remarks": null
+    "Latitude": 27.167852,
+    "Longitude": 88.205572,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.167852,88.205572",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK002",
@@ -4265,9 +4702,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 308,
-    "Latitude": 27.334788,
-    "Longitude": 88.613314,
-    "Remarks": null
+    "Latitude": 27.334632,
+    "Longitude": 88.612808,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.334632,88.612808",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK003",
@@ -4279,9 +4718,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 309,
-    "Latitude": 27,
-    "Longitude": 88,
-    "Remarks": null
+    "Latitude": 27.130598,
+    "Longitude": 88.286157,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.130598,88.286157",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK004",
@@ -4293,9 +4734,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 310,
-    "Latitude": 27.413252,
-    "Longitude": 88.583184,
-    "Remarks": null
+    "Latitude": 27.413131,
+    "Longitude": 88.582975,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.413131,88.582975",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK005",
@@ -4307,9 +4750,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 311,
-    "Latitude": 27,
-    "Longitude": 88,
-    "Remarks": null
+    "Latitude": 27.34703,
+    "Longitude": 88.596103,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.347030,88.596103",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK006",
@@ -4321,9 +4766,11 @@
     "Infra_Type": "Sports Complex",
     "Status": "Data Awaiting",
     "Order": 312,
-    "Latitude": 27.30435,
-    "Longitude": 88.36241,
-    "Remarks": null
+    "Latitude": 27.304159,
+    "Longitude": 88.362367,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.304159,88.362367",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "SK007",
@@ -4351,7 +4798,8 @@
     "Order": 314,
     "Latitude": 12.5091392,
     "Longitude": 80.8273228,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "TN002",
@@ -4363,9 +4811,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 315,
-    "Latitude": 10.773418,
-    "Longitude": 79.127498,
-    "Remarks": null
+    "Latitude": 10.773361,
+    "Longitude": 79.127641,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=10.773361,79.127641",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TN003",
@@ -4377,9 +4827,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 316,
-    "Latitude": 11.349918,
-    "Longitude": 77.721997,
-    "Remarks": null
+    "Latitude": 11.3505,
+    "Longitude": 77.7203,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.350500,77.720300",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TN004",
@@ -4391,9 +4843,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 317,
-    "Latitude": 12.509186,
-    "Longitude": 80.8321576,
-    "Remarks": null
+    "Latitude": 12.836115,
+    "Longitude": 80.142294,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=12.836115,80.142294",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TN005",
@@ -4405,9 +4859,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 318,
-    "Latitude": 11.7186,
-    "Longitude": 78.08274,
-    "Remarks": null
+    "Latitude": 11.718794,
+    "Longitude": 78.082402,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=11.718794,78.082402",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR001",
@@ -4419,9 +4875,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 319,
-    "Latitude": 23.495794,
-    "Longitude": 91.491659,
-    "Remarks": null
+    "Latitude": 23.495366,
+    "Longitude": 91.491216,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.495366,91.491216",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR002",
@@ -4433,9 +4891,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 320,
-    "Latitude": 27.26029,
-    "Longitude": 92.156999,
-    "Remarks": null
+    "Latitude": 24.260355,
+    "Longitude": 92.156587,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.260355,92.156587",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR003",
@@ -4447,9 +4907,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 321,
-    "Latitude": 23.8068,
-    "Longitude": 91,
-    "Remarks": null
+    "Latitude": 23.806029,
+    "Longitude": 91.27684,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.806029,91.276840",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR004",
@@ -4461,9 +4923,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 322,
-    "Latitude": 24,
-    "Longitude": 91.607996,
-    "Remarks": null
+    "Latitude": 24.067849,
+    "Longitude": 91.607453,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.067849,91.607453",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR005",
@@ -4475,9 +4939,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 323,
-    "Latitude": 24.259795,
-    "Longitude": 92.157485,
-    "Remarks": null
+    "Latitude": 24.258832,
+    "Longitude": 92.157217,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.258832,92.157217",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR006",
@@ -4489,9 +4955,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 324,
-    "Latitude": 23.807085,
-    "Longitude": 91.275725,
-    "Remarks": null
+    "Latitude": 23.714625,
+    "Longitude": 91.458377,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.714625,91.458377",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TR007",
@@ -4503,9 +4971,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 325,
-    "Latitude": 23.807085,
-    "Longitude": 91.275725,
-    "Remarks": null
+    "Latitude": 23.806781,
+    "Longitude": 91.276124,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=23.806781,91.276124",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS001",
@@ -4519,7 +4989,9 @@
     "Order": 326,
     "Latitude": 18.059652,
     "Longitude": 78.278355,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.059652,78.278355",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS002",
@@ -4531,9 +5003,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 327,
-    "Latitude": 18.406633,
-    "Longitude": 79.127456,
-    "Remarks": null
+    "Latitude": 18.00461,
+    "Longitude": 79.565025,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.004610,79.565025",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS003",
@@ -4545,9 +5019,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 328,
-    "Latitude": 18.00292,
-    "Longitude": 79.564392,
-    "Remarks": null
+    "Latitude": 18.004646,
+    "Longitude": 79.565261,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=18.004646,79.565261",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS004",
@@ -4559,9 +5035,11 @@
     "Infra_Type": "Swimming Pool",
     "Status": "Data Awaiting",
     "Order": 329,
-    "Latitude": 17.411807,
-    "Longitude": 78.520334,
-    "Remarks": null
+    "Latitude": 17.4119,
+    "Longitude": 78.520299,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.411900,78.520299",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS005",
@@ -4573,9 +5051,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 330,
-    "Latitude": 17.423949,
-    "Longitude": 78.532564,
-    "Remarks": null
+    "Latitude": 17.423192,
+    "Longitude": 78.532033,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.423192,78.532033",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS006",
@@ -4587,9 +5067,11 @@
     "Infra_Type": "Court",
     "Status": "Data Awaiting",
     "Order": 331,
-    "Latitude": 25.292836,
-    "Longitude": 78.31454008,
-    "Remarks": null
+    "Latitude": 17.411336,
+    "Longitude": 78.524272,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=17.411336,78.524272",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "TS007",
@@ -4615,9 +5097,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 333,
-    "Latitude": 30.324705721671,
-    "Longitude": 78.048388682219,
-    "Remarks": null
+    "Latitude": 30.324219,
+    "Longitude": 78.047387,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.324219,78.047387",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UK002",
@@ -4629,9 +5113,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 334,
-    "Latitude": 30.476877,
-    "Longitude": 78.047574,
-    "Remarks": null
+    "Latitude": 30.476867,
+    "Longitude": 78.047251,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.476867,78.047251",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UK003",
@@ -4643,9 +5129,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 335,
-    "Latitude": 29.8769487972,
-    "Longitude": 77.856918656798,
-    "Remarks": null
+    "Latitude": 29.971877,
+    "Longitude": 78.049176,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.971877,78.049176",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UK004",
@@ -4657,9 +5145,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 336,
-    "Latitude": 29.091876566553,
-    "Longitude": 79.171042286288,
-    "Remarks": null
+    "Latitude": 29.110526,
+    "Longitude": 79.16092,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.110526,79.160920",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UK005",
@@ -4671,9 +5161,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 337,
-    "Latitude": 30.328300549847,
-    "Longitude": 78.078296276148,
-    "Remarks": null
+    "Latitude": 30.324017,
+    "Longitude": 78.076889,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=30.324017,78.076889",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UK006",
@@ -4727,9 +5219,11 @@
     "Infra_Type": "Hockey Turf",
     "Status": "Data Awaiting",
     "Order": 341,
-    "Latitude": 28.991954992087,
-    "Longitude": 77.721058639864,
-    "Remarks": null
+    "Latitude": 28.992842,
+    "Longitude": 77.72121,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.992842,77.721210",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP002",
@@ -4741,9 +5235,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 342,
-    "Latitude": 25.380003430255,
-    "Longitude": 82.974113676714,
-    "Remarks": null
+    "Latitude": 25.380025,
+    "Longitude": 82.974538,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.380025,82.974538",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP003",
@@ -4755,9 +5251,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 343,
-    "Latitude": 28.967134041831,
-    "Longitude": 77.617960024521,
-    "Remarks": null
+    "Latitude": 28.971145,
+    "Longitude": 77.6138,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.971145,77.613800",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP004",
@@ -4769,9 +5267,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 344,
-    "Latitude": 26.683656670276,
-    "Longitude": 80.984309158504,
-    "Remarks": null
+    "Latitude": 26.695662,
+    "Longitude": 80.987807,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.695662,80.987807",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP005",
@@ -4783,9 +5283,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 345,
-    "Latitude": 24.737961603081,
-    "Longitude": 83.2347944206,
-    "Remarks": null
+    "Latitude": 24.71394,
+    "Longitude": 83.28689,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.713940,83.286890",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP006",
@@ -4797,9 +5299,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 346,
-    "Latitude": 26.798882395962,
-    "Longitude": 83.383360197495,
-    "Remarks": null
+    "Latitude": 26.801336,
+    "Longitude": 83.37998,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.801336,83.379980",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP007",
@@ -4811,9 +5315,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 347,
-    "Latitude": 25.912208427535,
-    "Longitude": 82.273601877901,
-    "Remarks": null
+    "Latitude": 26.03359,
+    "Longitude": 82.233996,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.033590,82.233996",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP008",
@@ -4825,9 +5331,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 348,
-    "Latitude": 26.134109579616,
-    "Longitude": 82.424592138299,
-    "Remarks": null
+    "Latitude": 25.987193,
+    "Longitude": 82.120607,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.987193,82.120607",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP009",
@@ -4839,9 +5347,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 349,
-    "Latitude": 27.10869734,
-    "Longitude": 83.27311504,
-    "Remarks": null
+    "Latitude": 27.109028,
+    "Longitude": 83.272651,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.109028,83.272651",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP010",
@@ -4853,9 +5363,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 350,
-    "Latitude": 29.965529097859,
-    "Longitude": 77.542412306803,
-    "Remarks": null
+    "Latitude": 29.965437,
+    "Longitude": 77.542304,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=29.965437,77.542304",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP011",
@@ -4867,9 +5379,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 351,
-    "Latitude": 27.577324985566,
-    "Longitude": 78.494685870266,
-    "Remarks": null
+    "Latitude": 27.547353,
+    "Longitude": 78.515824,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.547353,78.515824",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP012",
@@ -4881,9 +5395,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 352,
-    "Latitude": 27.30998,
-    "Longitude": 79.51147,
-    "Remarks": null
+    "Latitude": 27.309976,
+    "Longitude": 79.511485,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.309976,79.511485",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP013",
@@ -4895,9 +5411,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 353,
-    "Latitude": 28.81131308,
-    "Longitude": 78.93702339,
-    "Remarks": null
+    "Latitude": 28.811278,
+    "Longitude": 78.936798,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.811278,78.936798",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP014",
@@ -4909,9 +5427,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 354,
-    "Latitude": 23.37085,
+    "Latitude": 27.37085,
     "Longitude": 79.067149,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.370850,79.067149",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP015",
@@ -4923,9 +5443,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 355,
-    "Latitude": 26.703148,
-    "Longitude": 82.428333,
-    "Remarks": null
+    "Latitude": 26.703078,
+    "Longitude": 82.428321,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.703078,82.428321",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP016",
@@ -4937,9 +5459,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 356,
-    "Latitude": 25.966220820212,
-    "Longitude": 82.307196651434,
-    "Remarks": null
+    "Latitude": 25.963023,
+    "Longitude": 82.295608,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.963023,82.295608",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP017",
@@ -4951,9 +5475,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 357,
-    "Latitude": 26.51758233145,
-    "Longitude": 80.243402620775,
-    "Remarks": null
+    "Latitude": 26.496458,
+    "Longitude": 80.203916,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.496458,80.203916",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP018",
@@ -4965,9 +5491,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 358,
-    "Latitude": 26.8498,
-    "Longitude": 80.9994,
-    "Remarks": null
+    "Latitude": 26.84975,
+    "Longitude": 80.99943,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.849750,80.999430",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP019",
@@ -4979,9 +5507,11 @@
     "Infra_Type": "Athletics Track",
     "Status": "Data Awaiting",
     "Order": 359,
-    "Latitude": 27.150839171548,
-    "Longitude": 79.495911548765,
-    "Remarks": null
+    "Latitude": 27.148806,
+    "Longitude": 79.423796,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.148806,79.423796",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP020",
@@ -4993,9 +5523,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 360,
-    "Latitude": 28.488041,
-    "Longitude": 80.167613,
-    "Remarks": null
+    "Latitude": 28.487645,
+    "Longitude": 80.167496,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.487645,80.167496",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP021",
@@ -5007,9 +5539,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 361,
-    "Latitude": 24.90225388332,
-    "Longitude": 82.569099715754,
-    "Remarks": null
+    "Latitude": 24.915131,
+    "Longitude": 82.558512,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=24.915131,82.558512",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP022",
@@ -5021,9 +5555,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 362,
-    "Latitude": 27.862194,
-    "Longitude": 78.171141,
-    "Remarks": null
+    "Latitude": 27.862155,
+    "Longitude": 78.171245,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.862155,78.171245",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP023",
@@ -5035,9 +5571,11 @@
     "Infra_Type": "Hostel",
     "Status": "Data Awaiting",
     "Order": 363,
-    "Latitude": 26.759857,
-    "Longitude": 80.862396,
-    "Remarks": null
+    "Latitude": 26.759378,
+    "Longitude": 80.862642,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.759378,80.862642",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP024",
@@ -5049,9 +5587,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 364,
-    "Latitude": 26.759611,
-    "Longitude": 80.864089,
-    "Remarks": null
+    "Latitude": 26.759612,
+    "Longitude": 80.86409,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.759612,80.864090",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP027",
@@ -5063,9 +5603,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 365,
-    "Latitude": 26.820276629674,
-    "Longitude": 80.920707053574,
-    "Remarks": null
+    "Latitude": 26.818934,
+    "Longitude": 80.9198,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=26.818934,80.919800",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP028",
@@ -5077,9 +5619,11 @@
     "Infra_Type": "Football Turf",
     "Status": "Data Awaiting",
     "Order": 366,
-    "Latitude": 27.418849,
-    "Longitude": 80374482,
-    "Remarks": null
+    "Latitude": 27.418896,
+    "Longitude": 80.374322,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=27.418896,80.374322",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP029",
@@ -5091,9 +5635,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 367,
-    "Latitude": 28.9623603259,
-    "Longitude": 77.300072871797,
-    "Remarks": null
+    "Latitude": 28.956118,
+    "Longitude": 77.302353,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=28.956118,77.302353",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP030",
@@ -5107,7 +5653,8 @@
     "Order": 368,
     "Latitude": 26.21994560589,
     "Longitude": 81.233277183992,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UP031",
@@ -5135,7 +5682,8 @@
     "Order": 370,
     "Latitude": 25.311128378171,
     "Longitude": 82.986292793771,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UP033",
@@ -5147,9 +5695,11 @@
     "Infra_Type": "Multipurpose Hall",
     "Status": "Data Awaiting",
     "Order": 371,
-    "Latitude": 25.813866,
-    "Longitude": 82.685068,
-    "Remarks": null
+    "Latitude": 25.781397,
+    "Longitude": 82.572521,
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=25.781397,82.572521",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "UP034",
@@ -5177,7 +5727,9 @@
     "Order": 373,
     "Latitude": 22.567206,
     "Longitude": 88.406092,
-    "Remarks": null
+    "Remarks": null,
+    "Google_Maps_URL": "https://www.google.com/maps?q=22.567206,88.406092",
+    "Without_GPS_Images": false
   },
   {
     "Project_Code": "WB002",
