@@ -10,7 +10,7 @@ export function hasProjectCoordinates(p: Project): boolean {
  * facility-type colour (deep violet). Marker colour is status-based and future-ready: add a new
  * status here and every PRJ marker/cluster/legend picks it up with no other change.
  */
-export const PROJECT_COLOR = '#6a3ff5';
+export const PROJECT_COLOR = '#223f86';
 
 const PROJECT_STATUS_COLORS: Record<string, string> = {
   'Data Awaiting': PROJECT_COLOR,

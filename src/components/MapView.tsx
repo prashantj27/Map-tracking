@@ -12,6 +12,7 @@ import { geoToDataState, dataToGeoStates } from '../lib/stateNames';
 import { PROJECT_COLOR } from '../lib/projects';
 import { FacilityPopupContent } from './FacilityPopup';
 import { ProjectLayer } from './projects/ProjectLayer';
+import { MapPinGraphic, pinGlyph } from './MapPinGraphic';
 
 interface PointProps {
   cluster: boolean;
@@ -35,16 +36,6 @@ export interface MapViewProps {
   onSelectProject: (p: Project | null) => void;
   onViewProjectDetails: (p: Project) => void;
 }
-
-// Distinct marker silhouettes (24×24 viewBox, tip at the bottom centre so the point sits on the
-// coordinate). STC/EXT/AKH get their own shapes; every other type keeps the classic teardrop.
-const TEARDROP_PATH = 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z';
-const PIN_SHAPES: Partial<Record<FacilityCategory, string>> = {
-  STC: 'M12 2 L20 5 V11 C20 16.5 16.4 19.8 12 22 C7.6 19.8 4 16.5 4 11 V5 Z',                               // shield
-  EXT: 'M7 2 H17 A3 3 0 0 1 20 5 V12.5 A3 3 0 0 1 17 15.5 H14 L12 21.5 L10 15.5 H7 A3 3 0 0 1 4 12.5 V5 A3 3 0 0 1 7 2 Z', // tag
-  AKHARA: 'M6.5 3 H17.5 L20.5 9.5 L12 22 L3.5 9.5 Z',                                                        // hexagon
-};
-const pinPath = (cat: FacilityCategory): string => PIN_SHAPES[cat] ?? TEARDROP_PATH;
 
 const INITIAL_VIEW = { longitude: 78.96, latitude: 20.59, zoom: 4.0 };
 const DISTRICT_MIN_ZOOM = 5;
@@ -311,11 +302,7 @@ function MapViewComponent({
               <div className="pin" onMouseEnter={clearHover}>
                 {/* NCOE are the primary state centres — rendered a little larger via .ncoe */}
                 <div className={`pin-graphic${category === 'NCOE' ? ' ncoe' : ''}`}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
-                    <path d={pinPath(category)} />
-                  </svg>
-                  {/* Always the facility-type acronym — consistent across every pin of a type. */}
-                  <span className="pin-acronym">{cfg.acronym}</span>
+                  <MapPinGraphic color={cfg.color} glyph={pinGlyph(category)} />
                 </div>
                 {/* Hover box: facility name + type */}
                 <span className="pin-tooltip" aria-hidden="true">
