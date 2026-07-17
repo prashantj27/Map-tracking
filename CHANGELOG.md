@@ -16,7 +16,8 @@ This project does not yet publish versioned releases; entries are grouped under
 - Project documentation set for long-term maintenance: `CLAUDE.md` (project context + coding/workflow rules), `docs/architecture.md` (canonical up-to-date architecture reference), `docs/roadmap.md` (forward plan + known issues), and this `CHANGELOG.md`.
 
 ### Changed
-- Sidebar now shows all 7 facility-type filter chips (RC/NCOE/STC/EXT/KIC/KISCE/AKH); STC/EXT/AKH use distinct custom marker shapes.
+- **Premium pin icon set.** Markers now use a consistent teardrop frame with a white type glyph — building (RC), trophy (NCOE), runner (STC), columns (EXT), institution+star (KISCE), handshake (AKH), crane (Projects) — via the shared `MapPinGraphic`. The facility-type palette (`FACILITY_CONFIG`) was updated to the reference colours (NCOE green, STC orange, EXT purple, AKH gold; Projects navy), which flows to the legend, popups, search dots and report-card chips. **KIC keeps its original look** — the classic purple (`#8e24aa`) teardrop showing the facility's sport icon (or the "KIC" acronym where there is no single sport). Replaces the earlier acronym labels (for all other types) and the STC/EXT/AKH silhouette shapes.
+- Sidebar now shows all 7 facility-type filter chips (RC/NCOE/STC/EXT/KIC/KISCE/AKH).
 - Statistics Overview removed from the sidebar (`StatsDeck` deleted; Recharts no longer bundled); trainee-strength breakup moved beneath the total in the right-side state report card.
 - `react-is` added as an explicit dependency so a clean `vite build` resolves it (recharts' undeclared import).
 

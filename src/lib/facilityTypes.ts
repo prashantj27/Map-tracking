@@ -20,16 +20,18 @@ export interface FacilityCategoryConfig {
   lightBg: string;
 }
 
+// Colours match the premium pin icon set (reference design). FACILITY_CONFIG is the single
+// source of truth, so pins, legend, popups, search dots and report-card chips stay consistent.
 export const FACILITY_CONFIG: Record<FacilityCategory, FacilityCategoryConfig> = {
   RC:     { label: 'Regional Centre',                  acronym: 'RC',    color: '#1a73e8', lightBg: '#e8f0fe' },
-  NCOE:   { label: 'National Centre of Excellence',    acronym: 'NCOE',  color: '#ea4335', lightBg: '#fce8e6' },
-  STC:    { label: 'SAI Training Centre',              acronym: 'STC',   color: '#188038', lightBg: '#e6f4ea' },
-  EXT:    { label: 'Extension Centre of STC',          acronym: 'EXT',   color: '#f9ab00', lightBg: '#fef7e0' },
+  NCOE:   { label: 'National Centre of Excellence',    acronym: 'NCOE',  color: '#2e9e6b', lightBg: '#e4f3ec' },
+  STC:    { label: 'SAI Training Centre',              acronym: 'STC',   color: '#f5701a', lightBg: '#fdeee1' },
+  EXT:    { label: 'Extension Centre of STC',          acronym: 'EXT',   color: '#7d3cc9', lightBg: '#efe7fb' },
   KIC:    { label: 'Khelo India Centre',               acronym: 'KIC',   color: '#8e24aa', lightBg: '#f3e8fd' },
   KISCE:  { label: 'Khelo India State CoE',            acronym: 'KISCE', color: '#00acc1', lightBg: '#e0f7fa' },
   NSTC:   { label: 'NSTC Regular School',              acronym: 'NSTC',  color: '#00897b', lightBg: '#e0f2f1' },
   IGMA:   { label: 'Indigenous Games & Martial Arts',  acronym: 'IGMA',  color: '#e8710a', lightBg: '#feefe3' },
-  AKHARA: { label: 'Adopted Akhara',                   acronym: 'AKH',   color: '#795548', lightBg: '#efebe9' },
+  AKHARA: { label: 'Adopted Akhara',                   acronym: 'AKH',   color: '#eaa61e', lightBg: '#fdf4de' },
   OTHER:  { label: 'Other',                            acronym: 'O',     color: '#9e9e9e', lightBg: '#f1f3f4' },
 };
 

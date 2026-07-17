@@ -84,7 +84,7 @@ src/
 │   ├── MapFilterBar.tsx     Floating bottom-left filters: Facility Type, State, PRJ toggle,
 │   │                        intelligent search over facilities + projects (replaces the sidebar)
 │   ├── MapView.tsx          MapLibre map (memoized): state choropleth (2D fill + 3D extrusion), lazy
-│   │                        district lines, clustered markers (custom STC/EXT/AKH shapes), hover
+│   │                        district lines, clustered markers (premium glyph pins via MapPinGraphic), hover
 │   │                        tooltip, popup, 3D + dark-mode toggles, legend
 │   ├── FacilityPopup.tsx    FacilityPopupContent — Overview / Disciplines / Funds & Staff tabs,
 │   │                        Directions + Project Details link
