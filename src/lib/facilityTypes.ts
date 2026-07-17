@@ -27,7 +27,7 @@ export const FACILITY_CONFIG: Record<FacilityCategory, FacilityCategoryConfig> =
   NCOE:   { label: 'National Centre of Excellence',    acronym: 'NCOE',  color: '#2e9e6b', lightBg: '#e4f3ec' },
   STC:    { label: 'SAI Training Centre',              acronym: 'STC',   color: '#f5701a', lightBg: '#fdeee1' },
   EXT:    { label: 'Extension Centre of STC',          acronym: 'EXT',   color: '#7d3cc9', lightBg: '#efe7fb' },
-  KIC:    { label: 'Khelo India Centre',               acronym: 'KIC',   color: '#e83e79', lightBg: '#fce4ee' },
+  KIC:    { label: 'Khelo India Centre',               acronym: 'KIC',   color: '#8e24aa', lightBg: '#f3e8fd' },
   KISCE:  { label: 'Khelo India State CoE',            acronym: 'KISCE', color: '#00acc1', lightBg: '#e0f7fa' },
   NSTC:   { label: 'NSTC Regular School',              acronym: 'NSTC',  color: '#00897b', lightBg: '#e0f2f1' },
   IGMA:   { label: 'Indigenous Games & Martial Arts',  acronym: 'IGMA',  color: '#e8710a', lightBg: '#feefe3' },
