@@ -214,22 +214,21 @@ function App() {
         onViewProjectDetails={handleViewProjectDetails}
       />
 
-      <div className="map-bottom-stack">
-        <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={handleTypeSelectionChange} />
-        <MapFilterBar
-          uniqueStates={uniqueStates}
-          filterState={filterState}
-          onStateChange={setFilterState}
-          typeSelection={typeSelection}
-          onTypeSelectionChange={handleTypeSelectionChange}
-          projectStatusFilter={projectStatusFilter}
-          onProjectStatusFilterChange={setProjectStatusFilter}
-          allLocations={allLocations}
-          projects={allProjects}
-          onPickFacility={handlePickFacility}
-          onPickProject={handlePickProject}
-        />
-      </div>
+      {/* Independently draggable — each remembers its own position (see useDraggable). */}
+      <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={handleTypeSelectionChange} />
+      <MapFilterBar
+        uniqueStates={uniqueStates}
+        filterState={filterState}
+        onStateChange={setFilterState}
+        typeSelection={typeSelection}
+        onTypeSelectionChange={handleTypeSelectionChange}
+        projectStatusFilter={projectStatusFilter}
+        onProjectStatusFilterChange={setProjectStatusFilter}
+        allLocations={allLocations}
+        projects={allProjects}
+        onPickFacility={handlePickFacility}
+        onPickProject={handlePickProject}
+      />
 
       {reportState && (
         <StateReportCard
