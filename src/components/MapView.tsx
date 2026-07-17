@@ -9,16 +9,7 @@ import type Supercluster from 'supercluster';
 import type { Location, Project } from '../db';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from '../lib/facilityTypes';
 import { geoToDataState, dataToGeoStates } from '../lib/stateNames';
-import { getDisciplineIcon, isRealDiscipline } from '../lib/disciplineIcons';
 import { PROJECT_COLOR } from '../lib/projects';
-
-/** A facility's own sport icon — only when it offers exactly one discipline (98% of KICs). */
-function getFacilityDisciplineIcon(loc: Location): string | null {
-  const disciplines = loc.Disciplines?.split(',')
-    .map(d => d.trim())
-    .filter(d => d && isRealDiscipline(d)) ?? [];
-  return disciplines.length === 1 ? getDisciplineIcon(disciplines[0]) : null;
-}
 import { FacilityPopupContent } from './FacilityPopup';
 import { ProjectLayer } from './projects/ProjectLayer';
 
@@ -35,8 +26,6 @@ export interface MapViewProps {
   onSelect: (loc: Location | null) => void;
   onStateClick: (dataStateName: string) => void;
   mapRef: RefObject<MapRef | null>;
-  /** When a discipline filter is active, pins show the sport's icon. */
-  activeDiscipline?: string;
   /** When a facility-type quick filter is active, clusters take that category's color. */
   activeQuickFilter?: FacilityCategory | null;
   /** Projects (PRJ) GIS layer — independent of the facility markers. */
@@ -67,7 +56,7 @@ const MAP_STYLES = {
 
 function MapViewComponent({
   locations, stateColorMatch, selected, onSelect, onStateClick, mapRef,
-  activeDiscipline, activeQuickFilter,
+  activeQuickFilter,
   projects, showProjects, selectedProject, onSelectProject, onViewProjectDetails
 }: MapViewProps) {
   // Viewport state lives here so panning/zooming never re-renders the side panel.
@@ -78,7 +67,6 @@ function MapViewComponent({
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const hoveredFeatureId = useRef<string | number | null>(null);
 
-  const disciplineIcon = activeDiscipline ? getDisciplineIcon(activeDiscipline) : null;
   const clusterColor = activeQuickFilter ? FACILITY_CONFIG[activeQuickFilter].color : '#1a73e8';
 
   const locationById = useMemo(() => {
@@ -307,8 +295,6 @@ function MapViewComponent({
           const loc = locationById.get(locId);
           if (!loc) return null;
           const cfg = FACILITY_CONFIG[category];
-          // Active discipline filter wins; otherwise single-sport facilities show their own icon.
-          const pinIcon = disciplineIcon ?? getFacilityDisciplineIcon(loc);
 
           return (
             <Marker
@@ -328,9 +314,8 @@ function MapViewComponent({
                   <svg width="32" height="32" viewBox="0 0 24 24" fill={cfg.color} aria-hidden="true">
                     <path d={pinPath(category)} />
                   </svg>
-                  {pinIcon
-                    ? <span className="pin-emoji" aria-hidden="true">{pinIcon}</span>
-                    : <span className="pin-acronym">{cfg.acronym}</span>}
+                  {/* Always the facility-type acronym — consistent across every pin of a type. */}
+                  <span className="pin-acronym">{cfg.acronym}</span>
                 </div>
                 {/* Hover box: facility name + type */}
                 <span className="pin-tooltip" aria-hidden="true">
@@ -402,12 +387,6 @@ function MapViewComponent({
             <span className="legend-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
             <span className="legend-acronym">PRJ</span>
             <span className="legend-label">Projects</span>
-          </div>
-        )}
-        {activeDiscipline && (
-          <div className="legend-row legend-discipline">
-            <span aria-hidden="true">{disciplineIcon}</span>
-            <span className="legend-label"><strong>{activeDiscipline}</strong> facilities</span>
           </div>
         )}
         {presentCategories.map(cat => (
