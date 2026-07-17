@@ -145,7 +145,7 @@ button:focus-visible {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   display: none;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.82);
@@ -160,7 +160,7 @@ button:focus-visible {
 
 /* Push the tooltip a touch higher for the larger NCOE pins. */
 .pin-graphic.ncoe + .pin-tooltip {
-  margin-bottom: 18px;
+  margin-bottom: 13px;
 }
 
 .pin:hover .pin-tooltip {
@@ -182,30 +182,31 @@ button:focus-visible {
 
 .pin-acronym {
   position: absolute;
-  top: 7px;
+  top: 5px;
   left: 0;
   width: 100%;
   text-align: center;
   color: #fff;
-  font-size: 8px;
+  font-size: 7px;
   font-weight: 700;
   pointer-events: none;
 }
 
-/* Discipline emoji shown in a white badge at the pin head when a sport filter is active */
+/* Discipline emoji shown in a white badge at the pin head when a sport filter is active.
+   Scaled a little more gently than the pin frame itself so it stays legible. */
 .pin-emoji {
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1;
   pointer-events: none;
 }
@@ -1216,8 +1217,8 @@ button:focus-visible {
 }
 .prj-pin:hover { transform: scale(1.18); }
 .prj-pin-pulse {
-  position: absolute; left: 50%; top: 16px; width: 22px; height: 22px;
-  margin-left: -11px; margin-top: -11px; border-radius: 50%;
+  position: absolute; left: 50%; top: 12px; width: 16px; height: 16px;
+  margin-left: -8px; margin-top: -8px; border-radius: 50%;
   background: var(--prj-color, #223f86); opacity: 0; pointer-events: none;
 }
 .prj-pin:hover .prj-pin-pulse { animation: prj-pulse 1.3s ease-out infinite; }
