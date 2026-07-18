@@ -4,6 +4,7 @@ import Map, {
   type MapRef, type MapLayerMouseEvent, type ViewStateChangeEvent
 } from 'react-map-gl/maplibre';
 import type { BBox } from 'geojson';
+import type { StyleSpecification } from 'maplibre-gl';
 import useSupercluster from 'use-supercluster';
 import type Supercluster from 'supercluster';
 import type { Location, Project } from '../db';
@@ -29,6 +30,8 @@ export interface MapViewProps {
   mapRef: RefObject<MapRef | null>;
   /** When a facility-type quick filter is active, clusters take that category's color. */
   activeQuickFilter?: FacilityCategory | null;
+  /** Satellite basemap (Esri World Imagery). Owned by App — the toggle lives in the search box. */
+  satellite: boolean;
   /** Projects (PRJ) GIS layer — independent of the facility markers. */
   projects: Project[];
   showProjects: boolean;
@@ -45,6 +48,35 @@ const MAP_STYLES = {
   dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
 } as const;
 
+// Satellite basemap: Esri World Imagery raster tiles + Esri's boundaries/places reference overlay
+// so state/city names stay readable over the imagery (hybrid view). No API key; attribution is
+// required and surfaced through MapLibre's attribution control. Tiles are fetched per-viewport,
+// so an India-centred session only ever downloads India imagery, always current from the provider.
+// (OpenStreetMap itself publishes no satellite imagery — Esri World Imagery is the standard free
+// companion layer used with OSM-based maps.)
+const SATELLITE_STYLE: StyleSpecification = {
+  version: 8,
+  sources: {
+    'esri-imagery': {
+      type: 'raster',
+      tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+      tileSize: 256,
+      maxzoom: 19,
+      attribution: 'Powered by <a href="https://www.esri.com/">Esri</a> — Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+    },
+    'esri-labels': {
+      type: 'raster',
+      tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'],
+      tileSize: 256,
+      maxzoom: 19,
+    },
+  },
+  layers: [
+    { id: 'esri-imagery', type: 'raster', source: 'esri-imagery' },
+    { id: 'esri-labels', type: 'raster', source: 'esri-labels' },
+  ],
+};
+
 // KIC keeps its original look: the classic teardrop showing the facility's sport icon when it
 // offers exactly one discipline (~98% of KICs), else the "KIC" acronym. Every other type uses
 // the shared MapPinGraphic glyph pin.
@@ -59,7 +91,7 @@ function getFacilityDisciplineIcon(loc: Location): string | null {
 
 function MapViewComponent({
   locations, stateColorMatch, selected, onSelect, onStateClick, mapRef,
-  activeQuickFilter,
+  activeQuickFilter, satellite,
   projects, showProjects, selectedProject, onSelectProject, onViewProjectDetails
 }: MapViewProps) {
   // Viewport state lives here so panning/zooming never re-renders the side panel.
@@ -176,7 +208,7 @@ function MapViewComponent({
       <Map
         ref={mapRef}
         initialViewState={INITIAL_VIEW}
-        mapStyle={MAP_STYLES[theme]}
+        mapStyle={satellite ? SATELLITE_STYLE : MAP_STYLES[theme]}
         interactiveLayerIds={is3D ? ['state-extrusion'] : ['state-fills']}
         cursor={hoveredState ? 'pointer' : 'grab'}
         maxPitch={70}
@@ -201,11 +233,13 @@ function MapViewComponent({
             paint={{
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               'fill-color': stateColorMatch as any,
+              // Over satellite imagery the region tint is dropped to a whisper so the imagery
+              // stays legible; hover still brightens enough to show the click-to-filter target.
               'fill-opacity': [
                 'case',
                 ['boolean', ['feature-state', 'hover'], false],
-                0.45,
-                0.15
+                satellite ? 0.3 : 0.45,
+                satellite ? 0.05 : 0.15
               ]
             }}
           />
@@ -213,9 +247,9 @@ function MapViewComponent({
             id="state-borders"
             type="line"
             paint={{
-              'line-color': theme === 'dark' ? '#8ab4f8' : '#1a73e8',
+              'line-color': satellite ? '#ffffff' : theme === 'dark' ? '#8ab4f8' : '#1a73e8',
               'line-width': 1,
-              'line-opacity': 0.3
+              'line-opacity': satellite ? 0.5 : 0.3
             }}
           />
           {is3D && (
@@ -242,9 +276,9 @@ function MapViewComponent({
               type="line"
               minzoom={5.5}
               paint={{
-                'line-color': theme === 'dark' ? '#ffffff' : '#000000',
+                'line-color': satellite || theme === 'dark' ? '#ffffff' : '#000000',
                 'line-width': 1,
-                'line-opacity': 0.05
+                'line-opacity': satellite ? 0.2 : 0.05
               }}
             />
           </Source>
@@ -380,14 +414,18 @@ function MapViewComponent({
         >
           3D
         </button>
-        <button
-          className={`map-control-btn${theme === 'dark' ? ' active' : ''}`}
-          onClick={() => setTheme(t => (t === 'light' ? 'dark' : 'light'))}
-          aria-pressed={theme === 'dark'}
-          title="Toggle dark basemap"
-        >
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+        {/* The light/dark toggle only switches the CARTO street styles — hidden while the
+            satellite basemap is active, where it would do nothing. */}
+        {!satellite && (
+          <button
+            className={`map-control-btn${theme === 'dark' ? ' active' : ''}`}
+            onClick={() => setTheme(t => (t === 'light' ? 'dark' : 'light'))}
+            aria-pressed={theme === 'dark'}
+            title="Toggle dark basemap"
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        )}
       </div>
     </div>
   );

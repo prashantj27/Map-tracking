@@ -54,6 +54,11 @@ function App() {
   // Project Status filter — only meaningful (and only shown) while typeSelection === 'PRJ'.
   const [projectStatusFilter, setProjectStatusFilter] = useState<ProjectStatusFilterKey | null>(null);
 
+  // Satellite basemap toggle. Lives here (not in MapView with the rest of the map-mode state)
+  // because its control sits in MapFilterBar's search box; a rare discrete toggle, so the
+  // App-level re-render is fine — continuous viewport state stays inside MapView.
+  const [satellite, setSatellite] = useState(false);
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [projectDetail, setProjectDetail] = useState<Project | null>(null);
 
@@ -206,6 +211,7 @@ function App() {
         onStateClick={handleStateClick}
         mapRef={mapRef}
         activeQuickFilter={activeFacilityType}
+        satellite={satellite}
         projects={filteredProjects}
         showProjects={showProjects}
         selectedProject={selectedProject}
@@ -226,6 +232,8 @@ function App() {
         projects={allProjects}
         onPickFacility={handlePickFacility}
         onPickProject={handlePickProject}
+        satellite={satellite}
+        onSatelliteChange={setSatellite}
       />
 
       {reportState && (
