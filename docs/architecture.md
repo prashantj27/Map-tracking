@@ -13,7 +13,7 @@ An offline-capable single-page web app that maps **1,277 Sports Authority of Ind
 | UI framework | React 19 + TypeScript 6 | Component rendering |
 | Build tool | Vite 8 (`@vitejs/plugin-react`, Rolldown) | Dev server, production bundling |
 | Map engine | MapLibre GL 5 via `react-map-gl/maplibre` 8 | Interactive vector map |
-| Basemap | CARTO Positron (light) / Dark Matter (dark) | Base tiles from `basemaps.cartocdn.com` |
+| Basemap | CARTO Positron (light) / Dark Matter (dark); Esri World Imagery + Boundaries & Places (satellite) | Street tiles from `basemaps.cartocdn.com`; satellite raster tiles from `server.arcgisonline.com` |
 | Clustering | `supercluster` + `use-supercluster` | Marker clustering at low zoom |
 | Local database | Dexie 4 (IndexedDB) + `dexie-react-hooks` | Client-side store, reactive queries |
 | Charts | Recharts 3 | Bar charts in the stats panel |
@@ -83,9 +83,10 @@ src/
 ├── App.css                  All component styling (class-based; imported by App.tsx)
 ├── components/
 │   ├── MapFilterBar.tsx     Single floating glassmorphism panel (default: bottom-left,
-│   │                        user-draggable): search, the State selector, the Facility Type quick
-│   │                        chips (MapQuickChips, nested — the sole type control), and the Project
-│   │                        Status chip row (Projects only). Replaces the old left sidebar.
+│   │                        user-draggable): search (with the satellite-view toggle in the search
+│   │                        box), the State selector, the Facility Type quick chips (MapQuickChips,
+│   │                        nested — the sole type control), and the Project Status chip row
+│   │                        (Projects only). Replaces the old left sidebar.
 │   ├── MapQuickChips.tsx    Facility Type quick-chip row, nested inside MapFilterBar's panel (not
 │   │                        independently positioned): All/NCOE/STC/KIC/RC/Projects primary,
 │   │                        KISCE/EXT/AKH/IGMA/NSTC behind "More Filters"; wraps onto multiple
@@ -96,8 +97,9 @@ src/
 │   ├── MapPinGraphic.tsx    Shared teardrop pin frame + per-type glyph set (also used by TypeIcon)
 │   ├── MapView.tsx          MapLibre map (memoized): state choropleth (2D fill + 3D extrusion), lazy
 │   │                        district lines, clustered markers, hover tooltip, popup, 3D + dark-mode
-│   │                        toggles. No static legend — marker colours/icons match the Facility Type
-│   │                        quick chips.
+│   │                        toggles, and the Esri satellite style (dark toggle hidden while
+│   │                        satellite is active). No static legend — marker colours/icons match the
+│   │                        Facility Type quick chips.
 │   ├── FacilityPopup.tsx    FacilityPopupContent — Overview / Disciplines / Funds & Staff tabs,
 │   │                        Directions link
 │   ├── StateReportCard.tsx  Full-height per-state panel: facility mix, trainees + type breakup +
@@ -116,7 +118,7 @@ src/
 
 ### State ownership
 - **`App.tsx`** owns `typeSelection` (`FacilityCategory | 'PRJ' | null` — the value driving the Facility Type quick chips; `null` = "All Facilities"), `filterState` (State), `projectStatusFilter`, plus `selectedLocation`/`selectedProject`, `reportState`, `projectDetail`, and `seedState`. `activeFacilityType`/`showFacilities`/`showProjects` are derived from `typeSelection` (see below). All derived data (`filteredLocations`, `filteredProjects`, choropleth `match` expression) is a `useMemo` chain off the live IndexedDB queries.
-- **`MapView.tsx`** owns *viewport* state (`bounds`, `zoom`, `hoveredState`, `is3D`, `theme`) locally, so panning/zooming and map-mode toggles never re-render the filter panel.
+- **`MapView.tsx`** owns *viewport* state (`bounds`, `zoom`, `hoveredState`, `is3D`, `theme`) locally, so panning/zooming and map-mode toggles never re-render the filter panel. Exception: the `satellite` basemap toggle lives in `App.tsx` because its control sits in `MapFilterBar`'s search box — a rare discrete toggle, so the App-level re-render is acceptable (continuous viewport state stays in `MapView`).
 - **Data reads** use `useLiveQuery` (Dexie) so the UI stays in sync with IndexedDB reactively; there is no Redux/Zustand/Context — plain React state + memoization only.
 
 ### Type selection drives both GIS layers (intentional)
@@ -130,6 +132,7 @@ The State selector is orthogonal (geographic) and scopes both layers together re
 
 ### Map (`MapView.tsx`)
 - CARTO Positron/Dark-Matter basemap centered on India (initial zoom 4.0), switchable via the dark-mode toggle.
+- **Satellite basemap** (toggle in the filter panel's search box): Esri World Imagery raster tiles + Esri's World Boundaries & Places raster overlay so place names stay readable (hybrid view). No API key; the required Esri attribution is declared on the source and surfaced by MapLibre's attribution control. Tiles are fetched per-viewport, so an India-centred session only downloads India imagery, always current from the provider. While satellite is active the choropleth tint drops to a whisper (5 %/30 % hover), state/district lines turn white for contrast, and the light/dark toggle is hidden (it only switches the CARTO street styles). (OSM publishes no satellite imagery — Esri World Imagery is the standard free companion layer for OSM-based maps.)
 - **State choropleth** (`/india_states_simplified.geojson`): each state tinted by its SAI `Parent_Region` via a MapLibre `['match', ['get','STNAME_SH'], …]` expression (15 % fill, 45 % on hover). Region→color is an **explicit stable map** (`REGION_COLORS` in `App.tsx`) so colors don't reshuffle between data versions.
 - **Hover highlight** via `setFeatureState` (`generateId` on the source) + a floating tooltip; hidden while a popup is open.
 - **Click a state polygon** → sets the State filter, flies to zoom 6, and opens that state's report card.
@@ -140,7 +143,7 @@ The State selector is orthogonal (geographic) and scopes both layers together re
 
 ### Floating filter panel (`MapFilterBar.tsx` + `MapQuickChips.tsx`)
 A single widget, panel order top-to-bottom: **Search** → **State** → **Facility Type chips** → **Project Status** (conditional).
-- **Search** typeahead over facility name/city/district and project name/state/district (min 2 chars, top 6 each, tagged `PRJ`) with fly-to + popup-open on select; results drop upward since the panel is bottom-anchored.
+- **Search** typeahead over facility name/city/district and project name/state/district (min 2 chars, top 6 each, tagged `PRJ`) with fly-to + popup-open on select; results drop upward since the panel is bottom-anchored. The search box also hosts the **satellite-view toggle** (layers icon, before the drag handle) — see the Map section above.
 - **State selector**: compact, scopes both GIS layers geographically.
 - **Facility Type quick chips** (`MapQuickChips.tsx`, nested — the sole type control): one-tap pills — primary `All/NCOE/STC/KIC/RC/Projects`, with `KISCE/EXT/AKH/IGMA/NSTC` behind a "More Filters" expander — write the shared `typeSelection` state directly. Each chip shows an icon + short acronym, with the full type name as a hover `title` tooltip. Wraps onto multiple lines inside the panel rather than scrolling.
 - **Project Status filter**: shown only when the active type is "Projects" — see the Projects module section above.

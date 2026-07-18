@@ -20,17 +20,21 @@ export interface MapFilterBarProps {
   projects: Project[];
   onPickFacility: (loc: Location) => void;
   onPickProject: (p: Project) => void;
+  satellite: boolean;
+  onSatelliteChange: (v: boolean) => void;
 }
 
 /**
  * Floating glassmorphism filter panel (bottom-left) — a single draggable widget combining global
- * search, the State selector, the Facility Type quick chips, and a Projects-only status filter row.
+ * search (with the satellite-view toggle in the search box), the State selector, the Facility Type
+ * quick chips, and a Projects-only status filter row.
  */
 export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
   typeSelection, onTypeSelectionChange,
   projectStatusFilter, onProjectStatusFilterChange,
   allLocations, projects, onPickFacility, onPickProject,
+  satellite, onSatelliteChange,
 }: MapFilterBarProps) {
   const [query, setQuery] = useState('');
   const panelRef = useRef<HTMLElement>(null);
@@ -67,6 +71,21 @@ export function MapFilterBar({
           autoComplete="off"
           aria-label="Search facilities, projects, districts"
         />
+        <button
+          type="button"
+          className={`mfp-satellite-btn${satellite ? ' active' : ''}`}
+          aria-pressed={satellite}
+          /* Constant accessible name — aria-pressed conveys the state. A name that flips to the
+             reverse action alongside aria-pressed reads as contradictory in screen readers. */
+          title="Satellite view (Esri World Imagery)"
+          aria-label="Satellite view"
+          onClick={() => onSatelliteChange(!satellite)}
+        >
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 3 2.5 8.5 12 14l9.5-5.5L12 3z" />
+            <path d="m2.5 15.5 9.5 5.5 9.5-5.5" />
+          </svg>
+        </button>
         <DragHandle
           className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
           label="Drag to move the filter panel (double-click to reset position)"

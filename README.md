@@ -1,6 +1,6 @@
 # SAI Facilities Finder
 
-Interactive map of 1,277 Sports Authority of India facilities — filter by region/state/type/discipline, search by name, open per-facility details (trainees, disciplines, KISCE funds & manpower) and per-state report cards, with live statistics, marker clustering, and 3D/dark map modes. React + TypeScript + Vite + MapLibre, with all data stored client-side in IndexedDB (offline-capable PWA, no backend).
+Interactive map of 1,277 Sports Authority of India facilities — filter by region/state/type/discipline, search by name, open per-facility details (trainees, disciplines, KISCE funds & manpower) and per-state report cards, with live statistics, marker clustering, and 3D/dark/satellite map modes. React + TypeScript + Vite + MapLibre, with all data stored client-side in IndexedDB (offline-capable PWA, no backend).
 
 ## Quick start
 

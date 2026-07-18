@@ -1107,12 +1107,27 @@ button:focus-visible {
 .mfp-search { position: relative; }
 .mfp-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #5f6368; pointer-events: none; }
 .mfp-search input {
-  width: 100%; padding: 11px 32px 11px 34px; border-radius: 14px; background: rgba(255, 255, 255, 0.9);
+  width: 100%; padding: 11px 58px 11px 34px; border-radius: 14px; background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.08); outline: none; font-family: inherit; font-size: 13.5px;
   box-sizing: border-box; color: #202124; transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .mfp-search input::placeholder { color: #80868b; }
 .mfp-search input:focus-visible { outline: none; border-color: #1a73e8; box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.18); }
+/* Suppress the native type=search clear "x" (Chromium/WebKit) — it would render flush against
+   the satellite + drag buttons, making three near-identical tap targets; Esc/select-all already
+   clears, and this also unifies behaviour with Firefox (which has no such control). */
+.mfp-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; display: none; }
+/* Satellite-view toggle — lives in the search box, before the drag handle */
+.mfp-satellite-btn {
+  position: absolute; right: 30px; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 8px; border: none; padding: 0;
+  background: transparent; color: #5f6368; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.mfp-satellite-btn:hover { background: rgba(0, 0, 0, 0.06); color: #202124; }
+.mfp-satellite-btn.active { background: #1a73e8; color: #fff; }
+.mfp-satellite-btn.active:hover { background: #1765cc; }
 .mfp-drag-handle { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border-radius: 8px; background: transparent; }
 .mfp-drag-handle:hover { background: rgba(0, 0, 0, 0.06); }
 /* results drop UP — the panel sits at the bottom of the screen */
