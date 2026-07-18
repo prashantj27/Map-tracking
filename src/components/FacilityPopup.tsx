@@ -19,7 +19,13 @@ function buildDirectionsUrl(loc: Location): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
 }
 
-export function FacilityPopupContent({ loc }: { loc: Location }) {
+export interface FacilityPopupContentProps {
+  loc: Location;
+  /** "Birdeye": close the popup and dive the map to the facility's own location. */
+  onBirdeye?: (loc: Location) => void;
+}
+
+export function FacilityPopupContent({ loc, onBirdeye }: FacilityPopupContentProps) {
   const [activeTab, setActiveTab] = useState<TabId>('Overview');
 
   const disciplines = useLiveQuery(
@@ -69,15 +75,27 @@ export function FacilityPopupContent({ loc }: { loc: Location }) {
             {[loc.City, loc.District, loc.State].filter(Boolean).join(', ')}
           </div>
           {Number.isFinite(loc.Latitude) && Number.isFinite(loc.Longitude) && (
-            <a
-              className="directions-btn"
-              href={buildDirectionsUrl(loc)}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Get directions to ${loc.Facility_Name} in Google Maps`}
-            >
-              <span aria-hidden="true">🧭</span> Directions
-            </a>
+            <div className="popup-actions">
+              <a
+                className="directions-btn"
+                href={buildDirectionsUrl(loc)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Get directions to ${loc.Facility_Name} in Google Maps`}
+              >
+                <span aria-hidden="true">🧭</span> Directions
+              </a>
+              {onBirdeye && (
+                <button
+                  type="button"
+                  className="directions-btn birdeye-btn"
+                  aria-label={`Birdeye — zoom the map to ${loc.Facility_Name}`}
+                  onClick={() => onBirdeye(loc)}
+                >
+                  <span aria-hidden="true">🦅</span> Birdeye
+                </button>
+              )}
+            </div>
           )}
           {(loc.Total_Trainees ?? 0) > 0 && (
             <div className="popup-card">

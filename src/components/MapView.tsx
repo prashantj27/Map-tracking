@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useRef, useState, type RefObject } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type RefObject } from 'react';
 import Map, {
   Marker, Popup, NavigationControl, Source, Layer,
   type MapRef, type MapLayerMouseEvent, type ViewStateChangeEvent
@@ -42,6 +42,15 @@ export interface MapViewProps {
 
 const INITIAL_VIEW = { longitude: 78.96, latitude: 20.59, zoom: 4.0 };
 const DISTRICT_MIN_ZOOM = 5;
+
+// In satellite mode the choropleth tint exists for orientation at country/state level only —
+// once the user zooms in to actually inspect imagery, it fades out (linearly between these two
+// zooms) and the state layer stops intercepting hover/click, then returns on zoom-out.
+const SAT_CHOROPLETH_FADE_START = 6;
+const SAT_CHOROPLETH_FADE_END = 7;
+
+// "Birdeye" (facility popup): fly straight down to the facility at imagery-inspection zoom.
+const BIRDEYE_ZOOM = 17;
 
 const MAP_STYLES = {
   light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -104,6 +113,12 @@ function MapViewComponent({
 
   const clusterColor = activeQuickFilter ? FACILITY_CONFIG[activeQuickFilter].color : '#1a73e8';
 
+  // Once the satellite choropleth has fully faded out, the (now invisible) state fill must also
+  // stop intercepting hover/click — otherwise an unseen layer would still show the "Click to
+  // filter state" tooltip and hijack map clicks. (3D extrusion is an explicit data-viz mode and
+  // is deliberately not gated.)
+  const choroplethHidden = satellite && !is3D && zoom >= SAT_CHOROPLETH_FADE_END;
+
   const locationById = useMemo(() => {
     const map = new globalThis.Map<number, Location>();
     locations.forEach(loc => { if (loc.id != null) map.set(loc.id, loc); });
@@ -159,6 +174,13 @@ function MapViewComponent({
     });
   }, [mapRef]);
 
+  // Birdeye: close the popup and dive to the facility so the location itself is visible
+  // (most useful on the satellite basemap, but works on the street styles too).
+  const flyToBirdeye = useCallback((loc: Location) => {
+    onSelect(null);
+    mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: BIRDEYE_ZOOM, duration: 1800 });
+  }, [mapRef, onSelect]);
+
   const syncViewport = useCallback((e: ViewStateChangeEvent) => {
     const b = e.target.getBounds();
     setBounds([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
@@ -173,6 +195,13 @@ function MapViewComponent({
     }
     setHoveredState(null);
   }, [mapRef]);
+
+  // Wheel/button zoom doesn't move the pointer, so onMouseMove never fires to clear a hover
+  // that was active when the satellite choropleth faded out — clear it explicitly, or a stale
+  // "Click to filter state" tooltip would linger over an overlay that no longer exists.
+  useEffect(() => {
+    if (choroplethHidden) clearHover();
+  }, [choroplethHidden, clearHover]);
 
   const isStateLayer = (layerId: string | undefined) =>
     layerId === 'state-fills' || layerId === 'state-extrusion';
@@ -209,7 +238,7 @@ function MapViewComponent({
         ref={mapRef}
         initialViewState={INITIAL_VIEW}
         mapStyle={satellite ? SATELLITE_STYLE : MAP_STYLES[theme]}
-        interactiveLayerIds={is3D ? ['state-extrusion'] : ['state-fills']}
+        interactiveLayerIds={is3D ? ['state-extrusion'] : choroplethHidden ? [] : ['state-fills']}
         cursor={hoveredState ? 'pointer' : 'grab'}
         maxPitch={70}
         onLoad={e => {
@@ -235,12 +264,22 @@ function MapViewComponent({
               'fill-color': stateColorMatch as any,
               // Over satellite imagery the region tint is dropped to a whisper so the imagery
               // stays legible; hover still brightens enough to show the click-to-filter target.
-              'fill-opacity': [
-                'case',
-                ['boolean', ['feature-state', 'hover'], false],
-                satellite ? 0.3 : 0.45,
-                satellite ? 0.05 : 0.15
-              ]
+              // It also fades out entirely past SAT_CHOROPLETH_FADE_END so zoomed-in imagery is
+              // unobstructed, and comes back on zoom-out (street mode is zoom-independent).
+              'fill-opacity': satellite
+                ? [
+                    'interpolate', ['linear'], ['zoom'],
+                    SAT_CHOROPLETH_FADE_START,
+                    ['case', ['boolean', ['feature-state', 'hover'], false], 0.3, 0.05],
+                    SAT_CHOROPLETH_FADE_END,
+                    0
+                  ]
+                : [
+                    'case',
+                    ['boolean', ['feature-state', 'hover'], false],
+                    0.45,
+                    0.15
+                  ]
             }}
           />
           <Layer
@@ -377,7 +416,7 @@ function MapViewComponent({
             closeOnClick={false}
             maxWidth="340px"
           >
-            <FacilityPopupContent loc={selected} />
+            <FacilityPopupContent loc={selected} onBirdeye={flyToBirdeye} />
           </Popup>
         )}
 
