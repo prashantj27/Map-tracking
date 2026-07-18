@@ -774,6 +774,13 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Directions + Birdeye side by side in the popup's Overview tab */
+.popup-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.popup-actions .directions-btn { margin-bottom: 10px; }
+.birdeye-btn { border: none; background: #188038; }
+.birdeye-btn:hover { background: #136b2e; }
+.birdeye-btn:focus-visible { outline-color: #188038; }
+
 .popup-scroll {
   max-height: 220px;
   overflow-y: auto;
