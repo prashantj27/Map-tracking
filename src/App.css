@@ -973,6 +973,27 @@ button:focus-visible {
 .project-empty p { margin: 0 0 4px; font-weight: 600; color: #3c4043; }
 .project-detail-modal .infra-chip { margin-bottom: 2px; }
 
+/* ---- "Coordinates available" toggle (Gallery tab, flagged projects only) ---- */
+.coord-toggle {
+  display: flex; align-items: center; gap: 12px; justify-content: space-between;
+  padding: 12px 14px; margin-bottom: 16px; border-radius: 12px;
+  background: #fef7e0; border: 1px solid #feefc3;
+}
+.coord-toggle.confirmed { background: #e6f4ea; border-color: #ceead6; }
+.coord-toggle-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.coord-toggle-info strong { font-size: 13px; color: #202124; }
+.coord-toggle-btn {
+  flex-shrink: 0; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 600; white-space: nowrap;
+  background: #188038; color: #fff; border: 1px solid #188038;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.coord-toggle-btn:hover { background: #136b2e; border-color: #136b2e; }
+.coord-toggle.confirmed .coord-toggle-btn {
+  background: #fff; color: #188038; border-color: #a8d5b5;
+}
+.coord-toggle.confirmed .coord-toggle-btn:hover { background: #f1faf3; }
+
 /* ---- Gallery ---- */
 .gallery-note { margin: 0 0 12px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px; }

@@ -60,13 +60,12 @@ export function getStatusMeta(status: string | null | undefined): StatusMeta {
 
 /**
  * Project Status quick-filter (bottom-left project filter bar, shown only when the Facility Type
- * selector is set to Projects). "Without GPS Images" flags projects still needing ground-truth
- * verification — it matches a project that either (a) is explicitly flagged
- * `Without_GPS_Images: true` by the source data (set by the project-coordinates data pipeline —
- * see scripts/apply_project_gps_coordinates.cjs — independent of whatever coordinate it happens to
- * carry; a project can have an interim/approximate location and still need real GPS-verified
- * photos), or (b) has zero uploaded gallery photos regardless of its flag (see lib/imageStore.ts).
- * Either gap means the project isn't yet documented on the ground.
+ * selector is set to Projects). "Without GPS Images" shows exactly the projects the source data
+ * flags `Without_GPS_Images: true` (they have no GPS-verified site photos/coordinates yet — set by
+ * the project-coordinates data pipeline, see scripts/apply_project_gps_coordinates.cjs) that the
+ * user has NOT since marked "Coordinates available". That confirmation is a sticky, per-browser
+ * override stored alongside uploads (lib/imageStore.ts) so it survives data reseeds; marking a
+ * project "Coordinates available" from its gallery removes it from this filter.
  */
 export type ProjectStatusFilterKey = 'In Progress' | 'Completed' | 'Cancelled' | 'NO_IMAGES';
 
@@ -79,9 +78,13 @@ export const PROJECT_STATUS_FILTERS: ProjectStatusFilterMeta[] = [
   { key: 'NO_IMAGES',   label: 'Without GPS Images', icon: '📷', color: '#5f6368' },
 ];
 
-/** Whether a project matches a Project Status filter key. `hasImages` comes from the image store. */
-export function projectMatchesStatusFilter(p: Project, filter: ProjectStatusFilterKey, hasImages: boolean): boolean {
-  if (filter === 'NO_IMAGES') return p.Without_GPS_Images === true || !hasImages;
+/**
+ * Whether a project matches a Project Status filter key. `coordinatesConfirmed` comes from the
+ * confirmation store (lib/imageStore.ts) — a project flagged `Without_GPS_Images` drops out of the
+ * "Without GPS Images" filter once the user marks its coordinates available.
+ */
+export function projectMatchesStatusFilter(p: Project, filter: ProjectStatusFilterKey, coordinatesConfirmed: boolean): boolean {
+  if (filter === 'NO_IMAGES') return p.Without_GPS_Images === true && !coordinatesConfirmed;
   return p.Status === filter;
 }
 
