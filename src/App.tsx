@@ -8,7 +8,7 @@ import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
 import { projectCodesWithImages } from './lib/imageStore';
 import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
-import { MapView } from './components/MapView';
+import { MapView, INITIAL_VIEW } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
 import { ProjectDetailModal } from './components/projects/ProjectDetailModal';
 import './App.css';
@@ -58,6 +58,11 @@ function App() {
   // because its control sits in MapFilterBar's search box; a rare discrete toggle, so the
   // App-level re-render is fine — continuous viewport state stays inside MapView.
   const [satellite, setSatellite] = useState(false);
+
+  // Whether the map is zoomed in past the overview — drives the "zoom to full map" button in the
+  // search box. MapView notifies us only on threshold crossings (see onZoomedInChange), so this
+  // flips rarely and continuous panning never re-renders the panel.
+  const [mapZoomedIn, setMapZoomedIn] = useState(false);
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [projectDetail, setProjectDetail] = useState<Project | null>(null);
@@ -162,6 +167,16 @@ function App() {
     setReportState(stateName);
   }, []);
 
+  // "Zoom to full map" — fly back to the all-India overview. Pitch/bearing are left alone so it
+  // behaves correctly whether or not 3D mode is on.
+  const handleResetView = useCallback(() => {
+    mapRef.current?.flyTo({
+      center: [INITIAL_VIEW.longitude, INITIAL_VIEW.latitude],
+      zoom: INITIAL_VIEW.zoom,
+      duration: 1200,
+    });
+  }, []);
+
   const handlePickFromReport = useCallback((loc: Location) => {
     setSelectedProject(null);
     setSelectedLocation(loc);
@@ -217,6 +232,7 @@ function App() {
         selectedProject={selectedProject}
         onSelectProject={handleSelectProject}
         onViewProjectDetails={handleViewProjectDetails}
+        onZoomedInChange={setMapZoomedIn}
       />
 
       {/* Single draggable widget — remembers its own position (see useDraggable). */}
@@ -234,6 +250,8 @@ function App() {
         onPickProject={handlePickProject}
         satellite={satellite}
         onSatelliteChange={setSatellite}
+        showZoomToMap={mapZoomedIn}
+        onResetView={handleResetView}
       />
 
       {reportState && (

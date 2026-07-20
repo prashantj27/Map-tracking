@@ -38,9 +38,16 @@ export interface MapViewProps {
   selectedProject: Project | null;
   onSelectProject: (p: Project | null) => void;
   onViewProjectDetails: (p: Project) => void;
+  /**
+   * Fired only when the map crosses the "zoomed in past the overview" threshold (not on every
+   * zoom delta), so the filter panel can show/hide its "zoom to full map" button without
+   * re-rendering on every pan — keeps continuous viewport state inside MapView (invariant #6).
+   */
+  onZoomedInChange?: (zoomedIn: boolean) => void;
 }
 
-const INITIAL_VIEW = { longitude: 78.96, latitude: 20.59, zoom: 4.0 };
+/** Default all-India overview — also the "zoom to map" reset target (see App's onResetView). */
+export const INITIAL_VIEW = { longitude: 78.96, latitude: 20.59, zoom: 4.0 };
 const DISTRICT_MIN_ZOOM = 5;
 
 // In satellite mode the choropleth tint exists for orientation at country/state level only —
@@ -51,6 +58,13 @@ const SAT_CHOROPLETH_FADE_END = 7;
 
 // "Birdeye" (facility popup): fly straight down to the facility at imagery-inspection zoom.
 const BIRDEYE_ZOOM = 17;
+
+// The "zoom to full map" reset button (in the filter panel's search box) only appears once the
+// user has zoomed in past the all-India overview — roughly state level, about halfway through the
+// orientation range from the initial zoom (4). Below this, the button is hidden and the search box
+// keeps its full width. This is a single tunable threshold — raise it to reveal the button only
+// deeper in, lower it to reveal it sooner.
+const ZOOM_TO_MAP_MIN_ZOOM = 6;
 
 const MAP_STYLES = {
   light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
@@ -101,7 +115,8 @@ function getFacilityDisciplineIcon(loc: Location): string | null {
 function MapViewComponent({
   locations, stateColorMatch, selected, onSelect, onStateClick, mapRef,
   activeQuickFilter, satellite,
-  projects, showProjects, selectedProject, onSelectProject, onViewProjectDetails
+  projects, showProjects, selectedProject, onSelectProject, onViewProjectDetails,
+  onZoomedInChange
 }: MapViewProps) {
   // Viewport state lives here so panning/zooming never re-renders the side panel.
   const [bounds, setBounds] = useState<BBox | null>(null);
@@ -118,6 +133,12 @@ function MapViewComponent({
   // filter state" tooltip and hijack map clicks. (3D extrusion is an explicit data-viz mode and
   // is deliberately not gated.)
   const choroplethHidden = satellite && !is3D && zoom >= SAT_CHOROPLETH_FADE_END;
+
+  // Tell App when the map crosses the "zoomed in" threshold. Because the effect depends on the
+  // derived boolean (not `zoom` itself), it fires only on a crossing — panning/zooming within a
+  // band doesn't notify App, so the filter panel isn't re-rendered on every frame.
+  const zoomedIn = zoom >= ZOOM_TO_MAP_MIN_ZOOM;
+  useEffect(() => { onZoomedInChange?.(zoomedIn); }, [zoomedIn, onZoomedInChange]);
 
   const locationById = useMemo(() => {
     const map = new globalThis.Map<number, Location>();
