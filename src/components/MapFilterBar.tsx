@@ -53,6 +53,7 @@ export function MapFilterBar({
       l.District?.toLowerCase().includes(q)).slice(0, 6);
     const projs = projects.filter((p) =>
       p.Project_Name?.toLowerCase().includes(q) ||
+      p.Project_Code?.toLowerCase().includes(q) ||
       p.State?.toLowerCase().includes(q) ||
       p.District?.toLowerCase().includes(q)).slice(0, 6);
     return { facilities, projects: projs };
@@ -125,7 +126,7 @@ export function MapFilterBar({
                 <button onClick={() => { onPickProject(p); setQuery(''); }}>
                   <span className="search-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
                   <span className="search-name">{p.Project_Name}</span>
-                  <span className="dim small"> {p.State}</span>
+                  <span className="dim small"> {[p.Project_Code, p.State].filter(Boolean).join(' · ')}</span>
                   <span className="search-kind prj">PRJ</span>
                 </button>
               </li>
