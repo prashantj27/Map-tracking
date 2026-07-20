@@ -1,15 +1,19 @@
 import { useMemo, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, type Location, type DisciplineDetail } from '../db';
+import { db, type Location, type DisciplineDetail, type Project } from '../db';
 import { classifyFacility, FACILITY_CONFIG, ALL_CATEGORIES, type FacilityCategory } from '../lib/facilityTypes';
 import { getDisciplineIcon, isRealDiscipline } from '../lib/disciplineIcons';
+import { getInfraMeta, hasProjectCoordinates } from '../lib/projects';
 
 export interface StateReportCardProps {
   stateName: string;
   locations: Location[];        // all locations (unfiltered)
   disciplineRows: DisciplineDetail[];
+  projects: Project[];          // all projects (unfiltered)
   onClose: () => void;
   onPickFacility: (loc: Location) => void;
+  /** Click a project name → close the report and fly to it on the map in birdeye view. */
+  onBirdeyeProject: (p: Project) => void;
 }
 
 function formatINR(n: number): string {
@@ -18,10 +22,17 @@ function formatINR(n: number): string {
   return `₹${n.toLocaleString('en-IN')}`;
 }
 
-export function StateReportCard({ stateName, locations, disciplineRows, onClose, onPickFacility }: StateReportCardProps) {
+export function StateReportCard({ stateName, locations, disciplineRows, projects, onClose, onPickFacility, onBirdeyeProject }: StateReportCardProps) {
   const allFunds = useLiveQuery(() => db.funds.toArray()) || [];
   const allManpower = useLiveQuery(() => db.manpower.toArray()) || [];
   const [selectedDiscipline, setSelectedDiscipline] = useState<string | null>(null);
+
+  // Projects in this state (reachable on the map = has coordinates), alphabetical by name.
+  const stateProjects = useMemo(() =>
+    projects
+      .filter(p => p.State === stateName && hasProjectCoordinates(p))
+      .sort((a, b) => (a.Project_Name || '').localeCompare(b.Project_Name || '')),
+    [projects, stateName]);
 
   const report = useMemo(() => {
     const stateLocs = locations.filter(l => l.State === stateName);
@@ -131,6 +142,7 @@ export function StateReportCard({ stateName, locations, disciplineRows, onClose,
           <div className="report-sub">
             {report.regions.length > 0 && <>SAI Region: {report.regions.join(', ')} • </>}
             #{report.rank} of {report.totalStates} states by facilities
+            {' • '}<strong>{report.stateLocs.length}</strong> facilities • <strong>{stateProjects.length}</strong> project{stateProjects.length === 1 ? '' : 's'}
           </div>
         </div>
         <button className="report-close" onClick={onClose} aria-label="Close report card">×</button>
@@ -278,6 +290,30 @@ export function StateReportCard({ stateName, locations, disciplineRows, onClose,
             );
           })}
         </section>
+
+        {/* Projects — click a name to fly to it on the map in birdeye view */}
+        {stateProjects.length > 0 && (
+          <section>
+            <h4>Projects <span className="dim">({stateProjects.length} — click for birdeye view)</span></h4>
+            {stateProjects.map(p => {
+              const infra = getInfraMeta(p.Infra_Type);
+              return (
+                <button
+                  key={p.Project_Code}
+                  className="facility-row project-row"
+                  onClick={() => onBirdeyeProject(p)}
+                  aria-label={`Birdeye — zoom the map to ${p.Project_Name}`}
+                >
+                  <span className="project-badge" style={{ background: `${infra.color}1a`, color: infra.color }} aria-hidden="true">
+                    {infra.icon}
+                  </span>
+                  <span className="facility-name">{p.Project_Name}</span>
+                  <span className="rc-birdeye" aria-hidden="true">🦅</span>
+                </button>
+              );
+            })}
+          </section>
+        )}
       </div>
     </aside>
   );

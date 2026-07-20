@@ -8,7 +8,7 @@ import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
 import { projectCodesWithImages } from './lib/imageStore';
 import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
-import { MapView, INITIAL_VIEW } from './components/MapView';
+import { MapView, INITIAL_VIEW, BIRDEYE_ZOOM } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
 import { ProjectDetailModal } from './components/projects/ProjectDetailModal';
 import './App.css';
@@ -199,6 +199,18 @@ function App() {
 
   const handleViewProjectDetails = useCallback((p: Project) => setProjectDetail(p), []);
 
+  // Report card → project name: close the report and dive to the project on the map in "birdeye"
+  // mode (Projects layer shown, aerial close-up at BIRDEYE_ZOOM, no popup — just the location).
+  const handleProjectBirdeyeFromReport = useCallback((p: Project) => {
+    if (!hasProjectCoordinates(p)) return;
+    setTypeSelection('PRJ');
+    setProjectStatusFilter(null);
+    setSelectedLocation(null);
+    setSelectedProject(null);
+    setReportState(null);
+    mapRef.current?.flyTo({ center: [p.Longitude as number, p.Latitude as number], zoom: BIRDEYE_ZOOM, duration: 1800 });
+  }, []);
+
   // Search → project ("Show on Map"): switch to the Projects layer so the marker is visible, fly
   // to it and open its popup.
   const handlePickProject = useCallback((p: Project) => {
@@ -260,8 +272,10 @@ function App() {
           stateName={reportState}
           locations={allLocations}
           disciplineRows={allDisciplineRows}
+          projects={allProjects}
           onClose={() => setReportState(null)}
           onPickFacility={handlePickFromReport}
+          onBirdeyeProject={handleProjectBirdeyeFromReport}
         />
       )}
 
