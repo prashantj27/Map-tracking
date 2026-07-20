@@ -19,13 +19,15 @@ export interface ProjectLayerProps {
   selected: Project | null;
   onSelect: (p: Project | null) => void;
   onViewDetails: (p: Project) => void;
+  /** "Birdeye": close the popup and dive the map to the project's own location. */
+  onBirdeye: (p: Project) => void;
 }
 
 /**
  * Dedicated Projects (PRJ) GIS layer — its own clustered marker set, fully independent of the
  * facility markers. Toggled by `show`. Reuses the map's viewport (bounds/zoom) for clustering.
  */
-export function ProjectLayer({ projects, show, bounds, zoom, mapRef, selected, onSelect, onViewDetails }: ProjectLayerProps) {
+export function ProjectLayer({ projects, show, bounds, zoom, mapRef, selected, onSelect, onViewDetails, onBirdeye }: ProjectLayerProps) {
   const byCode = useMemo(() => {
     const m = new globalThis.Map<string, Project>();
     projects.forEach((p) => m.set(p.Project_Code, p));
@@ -112,7 +114,7 @@ export function ProjectLayer({ projects, show, bounds, zoom, mapRef, selected, o
           maxWidth="300px"
           className="prj-popup-wrap"
         >
-          <ProjectPopupContent project={selected} onViewDetails={() => onViewDetails(selected)} />
+          <ProjectPopupContent project={selected} onViewDetails={() => onViewDetails(selected)} onBirdeye={onBirdeye} />
         </Popup>
       )}
     </>

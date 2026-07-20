@@ -202,6 +202,12 @@ function MapViewComponent({
     mapRef.current?.flyTo({ center: [loc.Longitude, loc.Latitude], zoom: BIRDEYE_ZOOM, duration: 1800 });
   }, [mapRef, onSelect]);
 
+  // Same Birdeye action for a project marker's popup (closes the PRJ popup, dives to its location).
+  const flyToBirdeyeProject = useCallback((p: Project) => {
+    onSelectProject(null);
+    mapRef.current?.flyTo({ center: [p.Longitude as number, p.Latitude as number], zoom: BIRDEYE_ZOOM, duration: 1800 });
+  }, [mapRef, onSelectProject]);
+
   const syncViewport = useCallback((e: ViewStateChangeEvent) => {
     const b = e.target.getBounds();
     setBounds([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
@@ -451,6 +457,7 @@ function MapViewComponent({
           selected={selectedProject}
           onSelect={onSelectProject}
           onViewDetails={onViewProjectDetails}
+          onBirdeye={flyToBirdeyeProject}
         />
 
         {/* State hover tooltip (hidden while a popup is open) */}

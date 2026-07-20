@@ -8,10 +8,17 @@ function buildDirectionsUrl(p: Project): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
 }
 
+export interface ProjectPopupContentProps {
+  project: Project;
+  onViewDetails: () => void;
+  /** "Birdeye": close the popup and dive the map to the project's own location. */
+  onBirdeye?: (p: Project) => void;
+}
+
 /**
  * Compact PRJ marker popup — deliberately project-centric (no facility/NCOE reference).
  */
-export function ProjectPopupContent({ project, onViewDetails }: { project: Project; onViewDetails: () => void }) {
+export function ProjectPopupContent({ project, onViewDetails, onBirdeye }: ProjectPopupContentProps) {
   const infra = getInfraMeta(project.Infra_Type);
   const hasCoords = Number.isFinite(project.Latitude as number) && Number.isFinite(project.Longitude as number);
 
@@ -39,6 +46,16 @@ export function ProjectPopupContent({ project, onViewDetails }: { project: Proje
           >
             <span aria-hidden="true">🧭</span> Directions
           </a>
+        )}
+        {hasCoords && onBirdeye && (
+          <button
+            type="button"
+            className="directions-btn birdeye-btn"
+            aria-label={`Birdeye — zoom the map to ${project.Project_Name}`}
+            onClick={() => onBirdeye(project)}
+          >
+            <span aria-hidden="true">🦅</span> Birdeye
+          </button>
         )}
         <button className="project-details-link" onClick={onViewDetails}>
           <span aria-hidden="true">📋</span> View Project Details <span aria-hidden="true">→</span>
