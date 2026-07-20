@@ -57,7 +57,8 @@ function App() {
   // Satellite basemap toggle. Lives here (not in MapView with the rest of the map-mode state)
   // because its control sits in MapFilterBar's search box; a rare discrete toggle, so the
   // App-level re-render is fine — continuous viewport state stays inside MapView.
-  const [satellite, setSatellite] = useState(false);
+  // Defaults ON — the app opens in satellite view.
+  const [satellite, setSatellite] = useState(true);
 
   // Whether the map is zoomed in past the overview — drives the "zoom to full map" button in the
   // search box. MapView notifies us only on threshold crossings (see onZoomedInChange), so this

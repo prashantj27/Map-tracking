@@ -135,13 +135,9 @@ export function MapFilterBar({
               <path d="M9 21a6 6 0 0 0-6-6" />
             </svg>
           </button>
-          {isMobile ? (
-            <button type="button" className="mfp-collapse-btn" onClick={() => setCollapsed(true)} aria-label="Minimize the filter panel" title="Minimize">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M6 15l6-6 6 6" />
-              </svg>
-            </button>
-          ) : (
+          {/* Desktop drag grip; on mobile the panel is minimized via the glowing arrow at its
+              bottom edge instead (below), so the search box stays uncluttered. */}
+          {!isMobile && (
             <DragHandle
               className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
               label="Drag to move the filter panel (double-click to reset position)"
@@ -215,6 +211,22 @@ export function MapFilterBar({
             </button>
           ))}
         </div>
+      )}
+
+      {/* Mobile: an eye-catching glowing pull-tab at the panel's bottom edge to minimize it. */}
+      {isMobile && (
+        <button
+          type="button"
+          className="mfp-minimize-arrow"
+          onClick={() => setCollapsed(true)}
+          aria-label="Minimize the filter panel"
+          title="Minimize"
+        >
+          <span className="mfp-minimize-glow" aria-hidden="true" />
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M6 15l6-6 6 6" />
+          </svg>
+        </button>
       )}
     </section>
   );

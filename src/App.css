@@ -1343,11 +1343,17 @@ button:focus-visible {
   right: auto;
   top: 8px;
   bottom: auto;
-  width: min(360px, calc(100vw - 64px)); /* leave room for the top-right map controls */
+  width: min(340px, calc(100vw - 72px)); /* compact; leaves room for the top-right map controls */
   max-width: none;
+  padding: 9px 9px 12px; /* tighter than desktop so the panel stays small on mobile */
+  gap: 8px;
   z-index: 30; /* above the bottom-sheet report card (z 25) so downward dropdowns stay usable */
   animation: mfp-drop 0.25s ease-out;
 }
+/* On mobile the search field's only in-box control is the satellite toggle — pin it to the far
+   right and tighten the input padding (the minimize control moved to the panel's bottom edge). */
+.map-filter-panel.mobile .mfp-satellite-btn { right: 6px; }
+.map-filter-panel.mobile .mfp-search input { padding-right: 40px; }
 /* Search results drop DOWN now that the panel sits at the top; cap + scroll so a long list can't
    run past the fold or behind the bottom sheet. */
 .map-filter-panel.mobile .mfp-search-results {
@@ -1361,15 +1367,42 @@ button:focus-visible {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Minimize button — replaces the drag handle on mobile (dragging isn't offered on touch). */
-.mfp-collapse-btn {
-  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+/* Minimize control (mobile) — a glowing pull-tab protruding at the panel's bottom-centre edge.
+   A pulsing glow ring + a gently bobbing chevron make it eye-catching; tap it to collapse. */
+.mfp-minimize-arrow {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
   display: flex; align-items: center; justify-content: center;
-  width: 24px; height: 24px; border-radius: 8px; border: none; padding: 0;
-  background: transparent; color: #5f6368; cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  width: 54px; height: 26px; padding: 0; cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1a73e8, #5aa0ff);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(26, 115, 232, 0.45);
+  transition: transform 0.12s ease;
 }
-.mfp-collapse-btn:hover { background: rgba(0, 0, 0, 0.06); color: #202124; }
+.mfp-minimize-arrow:active { transform: translateX(-50%) scale(0.92); }
+.mfp-minimize-arrow svg { position: relative; z-index: 1; animation: mfp-arrow-bob 1.6s ease-in-out infinite; }
+/* Pulsing glow ring behind the tab. */
+.mfp-minimize-glow {
+  position: absolute; inset: 0; border-radius: 999px; pointer-events: none;
+  animation: mfp-arrow-glow 1.9s ease-out infinite;
+}
+@keyframes mfp-arrow-glow {
+  0%   { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(26, 115, 232, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0); }
+}
+@keyframes mfp-arrow-bob {
+  0%, 100% { transform: translateY(1px); }
+  50% { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mfp-minimize-arrow svg, .mfp-minimize-glow { animation: none; }
+}
 
 /* Collapsed state: two circular buttons at the top-left — reopen the panel, and reset the view. */
 .mfp-collapsed {
