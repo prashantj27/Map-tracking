@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useLiveQuery } from 'dexie-react-hooks';
 import type { Project } from '../../db';
 import { Modal } from '../Modal';
 import { StatusBadge } from './StatusBadge';
 import { ProjectGallery } from './ProjectGallery';
 import { getInfraMeta } from '../../lib/projects';
+import { confirmProjectCoordinates, unconfirmProjectCoordinates, projectCoordinatesConfirmedQuery } from '../../lib/imageStore';
 
 type TabId = 'Overview' | 'Financials' | 'Timeline' | 'Gallery' | 'Documents' | 'Remarks';
 const TABS: TabId[] = ['Overview', 'Financials', 'Timeline', 'Gallery', 'Documents', 'Remarks'];
@@ -14,6 +16,37 @@ function EmptyState({ label }: { label: string }) {
       <div className="project-empty-icon" aria-hidden="true">🗂️</div>
       <p>Data will be available in future updates.</p>
       <span className="dim small">{label}</span>
+    </div>
+  );
+}
+
+/**
+ * "Coordinates available" toggle — shown in the Gallery only for projects the source data flags
+ * `Without_GPS_Images`. Marking it available removes the project from the "Without GPS Images"
+ * map filter (persisted per-browser, survives reseed). Reversible.
+ */
+function CoordinatesAvailableToggle({ project }: { project: Project }) {
+  const confirmed = useLiveQuery(() => projectCoordinatesConfirmedQuery(project.Project_Code), [project.Project_Code]);
+  if (project.Without_GPS_Images !== true) return null;
+  const isConfirmed = confirmed === true;
+  return (
+    <div className={`coord-toggle${isConfirmed ? ' confirmed' : ''}`}>
+      <div className="coord-toggle-info">
+        <strong>{isConfirmed ? '📍 Coordinates available' : '📷 Without GPS Images'}</strong>
+        <span className="dim small">
+          {isConfirmed
+            ? 'Removed from the “Without GPS Images” filter. You can undo this.'
+            : 'This project shows under the “Without GPS Images” filter until a GPS-verified location is confirmed.'}
+        </span>
+      </div>
+      <button
+        type="button"
+        className="coord-toggle-btn"
+        aria-pressed={isConfirmed}
+        onClick={() => (isConfirmed ? unconfirmProjectCoordinates(project.Project_Code) : confirmProjectCoordinates(project.Project_Code))}
+      >
+        {isConfirmed ? '✓ Coordinates available' : 'Coordinates available'}
+      </button>
     </div>
   );
 }
@@ -80,7 +113,12 @@ export function ProjectDetailModal({ project, onClose }: { project: Project; onC
 
         {tab === 'Financials' && <EmptyState label="Financials" />}
 
-        {tab === 'Gallery' && <ProjectGallery projectCode={project.Project_Code} />}
+        {tab === 'Gallery' && (
+          <>
+            <CoordinatesAvailableToggle project={project} />
+            <ProjectGallery projectCode={project.Project_Code} />
+          </>
+        )}
 
         {tab === 'Documents' && <EmptyState label="Documents" />}
         {tab === 'Timeline' && <EmptyState label="Timeline" />}

@@ -6,7 +6,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
 import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
-import { projectCodesWithImages } from './lib/imageStore';
+import { confirmedCoordinateCodes } from './lib/imageStore';
 import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
 import { MapView, INITIAL_VIEW, BIRDEYE_ZOOM } from './components/MapView';
 import { StateReportCard } from './components/StateReportCard';
@@ -80,9 +80,10 @@ function App() {
   const allDisciplineRows = useLiveQuery(() => db.disciplines.toArray()) || [];
   const allProjects = useLiveQuery(() => db.projects.toArray()) || [];
 
-  // Project_Codes with at least one uploaded gallery image — powers "Without GPS Images".
-  const uploadedCodesArr = useLiveQuery(() => projectCodesWithImages(), []) || [];
-  const uploadedImageCodes = useMemo(() => new Set(uploadedCodesArr), [uploadedCodesArr]);
+  // Project_Codes the user has marked "coordinates available" — these drop out of the
+  // "Without GPS Images" filter (persisted, survives reseed; see lib/imageStore.ts).
+  const confirmedCodesArr = useLiveQuery(() => confirmedCoordinateCodes(), []) || [];
+  const confirmedCoordCodes = useMemo(() => new Set(confirmedCodesArr), [confirmedCodesArr]);
 
   const uniqueRegions = useMemo(
     () => Array.from(new Set(allLocations.map(l => l.Parent_Region).filter(isNonEmptyString))).sort(),
@@ -112,10 +113,10 @@ function App() {
     let list = allProjects.filter(hasProjectCoordinates);
     if (filterState) list = list.filter(p => p.State === filterState);
     if (projectStatusFilter) {
-      list = list.filter(p => projectMatchesStatusFilter(p, projectStatusFilter, uploadedImageCodes.has(p.Project_Code)));
+      list = list.filter(p => projectMatchesStatusFilter(p, projectStatusFilter, confirmedCoordCodes.has(p.Project_Code)));
     }
     return list;
-  }, [allProjects, filterState, projectStatusFilter, uploadedImageCodes]);
+  }, [allProjects, filterState, projectStatusFilter, confirmedCoordCodes]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {

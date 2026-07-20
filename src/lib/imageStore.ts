@@ -16,11 +16,26 @@ export interface ProjectImage {
   uploadedAt: number;
 }
 
+/**
+ * A user's "coordinates available" confirmation for a project. Lives in this same reseed-surviving
+ * store (not the seeded MapDatabase) so that marking a project's coordinates available sticks across
+ * data refreshes — the same guarantee uploaded images get. `Project_Code` is the primary key.
+ */
+export interface CoordinateConfirmation {
+  Project_Code: string;
+  confirmedAt: number;
+}
+
 class ImageDatabase extends Dexie {
   images!: Table<ProjectImage>;
+  coordConfirmations!: Table<CoordinateConfirmation, string>;
   constructor() {
     super('ProjectImages');
     this.version(1).stores({ images: '++id, Project_Code, uploadedAt' });
+    this.version(2).stores({
+      images: '++id, Project_Code, uploadedAt',
+      coordConfirmations: 'Project_Code, confirmedAt',
+    });
   }
 }
 
@@ -51,11 +66,22 @@ export async function deleteProjectImage(id: number): Promise<void> {
   await imageDb.images.delete(id);
 }
 
-/**
- * Distinct Project_Codes that have at least one uploaded image — reads only the index (never
- * loads blobs), so it stays cheap regardless of how many/large the stored images are. Powers the
- * "Without GPS Images" project filter.
- */
-export function projectCodesWithImages(): Promise<string[]> {
-  return imageDb.images.orderBy('Project_Code').uniqueKeys() as Promise<string[]>;
+/** Mark a project's GPS coordinates as available — removes it from the "Without GPS Images" filter. */
+export async function confirmProjectCoordinates(projectCode: string): Promise<void> {
+  await imageDb.coordConfirmations.put({ Project_Code: projectCode, confirmedAt: Date.now() });
+}
+
+/** Undo a "coordinates available" confirmation — the project returns to the filter. */
+export async function unconfirmProjectCoordinates(projectCode: string): Promise<void> {
+  await imageDb.coordConfirmations.delete(projectCode);
+}
+
+/** Reactive (useLiveQuery): whether this project has been marked "coordinates available". */
+export function projectCoordinatesConfirmedQuery(projectCode: string): Promise<boolean> {
+  return imageDb.coordConfirmations.get(projectCode).then((r) => r != null);
+}
+
+/** All Project_Codes marked "coordinates available" — powers the "Without GPS Images" filter. */
+export function confirmedCoordinateCodes(): Promise<string[]> {
+  return imageDb.coordConfirmations.toCollection().primaryKeys() as Promise<string[]>;
 }
