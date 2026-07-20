@@ -22,6 +22,9 @@ export interface MapFilterBarProps {
   onPickProject: (p: Project) => void;
   satellite: boolean;
   onSatelliteChange: (v: boolean) => void;
+  /** Show the "zoom to full map" button (only once the map is zoomed in past the overview). */
+  showZoomToMap: boolean;
+  onResetView: () => void;
 }
 
 /**
@@ -35,6 +38,7 @@ export function MapFilterBar({
   projectStatusFilter, onProjectStatusFilterChange,
   allLocations, projects, onPickFacility, onPickProject,
   satellite, onSatelliteChange,
+  showZoomToMap, onResetView,
 }: MapFilterBarProps) {
   const [query, setQuery] = useState('');
   const panelRef = useRef<HTMLElement>(null);
@@ -59,38 +63,61 @@ export function MapFilterBar({
   return (
     <section className="map-filter-panel" aria-label="Map filters" ref={panelRef} style={dragStyle}>
       <div className="mfp-search">
-        <svg className="mfp-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
-          <line x1="15.3" y1="15.3" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-        <input
-          type="search"
-          placeholder="Search facilities, projects, districts…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          autoComplete="off"
-          aria-label="Search facilities, projects, districts"
-        />
-        <button
-          type="button"
-          className={`mfp-satellite-btn${satellite ? ' active' : ''}`}
-          aria-pressed={satellite}
-          /* Constant accessible name — aria-pressed conveys the state. A name that flips to the
-             reverse action alongside aria-pressed reads as contradictory in screen readers. */
-          title="Satellite view (Esri World Imagery)"
-          aria-label="Satellite view"
-          onClick={() => onSatelliteChange(!satellite)}
-        >
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 3 2.5 8.5 12 14l9.5-5.5L12 3z" />
-            <path d="m2.5 15.5 9.5 5.5 9.5-5.5" />
+        <div className="mfp-search-field">
+          <svg className="mfp-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
+            <line x1="15.3" y1="15.3" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           </svg>
-        </button>
-        <DragHandle
-          className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
-          label="Drag to move the filter panel (double-click to reset position)"
-          {...dragHandleProps}
-        />
+          <input
+            type="search"
+            placeholder="Search facilities, projects, districts…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoComplete="off"
+            aria-label="Search facilities, projects, districts"
+          />
+          <button
+            type="button"
+            className={`mfp-satellite-btn${satellite ? ' active' : ''}`}
+            aria-pressed={satellite}
+            /* Constant accessible name — aria-pressed conveys the state. A name that flips to the
+               reverse action alongside aria-pressed reads as contradictory in screen readers. */
+            title="Satellite view (Esri World Imagery)"
+            aria-label="Satellite view"
+            onClick={() => onSatelliteChange(!satellite)}
+          >
+            {/* Orbiting satellite: body + two solar-panel wings + dish antenna + signal. */}
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M13 7 9 3 5 7l4 4" />
+              <path d="m17 11 4 4-4 4-4-4" />
+              <path d="m8 12 4 4 6-6-4-4Z" />
+              <path d="m16 8 3-3" />
+              <path d="M9 21a6 6 0 0 0-6-6" />
+            </svg>
+          </button>
+          <DragHandle
+            className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
+            label="Drag to move the filter panel (double-click to reset position)"
+            {...dragHandleProps}
+          />
+        </div>
+        {showZoomToMap && (
+          <button
+            type="button"
+            className="mfp-zoom-btn"
+            title="Zoom out to the full map"
+            aria-label="Zoom out to the full map"
+            onClick={onResetView}
+          >
+            {/* Fit-to-extent frame corners — the map-UI convention for "zoom to full extent". */}
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+              <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+              <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+            </svg>
+          </button>
+        )}
         {hasResults && (
           <ul className="search-results mfp-search-results" role="listbox">
             {results.projects.map((p) => (

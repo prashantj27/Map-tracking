@@ -1110,8 +1110,13 @@ button:focus-visible {
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Search */
-.mfp-search { position: relative; }
+/* Search — a flex row so the "zoom to full map" button can sit beside the field. `position:
+   relative` anchors the results dropdown, which spans the whole row width. */
+.mfp-search { position: relative; display: flex; align-items: center; gap: 6px; }
+/* The field wraps the input + its in-box buttons (satellite, drag handle). It's flex:1, so when
+   the zoom button is absent it fills the row (search keeps its full width); when the button
+   appears the field shrinks to make room. */
+.mfp-search-field { position: relative; flex: 1 1 auto; min-width: 0; }
 .mfp-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #5f6368; pointer-events: none; }
 .mfp-search input {
   width: 100%; padding: 11px 58px 11px 34px; border-radius: 14px; background: rgba(255, 255, 255, 0.9);
@@ -1137,6 +1142,25 @@ button:focus-visible {
 .mfp-satellite-btn.active:hover { background: #1765cc; }
 .mfp-drag-handle { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border-radius: 8px; background: transparent; }
 .mfp-drag-handle:hover { background: rgba(0, 0, 0, 0.06); }
+/* "Zoom to full map" button — appears beside the search field only when zoomed in (React mounts
+   it conditionally); a solid tonal control, sized to match the input height, with a gentle
+   scale-in so it doesn't pop. */
+.mfp-zoom-btn {
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 12px; padding: 0;
+  background: rgba(255, 255, 255, 0.92); color: #3c4043;
+  border: 1px solid rgba(0, 0, 0, 0.08); cursor: pointer;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  animation: mfp-zoom-in 0.18s ease-out;
+}
+.mfp-zoom-btn:hover { background: #fff; color: #1a73e8; border-color: rgba(26, 115, 232, 0.4); box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12); }
+.mfp-zoom-btn:active { transform: scale(0.94); }
+@keyframes mfp-zoom-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
 /* results drop UP — the panel sits at the bottom of the screen */
 .mfp-search-results {
   position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); top: auto; margin: 0; z-index: 5;
