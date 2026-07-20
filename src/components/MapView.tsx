@@ -56,8 +56,9 @@ const DISTRICT_MIN_ZOOM = 5;
 const SAT_CHOROPLETH_FADE_START = 6;
 const SAT_CHOROPLETH_FADE_END = 7;
 
-// "Birdeye" (facility popup): fly straight down to the facility at imagery-inspection zoom.
-const BIRDEYE_ZOOM = 17;
+// "Birdeye": fly straight down to a facility/project at imagery-inspection zoom. Exported so the
+// state report card's project links can reuse the exact same close-up zoom.
+export const BIRDEYE_ZOOM = 17;
 
 // The "zoom to full map" reset button (in the filter panel's search box) only appears once the
 // user has zoomed in past the all-India overview — roughly state level, about halfway through the

@@ -606,6 +606,15 @@ button:focus-visible {
   text-overflow: ellipsis;
 }
 
+/* Project rows in the report card (click → birdeye view). Reuse .facility-row layout. */
+.project-badge {
+  display: flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 5px; font-size: 12px; line-height: 1;
+  flex-shrink: 0;
+}
+.rc-birdeye { flex-shrink: 0; font-size: 12px; opacity: 0.35; transition: opacity 0.15s ease, transform 0.15s ease; }
+.project-row:hover .rc-birdeye { opacity: 1; transform: scale(1.15); }
+
 .report-link {
   margin-top: 8px;
   border: none;
