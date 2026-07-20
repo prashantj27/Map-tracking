@@ -1,5 +1,10 @@
 [
   {
+    "Project_Code": "AN001",
+    "Project_Name": "Construction of Swimming Pool at Village Madhupur, Diglipur, District North and Middle and Andman",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "AP001",
     "Project_Name": "Construction of Multi-Purpose Hall at Vizzy Stadium, District Vizianagaram",
     "Latitude": 18.109155,
@@ -70,6 +75,56 @@
     "Longitude": 83.079914,
     "Google_Maps_URL": "https://www.google.com/maps?q=17.827325,83.079914",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "AP010",
+    "Project_Name": "Construction Of Athletic Track - Indian Institute Of Science Education and Research Tirupati",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP011",
+    "Project_Name": "Laying of 400 mtrs, 8-lane Synthetic Athletic Track & 25m height Flood Lights at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP012",
+    "Project_Name": "Construction of Artificial Grass Football Field at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP013",
+    "Project_Name": "Construction of Tennis Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP014",
+    "Project_Name": "Construction of Basketball Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP015",
+    "Project_Name": "Providing Flood Lights for 6 Lane 200 M Track, Basketball Court and Tennis Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP016",
+    "Project_Name": "Multi-Purpose Indoor Block with Hall size of (60m×40m) at NTR Sports Complex, Kuppam, District Chittoor.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP017",
+    "Project_Name": "Construction of Indoor Hall (60m×40mx12.5m) at Pathrunivalasa, District Srikakulam",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP018",
+    "Project_Name": "Construction of Multi-Purpose Indoor Stadium (60m×40m) – Arena-2 at V.L. Puram, District Rajamahendravaram.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "AP019",
+    "Project_Name": "Construction of Multipurpose Hall (60m×40mx12.5m) Multi-Sports Complex at Brahmananda Reddy Stadium, District Guntur, Andhra Pradesh",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AR001",
@@ -287,12 +342,27 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "AS008",
+    "Project_Name": "Construction of Multi-Purpose Hall at Dibrugarh University, Assam",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "AS010",
     "Project_Name": "Construction of Multipurpose Hall at Dibrugarh University",
     "Latitude": 27.448161,
     "Longitude": 94.899176,
     "Google_Maps_URL": "https://www.google.com/maps?q=27.448161,94.899176",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "AS011",
+    "Project_Name": "Construction of 8 lane 400 metre Synthetic Athletic Track of World Athletics Standards at NCoE Guwahati",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "BH001",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Nawada",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH002",
@@ -311,12 +381,27 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "BH004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Botany Campus Babasaheb Bhimrao Ambedkar Bihar University, District Muzaffarpur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "BH005",
+    "Project_Name": "Construction of Multi-Purpose Hall at J.P. University, Chapra, Rahul Sankritayan Nagar, Chapra, District Saran",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "BH006",
     "Project_Name": "Laying of Synthetic Athletic Track at J.P. University, Chapra, Rahul Sankritayan Nagar, Chapra, District Saran",
     "Latitude": 25.782033,
     "Longitude": 84.781876,
     "Google_Maps_URL": "https://www.google.com/maps?q=25.782033,84.781876",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "BH007",
+    "Project_Name": "Construction of Multi-Purpose Hall at Saidpur campus, Patna University, Patna, District Patna",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH008",
@@ -341,6 +426,21 @@
     "Longitude": 87.045922,
     "Google_Maps_URL": "https://www.google.com/maps?q=25.241449,87.045922",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "BH011",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Saran",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "BH013",
+    "Project_Name": "Construction of Multipurpose Hall of size 60M x 40M x 12.5M with facilities for Badminton, Volleyball, Judo, Wrestling, Handball, Kabaddi, etc. at Central University of South Bihar, Gaya Panchanpur Road, Village – Karhara,",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "BH014",
+    "Project_Name": "Construction Of Khelo India Olympic Size Swimming Pool at IIT Patna Bihta Campus, Patna",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "CH001",
@@ -373,6 +473,26 @@
     "Longitude": 82.018702,
     "Google_Maps_URL": "https://www.google.com/maps?q=19.080171,82.018702",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "CH005",
+    "Project_Name": "Construction Multipurpose hall as block - Tilda-Neora, District - Raipur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "CH006",
+    "Project_Name": "Construction of 8 lane synthetic atheletic track at Government D.K. College Balodabazar, Bhatapara",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "CH007",
+    "Project_Name": "Construction of Multipurpose Hall at Mopka, District Bilaspur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "CH008",
+    "Project_Name": "Construction of Synthetic Athletic Track Rajnandgaon",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL001",
@@ -444,6 +564,51 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "DL010",
+    "Project_Name": "Replacement of 400 Main arena synthetic athletic \"MONDO Track EI\" at JLN Stadium New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "DL011",
+    "Project_Name": "Replacement of metal halide lights with LED lights in Main Arena at IGS Complex, New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "DL012",
+    "Project_Name": "Replacement of metal halide lights with LED lights in KD Jadhav Hall at IGS Complex, New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "DL013",
+    "Project_Name": "Upgradation/replacement of existing VRV/VRF air conditioning system in Final Range at Dr. KSSR, New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "DL014",
+    "Project_Name": "Replacement of defective rubber wooden cladding (Bullet Catcher) at 25m Range, 50m Range and Final Range at Dr. KSSR, New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "DL015",
+    "Project_Name": "Construction of new shotgun target No. 6 & 7 at Dr. KSSR, New Delhi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "GA001",
+    "Project_Name": "Construction of Synthetic Hockey Turf at Paddem Sports Complex, Mapusa, District North Goa",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "GA002",
+    "Project_Name": "Upgradation of Squash Court and Providing other eminent facilities of International Standards at Chicalim Sports Complex, Chicalim, District South Goa",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "GA003",
+    "Project_Name": "Development of Lawn Tennis Court at Open Sports Complex, Pt. JLN Stadium, Fatorda, District South Goa",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "GA004",
     "Project_Name": "Development of Synthetic Turf Football Ground at St. Cruz, District North Goa",
     "Latitude": 15.481444,
@@ -508,12 +673,22 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "HP003",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Solan",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "HP004",
     "Project_Name": "Construction of Synthetic Hockey Turf in Campus of Govt. of Senior Secondary School, Majra District Sirmaur",
     "Latitude": 30.491821,
     "Longitude": 77.532282,
     "Google_Maps_URL": "https://www.google.com/maps?q=30.491821,77.532282",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "HP005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Ghumarwin, District Bilaspur",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HP006",
@@ -538,6 +713,21 @@
     "Longitude": 76.207837,
     "Google_Maps_URL": "https://www.google.com/maps?q=31.812942,76.207837",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "HP009",
+    "Project_Name": "Establishment of National Centre of Excellence at District Hamirpur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "HP010",
+    "Project_Name": "Construction of Multipurpose Hall at Bilaspur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "HP011",
+    "Project_Name": "Construction of Football Turf at District Una",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HR001",
@@ -580,6 +770,11 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "HR006",
+    "Project_Name": "Construction of Multi-Purpose Hall with Maple wood flooring at Kurukshetra University",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "HR007",
     "Project_Name": "Relaying of Synthetic Athletic track along with synthetic athletic warmup track and hockey astroturf ground at Tau Devi Lal Sports Complex, District Panchkula",
     "Latitude": 30.683953,
@@ -612,6 +807,16 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "HR011",
+    "Project_Name": "Construction of All Weather Olympic size Swimming Pool at Kurukshetra University, District Kurukshetra",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "HR012",
+    "Project_Name": "Synthetic Athletic Track 400 M (08 Lane) at Central University of Haryana Vill. Jant-Pali, Distt. & Tehsil Mahendergarh",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "JH001",
     "Project_Name": "Upgradation of Hockey and Football Ground at SAI Training Centre, District Hazaribagh",
     "Latitude": 24.199816,
@@ -626,6 +831,21 @@
     "Longitude": 85.382779,
     "Google_Maps_URL": "https://www.google.com/maps?q=24.200648,85.382779",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "JH003",
+    "Project_Name": "Laying of Athlertic tarck at Kumaitha Sports complex, Jasidih, District Deoghar.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "JH004",
+    "Project_Name": "Laying of Hockey field at Swami Vivekanand Sports complex, District Gumla",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "JH005",
+    "Project_Name": "Construction of Netaji Subhas Chandra Bose Sports Complex, Simdega (Laying of Synthetic Football Turf)",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "JK001",
@@ -820,6 +1040,21 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "KA023",
+    "Project_Name": "Re-Laying of Hockey (Blue) Turf with allied works at SAI, NSSC, District Bengaluru.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "KA024",
+    "Project_Name": "Relaying of Hockey (Green) Turf with allied works at SAI NSSC BANGALORE",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "KA025",
+    "Project_Name": "Construction of Multipurpose Indoor Hall (60m×40m) at University of Agricultural Sciences, District Mandya",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "KL001",
     "Project_Name": "Laying of Synthetic Athletic Track in Government Brennen College, Thalassery, District Kannur",
     "Latitude": 11.781704,
@@ -868,6 +1103,16 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "KL007",
+    "Project_Name": "Construction of Synthetic Athletic Track at Christ College, Irinjalakkuda Muncipality",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "KL008",
+    "Project_Name": "Construction of Multipurpose hall (40m x 20m x 9m) at SAI LNCPE Trivandrum",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "LA001",
     "Project_Name": "Laying of Synthetic Athletic Track and Astro Turf for football in open stadium at District Leh",
     "Latitude": 34.135082,
@@ -890,6 +1135,16 @@
     "Longitude": 77.589563,
     "Google_Maps_URL": "https://www.google.com/maps?q=34.117862,77.589563",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "LD001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Government Senior Secondary School (GSSS), Kiltan, Lakshadweep",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "LD002",
+    "Project_Name": "Construction of Multipurpose Indoor Stadium at Mahatma Gandhi Senior Secondary School (MGSSS), Andrott Lakshadweep",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "ME001",
@@ -1033,6 +1288,21 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "MH013",
+    "Project_Name": "Construction of Synthetic Athletic Track at Dr. Babasaheb Ambedkar Marathwada University Campus, District Aurangabad.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "MH014",
+    "Project_Name": "Construction of Multipurpose Hall(40M X 20M X 9M) at Subash Maidan, Kalyan Dombivali Municipal Corporation, District Thane",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "MH015",
+    "Project_Name": "Construction of Multiple Hall (60Mx40Mx12.5M) at SAI NCOE Chhatrapati Sambhajinagar",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "MI001",
     "Project_Name": "Laying of Synthetic Turf Football Ground at Lawngtlai Playground, District Lawngtlai",
     "Latitude": 22.528042,
@@ -1088,6 +1358,11 @@
   {
     "Project_Code": "MI008",
     "Project_Name": "Construction of Multipurpose Hall at Tuikual , Aizawl, Mizoram",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "MI009",
+    "Project_Name": "Laying of Synthetic Hockey Turf and Lighting at STC Aizwal",
     "Without_GPS_Images": true
   },
   {
@@ -1199,6 +1474,11 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "MP008",
+    "Project_Name": "Establishment of Water Sports Centre at Gorital, District Bhind",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "MP009",
     "Project_Name": "Laying of Synthetic Athletic Track at Ranjhi, District Jabalpur",
     "Latitude": 23.194383,
@@ -1266,6 +1546,21 @@
     "Longitude": 75.878466,
     "Google_Maps_URL": "https://www.google.com/maps?q=22.725014,75.878466",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "MP018",
+    "Project_Name": "Construction of New Judo Hall at SAI Central Regional Centre, Sports Complex, P.O. Suraj Nagar, Gram Gora, Bishan Khedi, Bhopal, Madhya Pradesh",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "MP019",
+    "Project_Name": "Construction of Multipurpose Hall at District Jabalpur",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "MP020",
+    "Project_Name": "Laying of Synthetic Athletic Track at SAI Bhopal",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "NL001",
@@ -1354,6 +1649,11 @@
     "Longitude": 94.265454,
     "Google_Maps_URL": "https://www.google.com/maps?q=26.092958,94.265454",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "NL012",
+    "Project_Name": "Construction of Multipurpose Hall at Shamator District HQ",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "OR001",
@@ -1452,6 +1752,11 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "PB008",
+    "Project_Name": "Laying of Synthetic Athletic Track at Guru Nanak Dev Stadium, District Amritsar",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "PB009",
     "Project_Name": "Construction of Multi-Purpose Hall at Maharaja Ranjit Singh Technical University,District Bathinda",
     "Latitude": 30.171464,
@@ -1476,6 +1781,21 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "PB012",
+    "Project_Name": "Replacement of Synthetic Athletic Track with allied works at NS NIS, District Patiala.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "PB013",
+    "Project_Name": "Synthetic Athletic Track (08 Lanes) at Central University of Punjab, Bathinda, Badal Bathinda Road, Village Ghudda, District Bathinda",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "PB014",
+    "Project_Name": "Construction of Air-conditioned Multipurpose Sport Hall -60Mx40Mx12.5M at SAI RC Patiala",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "PY001",
     "Project_Name": "Construction of Swimming Pool at Saradambal Nagar, District Puducherry (Project Foreclosed)",
     "Latitude": 11.936006,
@@ -1490,6 +1810,11 @@
     "Longitude": 79.829107,
     "Google_Maps_URL": "https://www.google.com/maps?q=11.922085,79.829107",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "PY003",
+    "Project_Name": "Construction of Synthetic Athletic Track, Volleyball Court and Football field in SB Govt. Primary School Savithri Nagar playground in District Yanam",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ001",
@@ -1624,12 +1949,22 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "RJ022",
+    "Project_Name": "Construction of play ground at Nagarpalika Ground- Sambhar Lake, District Jaipur",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "RJ023",
     "Project_Name": "Construction of play ground at Government Senior Secondary School- Aandhi, District Jaipur",
     "Latitude": 27.054424,
     "Longitude": 76.156859,
     "Google_Maps_URL": "https://www.google.com/maps?q=27.054424,76.156859",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "RJ024",
+    "Project_Name": "Construction of play ground at Governemnt. Senior Secondary School- Dewta, District Jaipur",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ025",
@@ -1680,12 +2015,22 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "RJ031",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Rampur, District Jaipur",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "RJ032",
     "Project_Name": "Construction of play ground at Government Senior Secondary School- Renwal, District Jaipur",
     "Latitude": 27.166633,
     "Longitude": 75.350002,
     "Google_Maps_URL": "https://www.google.com/maps?q=27.166633,75.350002",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "RJ033",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Sundarpura, District Jaipur",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ034",
@@ -1702,6 +2047,11 @@
     "Longitude": 75.616939,
     "Google_Maps_URL": "https://www.google.com/maps?q=26.964232,75.616939",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "RJ036",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Jobner, District Jaipur",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ037",
@@ -1752,6 +2102,11 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "RJ043",
+    "Project_Name": "Construction of Rain water channel at 17 playgrounds sanctioned under Khelo India SchemeConstruction of retaining wall and boundary wall for senior secondary school Jobner.Construction of Security Perimeter Wall of Indoor Stadium at Jamwa Ramgarh, Distr",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "RJ044",
     "Project_Name": "Construction of Multi-Purpose Hall at Ramganjmandi, District Kota.",
     "Latitude": 24.662233,
@@ -1762,6 +2117,16 @@
   {
     "Project_Code": "RJ045",
     "Project_Name": "Construction of Multi-Purpose Hall at Lakheri, District Bundi.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "RJ049",
+    "Project_Name": "Construction of Multipurpose Hall at Kapren, District Bundi",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "RJ050",
+    "Project_Name": "LAYING OF SYNTHETIC HOCKEY TURF GROUND AT PMSHREE GOVT. NAVEEN SENIOR SECONDARY SCHOOL, ALWAR (RAJASTHAN)",
     "Without_GPS_Images": true
   },
   {
@@ -1811,6 +2176,11 @@
     "Longitude": 88.362367,
     "Google_Maps_URL": "https://www.google.com/maps?q=27.304159,88.362367",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "SK007",
+    "Project_Name": "Construction of Synthetic Turf Football Ground at Kyongsa Stadium, Gyalshing",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "TN001",
@@ -1954,6 +2324,11 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "TS007",
+    "Project_Name": "Development of 4 lane 400mts Synthetic Athletic Track of IAAF standard at Jammikunta, District Karimnagar",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "UK001",
     "Project_Name": "Construction of Multi-Purpose Hall at Parade Ground, District Dehradun",
     "Latitude": 30.324219,
@@ -1992,6 +2367,21 @@
     "Longitude": 78.076889,
     "Google_Maps_URL": "https://www.google.com/maps?q=30.324017,78.076889",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "UK006",
+    "Project_Name": "Construction of Multi-Purpose Hall at Kirti Nagar, Ghindyaal, District Tehri Garhwal.",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "UK007",
+    "Project_Name": "Construction of Indoor stadium Multipurpose Hall at Block-Bhagwanpur, Village-Naukragrant, Haridwar District",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "UK008",
+    "Project_Name": "Construction of Synthetic Athletic Track with Infield Ground (6-lane 200m) at Jyotirmath, District Chamoli",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UP001",
@@ -2215,6 +2605,11 @@
     "Without_GPS_Images": true
   },
   {
+    "Project_Code": "UP031",
+    "Project_Name": "Laying of Synthetic Athletic Track at Chaudhary Charan Singh Sports Stadium, District Muzaffarnagar",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "UP032",
     "Project_Name": "Development and Modernisation of Sigra Stadium, District Varanasi",
     "Without_GPS_Images": true
@@ -2228,11 +2623,31 @@
     "Without_GPS_Images": false
   },
   {
+    "Project_Code": "UP034",
+    "Project_Name": "Construction of Multipurpose Rural Stadium-Basahi Ashrafpur Pavai Azamgarh",
+    "Without_GPS_Images": true
+  },
+  {
     "Project_Code": "WB001",
     "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Regional Centre, District Kolkata",
     "Latitude": 22.567206,
     "Longitude": 88.406092,
     "Google_Maps_URL": "https://www.google.com/maps?q=22.567206,88.406092",
     "Without_GPS_Images": false
+  },
+  {
+    "Project_Code": "WB002",
+    "Project_Name": "Establishment of SAI - Indian Railways National centre of excellence at District New Cooch Behar, West Bengal; Construction of 400m Synthetic Athletic Track",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "WB003",
+    "Project_Name": "Construction of Synthetic Football turf at SAI-Indian Railways NCOE Cooch Behar",
+    "Without_GPS_Images": true
+  },
+  {
+    "Project_Code": "WB004",
+    "Project_Name": "Construction of 400 M, 8-lane Synthetic Athletics Track at STC Jalpaiguri",
+    "Without_GPS_Images": true
   }
 ]

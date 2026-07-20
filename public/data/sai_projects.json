@@ -11,7 +11,8 @@
     "Order": 0,
     "Latitude": 13.266394936313,
     "Longitude": 92.98236721216,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP001",
@@ -169,7 +170,8 @@
     "Order": 10,
     "Latitude": 13.764848,
     "Longitude": 79.603056,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP011",
@@ -183,7 +185,8 @@
     "Order": 11,
     "Latitude": 16.504719,
     "Longitude": 80.637944,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP012",
@@ -197,7 +200,8 @@
     "Order": 12,
     "Latitude": 16.504719,
     "Longitude": 80.637944,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP013",
@@ -211,7 +215,8 @@
     "Order": 13,
     "Latitude": 16.504719,
     "Longitude": 80.637944,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP014",
@@ -225,7 +230,8 @@
     "Order": 14,
     "Latitude": 16.504719,
     "Longitude": 80.637944,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP015",
@@ -239,7 +245,8 @@
     "Order": 15,
     "Latitude": 16.504719,
     "Longitude": 80.637944,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP016",
@@ -253,7 +260,8 @@
     "Order": 16,
     "Latitude": 12.744261,
     "Longitude": 45.346164,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP017",
@@ -267,7 +275,8 @@
     "Order": 17,
     "Latitude": 18.340483,
     "Longitude": 83.931301,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP018",
@@ -281,7 +290,8 @@
     "Order": 18,
     "Latitude": 16.998861,
     "Longitude": 81.798444,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AP019",
@@ -295,7 +305,8 @@
     "Order": 19,
     "Latitude": 16.305508,
     "Longitude": 82.436339,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AR001",
@@ -754,7 +765,8 @@
     "Order": 48,
     "Latitude": 27.449144,
     "Longitude": 94.897362,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "AS010",
@@ -784,7 +796,8 @@
     "Order": 50,
     "Latitude": 26.115103,
     "Longitude": 91.703239,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH001",
@@ -798,7 +811,8 @@
     "Order": 51,
     "Latitude": 24.75,
     "Longitude": 85,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH002",
@@ -844,7 +858,8 @@
     "Order": 54,
     "Latitude": 26.109606,
     "Longitude": 85.376152,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH005",
@@ -858,7 +873,8 @@
     "Order": 55,
     "Latitude": 25.782028,
     "Longitude": 84.779266,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH006",
@@ -888,7 +904,8 @@
     "Order": 57,
     "Latitude": 25.618368,
     "Longitude": 85.166801,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH008",
@@ -950,7 +967,8 @@
     "Order": 61,
     "Latitude": 25.618368,
     "Longitude": 85.166801,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH013",
@@ -964,7 +982,8 @@
     "Order": 62,
     "Latitude": 24.878332,
     "Longitude": 84.897891,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "BH014",
@@ -978,7 +997,8 @@
     "Order": 63,
     "Latitude": 25.5357,
     "Longitude": 0,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "CH001",
@@ -1056,7 +1076,8 @@
     "Order": 68,
     "Latitude": 21.3317,
     "Longitude": 81.4848,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "CH006",
@@ -1070,7 +1091,8 @@
     "Order": 69,
     "Latitude": 21.66209,
     "Longitude": 82.14393,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "CH007",
@@ -1084,7 +1106,8 @@
     "Order": 70,
     "Latitude": 22.078113,
     "Longitude": 82.195828,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "CH008",
@@ -1098,7 +1121,8 @@
     "Order": 71,
     "Latitude": 21.09542,
     "Longitude": 81.021204,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL001",
@@ -1255,7 +1279,8 @@
     "Order": 81,
     "Latitude": 28.5833,
     "Longitude": 77.2333,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL011",
@@ -1269,7 +1294,8 @@
     "Order": 82,
     "Latitude": 28.6315,
     "Longitude": 77.2472,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL012",
@@ -1283,7 +1309,8 @@
     "Order": 83,
     "Latitude": 28.6315,
     "Longitude": 77.2472,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL013",
@@ -1297,7 +1324,8 @@
     "Order": 84,
     "Latitude": 28.49,
     "Longitude": 77.3,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL014",
@@ -1311,7 +1339,8 @@
     "Order": 85,
     "Latitude": 28.49,
     "Longitude": 77.3,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "DL015",
@@ -1325,7 +1354,8 @@
     "Order": 86,
     "Latitude": 28.49,
     "Longitude": 77.3,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "GA001",
@@ -1339,7 +1369,8 @@
     "Order": 87,
     "Latitude": 15.6020982,
     "Longitude": 73.8279381,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "GA002",
@@ -1353,7 +1384,8 @@
     "Order": 88,
     "Latitude": 15.3922776,
     "Longitude": 73.833409,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "GA003",
@@ -1367,7 +1399,8 @@
     "Order": 89,
     "Latitude": 15.2893911,
     "Longitude": 73.9623256,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "GA004",
@@ -1509,7 +1542,8 @@
     "Order": 98,
     "Latitude": 30.910384725438,
     "Longitude": 77.084056251792,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HP004",
@@ -1539,7 +1573,8 @@
     "Order": 100,
     "Latitude": 31.450338158044,
     "Longitude": 76.69673236561,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HP006",
@@ -1601,7 +1636,8 @@
     "Order": 104,
     "Latitude": 31.690783,
     "Longitude": 76.517715,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HP010",
@@ -1615,7 +1651,8 @@
     "Order": 105,
     "Latitude": 31.34583,
     "Longitude": 76.75528,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HP011",
@@ -1629,7 +1666,8 @@
     "Order": 106,
     "Latitude": 31.52861,
     "Longitude": 76.15556,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HR001",
@@ -1723,7 +1761,8 @@
     "Order": 113,
     "Latitude": 29.9551486,
     "Longitude": 76.8164646,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HR007",
@@ -1801,7 +1840,8 @@
     "Order": 118,
     "Latitude": 29.9551486,
     "Longitude": 76.8164646,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "HR012",
@@ -1815,7 +1855,8 @@
     "Order": 119,
     "Latitude": 28.35148,
     "Longitude": 76.1381,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "JH001",
@@ -1861,7 +1902,8 @@
     "Order": 122,
     "Latitude": 24.482775,
     "Longitude": 86.695175,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "JH004",
@@ -1875,7 +1917,8 @@
     "Order": 123,
     "Latitude": 23.0415,
     "Longitude": 84.5444,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "JH005",
@@ -1889,7 +1932,8 @@
     "Order": 124,
     "Latitude": 22.60944,
     "Longitude": 29.85694,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "JK001",
@@ -2287,7 +2331,8 @@
     "Order": 150,
     "Latitude": 12.959089,
     "Longitude": 77.502844,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "KA024",
@@ -2301,7 +2346,8 @@
     "Order": 151,
     "Latitude": 12.946372,
     "Longitude": 77.514249,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "KA025",
@@ -2315,7 +2361,8 @@
     "Order": 152,
     "Latitude": 12.570497163238,
     "Longitude": 76.832447923957,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "KL001",
@@ -2425,7 +2472,8 @@
     "Order": 159,
     "Latitude": 10.35333333,
     "Longitude": 76.21333333,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "KL008",
@@ -2439,7 +2487,8 @@
     "Order": 160,
     "Latitude": 8.574431,
     "Longitude": 76.885897,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "LA001",
@@ -2501,7 +2550,8 @@
     "Order": 164,
     "Latitude": 11.484377026486,
     "Longitude": 73.006349779114,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "LD002",
@@ -2515,7 +2565,8 @@
     "Order": 165,
     "Latitude": 10.812358286524,
     "Longitude": 73.674075127264,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "ME001",
@@ -2816,7 +2867,8 @@
     "Order": 184,
     "Latitude": 19.9027409,
     "Longitude": 75.3104728,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MH014",
@@ -2830,7 +2882,8 @@
     "Order": 185,
     "Latitude": 19.243055555556,
     "Longitude": 73.127222222222,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MH015",
@@ -2844,7 +2897,8 @@
     "Order": 186,
     "Latitude": 19.902091,
     "Longitude": 75.299227,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MI001",
@@ -2984,7 +3038,8 @@
     "Order": 196,
     "Latitude": 23.72894,
     "Longitude": 92.71791,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MN001",
@@ -3234,7 +3289,8 @@
     "Order": 212,
     "Latitude": 26.55903,
     "Longitude": 78.79193,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP009",
@@ -3391,7 +3447,8 @@
     "Order": 223,
     "Latitude": 23.218746,
     "Longitude": 77.344684,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP019",
@@ -3405,7 +3462,8 @@
     "Order": 224,
     "Latitude": 23.1686,
     "Longitude": 79.9339,
-    "Remarks": "Cancelled (Duplicate)"
+    "Remarks": "Cancelled (Duplicate)",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "MP020",
@@ -3419,7 +3477,8 @@
     "Order": 225,
     "Latitude": 23.218217,
     "Longitude": 77.342898,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "NL001",
@@ -3609,7 +3668,8 @@
     "Order": 237,
     "Latitude": 26.11777778,
     "Longitude": 94.85805556,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "OR001",
@@ -3815,7 +3875,8 @@
     "Order": 250,
     "Latitude": 31.6339793,
     "Longitude": 74.8722642,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "PB009",
@@ -3877,7 +3938,8 @@
     "Order": 254,
     "Latitude": 30.33625,
     "Longitude": 76.3922,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "PB013",
@@ -3891,7 +3953,8 @@
     "Order": 255,
     "Latitude": 30.13583,
     "Longitude": 74.78972,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "PB014",
@@ -3905,7 +3968,8 @@
     "Order": 256,
     "Latitude": 30.307733,
     "Longitude": 76.385727,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "PY001",
@@ -3951,7 +4015,8 @@
     "Order": 259,
     "Latitude": 16.739752792556,
     "Longitude": 82.306566267763,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ001",
@@ -4289,7 +4354,8 @@
     "Order": 281,
     "Latitude": 26.9260523,
     "Longitude": 75.0961549,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ023",
@@ -4319,7 +4385,8 @@
     "Order": 283,
     "Latitude": 26.9124336,
     "Longitude": 75.7872709,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ025",
@@ -4429,7 +4496,8 @@
     "Order": 290,
     "Latitude": 28.8825255,
     "Longitude": 79.1096901,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ032",
@@ -4459,7 +4527,8 @@
     "Order": 292,
     "Latitude": 26.9124336,
     "Longitude": 75.7872709,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ034",
@@ -4505,7 +4574,8 @@
     "Order": 295,
     "Latitude": 26.9124336,
     "Longitude": 75.7872709,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ037",
@@ -4615,7 +4685,8 @@
     "Order": 302,
     "Latitude": 27.019178,
     "Longitude": 76.0017505,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ044",
@@ -4660,7 +4731,8 @@
     "Order": 305,
     "Latitude": 25.405325,
     "Longitude": 76.072769,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "RJ050",
@@ -4674,7 +4746,8 @@
     "Order": 306,
     "Latitude": 27.566807295246,
     "Longitude": 76.615336,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "SK001",
@@ -4784,7 +4857,8 @@
     "Order": 313,
     "Latitude": 27.2917,
     "Longitude": 88.24675,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "TN001",
@@ -5085,7 +5159,8 @@
     "Order": 332,
     "Latitude": 18.293878,
     "Longitude": 79.470456,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UK001",
@@ -5179,7 +5254,8 @@
     "Order": 338,
     "Latitude": 30.293461,
     "Longitude": 78.524094,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UK007",
@@ -5193,7 +5269,8 @@
     "Order": 339,
     "Latitude": 29.941095,
     "Longitude": 77.812424,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UK008",
@@ -5207,7 +5284,8 @@
     "Order": 340,
     "Latitude": 30.54938960484,
     "Longitude": 79.575998855212,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UP001",
@@ -5668,7 +5746,8 @@
     "Order": 369,
     "Latitude": 29.458651,
     "Longitude": 77.700867,
-    "Remarks": "Cancelled"
+    "Remarks": "Cancelled",
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "UP032",
@@ -5713,7 +5792,8 @@
     "Order": 372,
     "Latitude": 26.111037,
     "Longitude": 82.772938,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "WB001",
@@ -5743,7 +5823,8 @@
     "Order": 374,
     "Latitude": 26.35341,
     "Longitude": 88.46963,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "WB003",
@@ -5757,7 +5838,8 @@
     "Order": 375,
     "Latitude": 26.32392,
     "Longitude": 89.451088,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   },
   {
     "Project_Code": "WB004",
@@ -5771,6 +5853,7 @@
     "Order": 376,
     "Latitude": 26.708591,
     "Longitude": 88.447835,
-    "Remarks": null
+    "Remarks": null,
+    "Without_GPS_Images": true
   }
 ]
