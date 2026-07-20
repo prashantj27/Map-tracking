@@ -3,7 +3,9 @@ import type { Location, Project } from '../db';
 import { FACILITY_CONFIG, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
 import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, type ProjectStatusFilterKey } from '../lib/projects';
 import { useDraggable } from '../lib/useDraggable';
+import { useIsMobileOrTablet } from '../lib/useMediaQuery';
 import { MapQuickChips } from './MapQuickChips';
+import { TypeSelectDropdown } from './TypeSelectDropdown';
 import { DragHandle } from './DragHandle';
 
 export type TypeSelection = FacilityCategory | 'PRJ' | null;
@@ -27,10 +29,28 @@ export interface MapFilterBarProps {
   onResetView: () => void;
 }
 
+const SearchGlyph = ({ className, size = 16 }: { className?: string; size?: number }) => (
+  <svg className={className} viewBox="0 0 24 24" width={size} height={size} fill="none" aria-hidden="true">
+    <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
+    <line x1="15.3" y1="15.3" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
+const FitGlyph = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+    <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+    <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+    <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+  </svg>
+);
+
 /**
- * Floating glassmorphism filter panel (bottom-left) — a single draggable widget combining global
- * search (with the satellite-view toggle in the search box), the State selector, the Facility Type
- * quick chips, and a Projects-only status filter row.
+ * Floating glassmorphism filter panel (bottom-left on desktop, top on mobile) — a single draggable
+ * widget combining global search (with the satellite-view toggle in the search box), the State
+ * selector, the Facility Type control (quick chips on desktop, an icon dropdown on mobile/tablet),
+ * and a Projects-only status filter row. On mobile/tablet the whole panel collapses to two circular
+ * buttons (expand + zoom-out) after a search, and can be re-expanded by tapping.
  */
 export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
@@ -41,6 +61,8 @@ export function MapFilterBar({
   showZoomToMap, onResetView,
 }: MapFilterBarProps) {
   const [query, setQuery] = useState('');
+  const [collapsed, setCollapsed] = useState(false);
+  const isMobile = useIsMobileOrTablet();
   const panelRef = useRef<HTMLElement>(null);
   const { style: dragStyle, dragging, handleProps: dragHandleProps } = useDraggable('mapFilterPanelPos', panelRef);
 
@@ -61,14 +83,31 @@ export function MapFilterBar({
 
   const hasResults = results.facilities.length > 0 || results.projects.length > 0;
 
+  // Picking a search result auto-minimizes the panel on mobile so the map is immediately visible.
+  const pickFacility = (loc: Location) => { onPickFacility(loc); setQuery(''); if (isMobile) setCollapsed(true); };
+  const pickProject = (p: Project) => { onPickProject(p); setQuery(''); if (isMobile) setCollapsed(true); };
+
+  // Collapsed mobile/tablet view: two circular buttons — reopen the panel, and (when zoomed in) reset the view.
+  if (isMobile && collapsed) {
+    return (
+      <div className="mfp-collapsed" role="region" aria-label="Map filters (minimized)">
+        <button type="button" className="mfp-fab mfp-fab-primary" onClick={() => setCollapsed(false)} aria-label="Open search and filters">
+          <SearchGlyph size={20} />
+        </button>
+        {showZoomToMap && (
+          <button type="button" className="mfp-fab" onClick={onResetView} aria-label="Zoom out to the full map" title="Zoom out to the full map">
+            <FitGlyph />
+          </button>
+        )}
+      </div>
+    );
+  }
+
   return (
-    <section className="map-filter-panel" aria-label="Map filters" ref={panelRef} style={dragStyle}>
+    <section className={`map-filter-panel${isMobile ? ' mobile' : ''}`} aria-label="Map filters" ref={panelRef} style={isMobile ? undefined : dragStyle}>
       <div className="mfp-search">
         <div className="mfp-search-field">
-          <svg className="mfp-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
-            <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
-            <line x1="15.3" y1="15.3" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+          <SearchGlyph className="mfp-search-icon" />
           <input
             type="search"
             placeholder="Search facilities, projects, districts…"
@@ -96,11 +135,19 @@ export function MapFilterBar({
               <path d="M9 21a6 6 0 0 0-6-6" />
             </svg>
           </button>
-          <DragHandle
-            className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
-            label="Drag to move the filter panel (double-click to reset position)"
-            {...dragHandleProps}
-          />
+          {isMobile ? (
+            <button type="button" className="mfp-collapse-btn" onClick={() => setCollapsed(true)} aria-label="Minimize the filter panel" title="Minimize">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M6 15l6-6 6 6" />
+              </svg>
+            </button>
+          ) : (
+            <DragHandle
+              className={`mfp-drag-handle${dragging ? ' dragging' : ''}`}
+              label="Drag to move the filter panel (double-click to reset position)"
+              {...dragHandleProps}
+            />
+          )}
         </div>
         {showZoomToMap && (
           <button
@@ -110,20 +157,14 @@ export function MapFilterBar({
             aria-label="Zoom out to the full map"
             onClick={onResetView}
           >
-            {/* Fit-to-extent frame corners — the map-UI convention for "zoom to full extent". */}
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M8 3H5a2 2 0 0 0-2 2v3" />
-              <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
-              <path d="M3 16v3a2 2 0 0 0 2 2h3" />
-              <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
-            </svg>
+            <FitGlyph />
           </button>
         )}
         {hasResults && (
           <ul className="search-results mfp-search-results" role="listbox">
             {results.projects.map((p) => (
               <li key={`p-${p.Project_Code}`}>
-                <button onClick={() => { onPickProject(p); setQuery(''); }}>
+                <button onClick={() => pickProject(p)}>
                   <span className="search-dot" style={{ background: PROJECT_COLOR }} aria-hidden="true" />
                   <span className="search-name">{p.Project_Name}</span>
                   <span className="dim small"> {[p.Project_Code, p.State].filter(Boolean).join(' · ')}</span>
@@ -133,7 +174,7 @@ export function MapFilterBar({
             ))}
             {results.facilities.map((loc) => (
               <li key={`f-${loc.id}`}>
-                <button onClick={() => { onPickFacility(loc); setQuery(''); }}>
+                <button onClick={() => pickFacility(loc)}>
                   <span className="search-dot" style={{ background: FACILITY_CONFIG[classifyFacility(loc.Facility_Type)].color }} aria-hidden="true" />
                   <span className="search-name">{loc.Facility_Name}</span>
                   <span className="dim small"> {[loc.City, loc.State].filter(Boolean).join(', ')}</span>
@@ -155,7 +196,9 @@ export function MapFilterBar({
         </select>
       </div>
 
-      <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />
+      {isMobile
+        ? <TypeSelectDropdown typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />
+        : <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />}
 
       {typeSelection === 'PRJ' && (
         <div className="project-status-bar" role="group" aria-label="Project status filters">

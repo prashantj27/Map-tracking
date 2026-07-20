@@ -26,6 +26,8 @@ export function StateReportCard({ stateName, locations, disciplineRows, projects
   const allFunds = useLiveQuery(() => db.funds.toArray()) || [];
   const allManpower = useLiveQuery(() => db.manpower.toArray()) || [];
   const [selectedDiscipline, setSelectedDiscipline] = useState<string | null>(null);
+  // Bottom-sheet height on mobile: false = half screen, true = near-full. Ignored on desktop.
+  const [expanded, setExpanded] = useState(false);
 
   // Projects in this state (reachable on the map = has coordinates), alphabetical by name.
   const stateProjects = useMemo(() =>
@@ -135,7 +137,15 @@ export function StateReportCard({ stateName, locations, disciplineRows, projects
   const maxFY = Math.max(1, ...report.fundsByFY.map(([, v]) => v));
 
   return (
-    <aside className="report-card" role="dialog" aria-label={`${stateName} report card`}>
+    <aside className={`report-card${expanded ? ' expanded' : ''}`} role="dialog" aria-label={`${stateName} report card`}>
+      {/* Bottom-sheet grab handle — mobile/tablet only (CSS-hidden on desktop). Toggles half/full. */}
+      <button
+        type="button"
+        className="report-grab"
+        aria-label={expanded ? 'Collapse panel to half screen' : 'Expand panel to full screen'}
+        aria-expanded={expanded}
+        onClick={() => setExpanded((e) => !e)}
+      />
       <div className="report-header">
         <div>
           <h3>{stateName}</h3>
