@@ -376,7 +376,35 @@ button:focus-visible {
   background: #e8eaed;
 }
 
+/* Bottom-sheet grab handle — hidden on desktop, shown on mobile/tablet (see responsive block).
+   The <button> is a generous 80×26 tap target; the visible 40×5 pill is drawn via ::after. */
+.report-grab {
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 26px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 4px auto 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.report-grab::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 40px;
+  height: 5px;
+  border-radius: 999px;
+  background: #dadce0;
+}
+.report-grab:hover::after { background: #bdc1c6; }
+
 .report-body {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   padding: 4px 20px 20px;
 }
@@ -632,8 +660,36 @@ button:focus-visible {
   background: #d2e3fc;
 }
 
-@media (max-width: 768px) {
-  .report-card { width: 100vw; max-width: 100vw; }
+/* Mobile / tablet: the state report card becomes a bottom sheet — slides up from the bottom,
+   half-screen by default (grab handle toggles near-full), with a scrollable body. */
+@media (max-width: 1024px) {
+  .report-card {
+    /* `fixed` pins the sheet to the visual viewport — immune to the app-shell height and the
+       mobile URL bar; `dvh` sizes to the *dynamic* viewport so the bottom edge never falls under
+       the browser chrome (falls back to `vh` where `dvh` is unsupported). */
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 58vh;
+    height: 58dvh;
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.24);
+    animation: slide-up 0.34s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: height 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .report-card.expanded { height: 92vh; height: 92dvh; }
+  .report-grab { display: block; }
+  .report-header { padding-top: 4px; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 
 /* ===== Overlays (loading / error / empty) ===== */
@@ -1274,13 +1330,97 @@ button:focus-visible {
 .prj-popup-actions .directions-btn,
 .prj-popup-actions .project-details-link { margin: 0; justify-content: center; }
 
-/* ---- Responsive: floating panel (default position only — once dragged, its remembered
-   position applies at every width). ---- */
-@media (max-width: 768px) {
-  .map-filter-panel { left: 8px; bottom: 8px; }
+/* ============================================================
+   Mobile / tablet (≤1024px) — driven by useIsMobileOrTablet():
+   panel moves to the top, collapses to circular buttons after a
+   search, and the Facility Type control becomes an icon dropdown.
+   ============================================================ */
+
+/* Panel repositioned to the top on mobile (the report card owns the bottom as a sheet). The
+   `.mobile` class is set by React in sync with the same 1024px breakpoint. */
+.map-filter-panel.mobile {
+  left: 8px;
+  right: auto;
+  top: 8px;
+  bottom: auto;
+  width: min(360px, calc(100vw - 64px)); /* leave room for the top-right map controls */
+  max-width: none;
+  z-index: 30; /* above the bottom-sheet report card (z 25) so downward dropdowns stay usable */
+  animation: mfp-drop 0.25s ease-out;
 }
-@media (max-width: 420px) {
-  /* Icon-only chips to save space; "More Filters" keeps its label (no icon of its own). */
-  .quick-chip-label { display: none; }
-  .quick-chip:not(.more-chip) { padding: 8px; }
+/* Search results drop DOWN now that the panel sits at the top; cap + scroll so a long list can't
+   run past the fold or behind the bottom sheet. */
+.map-filter-panel.mobile .mfp-search-results {
+  top: calc(100% + 8px);
+  bottom: auto;
+  max-height: 60vh;
+  overflow-y: auto;
 }
+@keyframes mfp-drop {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Minimize button — replaces the drag handle on mobile (dragging isn't offered on touch). */
+.mfp-collapse-btn {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 8px; border: none; padding: 0;
+  background: transparent; color: #5f6368; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.mfp-collapse-btn:hover { background: rgba(0, 0, 0, 0.06); color: #202124; }
+
+/* Collapsed state: two circular buttons at the top-left — reopen the panel, and reset the view. */
+.mfp-collapsed {
+  position: absolute; top: 8px; left: 8px; z-index: 15;
+  display: flex; align-items: center; gap: 8px;
+}
+.mfp-fab {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%; padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5); color: #3c4043; cursor: pointer;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px) saturate(180%); -webkit-backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18), 0 1px 4px rgba(15, 23, 42, 0.08);
+  animation: mfp-rise 0.2s ease-out;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.mfp-fab:hover { background: #fff; }
+.mfp-fab:active { transform: scale(0.93); }
+.mfp-fab-primary { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+.mfp-fab-primary:hover { background: #1765cc; }
+
+/* Facility Type dropdown (mobile/tablet replacement for the icon-chip row). */
+.mfp-type-select {
+  position: relative;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+.mfp-type-trigger {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92); cursor: pointer; font-family: inherit;
+  transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.mfp-type-trigger:hover { background: #fff; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
+.mfp-type-label { flex: 1; min-width: 0; text-align: left; font-size: 13.5px; font-weight: 600; color: #202124; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mfp-type-chevron { color: #5f6368; transition: transform 0.2s ease; flex-shrink: 0; }
+.mfp-type-chevron.open { transform: rotate(180deg); }
+.mfp-type-menu {
+  position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 6;
+  list-style: none; margin: 0; padding: 6px; max-height: 46vh; overflow-y: auto;
+  background: #fff; border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22); animation: mfp-rise 0.18s ease-out;
+}
+.mfp-type-option {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 10px; border-radius: 10px; border: none; background: none;
+  font-family: inherit; font-size: 13.5px; color: #202124; text-align: left; cursor: pointer;
+  transition: background 0.15s ease;
+}
+.mfp-type-option:hover { background: #f1f3f4; }
+.mfp-type-option.selected { background: #e8f0fe; color: #1a73e8; font-weight: 600; }
+.mfp-type-option em { font-style: normal; color: #5f6368; }
+.mfp-type-option.selected em { color: #1a73e8; }
+.mfp-type-divider { height: 1px; margin: 6px 4px; background: rgba(0, 0, 0, 0.08); list-style: none; }
