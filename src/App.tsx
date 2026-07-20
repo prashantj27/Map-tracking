@@ -5,7 +5,7 @@ import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
 import { dataToGeoStates } from './lib/stateNames';
-import { hasProjectCoordinates, projectMatchesStatusFilter, type ProjectStatusFilterKey } from './lib/projects';
+import { hasProjectCoordinates, projectIsWithoutGps, type ProjectStatusFilterKey } from './lib/projects';
 import { confirmedCoordinateCodes } from './lib/imageStore';
 import { MapFilterBar, type TypeSelection } from './components/MapFilterBar';
 import { MapView, INITIAL_VIEW, BIRDEYE_ZOOM } from './components/MapView';
@@ -52,7 +52,9 @@ function App() {
   const [reportState, setReportState] = useState<string | null>(null);
 
   // Project Status filter — only meaningful (and only shown) while typeSelection === 'PRJ'.
+  // Status (single-select) and the "Without GPS Images" toggle are independent and combine (AND).
   const [projectStatusFilter, setProjectStatusFilter] = useState<ProjectStatusFilterKey | null>(null);
+  const [withoutGpsOnly, setWithoutGpsOnly] = useState(false);
 
   // Satellite basemap toggle. Lives here (not in MapView with the rest of the map-mode state)
   // because its control sits in MapFilterBar's search box; a rare discrete toggle, so the
@@ -113,11 +115,10 @@ function App() {
   const filteredProjects = useMemo(() => {
     let list = allProjects.filter(hasProjectCoordinates);
     if (filterState) list = list.filter(p => p.State === filterState);
-    if (projectStatusFilter) {
-      list = list.filter(p => projectMatchesStatusFilter(p, projectStatusFilter, confirmedCoordCodes.has(p.Project_Code)));
-    }
+    if (projectStatusFilter) list = list.filter(p => p.Status === projectStatusFilter);
+    if (withoutGpsOnly) list = list.filter(p => projectIsWithoutGps(p, confirmedCoordCodes.has(p.Project_Code)));
     return list;
-  }, [allProjects, filterState, projectStatusFilter, confirmedCoordCodes]);
+  }, [allProjects, filterState, projectStatusFilter, withoutGpsOnly, confirmedCoordCodes]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {
@@ -143,19 +144,20 @@ function App() {
     return matchExpr;
   }, [allLocations, uniqueRegions]);
 
-  const hasActiveFilters = !!(filterState || typeSelection || projectStatusFilter);
+  const hasActiveFilters = !!(filterState || typeSelection || projectStatusFilter || withoutGpsOnly);
 
-  // Changing the type selection away from Projects clears its status filter (it's hidden then,
-  // so a stale filter shouldn't silently keep hiding PRJ markers next time it's reopened).
+  // Changing the type selection away from Projects clears its status filters (they're hidden then,
+  // so stale filters shouldn't silently keep hiding PRJ markers next time it's reopened).
   const handleTypeSelectionChange = useCallback((v: TypeSelection) => {
     setTypeSelection(v);
-    if (v !== 'PRJ') setProjectStatusFilter(null);
+    if (v !== 'PRJ') { setProjectStatusFilter(null); setWithoutGpsOnly(false); }
   }, []);
 
   const resetFilters = useCallback(() => {
     setFilterState('');
     setTypeSelection(null);
     setProjectStatusFilter(null);
+    setWithoutGpsOnly(false);
   }, []);
 
   // Facility selection (from map / report card) — one popup at a time.
@@ -207,6 +209,7 @@ function App() {
     if (!hasProjectCoordinates(p)) return;
     setTypeSelection('PRJ');
     setProjectStatusFilter(null);
+    setWithoutGpsOnly(false);
     setSelectedLocation(null);
     setSelectedProject(null);
     setReportState(null);
@@ -218,6 +221,7 @@ function App() {
   const handlePickProject = useCallback((p: Project) => {
     setTypeSelection('PRJ');
     setProjectStatusFilter(null);
+    setWithoutGpsOnly(false);
     setFilterState('');
     setSelectedLocation(null);
     setSelectedProject(p);
@@ -258,6 +262,8 @@ function App() {
         onTypeSelectionChange={handleTypeSelectionChange}
         projectStatusFilter={projectStatusFilter}
         onProjectStatusFilterChange={setProjectStatusFilter}
+        withoutGpsOnly={withoutGpsOnly}
+        onWithoutGpsOnlyChange={setWithoutGpsOnly}
         allLocations={allLocations}
         projects={allProjects}
         onPickFacility={handlePickFacility}

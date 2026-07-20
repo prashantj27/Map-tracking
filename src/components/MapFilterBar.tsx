@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import type { Location, Project } from '../db';
 import { FACILITY_CONFIG, classifyFacility, type FacilityCategory } from '../lib/facilityTypes';
-import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, type ProjectStatusFilterKey } from '../lib/projects';
+import { PROJECT_COLOR, PROJECT_STATUS_FILTERS, WITHOUT_GPS_FILTER, type ProjectStatusFilterKey } from '../lib/projects';
 import { useDraggable } from '../lib/useDraggable';
 import { useIsMobileOrTablet } from '../lib/useMediaQuery';
 import { MapQuickChips } from './MapQuickChips';
@@ -18,6 +18,9 @@ export interface MapFilterBarProps {
   onTypeSelectionChange: (v: TypeSelection) => void;
   projectStatusFilter: ProjectStatusFilterKey | null;
   onProjectStatusFilterChange: (v: ProjectStatusFilterKey | null) => void;
+  /** Independent "Without GPS Images" toggle — combines (ANDs) with the status filter. */
+  withoutGpsOnly: boolean;
+  onWithoutGpsOnlyChange: (v: boolean) => void;
   allLocations: Location[];
   projects: Project[];
   onPickFacility: (loc: Location) => void;
@@ -56,6 +59,7 @@ export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
   typeSelection, onTypeSelectionChange,
   projectStatusFilter, onProjectStatusFilterChange,
+  withoutGpsOnly, onWithoutGpsOnlyChange,
   allLocations, projects, onPickFacility, onPickProject,
   satellite, onSatelliteChange,
   showZoomToMap, onResetView,
@@ -197,7 +201,8 @@ export function MapFilterBar({
         : <MapQuickChips typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />}
 
       {typeSelection === 'PRJ' && (
-        <div className="project-status-bar" role="group" aria-label="Project status filters">
+        <div className="project-status-bar" role="group" aria-label="Project filters">
+          {/* Status — single-select (click again to clear). */}
           {PROJECT_STATUS_FILTERS.map((f) => (
             <button
               key={f.key}
@@ -210,6 +215,17 @@ export function MapFilterBar({
               <span aria-hidden="true">{f.icon}</span> {f.label}
             </button>
           ))}
+          {/* Independent toggle — combines with the status above (e.g. Completed + Without GPS Images). */}
+          <span className="status-bar-break" aria-hidden="true" />
+          <button
+            type="button"
+            className={`status-chip status-chip-gps${withoutGpsOnly ? ' active' : ''}`}
+            aria-pressed={withoutGpsOnly}
+            onClick={() => onWithoutGpsOnlyChange(!withoutGpsOnly)}
+            style={withoutGpsOnly ? { background: WITHOUT_GPS_FILTER.color, borderColor: WITHOUT_GPS_FILTER.color } : undefined}
+          >
+            <span aria-hidden="true">{WITHOUT_GPS_FILTER.icon}</span> {WITHOUT_GPS_FILTER.label}
+          </button>
         </div>
       )}
 

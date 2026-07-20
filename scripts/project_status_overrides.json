@@ -1,0 +1,2240 @@
+[
+  {
+    "Project_Code": "AN001",
+    "Project_Name": "Construction of Swimming Pool at Village Madhupur, Diglipur, District North and Middle and Andman",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "AP001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Vizzy Stadium, District Vizianagaram",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AP002",
+    "Project_Name": "Construction of Multi-Purpose Hall at Mogallapalem in District Sri Potti Sriramulu Nellore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AP003",
+    "Project_Name": "Laying of Synthetic Hockey Turf at District Sports Authority Ground, Kakinada, District East Godavari",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AP004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Sri Padmavati Mahila Visvavidyalayam (Women's University), Tirupati, District Chittoor",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AP005",
+    "Project_Name": "Construction of Multi-Purpose Stadium at Adikavi Nannayya University, Rajamahendravaram ,District East Godavari",
+    "Status": "In Progress",
+    "Progress": 75
+  },
+  {
+    "Project_Code": "AP006",
+    "Project_Name": "Construction of swimming pool with water purifier at Adikavi Nannayya University, Rajamahendravaram,District East Godavari",
+    "Status": "In Progress",
+    "Progress": 75
+  },
+  {
+    "Project_Code": "AP007",
+    "Project_Name": "Construction of Multi-purpose Indoor Sports Complex at DSA sub-centre, Narasaraopet, Guntur District, Andhra Pradesh",
+    "Status": "In Progress",
+    "Progress": 70
+  },
+  {
+    "Project_Code": "AP008",
+    "Project_Name": "Laying of Synthetic Athletic Track (8 lanes) at Jawaharlal Nehru Technological University, District Kakinada",
+    "Status": "In Progress",
+    "Progress": 30
+  },
+  {
+    "Project_Code": "AP009",
+    "Project_Name": "Construction of Indoor Stadium with Multipurpose Hall Indian Maritime University Vishakhapatnam Campus",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AP010",
+    "Project_Name": "Construction Of Athletic Track - Indian Institute Of Science Education and Research Tirupati",
+    "Status": "In Progress",
+    "Progress": 25
+  },
+  {
+    "Project_Code": "AP011",
+    "Project_Name": "Laying of 400 mtrs, 8-lane Synthetic Athletic Track & 25m height Flood Lights at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP012",
+    "Project_Name": "Construction of Artificial Grass Football Field at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP013",
+    "Project_Name": "Construction of Tennis Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP014",
+    "Project_Name": "Construction of Basketball Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada.",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP015",
+    "Project_Name": "Providing Flood Lights for 6 Lane 200 M Track, Basketball Court and Tennis Court at Indira Gandhi Municipal Corporation Stadium (IGMC), District Vijayawada",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP016",
+    "Project_Name": "Multi-Purpose Indoor Block with Hall size of (60m×40m) at NTR Sports Complex, Kuppam, District Chittoor.",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP017",
+    "Project_Name": "Construction of Indoor Hall (60m×40mx12.5m) at Pathrunivalasa, District Srikakulam",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AP018",
+    "Project_Name": "Construction of Multi-Purpose Indoor Stadium (60m×40m) – Arena-2 at V.L. Puram, District Rajamahendravaram.",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "AP019",
+    "Project_Name": "Construction of Multipurpose Hall (60m×40mx12.5m) Multi-Sports Complex at Brahmananda Reddy Stadium, District Guntur, Andhra Pradesh",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "AR001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Tirbin Basar,District West Siang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR002",
+    "Project_Name": "Construction of Multi-Purpose Hall at Wakro, District Lohit",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Khenewa under Bamang Administrative Sub-Division, District East Kameng",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Tarak Langdi, Pania, District Kra-Daadi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Kiojoring, Nacho, District Upper Subansiri",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR006",
+    "Project_Name": "Construction of Multi-Purpose Hall at Government Secondary School, Lida, Gusar Circle, District Upper Subansiri",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR007",
+    "Project_Name": "Construction of Multi-Purpose Hall at Palin Petrol Pump Colony,District Kra-Daadi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR008",
+    "Project_Name": "Construction of Multi-Purpose Hall at Roing, District Lower Dibang Valley",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR009",
+    "Project_Name": "Laying of Synthetic Athletic Track at Tawang, District Tawang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR010",
+    "Project_Name": "Construction of Multi-Purpose Hall at Government Higher Secondary School, District Itanagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR011",
+    "Project_Name": "Construction of Multi-Purpose Hall at ADC HQ Kodukha, District Upper Subansiri",
+    "Status": "In Progress",
+    "Progress": 85
+  },
+  {
+    "Project_Code": "AR012",
+    "Project_Name": "Construction of Multi-Purpose Hall at Governemnt Higher Secondary School, Dirang, District West Kameng",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR013",
+    "Project_Name": "Construction of Multi-Purpose Hall at Kaimai, Tirap District",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR014",
+    "Project_Name": "Construction of Multi-Purpose Hall at ADC HQ, Raga, District Lower Subansari",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR015",
+    "Project_Name": "Construction of Multi-Purpose Hall at Kiyit Villager,District East Siang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR016",
+    "Project_Name": "Construction of Multi-Purpose Hall at Bilat, District East Siang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR017",
+    "Project_Name": "Construction of Multi-Purpose Hall at Mahadevpur,District Lekang Circle",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR018",
+    "Project_Name": "Construction of Multi-Purpose Hall at Lumla, District Tawang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR019",
+    "Project_Name": "Construction of Multi-Purpose Hall at Mechukha,District West Siang",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR020",
+    "Project_Name": "Construction of Multi-Purpose hall at Boa Simla under District Kamle",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AR021",
+    "Project_Name": "Construction of 120 bedded hostel cum Integrated Sports Complex at SAI National Center of Excellence, District Itanagar",
+    "Status": "In Progress",
+    "Progress": 50
+  },
+  {
+    "Project_Code": "AS001",
+    "Project_Name": "Laying of Synthetic Athletic Track at SAI SAG Centre, District Kokarjhar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS002",
+    "Project_Name": "Renovation/Upgradation including Laying of Synthetic Hockey Turf in Maulana Md. Tayabullah Hockey Stadium, District Betapara, Guwahati. (Reimbursement of expenditure)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS003",
+    "Project_Name": "Laying of Synthetic Athletic Track and construction of sub base, drainage and chain link at SAI SAG Centre, District Tinsukia",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS004",
+    "Project_Name": "Laying of Synthetic Hockey Turf at SAI SAG Centre,District Kokrajhar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS005",
+    "Project_Name": "Development of sports infrastructure at Bihpuria Stadium Complex, District Lakhimpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS006",
+    "Project_Name": "Renovation of Cycling Velodrome at Lakshmibai National Institute of Physical Education, District Guwahati for Khelo India Youth Games 2020",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS007",
+    "Project_Name": "Renovation and up-gradation of various sports complexes in Assam for Khelo India Youth Games 2020",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "AS008",
+    "Project_Name": "Construction of Multi-Purpose Hall at Dibrugarh University, Assam",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "AS010",
+    "Project_Name": "Construction of Multipurpose Hall at Dibrugarh University",
+    "Status": "In Progress",
+    "Progress": 50
+  },
+  {
+    "Project_Code": "AS011",
+    "Project_Name": "Construction of 8 lane 400 metre Synthetic Athletic Track of World Athletics Standards at NCoE Guwahati",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "BH001",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Nawada",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "BH002",
+    "Project_Name": "Laying of Synthetic Athletic Track at Rangbhumi Maidan, Purnia University, District Purnia",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Tilka Manjhi Bhagalpur University campus,District Bhagalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Botany Campus Babasaheb Bhimrao Ambedkar Bihar University, District Muzaffarpur",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "BH005",
+    "Project_Name": "Construction of Multi-Purpose Hall at J.P. University, Chapra, Rahul Sankritayan Nagar, Chapra, District Saran",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "BH006",
+    "Project_Name": "Laying of Synthetic Athletic Track at J.P. University, Chapra, Rahul Sankritayan Nagar, Chapra, District Saran",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH007",
+    "Project_Name": "Construction of Multi-Purpose Hall at Saidpur campus, Patna University, Patna, District Patna",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "BH008",
+    "Project_Name": "Construction of Swimming Pool at Saidpur Campus, Patna University, District Patna",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH009",
+    "Project_Name": "Construction of Multi-Purpose Hall at New Campus, Veer Kunwar Singh University, Ara, District Bhojpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH010",
+    "Project_Name": "Construction of Swimming Pool at Bihar Agricultural University, Sabour Campus, District Bhagalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "BH011",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Saran",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "BH013",
+    "Project_Name": "Construction of Multipurpose Hall of size 60M x 40M x 12.5M with facilities for Badminton, Volleyball, Judo, Wrestling, Handball, Kabaddi, etc. at Central University of South Bihar, Gaya Panchanpur Road, Village – Karhara,",
+    "Status": "In Progress",
+    "Progress": 60
+  },
+  {
+    "Project_Code": "BH014",
+    "Project_Name": "Construction Of Khelo India Olympic Size Swimming Pool at IIT Patna Bihta Campus, Patna",
+    "Status": "In Progress",
+    "Progress": 20
+  },
+  {
+    "Project_Code": "CH001",
+    "Project_Name": "Laying of Synthetic Hockey Turf at District Jashpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "CH002",
+    "Project_Name": "Construction of Synthetic Athletic Track at District Mahasamund",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "CH003",
+    "Project_Name": "Construction of Multi-Purpose hall at Municipal Corporation District Ambikapur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "CH004",
+    "Project_Name": "Construction of Synthetic Turf Football Ground with Running Track at Indira Priydarshani Stadium, District Jagdalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "CH005",
+    "Project_Name": "Construction Multipurpose hall as block - Tilda-Neora, District - Raipur",
+    "Status": "In Progress",
+    "Progress": 50
+  },
+  {
+    "Project_Code": "CH006",
+    "Project_Name": "Construction of 8 lane synthetic atheletic track at Government D.K. College Balodabazar, Bhatapara",
+    "Status": "In Progress",
+    "Progress": 30
+  },
+  {
+    "Project_Code": "CH007",
+    "Project_Name": "Construction of Multipurpose Hall at Mopka, District Bilaspur",
+    "Status": "In Progress",
+    "Progress": 15
+  },
+  {
+    "Project_Code": "CH008",
+    "Project_Name": "Construction of Synthetic Athletic Track Rajnandgaon",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "DL001",
+    "Project_Name": "Replacement of Synthetic Athletic Track at Jawaharlal Nehru Stadium, New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL002",
+    "Project_Name": "Construction of 162 Bedded Sports Hostel at Dr. Karni Singh Shooting Ranges, Tughklakabad, New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL003",
+    "Project_Name": "Construction of 100 Bedded Sports Hostel at Jawaharlal Nehru Stadium, New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL004",
+    "Project_Name": "Replacement of Synthetic Hockey Turf at Major Dhyan Chand Stadium, New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL005",
+    "Project_Name": "Creation of sports infrastructure at New Moti Bagh Complex, New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL006",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Centre, Dr. Karni Singh Shooting Ranges",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL007",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Centre, Indira Gandhi Indoor Stadium",
+    "Status": "In Progress",
+    "Progress": 85
+  },
+  {
+    "Project_Code": "DL008",
+    "Project_Name": "Construction of 4 Court Squash Complex at Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL009",
+    "Project_Name": "Provisioning of Astro Turf Football Ground with Changing Room, Seating Facility and Washroom at Old Pinto Park (Behind Gurudwara) Air Force Station Palam, Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL010",
+    "Project_Name": "Replacement of 400 Main arena synthetic athletic \"MONDO Track EI\" at JLN Stadium New Delhi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "DL011",
+    "Project_Name": "Replacement of metal halide lights with LED lights in Main Arena at IGS Complex, New Delhi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "DL012",
+    "Project_Name": "Replacement of metal halide lights with LED lights in KD Jadhav Hall at IGS Complex, New Delhi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "DL013",
+    "Project_Name": "Upgradation/replacement of existing VRV/VRF air conditioning system in Final Range at Dr. KSSR, New Delhi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "DL014",
+    "Project_Name": "Replacement of defective rubber wooden cladding (Bullet Catcher) at 25m Range, 50m Range and Final Range at Dr. KSSR, New Delhi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "DL015",
+    "Project_Name": "Construction of new shotgun target No. 6 & 7 at Dr. KSSR, New Delhi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "GA001",
+    "Project_Name": "Construction of Synthetic Hockey Turf at Paddem Sports Complex, Mapusa, District North Goa",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "GA002",
+    "Project_Name": "Upgradation of Squash Court and Providing other eminent facilities of International Standards at Chicalim Sports Complex, Chicalim, District South Goa",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "GA003",
+    "Project_Name": "Development of Lawn Tennis Court at Open Sports Complex, Pt. JLN Stadium, Fatorda, District South Goa",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "GA004",
+    "Project_Name": "Development of Synthetic Turf Football Ground at St. Cruz, District North Goa",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "GJ001",
+    "Project_Name": "Construction of Synthetic Athletic Track at Naroda, District Ahmadabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "GJ002",
+    "Project_Name": "Laying of Synthetic Hockey Turf at Devgadh Bariya, District Dahod",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "GJ003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Swarnim Gujarat Sports University, Valavav, District Vadodara",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "GJ004",
+    "Project_Name": "Construction of Swimming Pool at Swarnim Gujarat Sports University, Valavav, District Vadodara",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "GJ005",
+    "Project_Name": "Construction of sports complex at Naranpura District Ahmedabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HP001",
+    "Project_Name": "Laying of Synthetic Athletic Track at SAI HATC, Shilaroo",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HP002",
+    "Project_Name": "Construction of Multi-Purpose Hall at Sundernagar, District Mandi",
+    "Status": "In Progress",
+    "Progress": 80
+  },
+  {
+    "Project_Code": "HP003",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Solan",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HP004",
+    "Project_Name": "Construction of Synthetic Hockey Turf in Campus of Govt. of Senior Secondary School, Majra District Sirmaur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HP005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Ghumarwin, District Bilaspur",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HP006",
+    "Project_Name": "Construction of Multi-Purpose Hall at Bangana, District Una",
+    "Status": "In Progress",
+    "Progress": 75
+  },
+  {
+    "Project_Code": "HP007",
+    "Project_Name": "Construction of Synthetic Athletic Track along with allied sports at Nurpur, Kangra",
+    "Status": "In Progress",
+    "Progress": 40
+  },
+  {
+    "Project_Code": "HP008",
+    "Project_Name": "Construction of Multi-Purpose Hall at Pragpur, District Kangra (Project Forclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HP009",
+    "Project_Name": "Establishment of National Centre of Excellence at District Hamirpur",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HP010",
+    "Project_Name": "Construction of Multipurpose Hall at Bilaspur",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HP011",
+    "Project_Name": "Construction of Football Turf at District Una",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HR001",
+    "Project_Name": "Construction of Multi-Purpose Hall at SAI Northern Regional Centre, District Sonepat",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR002",
+    "Project_Name": "Replacement of Synthetic Athletic Track at Chaudhary Charan Singh Haryana Agriculture University, District Hisar(Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Choudhary Charan Singh Haryana Agriculture University, District Hisar, (SAI STC Centre)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR004",
+    "Project_Name": "Construction of 300 Bedded Hostel at SAI Regional Center, District Sonepat",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR005",
+    "Project_Name": "Laying of Synthetic Hockey Field of Global Category approved by F.I.H., at Kurukshetra University",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR006",
+    "Project_Name": "Construction of Multi-Purpose Hall with Maple wood flooring at Kurukshetra University",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "HR007",
+    "Project_Name": "Relaying of Synthetic Athletic track along with synthetic athletic warmup track and hockey astroturf ground at Tau Devi Lal Sports Complex, District Panchkula",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR008",
+    "Project_Name": "Laying of Pre-fabricated Multi-Purpose Hall having 2 Basketball and 2 Volleyball courts at Tau Devi Lal Sports Complex,District Panchkula",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR009",
+    "Project_Name": "Establishment of Archery Centre of Excellence at Northern Regional Centre, District Sonepat",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR010",
+    "Project_Name": "Replacement of Synthetic Hockey Turf at Northern Regional Centre, District Sonepat",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "HR011",
+    "Project_Name": "Construction of All Weather Olympic size Swimming Pool at Kurukshetra University, District Kurukshetra",
+    "Status": "In Progress",
+    "Progress": 25
+  },
+  {
+    "Project_Code": "HR012",
+    "Project_Name": "Synthetic Athletic Track 400 M (08 Lane) at Central University of Haryana Vill. Jant-Pali, Distt. & Tehsil Mahendergarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JH001",
+    "Project_Name": "Upgradation of Hockey and Football Ground at SAI Training Centre, District Hazaribagh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JH002",
+    "Project_Name": "Laying of Synthetic Hockey Turf at SAI Training Centre, District Hazaribagh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JH003",
+    "Project_Name": "Laying of Athlertic tarck at Kumaitha Sports complex, Jasidih, District Deoghar.",
+    "Status": "In Progress",
+    "Progress": 65
+  },
+  {
+    "Project_Code": "JH004",
+    "Project_Name": "Laying of Hockey field at Swami Vivekanand Sports complex, District Gumla",
+    "Status": "In Progress",
+    "Progress": 75
+  },
+  {
+    "Project_Code": "JH005",
+    "Project_Name": "Construction of Netaji Subhas Chandra Bose Sports Complex, Simdega (Laying of Synthetic Football Turf)",
+    "Status": "In Progress",
+    "Progress": 20
+  },
+  {
+    "Project_Code": "JK001",
+    "Project_Name": "Laying of Synthetic Athletic Track at Islamic University of Science & Technology (IUST) Awantipora, District Pulwama",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JK002",
+    "Project_Name": "Construction of Synthetic Hockey Turf at Pologround, District Srinagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JK003",
+    "Project_Name": "Construction of Synthetic Hockey Turf at K K Hakhu Hockey Stadium, District Jammu",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JK004",
+    "Project_Name": "Construction of Synthetic Athletic Track at Sports Stadium, Tulibal Sopore, District Baramulla",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "JK005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Shalnar, Argam, District Budgam",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA001",
+    "Project_Name": "Laying of Synthetic Turf Football Ground at SAI Regional Centre, District Bangalore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA002",
+    "Project_Name": "Laying of Synthetic Hockey Turf at Sainik School, District Bijapur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA003",
+    "Project_Name": "Construction of Multi-Purpose Hall at SAI Southern Regional Centre, District Bangalore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Haliyal Taluk Stadium at Uttara Kannada",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Town Shiralakoppa , District Shivamogga",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA006",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Hassan",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA007",
+    "Project_Name": "Construction of Multi-Purpose Hall at Hubli Dharwad, Municipal Corporation, Karnataka",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA008",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Regional Centre, District Bangalore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA009",
+    "Project_Name": "Construction of Indoor Stadium at Karkala, District Udupi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA010",
+    "Project_Name": "Construction of Multi-Purpose Indoor Hall at District Stadium, Chikmagalur Town in District Chikkamagaluru",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA011",
+    "Project_Name": "Laying of Synthetic Athletic Track at Stadium, District Chikkamagaluru (Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA012",
+    "Project_Name": "Construction of Multi-Purpose Hall at Stadium, District Koppal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA013",
+    "Project_Name": "Construction of Indoor Stadium at Sahyadri College Campus, Shivamogga for Kuvempu University, shankaraghatta, District Shivamogga",
+    "Status": "In Progress",
+    "Progress": 85
+  },
+  {
+    "Project_Code": "KA014",
+    "Project_Name": "Construction of Tensile Structural Roofing at Udupi District Stadium and construction of gallery roofing work for swimming pool at Ajjarakadu, District Udupi (Foreclosed)",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "KA015",
+    "Project_Name": "Upgrading of FOPs, water proofing work of the roof, renovation of spectators galleries and upgradtion of facilities of Shri Kanteerva Indoor Stadium at District Bengaluru",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA016",
+    "Project_Name": "Upgrading of FOPs and renovation of Shri Kanteerva Indoor Stadium at Bengaluru",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA017",
+    "Project_Name": "Upgrading of FOP in Hockey Stadium, Shantinagar, District Bengaluru",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA018",
+    "Project_Name": "Construction of Swimming Pool in Sri Jayaprakash Narayana National Youth Training Centre Vidyanagar, District Bangalore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA019",
+    "Project_Name": "Laying of Synthetic Athletic Track and other facilities at Netaji Subhash Southern Centre, District Banglore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA023",
+    "Project_Name": "Re-Laying of Hockey (Blue) Turf with allied works at SAI, NSSC, District Bengaluru.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KA024",
+    "Project_Name": "Relaying of Hockey (Green) Turf with allied works at SAI NSSC BANGALORE",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "KA025",
+    "Project_Name": "Construction of Multipurpose Indoor Hall (60m×40m) at University of Agricultural Sciences, District Mandya",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "KL001",
+    "Project_Name": "Laying of Synthetic Athletic Track in Government Brennen College, Thalassery, District Kannur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL002",
+    "Project_Name": "Construction of 300 Bedded Hostel at SAI Regional Center, District Trivandrum",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL003",
+    "Project_Name": "Laying of Synthetic Athletic Track at Lakshmibai National College of Physical Education, District Trivandrum",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL004",
+    "Project_Name": "Laying of Synthetic Athletic Track at Government Higher Secondary School, Kunnamkulam, District Thrissur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL005",
+    "Project_Name": "Laying of Synthetic Athletic Track at Medical College, Pariyaram, District Kannur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL006",
+    "Project_Name": "Construction of Indoor Stadium at Kamakshi Grama Panchayathin Idukki Legislative Assembly of Idukki District",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "KL007",
+    "Project_Name": "Construction of Synthetic Athletic Track at Christ College, Irinjalakkuda Muncipality",
+    "Status": "In Progress",
+    "Progress": 10
+  },
+  {
+    "Project_Code": "KL008",
+    "Project_Name": "Construction of Multipurpose hall (40m x 20m x 9m) at SAI LNCPE Trivandrum",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "LA001",
+    "Project_Name": "Laying of Synthetic Athletic Track and Astro Turf for football in open stadium at District Leh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "LA002",
+    "Project_Name": "Construction of Gymnasium Hall at NDS Sports Complex, District Leh",
+    "Status": "In Progress",
+    "Progress": 85
+  },
+  {
+    "Project_Code": "LA003",
+    "Project_Name": "Construction of Ice Hockey Rink at 24thBn, Indo Tibetan Border Police District Leh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "LD001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Government Senior Secondary School (GSSS), Kiltan, Lakshadweep",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "LD002",
+    "Project_Name": "Construction of Multipurpose Indoor Stadium at Mahatma Gandhi Senior Secondary School (MGSSS), Andrott Lakshadweep",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "ME001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Williamnagar, District East Garo Hills",
+    "Status": "In Progress",
+    "Progress": 75
+  },
+  {
+    "Project_Code": "ME002",
+    "Project_Name": "Construction of Multi-Purpose Hall at Lawsohtun, District East Khasi Hills",
+    "Status": "In Progress",
+    "Progress": 82
+  },
+  {
+    "Project_Code": "ME003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Umkhoi, District East Khasi Hills",
+    "Status": "In Progress",
+    "Progress": 70
+  },
+  {
+    "Project_Code": "ME004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Jingjal, District West Garo Hills",
+    "Status": "In Progress",
+    "Progress": 89
+  },
+  {
+    "Project_Code": "Me005",
+    "Project_Name": "Laying of Synthetic Turf Football Ground at Wahiajer District West Jaintia Hills",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "ME006",
+    "Project_Name": "Laying of Synthetic Turf Football Ground at Madan Centre Nongkrem,District East Khasi Hills",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH001",
+    "Project_Name": "Construction of Swimming Pool at SAI Western Training Center, District Aurangabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH002",
+    "Project_Name": "Construction of Multi-Purpose Hall at SAI Regional Centre, District Mumbai",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH003",
+    "Project_Name": "Upgradation of Olympic Swimming Parking Ground at Municipal Council, Katol District Nagpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH004",
+    "Project_Name": "Upgradation of Synthetic Hockey turf at Shivchhatrapti Kridapeeth Sports Complex, District Pune",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH005",
+    "Project_Name": "Upgradation of Shooting range at Shivchhatrapti Kridapeeth Sports Complex, District Pune",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH006",
+    "Project_Name": "Creation of sports infrastructure facilities namely seating Gallery, Basketball ground, Lawn Tennis Court and Support academics and Training Centre/ Hostel in District Nashik Municipal Corporation",
+    "Status": "In Progress",
+    "Progress": 70
+  },
+  {
+    "Project_Code": "MH007",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at ASI District Pune",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH008",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI STC, District Aurangabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH009",
+    "Project_Name": "Laying of Synthetic Hockey turf at Major Dhyanchand Hockey Stadium, District Kolhapur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH010",
+    "Project_Name": "Construction of Advance Archery Range and Equipment purchase in front of Santa Gagdebaba Amravati University, District Amravati",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH011",
+    "Project_Name": "Construction of Multi-Purpose Hall at Solapur University, District Solapur",
+    "Status": "In Progress",
+    "Progress": 95
+  },
+  {
+    "Project_Code": "MH012",
+    "Project_Name": "Construction of Fencing Hall at National Center of Excellence, District Aurangabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MH013",
+    "Project_Name": "Construction of Synthetic Athletic Track at Dr. Babasaheb Ambedkar Marathwada University Campus, District Aurangabad.",
+    "Status": "In Progress",
+    "Progress": 70
+  },
+  {
+    "Project_Code": "MH014",
+    "Project_Name": "Construction of Multipurpose Hall(40M X 20M X 9M) at Subash Maidan, Kalyan Dombivali Municipal Corporation, District Thane",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "MH015",
+    "Project_Name": "Construction of Multiple Hall (60Mx40Mx12.5M) at SAI NCOE Chhatrapati Sambhajinagar",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "MI001",
+    "Project_Name": "Laying of Synthetic Turf Football Ground at Lawngtlai Playground, District Lawngtlai",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI002",
+    "Project_Name": "Laying of Synthetic Turf Football Ground at Saidan, District Kolasib",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI003",
+    "Project_Name": "Laying of Synthetic Turf Football Ground and RCC framed structure at Armed Veng, District Aizawl",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI004",
+    "Project_Name": "Laying of synthetic Turf Football Ground at Lengpui Playground, District Mamit",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI005",
+    "Project_Name": "Laying of Synthetic Hockey Turf at Muallungthu , Aizawl District Mizoram",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI006",
+    "Project_Name": "Construction of Synthetic Turf Football Ground at Muallungthu,District. Aizawl",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI007",
+    "Project_Name": "Construction of Multipurpose Hall in Aizwal south",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MI008",
+    "Project_Name": "Construction of Multipurpose Hall at Tuikual , Aizawl, Mizoram",
+    "Status": "In Progress",
+    "Progress": 40
+  },
+  {
+    "Project_Code": "MI009",
+    "Project_Name": "Laying of Synthetic Hockey Turf and Lighting at STC Aizwal",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "MN001",
+    "Project_Name": "Laying of Synthetic Football Turf at SAI North Eastern Regional Centre Takyel, District Imphal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MN002",
+    "Project_Name": "Miscellaneous works including fencing in respect Football Academy at SAI North Eastern Regional Centre, District Imphal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MN003",
+    "Project_Name": "Construction of Multi-Purpose Hall at Charoibung Public Ground, Mayang District Imphal West",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MN004",
+    "Project_Name": "Construction of Synthetic turf Football Ground and RCC Gallery at Hiyangthang, Kangjeibung, District Imphal West",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MN005",
+    "Project_Name": "Construction of Synthetic turf Football Ground and RCC Gallery at Hao Ground, Chingamathak,District Imphal West",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MN006",
+    "Project_Name": "Construction of 300 Bedded Hostel at SAI Regional Centers, District Imphal",
+    "Status": "In Progress",
+    "Progress": 25
+  },
+  {
+    "Project_Code": "MN007",
+    "Project_Name": "Construction of Swimming Pool with RCC Gallery, toilet, change room at District Bishnupur Headquarters",
+    "Status": "In Progress",
+    "Progress": 80
+  },
+  {
+    "Project_Code": "MN008",
+    "Project_Name": "Construction of sports infrastructure at 8 Blocks of Manipur under Khelo India Scheme.Following 8 playgrounds approved",
+    "Status": "In Progress",
+    "Progress": 80
+  },
+  {
+    "Project_Code": "MP001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Tatya Tope Nagar Stadium, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP002",
+    "Project_Name": "Extension of existing 50 Mtr. Shooting Range, Village Goura, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP003",
+    "Project_Name": "Relaying of Synthetic Athletic Track at Tatya Tope Nagar Stadium, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP004",
+    "Project_Name": "Construction of Swimming pool at SAI central Regional Centre, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP005",
+    "Project_Name": "Construction of Swimming Pool at Indira Gandhi National tribal University (IGNTU), District Anuppur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP006",
+    "Project_Name": "Laying of Synthetic Hockey Turf Field at Railway Stadium, District Gwalior (Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP007",
+    "Project_Name": "Construction of 300 Bedded Hostel at SAI Regional Centers, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP008",
+    "Project_Name": "Establishment of Water Sports Centre at Gorital, District Bhind",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "MP009",
+    "Project_Name": "Laying of Synthetic Athletic Track at Ranjhi, District Jabalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP010",
+    "Project_Name": "Construction of Synthetic Athletic track at Rajmata Vijayaraje Scindia Sports Complex, Nanakheda, District Ujjain",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP011",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Sports Complex at District Shivpuri",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP012",
+    "Project_Name": "Construction of Sports Complex (Indoor/Outdoor) at District Damoh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP013",
+    "Project_Name": "Creation/Upgradation of existing sports at Tatya Tope Sports Complex, District Bhopal",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP014",
+    "Project_Name": "Creation/upgradation of existing sports infra at District Sports Complex Kampoo, District Gwalior",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP015",
+    "Project_Name": "Creation/upgradation of existing sports infra at Ranital Sports Complex, District Jabalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP016",
+    "Project_Name": "Upgradation of Abhay Prashal Stadium in District Indore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP017",
+    "Project_Name": "Upgradation of Basket Ball Complex at Race Course Road, District Indore",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "MP018",
+    "Project_Name": "Construction of New Judo Hall at SAI Central Regional Centre, Sports Complex, P.O. Suraj Nagar, Gram Gora, Bishan Khedi, Bhopal, Madhya Pradesh",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "MP019",
+    "Project_Name": "Construction of Multipurpose Hall at District Jabalpur",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "MP020",
+    "Project_Name": "Laying of Synthetic Athletic Track at SAI Bhopal",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "NL001",
+    "Project_Name": "Laying of Synthetic Athletic Track at SAI SAG Centre, District Dimapur",
+    "Status": "In Progress",
+    "Progress": 98
+  },
+  {
+    "Project_Code": "NL002",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Viswema, District Kohima",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL003",
+    "Project_Name": "Construction of Multi-Purpose hall at Medziphema District Dimapur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL004",
+    "Project_Name": "Construction of Multi-Purpose Hall at Riphyim, Englan, District Wokha",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL005",
+    "Project_Name": "Construction of Indoor Badminton Hall at Yachem EAC Hq, District Longleng",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL006",
+    "Project_Name": "Construction of Synthetic Turf Football Ground with Running Track & Solar Lighting at District Mon Football Ground",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL007",
+    "Project_Name": "Development of Lakhuti Football Ground District Wokha",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL008",
+    "Project_Name": "Construction of Multipurpose Hall at Changotya Town District Mokokchung",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL009",
+    "Project_Name": "Construction of Multipurpose Hall at Niuland District HQ",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL010",
+    "Project_Name": "Construction of Multipurpose Hall at Mokokchung",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL011",
+    "Project_Name": "Construction of Pre fabricated Indoor Sports Hall at Wokha",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "NL012",
+    "Project_Name": "Construction of Multipurpose Hall at Shamator District HQ",
+    "Status": "In Progress",
+    "Progress": 30
+  },
+  {
+    "Project_Code": "OR001",
+    "Project_Name": "Construction of Multi-Purpose Hall in Kalinga Stadium Sports Complex, Bhubaneswar, District Khordha",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "OR002",
+    "Project_Name": "Construction of Multi-purpose Hall at District Puri",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "OR003",
+    "Project_Name": "Construction of Swimming Pool at District Hqrs., District Boudh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "OR004",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Sports Complex, Burla, District Sambalpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "OR005",
+    "Project_Name": "Construction of Sports Complex at Rairangpur, District Mayurbhanj.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Smt. Lajwanti Sports Complex, District Hoshiarpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB002",
+    "Project_Name": "Construction of Multi-Purpose Hall at War Hero's Stadium, District Sangrur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB003",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at National Institute of Sports District Patiala",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB004",
+    "Project_Name": "Creation of 200 Beded Hostel (1 for Women and Men) including furnishing at Guru Nanak Dev University, District Amritsar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB005",
+    "Project_Name": "Construction of Synthetic Hockey Turf at village Marar District Gurdaspur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB006",
+    "Project_Name": "Laying of Synthetic Athletic Track at Shaheed Bhagat Singh Stadium, District Ferozepur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB007",
+    "Project_Name": "Construction of Multi-Purpose Hall at Nawashehar, District Shaheed Bhagat Singh Nagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB008",
+    "Project_Name": "Laying of Synthetic Athletic Track at Guru Nanak Dev Stadium, District Amritsar",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "PB009",
+    "Project_Name": "Construction of Multi-Purpose Hall at Maharaja Ranjit Singh Technical University,District Bathinda",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB010",
+    "Project_Name": "Construction of Centralized Kitchen and Food Court at National Institute of Sports, District Patiala",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB011",
+    "Project_Name": "Construction of Synthetic Hockey Turf Ground at Border Security Force (BSF) Campus Jalandhar HQ BSF.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PB012",
+    "Project_Name": "Replacement of Synthetic Athletic Track with allied works at NS NIS, District Patiala.",
+    "Status": "In Progress",
+    "Progress": 65
+  },
+  {
+    "Project_Code": "PB013",
+    "Project_Name": "Synthetic Athletic Track (08 Lanes) at Central University of Punjab, Bathinda, Badal Bathinda Road, Village Ghudda, District Bathinda",
+    "Status": "In Progress",
+    "Progress": 85
+  },
+  {
+    "Project_Code": "PB014",
+    "Project_Name": "Construction of Air-conditioned Multipurpose Sport Hall -60Mx40Mx12.5M at SAI RC Patiala",
+    "Status": "In Progress",
+    "Progress": 5
+  },
+  {
+    "Project_Code": "PY001",
+    "Project_Name": "Construction of Swimming Pool at Saradambal Nagar, District Puducherry (Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PY002",
+    "Project_Name": "Construction of Synthetic Athletic Track at Indira Gandhi Sports Complex, Uppallam, District Puducherry",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "PY003",
+    "Project_Name": "Construction of Synthetic Athletic Track, Volleyball Court and Football field in SB Govt. Primary School Savithri Nagar playground in District Yanam",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "RJ001",
+    "Project_Name": "Construction of Multi-Purpose Hall, Football Ground and Athletic Track at LBS Government PG College, District Kotputli",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ002",
+    "Project_Name": "Laying of Synthetic Athletic Track in District Churu",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ003",
+    "Project_Name": "Laying of Synthetic Floor and Lighting in Multi-Purpose Hall at SAI Training Centre District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ004",
+    "Project_Name": "Laying of Synthetic Hockey Field at Maharana Pratap Khel Gaon, District Udaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ005",
+    "Project_Name": "Construction of Multi-Purpose Hall at five block Headquarters, (i) Government Secondary School, Bapini, Jodhpur, (ii) Block Headquarter, Khinwsar, Nagaur, (iii) Sunhel, Jhalawar, (iv) Block Headquarter, Jaitran, Pali and (v) Siswali, Anta, District Baran",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ006",
+    "Project_Name": "Construction of Multi-Purpose Hall, in Government Senior Secondary School, Pragpura, District Jaipur(Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ007",
+    "Project_Name": "Laying of Synthetic Athletic Track at Maharaja Ganga Singh Stadium, District Sri Ganganagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ008",
+    "Project_Name": "Construction of Multi-Purpose Hall, in Government Senior Secondary School, Jamwa Ramgarh, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ009",
+    "Project_Name": "Construction of Basketball, Volleyball, Solar Light, Water Tank, 200 Mtr. Athletic Track at Village Khinwsar, District Nagaur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ010",
+    "Project_Name": "Construction of Academy Building & Solar Lights at Deedwana Stadium, District Nagaur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ011",
+    "Project_Name": "Laying of Synthetic Athletic Track at Swarnjayanti Stadium, District Jhunjhunu",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ012",
+    "Project_Name": "Construction of Multi-Purpose Hall at Swarnjayanti Stadium, District Jhunjhunu",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ013",
+    "Project_Name": "Construction of Badmintion Arena with four Championship Badminton courts with infrastructure at SMS Stadium, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ014",
+    "Project_Name": "Construction of Indoor Hall & Ticket Block at Sri Karnapur Stadium, District Sri Ganaganagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ015",
+    "Project_Name": "Completion of Shooting Range at District Bhilwara",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ016",
+    "Project_Name": "Construction of Boundary Wall, Basketball, Volleyball, Cricket Ground, Solar Lights, Office Building Toilet Block at Bapini Stadium District Jodhpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ017",
+    "Project_Name": "Construction of Boundary wall, Basketball, Volleyball, Cricket Ground, Solar Lights, Office Building Toilet Block at Dechu Stadium, District Jodhpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ018",
+    "Project_Name": "Construction of Boundary Wall, Basketball, Volleyball, Cricket Ground, Solar Lights, Office Building Toilet Block at Lohawat Stadium, District Jodhpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ019",
+    "Project_Name": "Construction of One All Glass Championship Court, Sawai Mansingh Stadium, Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ020",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Chandwaji, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ021",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Jalsoo, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ022",
+    "Project_Name": "Construction of play ground at Nagarpalika Ground- Sambhar Lake, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ023",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Aandhi, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ024",
+    "Project_Name": "Construction of play ground at Governemnt. Senior Secondary School- Dewta, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ025",
+    "Project_Name": "Construction of play ground at Governemnt Senior Secondary School- Gathwari, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ026",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Khejroli, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ027",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Manoharpur, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ028",
+    "Project_Name": "Construction of play ground at Governemnt Senior Secondary School- Narayanpur, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ029",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Narehera, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ030",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Paota, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ031",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Rampur, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ032",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Renwal, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ033",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Sundarpura, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ034",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Viratnagar, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ035",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Bhambhori, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ036",
+    "Project_Name": "Construction of play ground at Government Senior Secondary School- Jobner, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ037",
+    "Project_Name": "Construction of Multi-Purpose Hall at Rajiv Gandhi Stadium, District Hanumangarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ038",
+    "Project_Name": "Construction of Multi-Purpose Hall at District Sikar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ039",
+    "Project_Name": "Construction of Multi-Purpose Hall at Rajasthan Police Academy, District Jaipur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ040",
+    "Project_Name": "Laying of Synthetic Athletic Track at Shrinathpuram Sports Complex, District Kota",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ041",
+    "Project_Name": "Laying of Synthetic Hockey Ground at District Rajsamand",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ042",
+    "Project_Name": "Construction of Multi-Purpose Hall at Indira Gandhi Stadium, District Chittorgarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ043",
+    "Project_Name": "Construction of Rain water channel at 17 playgrounds sanctioned under Khelo India SchemeConstruction of retaining wall and boundary wall for senior secondary school Jobner.Construction of Security Perimeter Wall of Indoor Stadium at Jamwa Ramgarh, Distr",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "RJ044",
+    "Project_Name": "Construction of Multi-Purpose Hall at Ramganjmandi, District Kota.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ045",
+    "Project_Name": "Construction of Multi-Purpose Hall at Lakheri, District Bundi.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "RJ049",
+    "Project_Name": "Construction of Multipurpose Hall at Kapren, District Bundi",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "RJ050",
+    "Project_Name": "LAYING OF SYNTHETIC HOCKEY TURF GROUND AT PMSHREE GOVT. NAVEEN SENIOR SECONDARY SCHOOL, ALWAR (RAJASTHAN)",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "SK001",
+    "Project_Name": "Construction of Indoor Stadium Gymnasium Hall at Soreng, District West Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK002",
+    "Project_Name": "Construction of Synthetic Turf Football Ground at Palzor Stadium, Gangtok, East Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK003",
+    "Project_Name": "Construction of Multi-Purpose Gymnasium Hall at Jorethang, District South Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK004",
+    "Project_Name": "Construction of playground and archery ground with allied facilities at Phodong Monastic School, Phodong GPU in District North Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK005",
+    "Project_Name": "Replacement of Synthetic Athletic Track and Field at Reshithang, Khelgaon, Gangtok District East Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK006",
+    "Project_Name": "Construction of Archery Complex at Ravangla in South Sikkim",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "SK007",
+    "Project_Name": "Construction of Synthetic Turf Football Ground at Kyongsa Stadium, Gyalshing",
+    "Status": "In Progress",
+    "Progress": 95
+  },
+  {
+    "Project_Code": "TN001",
+    "Project_Name": "Laying of Synthetic Athletic Track at Tamil Nadu Physical Education and Sports University, Vandalur, Kelambakkam Road, Melakottaiyur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TN002",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Sports Complex,Thanjavur(Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TN003",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Sports Complex, District Erode",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TN004",
+    "Project_Name": "Construction of Swimming Pool at Tamil Nadu Physical Education and Sports University, Melakottaiyur, District Kancherpuram",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TN005",
+    "Project_Name": "Laying of Synthetic Athletic Track in Periyar University, District Salem",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR001",
+    "Project_Name": "Construction of Synthetic Football Turf in Chandrapur Football ground, Udaipur, District Gomati",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR002",
+    "Project_Name": "Construction of Swimming Pool at Regional College of Physical Education (RCPE), Panisagar,District North Tripura",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR003",
+    "Project_Name": "Construction of Synthetic Athletic Track at Dasarath Deb Sports Complex (DDSSC), Badharghat, Agartala, District West Tripura",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR004",
+    "Project_Name": "Construction of Synthetic Football Turf at Khowai Government High Secondary (Boys) School Playground, District Khowai",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR005",
+    "Project_Name": "Construction of Synthetic Athletic Track at Regional College of Physical Education Panisagar, District North Tripura.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR006",
+    "Project_Name": "Construction of Synthetic Turf Football Ground at Sudhanya Debbarma Memorial HS School Ground Jampuijala, Sepahijala District Tripura.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TR007",
+    "Project_Name": "Construction of Synthetic Hockey Field at Dasarath Dev State Sports Complex, Badharghat, Agartala, District West Tripura.",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS001",
+    "Project_Name": "Laying of Synthetic Athletic Track at Indira Gandhi Outdoor Stadium, District Medak",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS002",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Karimnagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS003",
+    "Project_Name": "Laying of Synthetic Athletic Track at District Warangal(Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS004",
+    "Project_Name": "Construction of Swimming pool for women at Osmania University, District Hyderabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS005",
+    "Project_Name": "Laying of Synthetic Athletic Track at Osmania University, District Hyderabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS006",
+    "Project_Name": "Construction of Synthetic Tennis Court at Osmania University Campus, District Hyderabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "TS007",
+    "Project_Name": "Development of 4 lane 400mts Synthetic Athletic Track of IAAF standard at Jammikunta, District Karimnagar",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "UK001",
+    "Project_Name": "Construction of Multi-Purpose Hall at Parade Ground, District Dehradun",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UK002",
+    "Project_Name": "Laying of Synthetic Athletic Track at Lal Bhadhur Shastri National Academy of Administration, District Mussoorie",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UK003",
+    "Project_Name": "Laying of Synthetic Hockey Field at Sports Stadium Roshnabad, Salempur, District Haridwar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UK004",
+    "Project_Name": "Construction of Multi-Purpose Hall, GaneshpurKalakhera, District Udham Singh Nagar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UK005",
+    "Project_Name": "Construction of Football field, grassing and irrigation system for mini stadium at Nanoorkhera District- Dehradun",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UK006",
+    "Project_Name": "Construction of Multi-Purpose Hall at Kirti Nagar, Ghindyaal, District Tehri Garhwal.",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "UK007",
+    "Project_Name": "Construction of Indoor stadium Multipurpose Hall at Block-Bhagwanpur, Village-Naukragrant, Haridwar District",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "UK008",
+    "Project_Name": "Construction of Synthetic Athletic Track with Infield Ground (6-lane 200m) at Jyotirmath, District Chamoli",
+    "Status": "In Progress",
+    "Progress": 10
+  },
+  {
+    "Project_Code": "UP001",
+    "Project_Name": "Laying of Synthetic Hockey Field at Kailash Prakash Stadium, District Meerut",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP002",
+    "Project_Name": "Laying of Synthetic Athletic Track at Dr. B.R. Ambedkar Sports Complex, Lalpur, District Varanasi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP003",
+    "Project_Name": "Construction of Multi-Purpose Hall at PanchaliKhurd, District Meerut",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP004",
+    "Project_Name": "Construction of Multi-Purpose with natural court and running track at village-Mau, Block- Mohanlalganj, District Lucknow",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP005",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Nagaon, VikasKhand-Nagwa, District Soanbhadra",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP006",
+    "Project_Name": "Construction of Multi-Purpose Hall at Beer Bahadur College at Gorakhpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP007",
+    "Project_Name": "Construction of Multi-Purpose Hall and Running Track at Village Dhedui Block Patti, District Pratapgarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP008",
+    "Project_Name": "Construction of Multi-Purpose Hall (Mini Stadium) at Village Mangraura Tehsil Patti, District Pratapgarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP009",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village- Ganeshpur, Block- Pharenda, District Maharajganj",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP010",
+    "Project_Name": "Laying of Synthetic Athletic Track at Sports Stadium, District Saharanpur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP011",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Rafat Nagar Senthara, Block Nidhauli Kalan, Tehsil Etah, District Etah",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP012",
+    "Project_Name": "Construction Multi-Purpose Hall with Athletic Track at Village Mudgaon, Block Mohammadabad, District Farrukhabad Sadar",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP013",
+    "Project_Name": "Construction of Multi-Purpose Hall at village- Mondapandey, District Moradabad",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP014",
+    "Project_Name": "Construction of Multi-Purpose Hall with Athletic Track at Village Sunnamai Near Roadways workshop, Block Sultanganj, District Mainpuri",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP015",
+    "Project_Name": "Construction of Multi-Purpose Hall with Athletic Track at Village Bargadahiya near Soodipur, Block Dubouliya, Tehsil Harraiya, Distirct Basti",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP016",
+    "Project_Name": "Construction of Multi-Purpose Hall (Mini Stadium) at Village & Block Aspur Deosara, District Pratapgarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP017",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Maksudabad Block Kalyanpur, District Kanpur Nagar",
+    "Status": "In Progress",
+    "Progress": 90
+  },
+  {
+    "Project_Code": "UP018",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Dharauli, Post Banikodar, District Barabanki",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP019",
+    "Project_Name": "Construction of Multi-Purpose Hall all, 400 mtr Natural Running Track at Gram Midhaului, Block Chibbramau, District Kannauj",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP020",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Simaria, Taluke Maharajpur, Puranpur, District Pilibhit",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP021",
+    "Project_Name": "Construction of Multi-Purpose Hall at Village Patehara Kalan, District Mirzapur",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP022",
+    "Project_Name": "Construction of Multi-Purpose Hall, at Village Alahadadpur, Block Dhanipur, District Aligarh",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP023",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Regional Center, District Lucknow",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP024",
+    "Project_Name": "Construction of Wrestling Hall with modern facilities at SAI RC, District Lucknow",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP027",
+    "Project_Name": "Construction of Multi-Purpose hall Youth Welfare and P.R.D. Headquarter, Jail Road, Anand Nagar, District Lucknow",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP028",
+    "Project_Name": "Construction of Multi-Purpose hall with Natural football court and athletic track at Village-Kotra, Post-Jairajpur,BlockKhand-Tadiyawan, District Hardoi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP029",
+    "Project_Name": "Construction of Multi-Purpose hall at Bagpat, Village Meetli, VikasKhand, District Bagpat(Project Foreclosed)",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP030",
+    "Project_Name": "Construction of Multi-Purpose Hall at Jaitpur Police line road District Raebareli",
+    "Status": "In Progress",
+    "Progress": 65
+  },
+  {
+    "Project_Code": "UP031",
+    "Project_Name": "Laying of Synthetic Athletic Track at Chaudhary Charan Singh Sports Stadium, District Muzaffarnagar",
+    "Status": "Cancelled",
+    "Progress": null
+  },
+  {
+    "Project_Code": "UP032",
+    "Project_Name": "Development and Modernisation of Sigra Stadium, District Varanasi",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "UP033",
+    "Project_Name": "Construction of Multi-Purpose Hall for Indira Gandhi Stadium at District Jaunpur",
+    "Status": "In Progress",
+    "Progress": 80
+  },
+  {
+    "Project_Code": "UP034",
+    "Project_Name": "Construction of Multipurpose Rural Stadium-Basahi Ashrafpur Pavai Azamgarh",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "WB001",
+    "Project_Name": "Construction of 300 Bedded (Triple Occupancy) Hostel at SAI Regional Centre, District Kolkata",
+    "Status": "Completed",
+    "Progress": 100
+  },
+  {
+    "Project_Code": "WB002",
+    "Project_Name": "Establishment of SAI - Indian Railways National centre of excellence at District New Cooch Behar, West Bengal; Construction of 400m Synthetic Athletic Track",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "WB003",
+    "Project_Name": "Construction of Synthetic Football turf at SAI-Indian Railways NCOE Cooch Behar",
+    "Status": "In Progress",
+    "Progress": 0
+  },
+  {
+    "Project_Code": "WB004",
+    "Project_Name": "Construction of 400 M, 8-lane Synthetic Athletics Track at STC Jalpaiguri",
+    "Status": "In Progress",
+    "Progress": 35
+  }
+]
