@@ -60,14 +60,13 @@ export function getStatusMeta(status: string | null | undefined): StatusMeta {
 
 /**
  * Project Status quick-filter (bottom-left project filter bar, shown only when the Facility Type
- * selector is set to Projects). "Without GPS Images" shows exactly the projects the source data
- * flags `Without_GPS_Images: true` (they have no GPS-verified site photos/coordinates yet — set by
- * the project-coordinates data pipeline, see scripts/apply_project_gps_coordinates.cjs) that the
- * user has NOT since marked "Coordinates available". That confirmation is a sticky, per-browser
- * override stored alongside uploads (lib/imageStore.ts) so it survives data reseeds; marking a
- * project "Coordinates available" from its gallery removes it from this filter.
+ * selector is set to Projects). Status is a single-select among the three real statuses (set from
+ * the progress workbook — see scripts/apply_project_status.cjs); a project matches simply when
+ * `p.Status === key`. The "Without GPS Images" toggle is a SEPARATE, independent filter (below)
+ * that ANDs with the status, so e.g. Completed + Without GPS Images = completed projects still
+ * needing GPS-verified photos.
  */
-export type ProjectStatusFilterKey = 'In Progress' | 'Completed' | 'Cancelled' | 'NO_IMAGES';
+export type ProjectStatusFilterKey = 'In Progress' | 'Completed' | 'Cancelled';
 
 export interface ProjectStatusFilterMeta { key: ProjectStatusFilterKey; label: string; icon: string; color: string; }
 
@@ -75,17 +74,27 @@ export const PROJECT_STATUS_FILTERS: ProjectStatusFilterMeta[] = [
   { key: 'In Progress', label: 'In Progress', icon: '🟡', color: '#f9ab00' },
   { key: 'Completed',   label: 'Completed',   icon: '🟢', color: '#188038' },
   { key: 'Cancelled',   label: 'Cancelled',   icon: '🔴', color: '#d93025' },
-  { key: 'NO_IMAGES',   label: 'Without GPS Images', icon: '📷', color: '#5f6368' },
 ];
 
+/** Display meta for the independent "Without GPS Images" toggle (combines with the status filter). */
+export const WITHOUT_GPS_FILTER = { label: 'Without GPS Images', icon: '📷', color: '#5f6368' } as const;
+
 /**
- * Whether a project matches a Project Status filter key. `coordinatesConfirmed` comes from the
- * confirmation store (lib/imageStore.ts) — a project flagged `Without_GPS_Images` drops out of the
- * "Without GPS Images" filter once the user marks its coordinates available.
+ * Whether a project is currently in the "Without GPS Images" set — flagged `Without_GPS_Images`
+ * by the source data and NOT since marked "Coordinates available" by the user (a sticky, per-browser
+ * override stored alongside uploads, lib/imageStore.ts, that survives data reseeds). Independent of
+ * the project's Status.
  */
-export function projectMatchesStatusFilter(p: Project, filter: ProjectStatusFilterKey, coordinatesConfirmed: boolean): boolean {
-  if (filter === 'NO_IMAGES') return p.Without_GPS_Images === true && !coordinatesConfirmed;
-  return p.Status === filter;
+export function projectIsWithoutGps(p: Project, coordinatesConfirmed: boolean): boolean {
+  return p.Without_GPS_Images === true && !coordinatesConfirmed;
+}
+
+/**
+ * Format a project's progress percentage for display, or null when there's nothing meaningful to
+ * show (e.g. Cancelled projects, which carry no progress).
+ */
+export function formatProgress(p: Project): string | null {
+  return typeof p.Progress === 'number' ? `${p.Progress}%` : null;
 }
 
 /** Count projects by infra type, ordered by INFRA_CONFIG then by count. */

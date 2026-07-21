@@ -33,6 +33,9 @@ export function ProjectPopupContent({ project, onViewDetails, onBirdeye }: Proje
         <div><dt>State</dt><dd>{project.State ?? '—'}</dd></div>
         {project.District && <div><dt>District</dt><dd>{project.District}</dd></div>}
         <div><dt>Status</dt><dd><StatusBadge status={project.Status || 'Data Awaiting'} /></dd></div>
+        {typeof project.Progress === 'number' && (
+          <div><dt>Progress</dt><dd><strong>{project.Progress}%</strong></dd></div>
+        )}
       </dl>
 
       <div className="prj-popup-actions">

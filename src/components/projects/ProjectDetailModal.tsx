@@ -4,7 +4,7 @@ import type { Project } from '../../db';
 import { Modal } from '../Modal';
 import { StatusBadge } from './StatusBadge';
 import { ProjectGallery } from './ProjectGallery';
-import { getInfraMeta } from '../../lib/projects';
+import { getInfraMeta, getProjectStatusColor } from '../../lib/projects';
 import { confirmProjectCoordinates, unconfirmProjectCoordinates, projectCoordinatesConfirmedQuery } from '../../lib/imageStore';
 
 type TabId = 'Overview' | 'Financials' | 'Timeline' | 'Gallery' | 'Documents' | 'Remarks';
@@ -108,6 +108,19 @@ export function ProjectDetailModal({ project, onClose }: { project: Project; onC
             <div><dt>Infrastructure Type</dt><dd>{project.Infra_Type}</dd></div>
             <div><dt>Project Code</dt><dd><code className="readonly-code">{project.Project_Code}</code></dd></div>
             <div><dt>Status</dt><dd><StatusBadge status={project.Status || 'Data Awaiting'} /></dd></div>
+            <div className="overview-progress">
+              <dt>Progress</dt>
+              <dd>
+                {typeof project.Progress === 'number' ? (
+                  <div className="progress-wrap">
+                    <div className="progress-track" role="img" aria-label={`${project.Progress}% complete`}>
+                      <div className="progress-fill" style={{ width: `${project.Progress}%`, background: getProjectStatusColor(project.Status) }} />
+                    </div>
+                    <span className="progress-pct">{project.Progress}%</span>
+                  </div>
+                ) : <span className="dim">—</span>}
+              </dd>
+            </div>
           </dl>
         )}
 

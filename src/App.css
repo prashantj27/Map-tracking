@@ -1020,6 +1020,13 @@ button:focus-visible {
 }
 .overview-grid dd { margin: 0; font-size: 14px; color: #202124; word-break: break-word; }
 .readonly-code { background: #f1f3f4; padding: 2px 8px; border-radius: 6px; font-size: 13px; color: #5f6368; }
+
+/* Progress bar (Overview tab). Spans both grid columns. */
+.overview-progress { grid-column: 1 / -1; }
+.progress-wrap { display: flex; align-items: center; gap: 10px; }
+.progress-track { flex: 1; min-width: 0; height: 8px; border-radius: 999px; background: #e8eaed; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 999px; transition: width 0.3s ease; }
+.progress-pct { flex-shrink: 0; font-size: 13px; font-weight: 700; color: #202124; }
 .project-remarks {
   font-size: 14px; line-height: 1.5; color: #202124; background: #f8f9fa;
   border: 1px solid #e8eaed; border-radius: 8px; padding: 12px 14px;
@@ -1274,6 +1281,11 @@ button:focus-visible {
 }
 .status-chip:hover { background: #fff; }
 .status-chip.active { color: #fff; }
+/* The "Without GPS Images" toggle is an independent filter (combines with the status above), so it
+   reads distinctly: it sits on its own line (via .status-bar-break) with a dashed border. */
+.status-bar-break { flex-basis: 100%; height: 0; }
+.status-chip-gps { border-style: dashed; border-color: rgba(0, 0, 0, 0.28); }
+.status-chip-gps.active { border-style: solid; }
 
 /* State selector — compact, secondary control */
 .mfp-state-row {
