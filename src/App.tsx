@@ -3,7 +3,8 @@ import type { MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { classifyFacility, type FacilityCategory } from './lib/facilityTypes';
+import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from './lib/facilityTypes';
+import { exportFacilitiesToExcel } from './lib/exportFacilities';
 import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectIsWithoutGps, type ProjectStatusFilterKey } from './lib/projects';
 import { confirmedCoordinateCodes } from './lib/imageStore';
@@ -110,6 +111,16 @@ function App() {
       return true;
     });
   }, [allLocations, filterState, activeFacilityType, showFacilities]);
+
+  // When facility filters (State and/or Facility Type) are active, surface the matching count in
+  // the search box + let the user export those facilities to Excel. Null when no filter is active.
+  const facilityFilterCount = (showFacilities && (filterState || activeFacilityType))
+    ? filteredLocations.length : null;
+  const handleExportFacilities = useCallback(() => {
+    const hint = [activeFacilityType ? FACILITY_CONFIG[activeFacilityType].acronym : null, filterState || null]
+      .filter(Boolean).join('_');
+    exportFacilitiesToExcel(filteredLocations, hint);
+  }, [filteredLocations, activeFacilityType, filterState]);
 
   // PRJ markers: only projects with coordinates; State + Project Status filters also apply.
   const filteredProjects = useMemo(() => {
@@ -264,6 +275,8 @@ function App() {
         onProjectStatusFilterChange={setProjectStatusFilter}
         withoutGpsOnly={withoutGpsOnly}
         onWithoutGpsOnlyChange={setWithoutGpsOnly}
+        facilityFilterCount={facilityFilterCount}
+        onExportFacilities={handleExportFacilities}
         allLocations={allLocations}
         projects={allProjects}
         onPickFacility={handlePickFacility}

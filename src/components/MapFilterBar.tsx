@@ -21,6 +21,9 @@ export interface MapFilterBarProps {
   /** Independent "Without GPS Images" toggle — combines (ANDs) with the status filter. */
   withoutGpsOnly: boolean;
   onWithoutGpsOnlyChange: (v: boolean) => void;
+  /** Count of facilities matching the active facility filters (null = no facility filter active). */
+  facilityFilterCount: number | null;
+  onExportFacilities: () => void;
   allLocations: Location[];
   projects: Project[];
   onPickFacility: (loc: Location) => void;
@@ -60,6 +63,7 @@ export function MapFilterBar({
   typeSelection, onTypeSelectionChange,
   projectStatusFilter, onProjectStatusFilterChange,
   withoutGpsOnly, onWithoutGpsOnlyChange,
+  facilityFilterCount, onExportFacilities,
   allLocations, projects, onPickFacility, onPickProject,
   satellite, onSatelliteChange,
   showZoomToMap, onResetView,
@@ -187,6 +191,28 @@ export function MapFilterBar({
           <div className="search-empty">No matches for “{query.trim()}”</div>
         )}
       </div>
+
+      {/* Facility filter results: count + one-tap Excel export (shown only when a facility filter is active). */}
+      {facilityFilterCount != null && (
+        <div className="mfp-results-strip">
+          <span className="mfp-results-count">
+            <strong>{facilityFilterCount.toLocaleString()}</strong> {facilityFilterCount === 1 ? 'facility' : 'facilities'}
+          </span>
+          <button
+            type="button"
+            className="mfp-export-btn"
+            onClick={onExportFacilities}
+            disabled={facilityFilterCount === 0}
+            title="Download the filtered facilities as an Excel file"
+            aria-label={`Download ${facilityFilterCount} facilities as an Excel file`}
+          >
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M12 3v12" /><path d="m7 12 5 5 5-5" /><path d="M5 20h14" />
+            </svg>
+            Excel
+          </button>
+        </div>
+      )}
 
       <div className="mfp-state-row">
         <label htmlFor="mfp-state" className="mfp-state-label">State</label>
