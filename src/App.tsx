@@ -4,7 +4,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from './lib/facilityTypes';
-import { exportFacilitiesToExcel } from './lib/exportFacilities';
+import { exportFacilitiesToExcel, exportProjectsToExcel } from './lib/exportExcel';
 import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectIsWithoutGps, type ProjectStatusFilterKey } from './lib/projects';
 import { confirmedCoordinateCodes } from './lib/imageStore';
@@ -130,6 +130,16 @@ function App() {
     if (withoutGpsOnly) list = list.filter(p => projectIsWithoutGps(p, confirmedCoordCodes.has(p.Project_Code)));
     return list;
   }, [allProjects, filterState, projectStatusFilter, withoutGpsOnly, confirmedCoordCodes]);
+
+  // Same count + Excel export as facilities, but for the Projects layer (columns: code, name,
+  // infra type, status, progress, state, district, coordinates, GPS-images-pending). Null unless
+  // Projects is the active selection.
+  const projectFilterCount = typeSelection === 'PRJ' ? filteredProjects.length : null;
+  const handleExportProjects = useCallback(() => {
+    const hint = [projectStatusFilter, withoutGpsOnly ? 'WithoutGPS' : null, filterState || null]
+      .filter(Boolean).join('_');
+    exportProjectsToExcel(filteredProjects, hint);
+  }, [filteredProjects, projectStatusFilter, withoutGpsOnly, filterState]);
 
   // Choropleth expression — keys must be GeoJSON state names.
   const stateColorMatch = useMemo(() => {
@@ -277,6 +287,8 @@ function App() {
         onWithoutGpsOnlyChange={setWithoutGpsOnly}
         facilityFilterCount={facilityFilterCount}
         onExportFacilities={handleExportFacilities}
+        projectFilterCount={projectFilterCount}
+        onExportProjects={handleExportProjects}
         allLocations={allLocations}
         projects={allProjects}
         onPickFacility={handlePickFacility}

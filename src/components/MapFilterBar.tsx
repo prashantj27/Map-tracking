@@ -24,6 +24,9 @@ export interface MapFilterBarProps {
   /** Count of facilities matching the active facility filters (null = no facility filter active). */
   facilityFilterCount: number | null;
   onExportFacilities: () => void;
+  /** Count of projects matching the active project filters (null unless the Projects layer is active). */
+  projectFilterCount: number | null;
+  onExportProjects: () => void;
   allLocations: Location[];
   projects: Project[];
   onPickFacility: (loc: Location) => void;
@@ -64,6 +67,7 @@ export function MapFilterBar({
   projectStatusFilter, onProjectStatusFilterChange,
   withoutGpsOnly, onWithoutGpsOnlyChange,
   facilityFilterCount, onExportFacilities,
+  projectFilterCount, onExportProjects,
   allLocations, projects, onPickFacility, onPickProject,
   satellite, onSatelliteChange,
   showZoomToMap, onResetView,
@@ -90,6 +94,13 @@ export function MapFilterBar({
   }, [query, allLocations, projects]);
 
   const hasResults = results.facilities.length > 0 || results.projects.length > 0;
+
+  // Count + Excel-export strip for whichever layer is active (facilities XOR projects).
+  const exportStrip = facilityFilterCount != null
+    ? { count: facilityFilterCount, noun: 'facility', nounPlural: 'facilities', onExport: onExportFacilities }
+    : projectFilterCount != null
+      ? { count: projectFilterCount, noun: 'project', nounPlural: 'projects', onExport: onExportProjects }
+      : null;
 
   // Picking a search result auto-minimizes the panel on mobile so the map is immediately visible.
   const pickFacility = (loc: Location) => { onPickFacility(loc); setQuery(''); if (isMobile) setCollapsed(true); };
@@ -192,19 +203,19 @@ export function MapFilterBar({
         )}
       </div>
 
-      {/* Facility filter results: count + one-tap Excel export (shown only when a facility filter is active). */}
-      {facilityFilterCount != null && (
+      {/* Count + one-tap Excel export for the active layer (facilities or projects). */}
+      {exportStrip && (
         <div className="mfp-results-strip">
           <span className="mfp-results-count">
-            <strong>{facilityFilterCount.toLocaleString()}</strong> {facilityFilterCount === 1 ? 'facility' : 'facilities'}
+            <strong>{exportStrip.count.toLocaleString()}</strong> {exportStrip.count === 1 ? exportStrip.noun : exportStrip.nounPlural}
           </span>
           <button
             type="button"
             className="mfp-export-btn"
-            onClick={onExportFacilities}
-            disabled={facilityFilterCount === 0}
-            title="Download the filtered facilities as an Excel file"
-            aria-label={`Download ${facilityFilterCount} facilities as an Excel file`}
+            onClick={exportStrip.onExport}
+            disabled={exportStrip.count === 0}
+            title={`Download the filtered ${exportStrip.nounPlural} as an Excel file`}
+            aria-label={`Download ${exportStrip.count} ${exportStrip.count === 1 ? exportStrip.noun : exportStrip.nounPlural} as an Excel file`}
           >
             <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M12 3v12" /><path d="m7 12 5 5 5-5" /><path d="M5 20h14" />
