@@ -1262,6 +1262,26 @@ button:focus-visible {
 .mfp-search-results button { display: flex; align-items: center; gap: 4px; }
 .mfp-search-results .search-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+/* Filtered-facility count + Excel export — appears below the search box only when a facility
+   filter (State / Facility Type) is active. */
+.mfp-results-strip {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 7px 8px 7px 12px; border-radius: 12px;
+  background: rgba(26, 115, 232, 0.09); border: 1px solid rgba(26, 115, 232, 0.18);
+  animation: mfp-rise 0.2s ease-out;
+}
+.mfp-results-count { font-size: 12.5px; color: #3c4043; white-space: nowrap; }
+.mfp-results-count strong { color: #1a73e8; font-size: 14px; }
+.mfp-export-btn {
+  display: flex; align-items: center; gap: 5px; flex-shrink: 0;
+  padding: 6px 12px; border-radius: 9px; border: none; cursor: pointer;
+  background: #188038; color: #fff; font-family: inherit; font-size: 12.5px; font-weight: 600;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.mfp-export-btn:hover { background: #136b2e; }
+.mfp-export-btn:active { transform: scale(0.96); }
+.mfp-export-btn:disabled { background: #bdc1c6; cursor: not-allowed; }
+
 /* Shared small circular badge icon (Facility Type quick chips) */
 .type-icon {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
