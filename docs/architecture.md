@@ -85,9 +85,13 @@ src/
 ├── components/
 │   ├── MapFilterBar.tsx     Single floating glassmorphism panel (default: bottom-left,
 │   │                        user-draggable): search (with the satellite-view toggle in the search
-│   │                        box), the State selector, the Facility Type quick chips (MapQuickChips,
-│   │                        nested — the sole type control), and the Project Status chip row
-│   │                        (Projects only). Replaces the old left sidebar.
+│   │                        box), the State selector, the Sport-discipline dropdown
+│   │                        (DisciplineSelectDropdown, facilities only), the Facility Type quick
+│   │                        chips (MapQuickChips, nested — the sole type control), and the Project
+│   │                        Status chip row (Projects only). Replaces the old left sidebar.
+│   ├── DisciplineSelectDropdown.tsx  Sport-discipline filter for the Facilities layer — a custom
+│   │                        icon dropdown (sport emoji per discipline via getDisciplineIcon);
+│   │                        Para variants collapsed to base sport. Hidden while PRJ is active.
 │   ├── MapQuickChips.tsx    Facility Type quick-chip row, nested inside MapFilterBar's panel (not
 │   │                        independently positioned): All/NCOE/STC/KIC/RC/Projects primary,
 │   │                        KISCE/EXT/AKH/IGMA/NSTC behind "More Filters"; wraps onto multiple
@@ -118,7 +122,7 @@ src/
 ```
 
 ### State ownership
-- **`App.tsx`** owns `typeSelection` (`FacilityCategory | 'PRJ' | null` — the value driving the Facility Type quick chips; `null` = "All Facilities"), `filterState` (State), `projectStatusFilter`, plus `selectedLocation`/`selectedProject`, `reportState`, `projectDetail`, and `seedState`. `activeFacilityType`/`showFacilities`/`showProjects` are derived from `typeSelection` (see below). All derived data (`filteredLocations`, `filteredProjects`, choropleth `match` expression) is a `useMemo` chain off the live IndexedDB queries.
+- **`App.tsx`** owns `typeSelection` (`FacilityCategory | 'PRJ' | null` — the value driving the Facility Type quick chips; `null` = "All Facilities"), `filterState` (State), `filterDiscipline` (base sport name; `''` = all — a facilities-only filter), `projectStatusFilter`, plus `selectedLocation`/`selectedProject`, `reportState`, `projectDetail`, and `seedState`. `activeFacilityType`/`showFacilities`/`showProjects` are derived from `typeSelection` (see below). All derived data (`filteredLocations`, `filteredProjects`, choropleth `match` expression) is a `useMemo` chain off the live IndexedDB queries.
 - **`MapView.tsx`** owns *viewport* state (`bounds`, `zoom`, `hoveredState`, `is3D`, `theme`) locally, so panning/zooming and map-mode toggles never re-render the filter panel. Exceptions, both driving controls in `MapFilterBar`'s search box: the `satellite` basemap toggle lives in `App.tsx` (a rare discrete toggle), and `mapZoomedIn` (drives the "zoom to full map" button) is lifted to `App` as a *boolean that flips only on threshold crossings* — MapView keeps the continuous `zoom` and reports crossings via `onZoomedInChange`, so panning within a zoom band still never re-renders the panel.
 - **Data reads** use `useLiveQuery` (Dexie) so the UI stays in sync with IndexedDB reactively; there is no Redux/Zustand/Context — plain React state + memoization only.
 
