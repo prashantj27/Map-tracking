@@ -6,6 +6,7 @@ import { useDraggable } from '../lib/useDraggable';
 import { useIsMobileOrTablet } from '../lib/useMediaQuery';
 import { MapQuickChips } from './MapQuickChips';
 import { TypeSelectDropdown } from './TypeSelectDropdown';
+import { DisciplineSelectDropdown } from './DisciplineSelectDropdown';
 import { DragHandle } from './DragHandle';
 
 export type TypeSelection = FacilityCategory | 'PRJ' | null;
@@ -14,6 +15,10 @@ export interface MapFilterBarProps {
   uniqueStates: string[];
   filterState: string;
   onStateChange: (v: string) => void;
+  /** Base sport disciplines (already normalized + sorted) offered across all facilities. */
+  uniqueDisciplines: string[];
+  filterDiscipline: string;
+  onDisciplineChange: (v: string) => void;
   typeSelection: TypeSelection;
   onTypeSelectionChange: (v: TypeSelection) => void;
   projectStatusFilter: ProjectStatusFilterKey | null;
@@ -63,6 +68,7 @@ const FitGlyph = () => (
  */
 export function MapFilterBar({
   uniqueStates, filterState, onStateChange,
+  uniqueDisciplines, filterDiscipline, onDisciplineChange,
   typeSelection, onTypeSelectionChange,
   projectStatusFilter, onProjectStatusFilterChange,
   withoutGpsOnly, onWithoutGpsOnlyChange,
@@ -232,6 +238,15 @@ export function MapFilterBar({
           {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>
+
+      {/* Sport-discipline filter — facilities only (disciplines are a facility concept, not a PRJ one). */}
+      {typeSelection !== 'PRJ' && (
+        <DisciplineSelectDropdown
+          disciplines={uniqueDisciplines}
+          value={filterDiscipline}
+          onChange={onDisciplineChange}
+        />
+      )}
 
       {isMobile
         ? <TypeSelectDropdown typeSelection={typeSelection} onTypeSelectionChange={onTypeSelectionChange} />

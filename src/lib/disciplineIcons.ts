@@ -46,11 +46,15 @@ const DISCIPLINE_ICONS: Record<string, string> = {
   'Yogasana': '🧘',
 };
 
+/** Normalize a discipline to its base sport, dropping the "-Para" suffix (e.g. "Athletics-Para" → "Athletics"). */
+export function baseDiscipline(discipline: string): string {
+  return discipline.replace(/\s*-\s*Para$/i, '').trim();
+}
+
 /** Get the emoji for a discipline; "-Para" variants map to the base sport. Fallback: 🏅 */
 export function getDisciplineIcon(discipline: string | null | undefined): string {
   if (!discipline) return '🏅';
-  const base = discipline.replace(/\s*-\s*Para$/i, '').trim();
-  return DISCIPLINE_ICONS[base] ?? '🏅';
+  return DISCIPLINE_ICONS[baseDiscipline(discipline)] ?? '🏅';
 }
 
 /** Data rows that aren't real disciplines and should be hidden from pickers. */

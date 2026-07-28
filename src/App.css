@@ -1318,6 +1318,15 @@ button:focus-visible {
   border: 1px solid rgba(0, 0, 0, 0.08); font-family: inherit; font-size: 12.5px; cursor: pointer; color: #202124;
 }
 
+/* Sport-discipline dropdown — label + custom icon dropdown, aligned with the State row above.
+   The popup itself reuses the .mfp-type-menu / .mfp-type-option styling. */
+.mfp-disc-row { display: flex; align-items: center; gap: 8px; padding-top: 8px; }
+.mfp-disc-select { position: relative; flex: 1; min-width: 0; }
+.mfp-disc-trigger { padding: 7px 10px; border-radius: 10px; }
+.mfp-disc-emoji {
+  flex-shrink: 0; width: 22px; text-align: center; font-size: 17px; line-height: 1;
+}
+
 /* ---- Shared map-pin graphic (facilities + projects use the same teardrop frame) ---- */
 .mp-pin-svg { display: block; }
 

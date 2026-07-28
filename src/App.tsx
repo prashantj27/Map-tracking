@@ -4,6 +4,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { db, seedDatabase, type Location, type Project } from './db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { classifyFacility, FACILITY_CONFIG, type FacilityCategory } from './lib/facilityTypes';
+import { baseDiscipline, isRealDiscipline } from './lib/disciplineIcons';
 import { exportFacilitiesToExcel, exportProjectsToExcel } from './lib/exportExcel';
 import { dataToGeoStates } from './lib/stateNames';
 import { hasProjectCoordinates, projectIsWithoutGps, type ProjectStatusFilterKey } from './lib/projects';
@@ -50,6 +51,8 @@ function App() {
   // separate facility-type filter + independent PRJ-layer checkbox from the previous design.
   const [typeSelection, setTypeSelection] = useState<TypeSelection>(null);
   const [filterState, setFilterState] = useState('');
+  // Sport-discipline filter (base sport name; '' = all). Applies to the Facilities layer only.
+  const [filterDiscipline, setFilterDiscipline] = useState('');
   const [reportState, setReportState] = useState<string | null>(null);
 
   // Project Status filter — only meaningful (and only shown) while typeSelection === 'PRJ'.
@@ -95,6 +98,16 @@ function App() {
   const uniqueStates = useMemo(
     () => Array.from(new Set(allLocations.map(l => l.State).filter(isNonEmptyString))).sort(),
     [allLocations]);
+  // Base sport disciplines offered across all facilities — Para variants collapsed to their base
+  // sport, junk rows dropped — driving the discipline dropdown in the filter panel.
+  const uniqueDisciplines = useMemo(() => {
+    const set = new Set<string>();
+    allLocations.forEach(l => l.Disciplines?.split(',').forEach(d => {
+      const t = baseDiscipline(d.trim());
+      if (t && isRealDiscipline(t)) set.add(t);
+    }));
+    return Array.from(set).sort();
+  }, [allLocations]);
 
   // Selecting a specific facility type or "Projects" focuses the map on that single layer
   // (Google-Maps-style category switching); "All Facilities" shows both layers together.
@@ -108,19 +121,20 @@ function App() {
     return allLocations.filter(loc => {
       if (filterState && loc.State !== filterState) return false;
       if (activeFacilityType && classifyFacility(loc.Facility_Type) !== activeFacilityType) return false;
+      if (filterDiscipline && !loc.Disciplines?.split(',').some(d => baseDiscipline(d.trim()) === filterDiscipline)) return false;
       return true;
     });
-  }, [allLocations, filterState, activeFacilityType, showFacilities]);
+  }, [allLocations, filterState, activeFacilityType, filterDiscipline, showFacilities]);
 
   // When facility filters (State and/or Facility Type) are active, surface the matching count in
   // the search box + let the user export those facilities to Excel. Null when no filter is active.
-  const facilityFilterCount = (showFacilities && (filterState || activeFacilityType))
+  const facilityFilterCount = (showFacilities && (filterState || activeFacilityType || filterDiscipline))
     ? filteredLocations.length : null;
   const handleExportFacilities = useCallback(() => {
-    const hint = [activeFacilityType ? FACILITY_CONFIG[activeFacilityType].acronym : null, filterState || null]
+    const hint = [activeFacilityType ? FACILITY_CONFIG[activeFacilityType].acronym : null, filterDiscipline || null, filterState || null]
       .filter(Boolean).join('_');
     exportFacilitiesToExcel(filteredLocations, hint);
-  }, [filteredLocations, activeFacilityType, filterState]);
+  }, [filteredLocations, activeFacilityType, filterDiscipline, filterState]);
 
   // PRJ markers: only projects with coordinates; State + Project Status filters also apply.
   const filteredProjects = useMemo(() => {
@@ -165,7 +179,7 @@ function App() {
     return matchExpr;
   }, [allLocations, uniqueRegions]);
 
-  const hasActiveFilters = !!(filterState || typeSelection || projectStatusFilter || withoutGpsOnly);
+  const hasActiveFilters = !!(filterState || filterDiscipline || typeSelection || projectStatusFilter || withoutGpsOnly);
 
   // Changing the type selection away from Projects clears its status filters (they're hidden then,
   // so stale filters shouldn't silently keep hiding PRJ markers next time it's reopened).
@@ -176,6 +190,7 @@ function App() {
 
   const resetFilters = useCallback(() => {
     setFilterState('');
+    setFilterDiscipline('');
     setTypeSelection(null);
     setProjectStatusFilter(null);
     setWithoutGpsOnly(false);
@@ -279,6 +294,9 @@ function App() {
         uniqueStates={uniqueStates}
         filterState={filterState}
         onStateChange={setFilterState}
+        uniqueDisciplines={uniqueDisciplines}
+        filterDiscipline={filterDiscipline}
+        onDisciplineChange={setFilterDiscipline}
         typeSelection={typeSelection}
         onTypeSelectionChange={handleTypeSelectionChange}
         projectStatusFilter={projectStatusFilter}
