@@ -1,9 +1,20 @@
 import type { Location, Project } from '../db';
 import { formatProgress } from './projects';
+import { isRealDiscipline } from './disciplineIcons';
 
 /** "lat, lng" for a record with numeric coordinates, else "". */
 function coordinates(lat: number | null, lng: number | null): string {
   return Number.isFinite(lat) && Number.isFinite(lng) ? `${lat}, ${lng}` : '';
+}
+
+/**
+ * A facility's real sport disciplines, taken verbatim from its `Disciplines` field (the same source
+ * the discipline filter matches on) with non-sport placeholder rows dropped (e.g. "Yet to be
+ * Started") so the column reflects exactly the disciplines the platform treats as real.
+ */
+function facilityDisciplines(raw: string | null): string {
+  if (!raw) return '';
+  return raw.split(',').map((s) => s.trim()).filter((d) => d && isRealDiscipline(d)).join(', ');
 }
 
 /**
@@ -29,15 +40,16 @@ async function downloadSheet(
 
 /** Download the given (already-filtered) facilities as a real .xlsx. */
 export function exportFacilitiesToExcel(locations: Location[], filenameHint: string): Promise<void> {
-  const header = ['S.No', 'Facility Type', 'Facility Name', 'Coordinates', 'Address'];
+  const header = ['S.No', 'Facility Type', 'Facility Name', 'Sports Disciplines', 'Coordinates', 'Address'];
   const rows = locations.map((loc, i) => ({
     'S.No': i + 1,
     'Facility Type': loc.Facility_Type ?? '',
     'Facility Name': loc.Facility_Name ?? '',
+    'Sports Disciplines': facilityDisciplines(loc.Disciplines),
     'Coordinates': coordinates(loc.Latitude, loc.Longitude),
     'Address': [loc.Address, loc.City, loc.District, loc.State].filter(Boolean).join(', '),
   }));
-  return downloadSheet(rows, header, [6, 34, 48, 24, 60], 'Facilities', filenameHint);
+  return downloadSheet(rows, header, [6, 34, 48, 50, 24, 60], 'Facilities', filenameHint);
 }
 
 /** Download the given (already-filtered) projects as a real .xlsx. */
