@@ -85,6 +85,7 @@ function App() {
 
   const allLocations = useLiveQuery(() => db.locations.toArray()) || [];
   const allDisciplineRows = useLiveQuery(() => db.disciplines.toArray()) || [];
+  const allManpower = useLiveQuery(() => db.manpower.toArray()) || [];
   const allProjects = useLiveQuery(() => db.projects.toArray()) || [];
 
   // Project_Codes the user has marked "coordinates available" — these drop out of the
@@ -133,8 +134,8 @@ function App() {
   const handleExportFacilities = useCallback(() => {
     const hint = [activeFacilityType ? FACILITY_CONFIG[activeFacilityType].acronym : null, filterDiscipline || null, filterState || null]
       .filter(Boolean).join('_');
-    exportFacilitiesToExcel(filteredLocations, hint);
-  }, [filteredLocations, activeFacilityType, filterDiscipline, filterState]);
+    exportFacilitiesToExcel(filteredLocations, allManpower, hint);
+  }, [filteredLocations, allManpower, activeFacilityType, filterDiscipline, filterState]);
 
   // PRJ markers: only projects with coordinates; State + Project Status filters also apply.
   const filteredProjects = useMemo(() => {

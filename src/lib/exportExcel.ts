@@ -1,10 +1,41 @@
-import type { Location, Project } from '../db';
+import type { Location, Project, ManpowerDetail } from '../db';
 import { formatProgress } from './projects';
 import { isRealDiscipline } from './disciplineIcons';
 
 /** "lat, lng" for a record with numeric coordinates, else "". */
 function coordinates(lat: number | null, lng: number | null): string {
   return Number.isFinite(lat) && Number.isFinite(lng) ? `${lat}, ${lng}` : '';
+}
+
+/** A cell for a numeric field: the number itself (0 kept), or "" when the value is absent. */
+function numOrBlank(v: number | null | undefined): number | string {
+  return v === null || v === undefined ? '' : v;
+}
+
+interface StaffCounts { coachSanctioned: number; coachCurrent: number; totalSanctioned: number; totalCurrent: number; }
+
+/**
+ * Aggregate the manpower rows into per-facility staff counts, keyed by Facility_ID. A row counts as
+ * a coach when its Designation contains "coach" (Head/Assistant Coach etc.); every manpower row —
+ * coaches plus sport-science/management staff — rolls into the Total figures. "Sanctioned" = approved
+ * posts, "Current" = people actually in position (verbatim from the source's Sanctioned/Current
+ * Strength). Only ~34 facilities (the KISCE centres) carry manpower data; the rest get blank staff
+ * cells rather than a misleading 0.
+ */
+function staffCountsByFacility(manpower: ManpowerDetail[]): Map<string, StaffCounts> {
+  const map = new Map<string, StaffCounts>();
+  for (const m of manpower) {
+    const id = m.Facility_ID;
+    if (!id) continue;
+    let c = map.get(id);
+    if (!c) { c = { coachSanctioned: 0, coachCurrent: 0, totalSanctioned: 0, totalCurrent: 0 }; map.set(id, c); }
+    const sanctioned = Number(m['Sanctioned Strength']) || 0;
+    const current = Number(m['Current Strength']) || 0;
+    c.totalSanctioned += sanctioned;
+    c.totalCurrent += current;
+    if (/coach/i.test(m.Designation ?? '')) { c.coachSanctioned += sanctioned; c.coachCurrent += current; }
+  }
+  return map;
 }
 
 /**
@@ -39,17 +70,40 @@ async function downloadSheet(
 }
 
 /** Download the given (already-filtered) facilities as a real .xlsx. */
-export function exportFacilitiesToExcel(locations: Location[], filenameHint: string): Promise<void> {
-  const header = ['S.No', 'Facility Type', 'Facility Name', 'Sports Disciplines', 'Coordinates', 'Address'];
-  const rows = locations.map((loc, i) => ({
-    'S.No': i + 1,
-    'Facility Type': loc.Facility_Type ?? '',
-    'Facility Name': loc.Facility_Name ?? '',
-    'Sports Disciplines': facilityDisciplines(loc.Disciplines),
-    'Coordinates': coordinates(loc.Latitude, loc.Longitude),
-    'Address': [loc.Address, loc.City, loc.District, loc.State].filter(Boolean).join(', '),
-  }));
-  return downloadSheet(rows, header, [6, 34, 48, 50, 24, 60], 'Facilities', filenameHint);
+export function exportFacilitiesToExcel(locations: Location[], manpower: ManpowerDetail[], filenameHint: string): Promise<void> {
+  const staff = staffCountsByFacility(manpower);
+  const header = [
+    'S.No', 'Facility Type', 'Facility Name', 'Sports Disciplines',
+    'Total Trainees', 'Trainees (Male)', 'Trainees (Female)', 'Sanctioned Strength (Trainees)',
+    'Coaches (Sanctioned)', 'Coaches (Current)', 'Total Staff (Sanctioned)', 'Total Staff (Current)',
+    'Operational Status', 'In-charge / Contact Person', 'Contact Number', 'SAI Region',
+    'Coordinates', 'Address',
+  ];
+  const rows = locations.map((loc, i) => {
+    const s = staff.get(loc.Facility_ID);
+    return {
+      'S.No': i + 1,
+      'Facility Type': loc.Facility_Type ?? '',
+      'Facility Name': loc.Facility_Name ?? '',
+      'Sports Disciplines': facilityDisciplines(loc.Disciplines),
+      'Total Trainees': numOrBlank(loc.Total_Trainees),
+      'Trainees (Male)': numOrBlank(loc.Trainees_Male),
+      'Trainees (Female)': numOrBlank(loc.Trainees_Female),
+      'Sanctioned Strength (Trainees)': numOrBlank(loc.Sanctioned_Strength),
+      'Coaches (Sanctioned)': s ? s.coachSanctioned : '',
+      'Coaches (Current)': s ? s.coachCurrent : '',
+      'Total Staff (Sanctioned)': s ? s.totalSanctioned : '',
+      'Total Staff (Current)': s ? s.totalCurrent : '',
+      'Operational Status': loc.Operational_Status ?? '',
+      'In-charge / Contact Person': loc.Incharge_Contact_Person ?? '',
+      'Contact Number': loc.Contact_Number ?? '',
+      'SAI Region': loc.Parent_Region ?? '',
+      'Coordinates': coordinates(loc.Latitude, loc.Longitude),
+      'Address': [loc.Address, loc.City, loc.District, loc.State].filter(Boolean).join(', '),
+    };
+  });
+  const widths = [6, 34, 48, 50, 13, 15, 16, 26, 18, 17, 20, 19, 18, 26, 16, 16, 24, 60];
+  return downloadSheet(rows, header, widths, 'Facilities', filenameHint);
 }
 
 /** Download the given (already-filtered) projects as a real .xlsx. */
